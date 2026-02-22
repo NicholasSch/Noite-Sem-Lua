@@ -14,7 +14,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     //Data
     private Vector2 moveInput = Vector2.zero;
     private Directions facingDirection = Directions.RIGHT;
-    private float moveSpeed = 110f;
+    private float moveSpeed = 120f;
 
     //Animations
     private readonly int animWalkSide = Animator.StringToHash("Anim_Player_Walk_Side");
