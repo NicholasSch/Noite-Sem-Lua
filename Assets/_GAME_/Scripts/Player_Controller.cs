@@ -88,7 +88,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         switch(facingDirection)
         {
             case Directions.UP:
-                if(isMoving && moveSpeed == 110f)
+                if(isMoving && moveSpeed == 120f)
                 {
                     animation = animWalkUP; 
                 }
@@ -98,7 +98,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 }
                 break;
             case Directions.DOWN:
-                if(isMoving && moveSpeed == 110f)
+                if(isMoving && moveSpeed == 120f)
                 {
                     animation = animWalkDown; 
                 }
@@ -110,7 +110,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             case Directions.LEFT:
             case Directions.RIGHT:
             default:
-                if(isMoving && moveSpeed == 110f)
+                if(isMoving && moveSpeed == 120f)
                 {
                     animation = animWalkSide; 
                 }
