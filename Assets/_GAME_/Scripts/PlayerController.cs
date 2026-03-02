@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +6,8 @@ using UnityEngine.InputSystem;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     private enum Directions {UP, DOWN, LEFT, RIGHT}; 
+
+    private IInteractable currentInteractable;
 
     //Dependencies
     private Rigidbody2D rigidBody;
@@ -124,4 +127,23 @@ public class NewMonoBehaviourScript : MonoBehaviour
         animator.CrossFade(animation,0);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        currentInteractable = other.GetComponent<IInteractable>();
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.GetComponent<IInteractable>() != null)
+            currentInteractable = null;
+    }
+
+    private void OnInteract(InputValue value)
+    {
+
+        if (value.isPressed && currentInteractable != null)
+        {
+            currentInteractable.Interact();
+        }
+    }
 }
