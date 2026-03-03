@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 [SelectionBase]
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+
+    [SerializeField] private GameObject interactPrompt;
     private enum Directions {UP, DOWN, LEFT, RIGHT}; 
 
     private IInteractable currentInteractable;
+    
 
     //Dependencies
     private Rigidbody2D rigidBody;
@@ -40,6 +43,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         rigidBody.linearVelocity = moveInput.normalized * moveSpeed * Time.fixedDeltaTime;
         CalculateFacingDirection();
         UpdateAnimation();
+    }
+
+    private void LateUpdate()
+    {
+        if (interactPrompt != null)
+            interactPrompt.transform.position = transform.position + Vector3.up * 1.14f;
     }
 
     private void OnMove(InputValue value)
@@ -130,12 +139,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         currentInteractable = other.GetComponent<IInteractable>();
+
+        if (currentInteractable != null && GameStateManager.CurrentState == GameState.Gameplay)
+            interactPrompt.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.GetComponent<IInteractable>() != null)
+        {
             currentInteractable = null;
+            interactPrompt.SetActive(false);
+        }
     }
 
     private void OnInteract(InputValue value)
@@ -145,5 +160,37 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             currentInteractable.Interact();
         }
+    }
+    private void OnClick(InputValue value)
+    {
+        if (!value.isPressed)
+            return;
+
+        switch (GameStateManager.CurrentState)
+        {
+            case GameState.Dialogue:
+                FindFirstObjectByType<DialogueUI>().OnSubmit();
+                break;
+
+            case GameState.Letter:
+                FindFirstObjectByType<JournalInteractable>().Close();
+                break;
+
+            case GameState.Gameplay:
+                if (currentInteractable != null)
+                    currentInteractable.Interact();
+                break;
+        }
+    }
+    private bool DialogueUIActive()
+    {
+        DialogueUI ui = FindFirstObjectByType<DialogueUI>();
+        return ui != null && ui.gameObject.activeInHierarchy;
+    }
+
+    private bool LetterIsOpen()
+    {
+        JournalInteractable journal = FindFirstObjectByType<JournalInteractable>();
+        return journal != null && journal.LetterIsOpen();
     }
 }

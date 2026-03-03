@@ -5,6 +5,8 @@ using System.Collections;
 
 public class DialogueUI : MonoBehaviour
 {
+
+    private bool skipRequested;
     public GameObject panel;
     private CanvasGroup canvasGroup;
     public TextMeshProUGUI textField;
@@ -27,6 +29,7 @@ public class DialogueUI : MonoBehaviour
         if (currentRoutine != null)
             StopCoroutine(currentRoutine);
 
+        GameStateManager.CurrentState = GameState.Dialogue;
         currentSettings = settings;
         fullText = text;
 
@@ -50,18 +53,25 @@ public class DialogueUI : MonoBehaviour
         yield return StartCoroutine(WaitAndClose(scene));
     }
 
-    private IEnumerator TypeText()
-    {
-        isTyping = true;
+private IEnumerator TypeText()
+{
+    isTyping = true;
+    skipRequested = false;
 
-        for (int i = 0; i < fullText.Length; i++)
+    for (int i = 0; i < fullText.Length; i++)
+    {
+        if (skipRequested)
         {
-            textField.text += fullText[i];
-            yield return new WaitForSecondsRealtime(currentSettings.typingSpeed);
+            textField.text = fullText;
+            break;
         }
 
-        isTyping = false;
+        textField.text += fullText[i];
+        yield return new WaitForSecondsRealtime(currentSettings.typingSpeed);
     }
+
+    isTyping = false;
+}
 
     private IEnumerator WaitAndClose(string? scene)
     {
@@ -83,6 +93,7 @@ public class DialogueUI : MonoBehaviour
         panel.SetActive(false);
         Time.timeScale = 1f; 
         }
+        GameStateManager.CurrentState = GameState.Gameplay;
     }
 
     private IEnumerator Fade(float start, float end)
@@ -111,5 +122,17 @@ public class DialogueUI : MonoBehaviour
         }
 
         canvasGroup.alpha = end;
+    }
+
+    public void OnSubmit()
+    {
+        if (isTyping)
+        {
+            skipRequested = true;
+        }
+        else
+        {
+            skipRequested = false;
+        }
     }
 }
