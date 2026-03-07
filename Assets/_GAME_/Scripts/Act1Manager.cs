@@ -4,10 +4,17 @@ using System.Collections;
 
 public class Act1Manager : MonoBehaviour
 {
-    public CanvasGroup fadeCanvas;
     //public AudioSource sfxSource;
     //public AudioClip glassCrack;
     public DialogueUI blackScreenText;
+
+    public void Start()
+    {
+            ThoughtUI.Instance.ShowThought(
+                "<color=#531182>Lucas:</color> Talvez eu devesse ler o que Dante escreveu primeiro..."
+            );
+            return;   
+    }
 
     public void ExitApartment()
     {
