@@ -5,31 +5,31 @@ using System.Collections;
 
 public class DialogueUI : MonoBehaviour
 {
+    public GameObject panel;
+    public TextMeshProUGUI textField;
+    public AudioClip typingSound;
+
+    private CanvasGroup canvasGroup;
+    public AudioSource audioSource;
 
     private bool skipRequested;
-    public GameObject panel;
-    private CanvasGroup canvasGroup;
-    public TextMeshProUGUI textField;
-
-    private Coroutine currentRoutine;
     private bool isTyping;
-    private string fullText;
 
+    private string fullText;
     private DialogueSettings currentSettings;
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+
         panel.SetActive(false);
         canvasGroup.alpha = 0f;
     }
 
-    public IEnumerator ShowTextRoutine(string text, DialogueSettings settings, string? scene)
+    public IEnumerator ShowTextRoutine(string text, DialogueSettings settings, string scene = null)
     {
-        if (currentRoutine != null)
-            StopCoroutine(currentRoutine);
-
         GameStateManager.CurrentState = GameState.Dialogue;
+
         currentSettings = settings;
         fullText = text;
 
@@ -39,60 +39,64 @@ public class DialogueUI : MonoBehaviour
         yield return StartCoroutine(ShowRoutine(scene));
     }
 
-    public IEnumerator ShowTextRoutine(string text, string?scene)
+    public IEnumerator ShowTextRoutine(string text, string scene = null)
     {
         return ShowTextRoutine(text, DialogueSettings.Default, scene);
     }
 
-    private IEnumerator ShowRoutine(string?scene)
+    private IEnumerator ShowRoutine(string scene)
     {
         Time.timeScale = 0f;
 
-        yield return StartCoroutine(Fade(0f, 1f));
-        yield return StartCoroutine(TypeText());
-        yield return StartCoroutine(WaitAndClose(scene));
+        yield return Fade(0f, 1f);
+        yield return TypeText();
+        yield return WaitAndClose(scene);
     }
 
-private IEnumerator TypeText()
-{
-    isTyping = true;
-    skipRequested = false;
-
-    for (int i = 0; i < fullText.Length; i++)
+    private IEnumerator TypeText()
     {
-        if (skipRequested)
+        isTyping = true;
+        skipRequested = false;
+
+        textField.text = "";
+
+        for (int i = 0; i < fullText.Length; i++)
         {
-            textField.text = fullText;
-            break;
+            if (skipRequested)
+            {
+                textField.text = fullText;
+                break;
+            }
+
+            char letter = fullText[i];
+            textField.text += letter;
+
+            if (typingSound != null && letter != ' ' && Random.value > 0.5f)
+            {
+                audioSource.PlayOneShot(typingSound, 0.4f);
+            }
+
+            yield return new WaitForSecondsRealtime(currentSettings.typingSpeed);
         }
 
-        textField.text += fullText[i];
-        yield return new WaitForSecondsRealtime(currentSettings.typingSpeed);
+        isTyping = false;
     }
 
-    isTyping = false;
-}
-
-    private IEnumerator WaitAndClose(string? scene)
+    private IEnumerator WaitAndClose(string scene)
     {
-        if (scene == null)
-        {
         yield return new WaitForSecondsRealtime(currentSettings.displayDuration);
 
-        yield return StartCoroutine(Fade(1f, 0f));
-
-        panel.SetActive(false);
-        Time.timeScale = 1f;
+        if (scene == null)
+        {
+            yield return Fade(1f, 0f);
         }
         else
         {
-        yield return new WaitForSecondsRealtime(currentSettings.displayDuration);
-
-        yield return StartCoroutine(FadeChangeScene(1f, 0f, scene));
+            yield return FadeAndChangeScene(scene);
+        }
 
         panel.SetActive(false);
-        Time.timeScale = 1f; 
-        }
+        Time.timeScale = 1f;
         GameStateManager.CurrentState = GameState.Gameplay;
     }
 
@@ -109,19 +113,15 @@ private IEnumerator TypeText()
 
         canvasGroup.alpha = end;
     }
-        private IEnumerator FadeChangeScene(float start, float end , string Scene)
-    {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(Scene);
-        float elapsed = 0f;
-        yield return 1f;
-        while (elapsed < currentSettings.fadeDuration)
-        {
-            elapsed += Time.unscaledDeltaTime;
-            canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / currentSettings.fadeDuration);
-            yield return null;
-        }
 
-        canvasGroup.alpha = end;
+    private IEnumerator FadeAndChangeScene(string scene)
+    {
+        AsyncOperation load = SceneManager.LoadSceneAsync(scene);
+        load.allowSceneActivation = false;
+
+        yield return Fade(1f, 0f);
+
+        load.allowSceneActivation = true;
     }
 
     public void OnSubmit()
@@ -129,10 +129,6 @@ private IEnumerator TypeText()
         if (isTyping)
         {
             skipRequested = true;
-        }
-        else
-        {
-            skipRequested = false;
         }
     }
 }

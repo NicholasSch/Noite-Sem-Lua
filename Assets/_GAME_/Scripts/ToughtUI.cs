@@ -4,6 +4,8 @@ using TMPro;
 
 public class ThoughtUI : MonoBehaviour
 {
+
+    public AudioClip typingSound;
     public static ThoughtUI Instance;
 
     public GameObject panel;
@@ -49,6 +51,10 @@ public class ThoughtUI : MonoBehaviour
             }
 
             textField.maxVisibleCharacters++;
+
+            if (typingSound != null)
+                AudioManager.Instance.PlayUI(typingSound);
+
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
 

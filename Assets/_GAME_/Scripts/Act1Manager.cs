@@ -4,26 +4,35 @@ using System.Collections;
 
 public class Act1Manager : MonoBehaviour
 {
-    //public AudioSource sfxSource;
-    //public AudioClip glassCrack;
+    //Audio
+    public AudioClip apartmentMusic;
+    public AudioClip apartmentAmbience;
+    public AudioClip glassCrack;
+
+
+    //Data
     public DialogueUI blackScreenText;
 
     public void Start()
     {
+        AudioManager.Instance.PlayMusic(apartmentMusic);
+        AudioManager.Instance.PlayAmbient(apartmentAmbience);
+
             ThoughtUI.Instance.ShowThought(
-                "<color=#531182>Lucas:</color> Talvez eu devesse ler o que Dante escreveu primeiro..."
+                "<color=#531182>Lucas:</color> O advogado deixou o caderno do vovô na mesa"
             );
             return;   
     }
 
     public void ExitApartment()
     {
+        StartCoroutine(FadeMusic());
         StartCoroutine(ExitSequence());
     }
 
 private IEnumerator ExitSequence()
 {
-    DontDestroyOnLoad(blackScreenText.gameObject);
+    AudioManager.Instance.PlaySFX(glassCrack);
     DialogueSettings DoorExitText = new DialogueSettings
     {
         displayDuration = 3f,
@@ -38,5 +47,18 @@ private IEnumerator ExitSequence()
         )
     );
 
+}
+
+IEnumerator FadeMusic()
+{
+    float startVolume = AudioManager.Instance.musicSource.volume;
+
+    while (AudioManager.Instance.musicSource.volume > 0)
+    {
+        AudioManager.Instance.musicSource.volume -= startVolume * Time.deltaTime;
+        yield return null;
+    }
+
+    AudioManager.Instance.musicSource.Stop();
 }
 }
