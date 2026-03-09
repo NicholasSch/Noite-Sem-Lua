@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59bfac34e4f8f3d4eb18b0a42b844547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThoughtUI
+  typingSound: {fileID: 0}
   panel: {fileID: 7101913414110452463}
   textField: {fileID: 1467959845868304587}
   typingSpeed: 0.03

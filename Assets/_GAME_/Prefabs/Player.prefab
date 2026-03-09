@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46947fbd35c5e441b294a9b1bdc00f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  interactPrompt: {fileID: 0}
+  interactPrompt: {fileID: 4263486594766987204, guid: 0cb34e83b204f6a4ba90bf3459ac00c8, type: 3}
 --- !u!114 &7512224305222770898
 MonoBehaviour:
   m_ObjectHideFlags: 0
