@@ -5,6 +5,7 @@ public enum GameState
     Gameplay,
     Dialogue,
     Letter,
+    Journal,
     Cutscene
 }
 public class GameStateManager : MonoBehaviour

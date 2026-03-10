@@ -2354,11 +2354,7 @@ PrefabInstance:
     - target: {fileID: 3376594817937516807, guid: cfda5dfe7179d8346b75164adb783b75, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 1260930378}
-    - target: {fileID: 3376594817937516807, guid: cfda5dfe7179d8346b75164adb783b75, type: 3}
-      propertyPath: typingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
+      objectReference: {fileID: 1237749833}
     - target: {fileID: 4263486594766987204, guid: cfda5dfe7179d8346b75164adb783b75, type: 3}
       propertyPath: m_Name
       value: DialogueUI
@@ -6879,9 +6875,9 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!82 &1260930378 stripped
+--- !u!82 &1237749833 stripped
 AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6900725507563149697, guid: c4226bddaf06323489ba2438b8d68d34, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4660903120499487847, guid: c4226bddaf06323489ba2438b8d68d34, type: 3}
   m_PrefabInstance: {fileID: 9221004021124957493}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282047570
@@ -6946,10 +6942,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca3829cc3d163e48a704a4daedaf2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Act1Manager
-  apartmentMusic: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
-  apartmentAmbience: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
+  apartmentMusic: {fileID: 8300000, guid: 2dc3c3219a6d79f478ed5d38bc8df512, type: 3}
+  apartmentAmbience: {fileID: 8300000, guid: 45479ffe794fa6f49b3fa05b8cf77639, type: 3}
   glassCrack: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
   blackScreenText: {fileID: 493066510}
+  doorExitText:
+    displayDuration: 0
+    fadeDuration: 0
+    typingSpeed: 0
 --- !u!4 &1337574567
 Transform:
   m_ObjectHideFlags: 0
@@ -7332,10 +7332,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1602439532}
     m_Modifications:
-    - target: {fileID: 452810839752920630, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
-      propertyPath: typingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
     - target: {fileID: 5442754977211293960, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
       propertyPath: m_Pivot.x
       value: 0

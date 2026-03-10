@@ -71,7 +71,7 @@ public class DialogueUI : MonoBehaviour
             char letter = fullText[i];
             textField.text += letter;
 
-            if (typingSound != null && letter != ' ' && Random.value > 0.5f)
+            if (typingSound != null && letter != ' ' && Random.value > 0.65f)
             {
                 audioSource.PlayOneShot(typingSound, 0.4f);
             }

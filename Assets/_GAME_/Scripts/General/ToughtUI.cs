@@ -63,7 +63,7 @@ public class ThoughtUI : MonoBehaviour
 
             soundCounter++;
 
-            if (typingSound != null && Random.value > 0.6f)
+            if (typingSound != null && Random.value > 0.65f)
             {
                 AudioManager.Instance.PlayUI(typingSound);
             }

@@ -194,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   panel: {fileID: 3177211976250826878}
   textField: {fileID: 4440170099324918137}
+  typingSound: {fileID: 8300000, guid: 9507c3765913e914aa4b1867c9bfd4e4, type: 3}
+  audioSource: {fileID: 0}
 --- !u!225 &-5899554680323811969
 CanvasGroup:
   m_ObjectHideFlags: 0

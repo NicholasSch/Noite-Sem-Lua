@@ -25,7 +25,6 @@ public class Act1Manager : MonoBehaviour
     IEnumerator StartSequence()
     {
         // Start ambience
-        AudioManager.Instance.PlayMusic(apartmentMusic);
         AudioManager.Instance.PlayAmbient(apartmentAmbience);
 
         // Intro thought
@@ -34,7 +33,11 @@ public class Act1Manager : MonoBehaviour
             "<color=#531182>Lucas:</color> O advogado deixou o caderno do vovô na mesa."
         };
 
+        yield return new WaitForSecondsRealtime(3f);
+        AudioManager.Instance.PlayMusic(apartmentMusic);
+        yield return new WaitForSecondsRealtime(1f);
         yield return ThoughtUI.Instance.PlaySequence(intro);
+        
     }
 
     public void ExitApartment()

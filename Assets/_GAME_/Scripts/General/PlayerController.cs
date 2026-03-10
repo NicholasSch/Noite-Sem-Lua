@@ -1,9 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 [SelectionBase]
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private GameObject interactPrompt;
@@ -40,6 +40,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameStateManager.CurrentState != GameState.Gameplay)
+        {
+            rigidBody.linearVelocity = Vector2.zero;
+            return;
+        }
         rigidBody.linearVelocity = moveInput.normalized * moveSpeed * Time.fixedDeltaTime;
         CalculateFacingDirection();
         UpdateAnimation();
@@ -159,6 +164,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (value.isPressed && currentInteractable != null)
         {
             currentInteractable.Interact();
+            interactPrompt.SetActive(false);
         }
     }
     private void OnClick(InputValue value)
@@ -192,5 +198,33 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         JournalInteractable journal = FindFirstObjectByType<JournalInteractable>();
         return journal != null && journal.LetterIsOpen();
+    }
+
+    public void LookAtTarget(Transform target)
+    {
+        Vector2 dir = target.position - transform.position;
+
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            if (dir.x > 0)
+                facingDirection = Directions.RIGHT;
+            else
+                facingDirection = Directions.LEFT;
+        }
+        else
+        {
+            if (dir.y > 0)
+                facingDirection = Directions.UP;
+            else
+                facingDirection = Directions.DOWN;
+        }
+
+        UpdateAnimation();
+    }
+
+    public void ForceFaceUp()
+    {
+        facingDirection = Directions.UP;
+        UpdateAnimation();
     }
 }
