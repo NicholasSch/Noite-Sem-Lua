@@ -4,13 +4,13 @@ public class DoorInteractable : MonoBehaviour, IInteractable
 {
     public Act1Manager actManager;
 
-    public DialogueUI dialogueUI;
+    public NarrationUI narrationUI;
 
     public void Interact()
     {
-    if (!GameStateManager.LetterWasRead){
-        dialogueUI.StartCoroutine(
-        dialogueUI.ShowTextRoutine("Eu deveria ler a carta do vovô primeiro",null)
+    if (!ProgressionManager.Instance.LetterOpened){
+        narrationUI.StartCoroutine(
+        narrationUI.ShowTextRoutine("Eu deveria ler a carta do vovô primeiro",null)
     );
     return;
     }

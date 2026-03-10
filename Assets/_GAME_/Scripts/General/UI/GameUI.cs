@@ -4,15 +4,13 @@ public class GameUI : MonoBehaviour
 {
     public GameObject journalPrefab;
 
-    public Transform scenarioUIParent; 
-
     JournalUI journal;
 
     public void OpenJournal()
     {
         if(GameStateManager.CurrentState == GameState.Gameplay)
         {
-            GameObject obj = Instantiate(journalPrefab, scenarioUIParent);
+            GameObject obj = Instantiate(journalPrefab);
 
 
             journal = obj.GetComponent<JournalUI>();

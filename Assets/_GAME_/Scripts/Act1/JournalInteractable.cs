@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class JournalInteractable : MonoBehaviour, IInteractable
 {
-    public static bool letterWasRead = false;
     public GameObject GameUI;
     public GameObject LetterUI;
 
@@ -37,7 +36,7 @@ public void Interact()
     GameUI.SetActive(true);
     Time.timeScale = 1f;
 
-    GameStateManager.LetterWasRead = true;
+    ProgressionManager.Instance.LetterOpened = true;
     GameStateManager.CurrentState = GameState.Gameplay;
     }
 

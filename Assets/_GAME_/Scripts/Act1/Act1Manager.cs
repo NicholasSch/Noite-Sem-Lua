@@ -11,11 +11,11 @@ public class Act1Manager : MonoBehaviour
 
     // UI
     [Header("UI")]
-    public DialogueUI blackScreenText;
+    public NarrationUI blackScreenText;
 
     // SETTINGS
     [Header("Exit Dialogue Settings")]
-    public DialogueSettings doorExitText;
+    public NarrationSettings doorExitText;
 
     void Start()
     {
@@ -51,7 +51,7 @@ public class Act1Manager : MonoBehaviour
         AudioManager.Instance.PlaySFX(glassCrack);
 
         // fade music
-        yield return StartCoroutine(FadeMusic(2f));
+        StartCoroutine(FadeMusic(2f));
 
         // show final text
         yield return blackScreenText.ShowTextRoutine(

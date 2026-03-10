@@ -8,6 +8,8 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
     public Transform walkTarget;
 
+    public bool talkedto;
+
     private string[] lines =
     {
         "<color=#531182>Lucas:</color>Que mulher estranha",
@@ -27,7 +29,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (talking) return;
-
+        ProgressionManager.Instance.talkedToDonaCurio = true;
         StartCoroutine(InteractionRoutine());
     }
 

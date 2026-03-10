@@ -16,11 +16,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public LayerMask interactionMask;
 
     //Data
     private Vector2 moveInput = Vector2.zero;
     private Directions facingDirection = Directions.RIGHT;
     private float moveSpeed = 120f;
+
+    public float interactRange = 2f;
 
     //Animations
     private readonly int animWalkSide = Animator.StringToHash("Anim_Player_Walk_Side");
@@ -143,22 +146,21 @@ public class PlayerController : MonoBehaviour
         animator.CrossFade(animation,0);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        currentInteractable = other.GetComponent<IInteractable>();
+    public void SetInteractable(IInteractable interactable)
+{
+    currentInteractable = interactable;
+    if (GameStateManager.CurrentState == GameState.Gameplay)
+        interactPrompt.SetActive(true);
+}
 
-        if (currentInteractable != null && GameStateManager.CurrentState == GameState.Gameplay)
-            interactPrompt.SetActive(true);
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
+public void ClearInteractable(IInteractable interactable)
+{
+    if (currentInteractable == interactable)
     {
-        if (other.GetComponent<IInteractable>() != null)
-        {
-            currentInteractable = null;
-            interactPrompt.SetActive(false);
-        }
+        currentInteractable = null;
+        interactPrompt.SetActive(false);
     }
+}
 
     private void OnInteract(InputValue value)
     {
@@ -177,24 +179,22 @@ public class PlayerController : MonoBehaviour
 
         switch (GameStateManager.CurrentState)
         {
-            case GameState.Dialogue:
-                FindFirstObjectByType<DialogueUI>().OnSubmit();
+            case GameState.Narration:
+                FindFirstObjectByType<NarrationUI>().OnSubmit();
                 break;
 
             case GameState.Letter:
                 FindFirstObjectByType<JournalInteractable>().Close();
                 break;
-
-            case GameState.Gameplay:
-                if (currentInteractable != null)
-                    currentInteractable.Interact();
+                
+            default:
                 break;
         }
     }
     private bool DialogueUIActive()
     {
-        DialogueUI ui = FindFirstObjectByType<DialogueUI>();
-        return ui != null && ui.gameObject.activeInHierarchy;
+        NarrationUI narrationUI = FindFirstObjectByType<NarrationUI>();
+        return narrationUI != null && narrationUI.gameObject.activeInHierarchy;
     }
 
     private bool LetterIsOpen()

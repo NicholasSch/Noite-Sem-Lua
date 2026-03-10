@@ -23,7 +23,10 @@ public class MillInteractable : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (TaskManager.Instance.IsCompleted("Mill_Gears"))
+        {
+            Destroy(gameObject);
             return;
+        }
 
         player.ForceFaceUp();
         StartCoroutine(InteractionRoutine());
@@ -35,7 +38,7 @@ public class MillInteractable : MonoBehaviour, IInteractable
 
         audioSource.PlayOneShot(gearSound);
 
-        GameStateManager.CurrentState = GameState.Dialogue;
+        GameStateManager.CurrentState = GameState.Thought;
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 

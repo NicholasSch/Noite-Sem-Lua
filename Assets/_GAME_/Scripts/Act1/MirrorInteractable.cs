@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class MirrorInteractable : MonoBehaviour, IInteractable
 {
-    public DialogueUI dialogueUI;
+    public NarrationUI narrationUI;
 
     public void Interact()
     {
-    dialogueUI.StartCoroutine(
-        dialogueUI.ShowTextRoutine("Você vê seu reflexo no espelho. Você Parece exausto.",null)
+    narrationUI.StartCoroutine(
+        narrationUI.ShowTextRoutine("Você vê seu reflexo no espelho. Você Parece exausto.",null)
     );
     }
 }

@@ -1,11 +1,11 @@
 [System.Serializable]
-public struct DialogueSettings
+public struct NarrationSettings
 {
     public float displayDuration;
     public float fadeDuration;
     public float typingSpeed;
 
-    public static DialogueSettings Default => new DialogueSettings
+    public static NarrationSettings Default => new NarrationSettings
     {
         displayDuration = 2f,
         fadeDuration = 0.5f,

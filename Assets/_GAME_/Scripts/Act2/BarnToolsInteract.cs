@@ -21,7 +21,10 @@ public class BarnToolsInteract : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (TaskManager.Instance.IsCompleted("Barn_Tools"))
+        {
+            Destroy(gameObject);
             return;
+        }
         player.ForceFaceUp();
         StartCoroutine(InteractionRoutine());
     }
@@ -30,7 +33,7 @@ public class BarnToolsInteract : MonoBehaviour, IInteractable
     {
         TaskManager.Instance.CompleteTask("Barn_Tools");
 
-        GameStateManager.CurrentState = GameState.Dialogue;
+        GameStateManager.CurrentState = GameState.Thought;
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 

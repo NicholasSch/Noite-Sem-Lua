@@ -5,7 +5,7 @@ public class HouseInteractable : MonoBehaviour, IInteractable
 {
     public AudioClip doorSound;
 
-    public DialogueUI dialogueUI;
+    public NarrationUI narrationUI;
     public void Interact()
     {
 
@@ -17,10 +17,10 @@ public class HouseInteractable : MonoBehaviour, IInteractable
         AudioManager.Instance.PlaySFX(doorSound);
 
         // fade music
-        yield return StartCoroutine(FadeMusic(2f));
+        StartCoroutine(FadeMusic(2f));
 
         // change scene
-        yield return dialogueUI.ShowTextRoutine(
+        yield return narrationUI.ShowTextRoutine(
             "",
             "House_Day"
         );

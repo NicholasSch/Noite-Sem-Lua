@@ -3,14 +3,14 @@ using UnityEngine;
 public enum GameState
 {
     Gameplay,
-    Dialogue,
-    Letter,
+    Narration,
+    Thought,
     Journal,
+    Letter,
     Cutscene
 }
 public class GameStateManager : MonoBehaviour
 {
-public static bool LetterWasRead;
 public static GameState CurrentState = GameState.Gameplay;
 
 }

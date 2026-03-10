@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 
-public class DialogueUI : MonoBehaviour
+public class NarrationUI : MonoBehaviour
 {
     public GameObject panel;
     public TextMeshProUGUI textField;
@@ -16,7 +16,7 @@ public class DialogueUI : MonoBehaviour
     private bool isTyping;
 
     private string fullText;
-    private DialogueSettings currentSettings;
+    private NarrationSettings currentSettings;
 
     void Awake()
     {
@@ -26,9 +26,9 @@ public class DialogueUI : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 
-    public IEnumerator ShowTextRoutine(string text, DialogueSettings settings, string scene = null)
+    public IEnumerator ShowTextRoutine(string text, NarrationSettings settings, string scene = null)
     {
-        GameStateManager.CurrentState = GameState.Dialogue;
+        GameStateManager.CurrentState = GameState.Narration;
 
         currentSettings = settings;
         fullText = text;
@@ -41,7 +41,7 @@ public class DialogueUI : MonoBehaviour
 
     public IEnumerator ShowTextRoutine(string text, string scene = null)
     {
-        return ShowTextRoutine(text, DialogueSettings.Default, scene);
+        return ShowTextRoutine(text, NarrationSettings.Default, scene);
     }
 
     private IEnumerator ShowRoutine(string scene)
