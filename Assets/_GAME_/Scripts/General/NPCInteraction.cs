@@ -8,9 +8,12 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
     public Transform walkTarget;
 
-    public string[] lines =
-        {
-        };
+    private string[] lines =
+    {
+        "<color=#531182>Lucas:</color>Que mulher estranha",
+        "Este lugar é estranho",
+        "Bom eu deveria fazer o que o caderno manda agora"
+    };
 
     bool talking;
 

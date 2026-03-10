@@ -7,7 +7,6 @@ public class SceneIntro : MonoBehaviour
     public GameUI gameui;
     IEnumerator Start()
     {
-
         yield return new WaitForSeconds(1f);
 
         string[] lines =
@@ -18,9 +17,5 @@ public class SceneIntro : MonoBehaviour
         };
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
-
-        GameStateManager.CurrentState = GameState.Gameplay;
-
-        gameui.OpenJournal();
     }
 }

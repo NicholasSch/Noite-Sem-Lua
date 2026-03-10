@@ -4,23 +4,24 @@ public class GameUI : MonoBehaviour
 {
     public GameObject journalPrefab;
 
-    JournalUI currentJournal;
+    public Transform scenarioUIParent; 
+
+    JournalUI journal;
 
     public void OpenJournal()
-    {   
-        if (GameStateManager.CurrentState != GameState.Gameplay)
+    {
+        if(GameStateManager.CurrentState == GameState.Gameplay)
         {
-            return;
+            GameObject obj = Instantiate(journalPrefab, scenarioUIParent);
+
+
+            journal = obj.GetComponent<JournalUI>();
+            journal.Setup(
+                JournalSystem.Instance.GetLeftPage(),
+                JournalSystem.Instance.GetRightPage()
+            );
+
+            GameStateManager.CurrentState = GameState.Journal;
         }
-
-        GameStateManager.CurrentState = GameState.Journal;
-
-        GameObject obj = Instantiate(journalPrefab, transform);
-        currentJournal = obj.GetComponent<JournalUI>();
-
-        currentJournal.Setup(
-            JournalSystem.Instance.GetLeftPage(),
-            JournalSystem.Instance.GetRightPage()
-        );
     }
 }

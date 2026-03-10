@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.EventSystems;
+using System.Collections;
 
 [SelectionBase]
 public class PlayerController : MonoBehaviour
@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
         if (GameStateManager.CurrentState != GameState.Gameplay)
         {
             rigidBody.linearVelocity = Vector2.zero;
+            moveInput = Vector2.zero;
+            UpdateAnimation();
             return;
         }
         rigidBody.linearVelocity = moveInput.normalized * moveSpeed * Time.fixedDeltaTime;
@@ -131,7 +133,7 @@ public class PlayerController : MonoBehaviour
                 {
                     animation = animWalkSide; 
                 }
-                else
+                else 
                 {
                     animation = animIdleSide; 
                 }
@@ -171,6 +173,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!value.isPressed)
             return;
+
 
         switch (GameStateManager.CurrentState)
         {
@@ -227,4 +230,37 @@ public class PlayerController : MonoBehaviour
         facingDirection = Directions.UP;
         UpdateAnimation();
     }
+    public void ForceFaceDown()
+    {
+        facingDirection = Directions.DOWN;
+        UpdateAnimation();
+    }
+
+    public IEnumerator MoveTo(Vector2 targetPosition, float speed = 2f)
+    {
+        GameStateManager.CurrentState = GameState.Cutscene;
+
+        while (Vector2.Distance(transform.position, targetPosition) > 0.05f)
+        {
+            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+
+            moveInput = direction;
+
+            rigidBody.linearVelocity = direction * speed;
+
+            CalculateFacingDirection();
+            UpdateAnimation();
+
+            yield return new WaitForFixedUpdate();
+        }
+
+        rigidBody.linearVelocity = Vector2.zero;
+        moveInput = Vector2.zero;
+
+        UpdateAnimation();
+
+        GameStateManager.CurrentState = GameState.Gameplay;
+    }
+
+    
 }

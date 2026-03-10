@@ -7,15 +7,15 @@ public class JournalSystem : MonoBehaviour
 
     class Task
     {
+        public string id;
         public string title;
         public string description;
-        public bool completed;
 
-        public Task(string title, string description)
+        public Task(string id, string title, string description)
         {
+            this.id = id;
             this.title = title;
             this.description = description;
-            completed = false;
         }
     }
 
@@ -39,13 +39,11 @@ public class JournalSystem : MonoBehaviour
 
         tasks.Clear();
 
-        tasks.Add(new Task(
-            "Reconhecimento do Chão",
-            "O Engenho não gosta de estranhos. Caminhe pelos limites, toque as ferramentas e mostre à terra que o sangue de Dante ainda corre aqui."
-        ));
+        tasks.Add(new Task("Barn_Tools","O Reconhecimento do Chão: (Interaja com o celeiro)", 
+        "O Engenho não gosta de estranhos. Caminhe pelos limites, toque as ferramentas e mostre à terra que o sangue de Dante ainda corre aqui."));
 
-        tasks.Add(new Task(
-            "Coração de Pedra",
+        tasks.Add(new Task("Mill_Gears",
+            "Coração de Pedra: (Interaja com o moinho)",
             "O moinho parou quando eu me cansei. Verifique se as engrenagens ainda lembram como girar. Elas guardam o que o vento traz."
         ));
     }
@@ -61,7 +59,8 @@ public class JournalSystem : MonoBehaviour
 
         foreach (Task task in tasks)
         {
-            string checkbox = task.completed ? "☑ " : "☐ ";
+            bool completed = TaskManager.Instance.IsCompleted(task.id);
+            string checkbox = completed ? "[X] " : "[ ] ";
 
             text += checkbox + task.title + "\n";
             text += "   " + task.description + "\n\n";

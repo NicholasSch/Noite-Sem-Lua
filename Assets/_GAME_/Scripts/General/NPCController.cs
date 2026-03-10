@@ -29,7 +29,7 @@ public class NPCController : MonoBehaviour
 
             yield return null;
         }
-
+        
         animator.SetBool("IsWalking", false);
     }
 
