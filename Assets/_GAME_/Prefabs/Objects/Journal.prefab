@@ -106,9 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a71433f764cd5b48a561fc2485d5a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JournalInteractable
-  GameUI: {fileID: 0}
-  LetterUI: {fileID: 0}
-  isOpen: 0
+  gameUI: {fileID: 4263486594766987204, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
+  letterPrefab: {fileID: 7337345253208050567, guid: f1f05514ae6a9e94fb1b275c21588962, type: 3}
 --- !u!50 &2041140044682771316
 Rigidbody2D:
   serializedVersion: 5

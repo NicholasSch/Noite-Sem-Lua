@@ -1,19 +1,18 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
-    public Animator animator;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float moveSpeed = 3f;
 
-
-    public float moveSpeed = 3f;
-
-
-    void Awake()
+    private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
-
 
     public IEnumerator WalkTo(Transform target)
     {
@@ -29,8 +28,7 @@ public class NPCController : MonoBehaviour
 
             yield return null;
         }
-        
+
         animator.SetBool("IsWalking", false);
     }
-
 }

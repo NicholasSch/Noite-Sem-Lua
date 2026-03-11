@@ -1,34 +1,34 @@
 using System.Collections;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class ThoughtUI : MonoBehaviour
 {
-    public static ThoughtUI Instance;
+    public static ThoughtUI Instance { get; private set; }
 
-    public GameObject panel;
-    public TextMeshProUGUI textField;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private TextMeshProUGUI textField;
+    [SerializeField] private AudioClip typingSound;
+    [SerializeField] private float typingSpeed = 0.03f;
+    [SerializeField] private float displayTime = 1f;
 
-    public AudioClip typingSound;
+    private bool skip;
 
-    public float typingSpeed = 0.03f;
-    public float displayTime = 1f;
-
-    bool skip;
-    Coroutine routine;
-
-    void Awake()
+    private void Awake()
     {
-        Instance = this;
-        panel.SetActive(false);
+        if (Instance == null)
+        {
+            Instance = this;
+            panel.SetActive(false);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Plays a sequence of thoughts
     public IEnumerator PlaySequence(string[] lines)
     {
-        if (routine != null)
-            StopCoroutine(routine);
-
         panel.SetActive(true);
 
         for (int i = 0; i < lines.Length; i++)
@@ -39,7 +39,7 @@ public class ThoughtUI : MonoBehaviour
         panel.SetActive(false);
     }
 
-    IEnumerator RunLine(string text)
+    private IEnumerator RunLine(string text)
     {
         skip = false;
 
@@ -48,8 +48,6 @@ public class ThoughtUI : MonoBehaviour
 
         int totalCharacters = textField.textInfo.characterCount;
         textField.maxVisibleCharacters = 0;
-
-        int soundCounter = 0;
 
         while (textField.maxVisibleCharacters < totalCharacters)
         {
@@ -60,8 +58,6 @@ public class ThoughtUI : MonoBehaviour
             }
 
             textField.maxVisibleCharacters++;
-
-            soundCounter++;
 
             if (typingSound != null && Random.value > 0.65f)
             {

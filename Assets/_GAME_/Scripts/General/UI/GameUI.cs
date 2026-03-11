@@ -2,24 +2,23 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    public GameObject journalPrefab;
+    [SerializeField] private GameObject journalPrefab;
 
-    JournalUI journal;
+    private JournalUI journal;
 
     public void OpenJournal()
     {
-        if(GameStateManager.CurrentState == GameState.Gameplay)
-        {
-            GameObject obj = Instantiate(journalPrefab);
+        if (GameStateManager.CurrentState != GameState.Gameplay)
+            return;
 
+        GameObject obj = Instantiate(journalPrefab);
 
-            journal = obj.GetComponent<JournalUI>();
-            journal.Setup(
-                JournalSystem.Instance.GetLeftPage(),
-                JournalSystem.Instance.GetRightPage()
-            );
+        journal = obj.GetComponent<JournalUI>();
+        journal.Setup(
+            JournalSystem.Instance.GetLeftPage(),
+            JournalSystem.Instance.GetRightPage()
+        );
 
-            GameStateManager.CurrentState = GameState.Journal;
-        }
+        GameStateManager.SetState(GameState.Journal);
     }
 }

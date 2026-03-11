@@ -1,32 +1,46 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class TaskManager : MonoBehaviour
 {
-    public static TaskManager Instance;
+    public static TaskManager Instance { get; private set; }
 
-    HashSet<string> completedTasks = new HashSet<string>();
+    private readonly HashSet<string> completedTasks = new();
 
-    void Awake()
+    private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
-    {   
-        foreach (var task in ProgressionManager.Instance.completedTaskIDs) 
-        {
+    {
+        if (ProgressionManager.Instance == null)
+            return;
 
+        completedTasks.Clear();
+
+        foreach (string task in ProgressionManager.Instance.completedTaskIDs)
+        {
             completedTasks.Add(task);
-            
         }
     }
 
     public void CompleteTask(string id)
     {
+        if (string.IsNullOrWhiteSpace(id))
+            return;
 
-        completedTasks.Add(id);
-        ProgressionManager.Instance.completedTaskIDs.Add(id);
+        if (completedTasks.Add(id))
+        {
+            ProgressionManager.Instance.CompleteTask(id);
+        }
     }
 
     public bool IsCompleted(string id)

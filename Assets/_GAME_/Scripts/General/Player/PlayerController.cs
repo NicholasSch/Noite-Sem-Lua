@@ -1,31 +1,36 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 
 [SelectionBase]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject interactPromptPrefab;
+    [SerializeField] private float walkSpeed = 120f;
+    [SerializeField] private float runSpeed = 180f;
 
-    [SerializeField] private GameObject interactPrompt;
-    private enum Directions {UP, DOWN, LEFT, RIGHT}; 
+    private enum Directions
+    {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    }
 
     private IInteractable currentInteractable;
-    
+    private GameObject currentInteractPrompt;
 
-    //Dependencies
     private Rigidbody2D rigidBody;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    public LayerMask interactionMask;
 
-    //Data
     private Vector2 moveInput = Vector2.zero;
     private Directions facingDirection = Directions.RIGHT;
-    private float moveSpeed = 120f;
+    private bool isRunning;
+    private bool isScriptedMoving;
+    private float currentMoveSpeed;
+    private int currentAnimation = -1;
 
-    public float interactRange = 2f;
-
-    //Animations
     private readonly int animWalkSide = Animator.StringToHash("Anim_Player_Walk_Side");
     private readonly int animIdleSide = Animator.StringToHash("Anim_Player_Idle_Side");
     private readonly int animWalkDown = Animator.StringToHash("Anim_Player_Walk_Down");
@@ -33,68 +38,85 @@ public class PlayerController : MonoBehaviour
     private readonly int animWalkUP = Animator.StringToHash("Anim_Player_Walk_UP");
     private readonly int animIdleUP = Animator.StringToHash("Anim_Player_Idle_UP");
 
-    private void Start()
+    private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();  
-
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        currentMoveSpeed = walkSpeed;
     }
 
     private void FixedUpdate()
     {
-        if (GameStateManager.CurrentState != GameState.Gameplay)
+        if (GameStateManager.CurrentState == GameState.Gameplay)
         {
-            rigidBody.linearVelocity = Vector2.zero;
-            moveInput = Vector2.zero;
+            currentMoveSpeed = isRunning ? runSpeed : walkSpeed;
+            rigidBody.linearVelocity = moveInput.normalized * currentMoveSpeed * Time.fixedDeltaTime;
+
+            CalculateFacingDirection();
             UpdateAnimation();
             return;
         }
-        rigidBody.linearVelocity = moveInput.normalized * moveSpeed * Time.fixedDeltaTime;
-        CalculateFacingDirection();
+
+        if (isScriptedMoving)
+        {
+            CalculateFacingDirection();
+            UpdateAnimation();
+            return;
+        }
+
+        rigidBody.linearVelocity = Vector2.zero;
+        moveInput = Vector2.zero;
         UpdateAnimation();
     }
 
     private void LateUpdate()
     {
-        if (interactPrompt != null)
-            interactPrompt.transform.position = transform.position + Vector3.up * 1.14f;
+        if (currentInteractPrompt != null)
+        {
+            currentInteractPrompt.transform.position = transform.position + Vector3.up * 1.14f;
+        }
     }
 
     private void OnMove(InputValue value)
     {
+        if (GameStateManager.CurrentState != GameState.Gameplay || isScriptedMoving)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
+
         moveInput = value.Get<Vector2>();
     }
 
-    private void CalculateFacingDirection ()
+    private void OnRun(InputValue value)
     {
-        if (moveInput.x != 0)
+        if (GameStateManager.CurrentState != GameState.Gameplay || isScriptedMoving)
         {
-            if (moveInput.x > 0)
-            {
-                facingDirection = Directions.RIGHT;
-            }
-            else if(moveInput.x < 0)
-            {
-                facingDirection = Directions.LEFT;
-            }
+            isRunning = false;
+            return;
         }
 
-        else if (moveInput.y != 0)
+        isRunning = value.isPressed;
+    }
+
+    private void CalculateFacingDirection()
+    {
+        if (moveInput.x != 0f)
         {
-            if (moveInput.y > 0)
-            {
-                facingDirection = Directions.UP;
-            }
-            else if(moveInput.y < 0)
-            {
-                facingDirection = Directions.DOWN;
-            }
+            facingDirection = moveInput.x > 0f ? Directions.RIGHT : Directions.LEFT;
+        }
+        else if (moveInput.y != 0f)
+        {
+            facingDirection = moveInput.y > 0f ? Directions.UP : Directions.DOWN;
         }
     }
 
     private void UpdateAnimation()
     {
+        if (spriteRenderer == null || animator == null)
+            return;
+
         if (facingDirection == Directions.LEFT)
         {
             spriteRenderer.flipX = true;
@@ -104,103 +126,106 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        bool isMoving = moveInput.SqrMagnitude() > 0;
-        int animation = animWalkSide;
+        bool isMoving = moveInput.sqrMagnitude > 0.0001f;
+        int targetAnimation = animIdleSide;
 
-        switch(facingDirection)
+        switch (facingDirection)
         {
             case Directions.UP:
-                if(isMoving && moveSpeed == 120f)
-                {
-                    animation = animWalkUP; 
-                }
-                else
-                {
-                    animation = animIdleUP; 
-                }
+                targetAnimation = isMoving ? animWalkUP : animIdleUP;
                 break;
+
             case Directions.DOWN:
-                if(isMoving && moveSpeed == 120f)
-                {
-                    animation = animWalkDown; 
-                }
-                else
-                {
-                    animation = animIdleDown; 
-                }
+                targetAnimation = isMoving ? animWalkDown : animIdleDown;
                 break;
-            case Directions.LEFT:
-            case Directions.RIGHT:
+
             default:
-                if(isMoving && moveSpeed == 120f)
-                {
-                    animation = animWalkSide; 
-                }
-                else 
-                {
-                    animation = animIdleSide; 
-                }
+                targetAnimation = isMoving ? animWalkSide : animIdleSide;
                 break;
         }
 
-        animator.CrossFade(animation,0);
+        if (currentAnimation == targetAnimation)
+            return;
+
+        currentAnimation = targetAnimation;
+        animator.CrossFade(targetAnimation, 0.08f);
     }
 
     public void SetInteractable(IInteractable interactable)
-{
-    currentInteractable = interactable;
-    if (GameStateManager.CurrentState == GameState.Gameplay)
-        interactPrompt.SetActive(true);
-}
-
-public void ClearInteractable(IInteractable interactable)
-{
-    if (currentInteractable == interactable)
     {
-        currentInteractable = null;
-        interactPrompt.SetActive(false);
+        currentInteractable = interactable;
+
+        if (GameStateManager.CurrentState == GameState.Gameplay)
+        {
+            ShowInteractPrompt();
+        }
     }
-}
+
+    public void ClearInteractable(IInteractable interactable)
+    {
+        if (currentInteractable != interactable)
+            return;
+
+        currentInteractable = null;
+        HideInteractPrompt();
+    }
+
+    private void ShowInteractPrompt()
+    {
+        if (interactPromptPrefab == null || currentInteractPrompt != null)
+            return;
+
+        currentInteractPrompt = Instantiate(
+            interactPromptPrefab,
+            transform.position + Vector3.up * 1.14f,
+            Quaternion.identity
+        );
+    }
+
+    private void HideInteractPrompt()
+    {
+        if (currentInteractPrompt == null)
+            return;
+
+        GameObject prompt = currentInteractPrompt;
+        currentInteractPrompt = null;
+        Destroy(prompt);
+    }
 
     private void OnInteract(InputValue value)
     {
+        if (!value.isPressed)
+            return;
 
-        if (value.isPressed && currentInteractable != null)
-        {
-            currentInteractable.Interact();
-            interactPrompt.SetActive(false);
-        }
+        if (GameStateManager.CurrentState != GameState.Gameplay)
+            return;
+
+        if (currentInteractable == null)
+            return;
+
+        currentInteractable.Interact();
+        HideInteractPrompt();
     }
+
     private void OnClick(InputValue value)
     {
         if (!value.isPressed)
             return;
 
-
         switch (GameStateManager.CurrentState)
         {
             case GameState.Narration:
-                FindFirstObjectByType<NarrationUI>().OnSubmit();
+                FindFirstObjectByType<NarrationUI>()?.OnSubmit();
                 break;
 
             case GameState.Letter:
-                FindFirstObjectByType<JournalInteractable>().Close();
+                FindFirstObjectByType<LetterUI>()?.Close();
                 break;
-                
-            default:
+
+            case GameState.Thought:
+                ThoughtUI.Instance?.Skip();
                 break;
         }
-    }
-    private bool DialogueUIActive()
-    {
-        NarrationUI narrationUI = FindFirstObjectByType<NarrationUI>();
-        return narrationUI != null && narrationUI.gameObject.activeInHierarchy;
-    }
-
-    private bool LetterIsOpen()
-    {
-        JournalInteractable journal = FindFirstObjectByType<JournalInteractable>();
-        return journal != null && journal.LetterIsOpen();
     }
 
     public void LookAtTarget(Transform target)
@@ -209,17 +234,11 @@ public void ClearInteractable(IInteractable interactable)
 
         if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
         {
-            if (dir.x > 0)
-                facingDirection = Directions.RIGHT;
-            else
-                facingDirection = Directions.LEFT;
+            facingDirection = dir.x > 0f ? Directions.RIGHT : Directions.LEFT;
         }
         else
         {
-            if (dir.y > 0)
-                facingDirection = Directions.UP;
-            else
-                facingDirection = Directions.DOWN;
+            facingDirection = dir.y > 0f ? Directions.UP : Directions.DOWN;
         }
 
         UpdateAnimation();
@@ -228,25 +247,33 @@ public void ClearInteractable(IInteractable interactable)
     public void ForceFaceUp()
     {
         facingDirection = Directions.UP;
+        moveInput = Vector2.zero;
         UpdateAnimation();
     }
+
     public void ForceFaceDown()
     {
         facingDirection = Directions.DOWN;
+        moveInput = Vector2.zero;
         UpdateAnimation();
     }
 
-    public IEnumerator MoveTo(Vector2 targetPosition, float speed = 2f)
+    public IEnumerator MoveTo(Vector2 targetPosition, float speed = 2f, bool restoreGameplayState = false)
     {
-        GameStateManager.CurrentState = GameState.Cutscene;
+        GameStateManager.SetState(GameState.Cutscene);
+        HideInteractPrompt();
+        isScriptedMoving = true;
+        isRunning = false;
 
-        while (Vector2.Distance(transform.position, targetPosition) > 0.05f)
+        while (Vector2.Distance(rigidBody.position, targetPosition) > 0.05f)
         {
-            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+            Vector2 direction = (targetPosition - rigidBody.position).normalized;
 
             moveInput = direction;
 
-            rigidBody.linearVelocity = direction * speed;
+            rigidBody.MovePosition(
+                Vector2.MoveTowards(rigidBody.position, targetPosition, speed * Time.fixedDeltaTime)
+            );
 
             CalculateFacingDirection();
             UpdateAnimation();
@@ -254,13 +281,20 @@ public void ClearInteractable(IInteractable interactable)
             yield return new WaitForFixedUpdate();
         }
 
+        rigidBody.MovePosition(targetPosition);
         rigidBody.linearVelocity = Vector2.zero;
         moveInput = Vector2.zero;
-
+        isScriptedMoving = false;
         UpdateAnimation();
 
-        GameStateManager.CurrentState = GameState.Gameplay;
-    }
+        if (restoreGameplayState)
+        {
+            GameStateManager.SetState(GameState.Gameplay);
 
-    
+            if (currentInteractable != null)
+            {
+                ShowInteractPrompt();
+            }
+        }
+    }
 }

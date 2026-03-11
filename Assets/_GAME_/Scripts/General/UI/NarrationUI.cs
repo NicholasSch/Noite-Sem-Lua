@@ -1,34 +1,32 @@
+using System.Collections;
+using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using System.Collections;
 
 public class NarrationUI : MonoBehaviour
 {
-    public GameObject panel;
-    public TextMeshProUGUI textField;
-    public AudioClip typingSound;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private TextMeshProUGUI textField;
+    [SerializeField] private AudioClip typingSound;
+    [SerializeField] private AudioSource audioSource;
 
     private CanvasGroup canvasGroup;
-    public AudioSource audioSource;
-
     private bool skipRequested;
     private bool isTyping;
-
     private string fullText;
     private NarrationSettings currentSettings;
 
-    void Awake()
+    private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-
         panel.SetActive(false);
         canvasGroup.alpha = 0f;
     }
 
     public IEnumerator ShowTextRoutine(string text, NarrationSettings settings, string scene = null)
     {
-        GameStateManager.CurrentState = GameState.Narration;
+        GameStateManager.SetState(GameState.Narration);
 
         currentSettings = settings;
         fullText = text;
@@ -36,12 +34,12 @@ public class NarrationUI : MonoBehaviour
         panel.SetActive(true);
         textField.text = "";
 
-        yield return StartCoroutine(ShowRoutine(scene));
+        yield return ShowRoutine(scene);
     }
 
     public IEnumerator ShowTextRoutine(string text, string scene = null)
     {
-        return ShowTextRoutine(text, NarrationSettings.Default, scene);
+        yield return ShowTextRoutine(text, NarrationSettings.Default, scene);
     }
 
     private IEnumerator ShowRoutine(string scene)
@@ -57,8 +55,9 @@ public class NarrationUI : MonoBehaviour
     {
         isTyping = true;
         skipRequested = false;
-
         textField.text = "";
+
+        StringBuilder builder = new StringBuilder();
 
         for (int i = 0; i < fullText.Length; i++)
         {
@@ -68,10 +67,25 @@ public class NarrationUI : MonoBehaviour
                 break;
             }
 
-            char letter = fullText[i];
-            textField.text += letter;
+            char character = fullText[i];
 
-            if (typingSound != null && letter != ' ' && Random.value > 0.65f)
+            if (character == '<')
+            {
+                int closingIndex = fullText.IndexOf('>', i);
+
+                if (closingIndex != -1)
+                {
+                    builder.Append(fullText, i, closingIndex - i + 1);
+                    textField.text = builder.ToString();
+                    i = closingIndex;
+                    continue;
+                }
+            }
+
+            builder.Append(character);
+            textField.text = builder.ToString();
+
+            if (typingSound != null && character != ' ' && Random.value > 0.65f)
             {
                 audioSource.PlayOneShot(typingSound, 0.4f);
             }
@@ -97,7 +111,7 @@ public class NarrationUI : MonoBehaviour
 
         panel.SetActive(false);
         Time.timeScale = 1f;
-        GameStateManager.CurrentState = GameState.Gameplay;
+        GameStateManager.SetState(GameState.Gameplay);
     }
 
     private IEnumerator Fade(float start, float end)
@@ -119,7 +133,7 @@ public class NarrationUI : MonoBehaviour
         AsyncOperation load = SceneManager.LoadSceneAsync(scene);
         load.allowSceneActivation = false;
 
-        yield return Fade(1f, 0f);
+        yield return 0f;
 
         load.allowSceneActivation = true;
     }

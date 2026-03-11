@@ -1,10 +1,10 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class JournalUI : MonoBehaviour
 {
-    public TextMeshProUGUI leftPageText;
-    public TextMeshProUGUI rightPageText;
+    [SerializeField] private TextMeshProUGUI leftPageText;
+    [SerializeField] private TextMeshProUGUI rightPageText;
 
     public void Setup(string leftText, string rightText)
     {
@@ -14,7 +14,7 @@ public class JournalUI : MonoBehaviour
 
     public void CloseJournal()
     {
-        GameStateManager.CurrentState = GameState.Gameplay;
+        GameStateManager.SetState(GameState.Gameplay);
         Destroy(gameObject);
     }
 }

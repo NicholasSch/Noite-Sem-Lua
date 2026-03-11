@@ -1,10 +1,10 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    [TextArea(3,10)]
-    public string[] lines;
+    [TextArea(3, 10)]
+    [SerializeField] private string[] lines;
 
     public IEnumerator StartDialogue()
     {

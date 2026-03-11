@@ -3,45 +3,62 @@ using UnityEngine;
 
 public class JournalInteractable : MonoBehaviour, IInteractable
 {
-    public GameObject GameUI;
-    public GameObject LetterUI;
+    [SerializeField] private GameObject gameUI;
+    [SerializeField] private LetterUI letterPrefab;
 
-    public bool isOpen = false;
+    private LetterUI currentLetterInstance;
+    private bool isOpen;
 
-    public void Awake()
+    private void Awake()
     {
-    GameUI.SetActive(false);
-    Time.timeScale = 1f;
+        if (gameUI != null)
+        {
+            gameUI.SetActive(false);
+        }
+
+        isOpen = false;
+        Time.timeScale = 1f;
     }
 
-public void Interact()
+    public void Interact()
     {
+        if (isOpen || currentLetterInstance != null)
+            return;
+
         StartCoroutine(OpenLetterRoutine());
     }
 
     private IEnumerator OpenLetterRoutine()
     {
-        GameStateManager.CurrentState = GameState.Letter;
-        LetterUI.SetActive(true);
-        Time.timeScale = 0f;
+        GameStateManager.SetState(GameState.Letter);
+
+        if (gameUI != null)
+        {
+            gameUI.SetActive(false);
+        }
+
+        currentLetterInstance = Instantiate(letterPrefab);
+        currentLetterInstance.Setup(this, gameUI);
+
         isOpen = true;
+        Time.timeScale = 0f;
+
         yield return new WaitForSecondsRealtime(10f);
 
-        Close();
-    }
-
-    public void Close()
-    {
-    LetterUI.SetActive(false);
-    GameUI.SetActive(true);
-    Time.timeScale = 1f;
-
-    ProgressionManager.Instance.LetterOpened = true;
-    GameStateManager.CurrentState = GameState.Gameplay;
+        if (currentLetterInstance != null)
+        {
+            currentLetterInstance.Close();
+        }
     }
 
     public bool LetterIsOpen()
     {
-    return isOpen;
+        return isOpen;
+    }
+
+    public void NotifyClosed()
+    {
+        currentLetterInstance = null;
+        isOpen = false;
     }
 }

@@ -1,11 +1,9 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class BarnToolsInteract : MonoBehaviour, IInteractable
 {
-
-    PlayerController player;
-    string[] lines =
+    private static readonly string[] Lines =
     {
         "Lucas: Não consigo entrar, mas consigo ver enxadas...",
         "Essas enxadas...",
@@ -13,7 +11,9 @@ public class BarnToolsInteract : MonoBehaviour, IInteractable
         "Parece que ele fez isso com força suficiente pra rachar a madeira."
     };
 
-        void Start()
+    private PlayerController player;
+
+    private void Start()
     {
         player = FindFirstObjectByType<PlayerController>();
     }
@@ -25,20 +25,19 @@ public class BarnToolsInteract : MonoBehaviour, IInteractable
             Destroy(gameObject);
             return;
         }
+
         player.ForceFaceUp();
         StartCoroutine(InteractionRoutine());
     }
 
-    IEnumerator InteractionRoutine()
+    private IEnumerator InteractionRoutine()
     {
         TaskManager.Instance.CompleteTask("Barn_Tools");
+        GameStateManager.SetState(GameState.Thought);
 
-        GameStateManager.CurrentState = GameState.Thought;
+        yield return ThoughtUI.Instance.PlaySequence(Lines);
 
-        yield return ThoughtUI.Instance.PlaySequence(lines);
-
-        GameStateManager.CurrentState = GameState.Gameplay;
-
+        GameStateManager.SetState(GameState.Gameplay);
         Destroy(gameObject);
     }
 }

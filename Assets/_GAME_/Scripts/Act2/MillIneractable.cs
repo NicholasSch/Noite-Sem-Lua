@@ -1,21 +1,21 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class MillInteractable : MonoBehaviour, IInteractable
 {
-    public AudioClip gearSound;
-    public AudioSource audioSource;
+    [SerializeField] private AudioClip gearSound;
+    [SerializeField] private AudioSource audioSource;
 
-    PlayerController player;
-
-    string[] lines =
+    private static readonly string[] Lines =
     {
         "Lucas: Está parado...",
         "Mas sinto que o moinho está esperando por algo.",
         "Ou por alguém."
     };
 
-        void Start()
+    private PlayerController player;
+
+    private void Start()
     {
         player = FindFirstObjectByType<PlayerController>();
     }
@@ -32,18 +32,16 @@ public class MillInteractable : MonoBehaviour, IInteractable
         StartCoroutine(InteractionRoutine());
     }
 
-    IEnumerator InteractionRoutine()
+    private IEnumerator InteractionRoutine()
     {
         TaskManager.Instance.CompleteTask("Mill_Gears");
-
         audioSource.PlayOneShot(gearSound);
 
-        GameStateManager.CurrentState = GameState.Thought;
+        GameStateManager.SetState(GameState.Thought);
 
-        yield return ThoughtUI.Instance.PlaySequence(lines);
+        yield return ThoughtUI.Instance.PlaySequence(Lines);
 
-        GameStateManager.CurrentState = GameState.Gameplay;
-
+        GameStateManager.SetState(GameState.Gameplay);
         Destroy(gameObject);
     }
 }

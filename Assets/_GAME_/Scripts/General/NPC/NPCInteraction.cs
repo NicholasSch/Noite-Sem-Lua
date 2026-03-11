@@ -1,55 +1,61 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour, IInteractable
 {
-    public NPCDialogue dialogue;
-    public NPCController controller;
+    [SerializeField] private NPCDialogue dialogue;
+    [SerializeField] private NPCController controller;
+    [SerializeField] private Transform walkTarget;
+    [SerializeField] private GameObject objectToDisableAfterConversation;
 
-    public Transform walkTarget;
-
-    public bool talkedto;
-
-    private string[] lines =
+    private static readonly string[] Lines =
     {
-        "<color=#531182>Lucas:</color>Que mulher estranha",
+        "<color=#531182>Lucas:</color> Que mulher estranha",
         "Este lugar é estranho",
-        "Bom eu deveria fazer o que o caderno manda agora"
+        "Bom, eu deveria fazer o que o caderno manda agora"
     };
 
-    bool talking;
+    private bool talking;
+    private PlayerController player;
 
-    PlayerController player;
-
-    void Start()
+    private void Start()
     {
         player = FindFirstObjectByType<PlayerController>();
     }
 
     public void Interact()
     {
-        if (talking) return;
-        ProgressionManager.Instance.talkedToDonaCurio = true;
+        if (talking)
+            return;
+
         StartCoroutine(InteractionRoutine());
     }
 
-    IEnumerator InteractionRoutine()
+    private IEnumerator InteractionRoutine()
     {
         talking = true;
 
-        GameStateManager.CurrentState = GameState.Cutscene;
-
+        GameStateManager.SetState(GameState.Cutscene);
         player.ForceFaceUp();
-
 
         yield return dialogue.StartDialogue();
 
+        ProgressionManager.Instance.talkedToDonaCurio = true;
+        ProgressionManager.Instance.SaveProgress();
+
         if (walkTarget != null)
+        {
             StartCoroutine(controller.WalkTo(walkTarget));
+        }
 
-            yield return ThoughtUI.Instance.PlaySequence(lines);
-        GameStateManager.CurrentState = GameState.Gameplay;
+        yield return ThoughtUI.Instance.PlaySequence(Lines);
 
+        if (objectToDisableAfterConversation != null)
+        {
+            objectToDisableAfterConversation.SetActive(false);
+        }
+
+        GameStateManager.SetState(GameState.Gameplay);
         talking = false;
     }
 }

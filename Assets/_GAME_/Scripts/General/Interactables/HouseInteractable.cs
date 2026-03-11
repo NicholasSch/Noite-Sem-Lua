@@ -1,45 +1,27 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class HouseInteractable : MonoBehaviour, IInteractable
 {
-    public AudioClip doorSound;
+    [SerializeField] private AudioClip doorSound;
+    [SerializeField] private NarrationUI narrationUI;
 
-    public NarrationUI narrationUI;
     public void Interact()
     {
-
-        StartCoroutine(ExitRoutine());
+        StartCoroutine(EnterHouseRoutine());
     }
-        IEnumerator ExitRoutine()
-        {
-        // play door sound
+
+    private IEnumerator EnterHouseRoutine()
+    {
         AudioManager.Instance.PlaySFX(doorSound);
 
-        // fade music
-        StartCoroutine(FadeMusic(2f));
-
-        // change scene
-        yield return narrationUI.ShowTextRoutine(
-            "",
-            "House_Day"
+        SceneRouteManager.RouteData route = SceneRouteManager.GetRoute(
+            SceneRouteManager.WorldArea.House,
+            SceneRouteManager.EntryPoint.FromFarm
         );
-        }
-        IEnumerator FadeMusic(float duration)
-        {
-        float startVolume = AudioManager.Instance.musicSource.volume;
-        float timer = 0f;
 
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
+        ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
 
-            AudioManager.Instance.musicSource.volume =
-                Mathf.Lerp(startVolume, 0, timer / duration);
-
-            yield return null;
-        }
-
-        AudioManager.Instance.musicSource.Stop();
-        }
+        yield return narrationUI.ShowTextRoutine("", route.SceneName);
+    }
 }

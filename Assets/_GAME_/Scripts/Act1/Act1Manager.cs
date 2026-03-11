@@ -1,33 +1,23 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class Act1Manager : MonoBehaviour
 {
-    // AUDIO
-    [Header("Audio")]
-    public AudioClip apartmentMusic;
-    public AudioClip apartmentAmbience;
-    public AudioClip glassCrack;
+    [SerializeField] private AudioClip apartmentMusic;
+    [SerializeField] private AudioClip apartmentAmbience;
+    [SerializeField] private AudioClip glassCrack;
+    [SerializeField] private NarrationUI blackScreenText;
+    [SerializeField] private NarrationSettings doorExitText;
 
-    // UI
-    [Header("UI")]
-    public NarrationUI blackScreenText;
-
-    // SETTINGS
-    [Header("Exit Dialogue Settings")]
-    public NarrationSettings doorExitText;
-
-    void Start()
+    private void Start()
     {
         StartCoroutine(StartSequence());
     }
 
-    IEnumerator StartSequence()
+    private IEnumerator StartSequence()
     {
-        // Start ambience
         AudioManager.Instance.PlayAmbient(apartmentAmbience);
 
-        // Intro thought
         string[] intro =
         {
             "<color=#531182>Lucas:</color> O advogado deixou o caderno do vovô na mesa."
@@ -37,7 +27,6 @@ public class Act1Manager : MonoBehaviour
         AudioManager.Instance.PlayMusic(apartmentMusic);
         yield return new WaitForSecondsRealtime(1f);
         yield return ThoughtUI.Instance.PlaySequence(intro);
-        
     }
 
     public void ExitApartment()
@@ -45,37 +34,33 @@ public class Act1Manager : MonoBehaviour
         StartCoroutine(ExitRoutine());
     }
 
-    IEnumerator ExitRoutine()
+    private IEnumerator ExitRoutine()
     {
-        // play crack sound
-        AudioManager.Instance.PlaySFX(glassCrack);
+        ProgressionManager.Instance.SetDay(1);
+        ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Day);
 
-        // fade music
+        AudioManager.Instance.PlaySFX(glassCrack);
         StartCoroutine(FadeMusic(2f));
 
-        // show final text
         yield return blackScreenText.ShowTextRoutine(
             "Por um segundo, antes da escuridão total, você sente que o seu reflexo no espelho continuou parado, observando suas costas.",
             doorExitText,
-            "Farm_Day"
+            SceneRouteManager.GetScene(SceneRouteManager.WorldArea.Farm)
         );
     }
 
-    IEnumerator FadeMusic(float duration)
+    private IEnumerator FadeMusic(float duration)
     {
-        float startVolume = AudioManager.Instance.musicSource.volume;
+        float startVolume = AudioManager.Instance.MusicSource.volume;
         float timer = 0f;
 
         while (timer < duration)
         {
             timer += Time.deltaTime;
-
-            AudioManager.Instance.musicSource.volume =
-                Mathf.Lerp(startVolume, 0, timer / duration);
-
+            AudioManager.Instance.MusicSource.volume = Mathf.Lerp(startVolume, 0f, timer / duration);
             yield return null;
         }
 
-        AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.MusicSource.Stop();
     }
 }

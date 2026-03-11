@@ -1,48 +1,59 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class JournalSystem : MonoBehaviour
 {
-    public static JournalSystem Instance;
+    public static JournalSystem Instance { get; private set; }
 
-    class Task
+    private class Task
     {
-        public string id;
-        public string title;
-        public string description;
+        public string Id { get; }
+        public string Title { get; }
+        public string Description { get; }
 
         public Task(string id, string title, string description)
         {
-            this.id = id;
-            this.title = title;
-            this.description = description;
+            Id = id;
+            Title = title;
+            Description = description;
         }
     }
 
-    List<Task> tasks = new List<Task>();
+    private readonly List<Task> tasks = new();
 
-    string leftPageText;
+    private string leftPageText;
 
-    void Awake()
+    private void Awake()
     {
-        Instance = this;
-        SetupDay1();
+        if (Instance == null)
+        {
+            Instance = this;
+            SetupDay1();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void SetupDay1()
+    private void SetupDay1()
     {
         leftPageText =
-        "Caderno de Dante\n\n" +
-        "O Engenho não gosta de estranhos.\n" +
-        "Caminhe pelos limites e mostre à terra\n" +
-        "que o sangue de Dante ainda corre aqui.";
+            "Caderno de Dante\n\n" +
+            "O Engenho não gosta de estranhos.\n" +
+            "Caminhe pelos limites e mostre à terra\n" +
+            "que o sangue de Dante ainda corre aqui.";
 
         tasks.Clear();
 
-        tasks.Add(new Task("Barn_Tools","O Reconhecimento do Chão: (Interaja com o celeiro)", 
-        "O Engenho não gosta de estranhos. Caminhe pelos limites, toque as ferramentas e mostre à terra que o sangue de Dante ainda corre aqui."));
+        tasks.Add(new Task(
+            "Barn_Tools",
+            "O Reconhecimento do Chão: (Interaja com o celeiro)",
+            "O Engenho não gosta de estranhos. Caminhe pelos limites, toque as ferramentas e mostre à terra que o sangue de Dante ainda corre aqui."
+        ));
 
-        tasks.Add(new Task("Mill_Gears",
+        tasks.Add(new Task(
+            "Mill_Gears",
             "Coração de Pedra: (Interaja com o moinho)",
             "O moinho parou quando eu me cansei. Verifique se as engrenagens ainda lembram como girar. Elas guardam o que o vento traz."
         ));
@@ -59,11 +70,11 @@ public class JournalSystem : MonoBehaviour
 
         foreach (Task task in tasks)
         {
-            bool completed = TaskManager.Instance.IsCompleted(task.id);
+            bool completed = TaskManager.Instance.IsCompleted(task.Id);
             string checkbox = completed ? "[X] " : "[ ] ";
 
-            text += checkbox + task.title + "\n";
-            text += "   " + task.description + "\n\n";
+            text += checkbox + task.Title + "\n";
+            text += "   " + task.Description + "\n\n";
         }
 
         return text;

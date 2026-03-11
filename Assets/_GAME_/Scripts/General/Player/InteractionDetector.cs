@@ -6,7 +6,8 @@ public class InteractionDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var interactable = other.GetComponent<IInteractable>();
+        IInteractable interactable = other.GetComponent<IInteractable>();
+
         if (interactable != null)
         {
             player.SetInteractable(interactable);
@@ -15,7 +16,8 @@ public class InteractionDetector : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        var interactable = other.GetComponent<IInteractable>();
+        IInteractable interactable = other.GetComponent<IInteractable>();
+
         if (interactable != null)
         {
             player.ClearInteractable(interactable);
