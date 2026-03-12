@@ -4,7 +4,6 @@ using UnityEngine;
 public class MillInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private AudioClip gearSound;
-    [SerializeField] private AudioSource audioSource;
 
     private static readonly string[] Lines =
     {
@@ -35,9 +34,9 @@ public class MillInteractable : MonoBehaviour, IInteractable
     private IEnumerator InteractionRoutine()
     {
         TaskManager.Instance.CompleteTask("Mill_Gears");
-        audioSource.PlayOneShot(gearSound);
-
+        AudioManager.Instance.PlaySFX(gearSound);
         GameStateManager.SetState(GameState.Thought);
+        yield return new WaitForSecondsRealtime(2f);
 
         yield return ThoughtUI.Instance.PlaySequence(Lines);
 

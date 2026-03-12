@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: fd9547b3283fee34cbb1d849e5117a1d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6315160102451952175
+    second: LucasWalkingAnims_0
+  - first:
+      213: -4388731261421958170
+    second: LucasWalkingAnims_1
+  - first:
+      213: -6359762495141433953
+    second: LucasWalkingAnims_2
+  - first:
+      213: 452526884099772671
+    second: LucasWalkingAnims_3
+  - first:
+      213: 1297168066519008889
+    second: LucasWalkingAnims_4
+  - first:
+      213: 3883766596467328306
+    second: LucasWalkingAnims_5
+  - first:
+      213: -2309230898642760190
+    second: LucasWalkingAnims_6
+  - first:
+      213: -2645152220682750210
+    second: LucasWalkingAnims_7
+  - first:
+      213: 2970329302495470263
+    second: LucasWalkingAnims_8
+  - first:
+      213: -4318755329634238729
+    second: LucasWalkingAnims_9
+  - first:
+      213: -3098185752295292089
+    second: LucasWalkingAnims_10
+  - first:
+      213: -3912785705588352818
+    second: LucasWalkingAnims_11
+  - first:
+      213: 2044407968494484894
+    second: LucasWalkingAnims_12
+  - first:
+      213: -5149566901124252352
+    second: LucasWalkingAnims_13
+  - first:
+      213: 7869594188827980016
+    second: LucasWalkingAnims_14
+  - first:
+      213: -5786108206490831344
+    second: LucasWalkingAnims_15
+  - first:
+      213: 6043251006920936673
+    second: LucasWalkingAnims_16
+  - first:
+      213: 6516198241351780327
+    second: LucasWalkingAnims_17
+  - first:
+      213: -522581845808063926
+    second: LucasWalkingAnims_18
+  - first:
+      213: 611150684590929265
+    second: LucasWalkingAnims_19
+  - first:
+      213: -5705183263544629414
+    second: LucasWalkingAnims_20
+  - first:
+      213: -6088619061308446682
+    second: LucasWalkingAnims_21
+  - first:
+      213: 7445270487072719033
+    second: LucasWalkingAnims_22
+  - first:
+      213: -1392536131361322707
+    second: LucasWalkingAnims_23
+  - first:
+      213: -4763247946570749079
+    second: LucasWalkingAnims_24
+  - first:
+      213: 3276895813230665637
+    second: LucasWalkingAnims_25
+  - first:
+      213: 3873751219729583363
+    second: LucasWalkingAnims_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LucasWalkingAnims_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 739
+        width: 96
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5c1a1985b0c58a0800000000000000
+      internalID: -6315160102451952175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 739
+        width: 97
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ebca449b281813c0800000000000000
+      internalID: -4388731261421958170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_2
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 737
+        width: 98
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d2e35c4b59db7a0800000000000000
+      internalID: -6359762495141433953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 737
+        width: 100
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0d412bdc2b74600800000000000000
+      internalID: 452526884099772671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_4
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 737
+        width: 97
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97688dadb77700210800000000000000
+      internalID: 1297168066519008889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_5
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 739
+        width: 98
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23586f47429e5e530800000000000000
+      internalID: 3883766596467328306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_6
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 739
+        width: 97
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20eca068bb6f3ffd0800000000000000
+      internalID: -2309230898642760190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_7
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 737
+        width: 97
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef67e55e1188a4bd0800000000000000
+      internalID: -2645152220682750210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_8
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 739
+        width: 98
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b22d2d53cab83920800000000000000
+      internalID: 2970329302495470263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 426
+        width: 98
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe7351d8e2b014c0800000000000000
+      internalID: -4318755329634238729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 425
+        width: 102
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743434229780105d0800000000000000
+      internalID: -3098185752295292089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_11
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 425
+        width: 101
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec81e20b12ef2b9c0800000000000000
+      internalID: -3912785705588352818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_12
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 424
+        width: 64
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d771237323f5c10800000000000000
+      internalID: 2044407968494484894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_13
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 425
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d316fdf201988b0800000000000000
+      internalID: -5149566901124252352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 425
+        width: 101
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0f197483a663d60800000000000000
+      internalID: 7869594188827980016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_15
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 424
+        width: 77
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01634280e3d93bfa0800000000000000
+      internalID: -5786108206490831344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_16
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 426
+        width: 101
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec4b04b5c0fdd350800000000000000
+      internalID: 6043251006920936673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_17
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 425
+        width: 100
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e74cc5b6cf2e6a50800000000000000
+      internalID: 6516198241351780327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_18
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 127
+        width: 98
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ada8a749a6fb8f0800000000000000
+      internalID: -522581845808063926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 136
+        width: 96
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17577434f4e3b7800800000000000000
+      internalID: 611150684590929265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_20
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 132
+        width: 99
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a572be59c0e13d0b0800000000000000
+      internalID: -5705183263544629414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_21
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 127
+        width: 98
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628a90ef831e08ba0800000000000000
+      internalID: -6088619061308446682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_22
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 128
+        width: 96
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b04baeaf0ae25760800000000000000
+      internalID: 7445270487072719033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_23
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 128
+        width: 98
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29cf4934c7bcace0800000000000000
+      internalID: -1392536131361322707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_24
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 129
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96baa87ba3b85edb0800000000000000
+      internalID: -4763247946570749079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_25
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 127
+        width: 99
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af1491616fd97d20800000000000000
+      internalID: 3276895813230665637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasWalkingAnims_26
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 133
+        width: 98
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dc738d53452c530800000000000000
+      internalID: 3873751219729583363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LucasWalkingAnims_0: -6315160102451952175
+      LucasWalkingAnims_1: -4388731261421958170
+      LucasWalkingAnims_10: -3098185752295292089
+      LucasWalkingAnims_11: -3912785705588352818
+      LucasWalkingAnims_12: 2044407968494484894
+      LucasWalkingAnims_13: -5149566901124252352
+      LucasWalkingAnims_14: 7869594188827980016
+      LucasWalkingAnims_15: -5786108206490831344
+      LucasWalkingAnims_16: 6043251006920936673
+      LucasWalkingAnims_17: 6516198241351780327
+      LucasWalkingAnims_18: -522581845808063926
+      LucasWalkingAnims_19: 611150684590929265
+      LucasWalkingAnims_2: -6359762495141433953
+      LucasWalkingAnims_20: -5705183263544629414
+      LucasWalkingAnims_21: -6088619061308446682
+      LucasWalkingAnims_22: 7445270487072719033
+      LucasWalkingAnims_23: -1392536131361322707
+      LucasWalkingAnims_24: -4763247946570749079
+      LucasWalkingAnims_25: 3276895813230665637
+      LucasWalkingAnims_26: 3873751219729583363
+      LucasWalkingAnims_3: 452526884099772671
+      LucasWalkingAnims_4: 1297168066519008889
+      LucasWalkingAnims_5: 3883766596467328306
+      LucasWalkingAnims_6: -2309230898642760190
+      LucasWalkingAnims_7: -2645152220682750210
+      LucasWalkingAnims_8: 2970329302495470263
+      LucasWalkingAnims_9: -4318755329634238729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -30,7 +30,7 @@ public class PorchTrigger : MonoBehaviour
             return;
         if (ProgressionManager.Instance.porchScenePlayed)
             return;
-        if (!TaskManager.Instance.IsCompleted("Barn_Tools") || !TaskManager.Instance.IsCompleted("Mill_Gears"))
+        if (!TaskManager.Instance.IsCompleted("Barn_Tools") || !TaskManager.Instance.IsCompleted("Mill_Gears") || !ProgressionManager.Instance.HasTalkedToNpc("CucaDisguised"))
             return;
         player.ForceFaceDown();
         StartCoroutine(StartAct4());

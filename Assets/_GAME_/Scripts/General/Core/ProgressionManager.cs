@@ -20,22 +20,21 @@ public class ProgressionManager : MonoBehaviour
         public bool farmIntroPlayed;
         public bool LetterOpened;
         public bool porchScenePlayed;
-        public bool talkedToDonaCurio;
         public bool firstNightSleepDone;
         public bool firstNightWakeScenePlayed;
         public bool firstNightTitlePlayed;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
+        public List<string> talkedNpcIDs = new();
     }
 
-    public int currentDay = 1;
+    public int currentDay = 0;
     public DayPeriod currentPeriod = DayPeriod.Day;
 
     public bool farmIntroPlayed;
     public bool LetterOpened;
     public bool porchScenePlayed;
-    public bool talkedToDonaCurio;
     public bool firstNightSleepDone;
     public bool firstNightWakeScenePlayed;
     public bool firstNightTitlePlayed;
@@ -44,6 +43,7 @@ public class ProgressionManager : MonoBehaviour
     public string pendingSceneName;
 
     public List<string> completedTaskIDs = new();
+    public List<string> talkedNpcIDs = new();
 
     private string SavePath => Path.Combine(Application.persistentDataPath, "progression.json");
 
@@ -78,9 +78,29 @@ public class ProgressionManager : MonoBehaviour
         return completedTaskIDs.Contains(taskID);
     }
 
+    public void RegisterNpcTalk(string npcID)
+    {
+        if (string.IsNullOrWhiteSpace(npcID))
+            return;
+
+        if (!talkedNpcIDs.Contains(npcID))
+        {
+            talkedNpcIDs.Add(npcID);
+            SaveProgress();
+        }
+    }
+
+    public bool HasTalkedToNpc(string npcID)
+    {
+        if (string.IsNullOrWhiteSpace(npcID))
+            return false;
+
+        return talkedNpcIDs.Contains(npcID);
+    }
+
     public void SetDay(int day)
     {
-        currentDay = Mathf.Max(1, day);
+        currentDay = Mathf.Max(0, day);
         SaveProgress();
     }
 
@@ -120,13 +140,13 @@ public class ProgressionManager : MonoBehaviour
             farmIntroPlayed = farmIntroPlayed,
             LetterOpened = LetterOpened,
             porchScenePlayed = porchScenePlayed,
-            talkedToDonaCurio = talkedToDonaCurio,
             firstNightSleepDone = firstNightSleepDone,
             firstNightWakeScenePlayed = firstNightWakeScenePlayed,
             firstNightTitlePlayed = firstNightTitlePlayed,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
-            completedTaskIDs = new List<string>(completedTaskIDs)
+            completedTaskIDs = new List<string>(completedTaskIDs),
+            talkedNpcIDs = new List<string>(talkedNpcIDs)
         };
 
         string json = JsonUtility.ToJson(data, true);
@@ -153,13 +173,13 @@ public class ProgressionManager : MonoBehaviour
         farmIntroPlayed = data.farmIntroPlayed;
         LetterOpened = data.LetterOpened;
         porchScenePlayed = data.porchScenePlayed;
-        talkedToDonaCurio = data.talkedToDonaCurio;
         firstNightSleepDone = data.firstNightSleepDone;
         firstNightWakeScenePlayed = data.firstNightWakeScenePlayed;
         firstNightTitlePlayed = data.firstNightTitlePlayed;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
+        talkedNpcIDs = data.talkedNpcIDs ?? new List<string>();
     }
 
     public void ResetProgress()
@@ -169,13 +189,13 @@ public class ProgressionManager : MonoBehaviour
         farmIntroPlayed = false;
         LetterOpened = false;
         porchScenePlayed = false;
-        talkedToDonaCurio = false;
         firstNightSleepDone = false;
         firstNightWakeScenePlayed = false;
         firstNightTitlePlayed = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();
+        talkedNpcIDs.Clear();
 
         if (File.Exists(SavePath))
         {

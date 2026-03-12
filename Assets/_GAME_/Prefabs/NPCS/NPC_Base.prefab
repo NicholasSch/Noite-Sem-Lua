@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5894330864203842625}
   - component: {fileID: 3095426477372506444}
   - component: {fileID: 3147713976773274583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,12 +169,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca5ed37b891c894fb6ef8a8e69fe6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  npcID: 
   dialogue: {fileID: 2788065578304300599}
   controller: {fileID: 5894330864203842625}
-  walkTarget: {fileID: 0}
-  lines:
-  - Que mulher estranha
-  - "Este lugar \xE9 estranho "
+  firstInteractionSequence: []
+  repeatInteractionSequence: []
+  lockPlayerDuringInteraction: 1
+  facePlayerAtStart: 1
+  objectToDisableAfterFirstInteraction: {fileID: 0}
+  completeTaskIDAfterFirstInteraction: 
 --- !u!114 &2788065578304300599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,12 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a48319fb844ee847afe5ece4b9a4c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  lines:
-  - "<color=#531182>Lucas:</color> Ol\xE1? Senhora? Eu sou o Lucas, neto do Dante."
-  - "<color=#A2EA30>Dona Curi\xF3:</color> Cuidado onde pisa, garoto. A terra do
-    seu av\xF4 tem mem\xF3ria longa para d\xEDvidas."
-  - "<color=#531182>Lucas:</color> D\xEDvidas? Meu av\xF4 era um homem simples."
-  - "<color=#A2EA30>Dona Curi\xF3:</color> Neste ch\xE3o, nada \xE9 simples."
+  dialogueBlocks: []
 --- !u!114 &5894330864203842625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +204,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
   animator: {fileID: 1807089735277452608}
-  moveSpeed: 1.5
+  spriteRenderer: {fileID: 3808247856882251048}
+  moveSpeed: 1.8
+  idleState: Idle
+  walkUpState: WalkingUP
+  walkDownState: WalkingDown
+  walkSideState: WalkingSide
 --- !u!50 &3095426477372506444
 Rigidbody2D:
   serializedVersion: 5

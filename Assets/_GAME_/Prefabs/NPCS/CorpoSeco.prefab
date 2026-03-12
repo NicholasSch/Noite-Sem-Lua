@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2461414714920128745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1807089735277452608, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 132f26964f7a9f241a28c8069295cda9, type: 2}
+    - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: npcID
+      value: CorpoSeco
+      objectReference: {fileID: 0}
+    - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 331438414931539678}
+    - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 8350919547536413864}
+    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.87139136
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.7148436
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6138347473516098711, guid: 7c369dfcdddd70442a6154b33b37fe88, type: 3}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022403094741855794, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Name
+      value: CorpoSeco
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+--- !u!114 &331438414931539678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2788065578304300599, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+  m_PrefabInstance: {fileID: 2461414714920128745}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a48319fb844ee847afe5ece4b9a4c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+--- !u!114 &8350919547536413864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5894330864203842625, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+  m_PrefabInstance: {fileID: 2461414714920128745}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b51379a0ef4e04c9874a1b02c6d16e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCController

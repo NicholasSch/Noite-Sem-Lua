@@ -39,28 +39,14 @@ public class Act1Manager : MonoBehaviour
         ProgressionManager.Instance.SetDay(1);
         ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Day);
 
+        AudioManager.Instance.StopMusic(2f);
+        AudioManager.Instance.StopAmbient(2f);
         AudioManager.Instance.PlaySFX(glassCrack);
-        StartCoroutine(FadeMusic(2f));
 
         yield return blackScreenText.ShowTextRoutine(
             "Por um segundo, antes da escuridão total, você sente que o seu reflexo no espelho continuou parado, observando suas costas.",
             doorExitText,
             SceneRouteManager.GetScene(SceneRouteManager.WorldArea.Farm)
         );
-    }
-
-    private IEnumerator FadeMusic(float duration)
-    {
-        float startVolume = AudioManager.Instance.MusicSource.volume;
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
-            AudioManager.Instance.MusicSource.volume = Mathf.Lerp(startVolume, 0f, timer / duration);
-            yield return null;
-        }
-
-        AudioManager.Instance.MusicSource.Stop();
     }
 }

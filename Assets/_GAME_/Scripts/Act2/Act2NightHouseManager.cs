@@ -4,27 +4,26 @@ using UnityEngine;
 public class Act2NightHouseManager : MonoBehaviour
 {
     [SerializeField] private AudioClip draggingSound;
-    [SerializeField] private AudioClip nightAmbience;
+    [SerializeField] private AudioClip nightHouseAmbience;
+    [SerializeField] private AudioClip nightHouseMusic;
 
     private void Start()
     {
-        if (!ProgressionManager.Instance.firstNightSleepDone)
-            return;
+        AudioManager.Instance.PlayAmbient(nightHouseAmbience);
 
-        if (ProgressionManager.Instance.firstNightWakeScenePlayed)
-            return;
-
-        StartCoroutine(NightWakeRoutine());
+        if (ProgressionManager.Instance.firstNightSleepDone && !ProgressionManager.Instance.firstNightWakeScenePlayed)
+        {
+            StartCoroutine(NightWakeRoutine());
+        }
+        else
+        {
+            AudioManager.Instance.PlayMusic(nightHouseMusic);
+        }
     }
 
     private IEnumerator NightWakeRoutine()
     {
         GameStateManager.SetState(GameState.Cutscene);
-
-        if (nightAmbience != null)
-        {
-            AudioManager.Instance.PlayAmbient(nightAmbience);
-        }
 
         yield return new WaitForSecondsRealtime(1f);
 
@@ -32,6 +31,8 @@ public class Act2NightHouseManager : MonoBehaviour
         {
             AudioManager.Instance.PlaySFX(draggingSound);
         }
+
+        yield return new WaitForSecondsRealtime(5f);
 
         string[] lines =
         {
@@ -45,6 +46,7 @@ public class Act2NightHouseManager : MonoBehaviour
         ProgressionManager.Instance.firstNightWakeScenePlayed = true;
         ProgressionManager.Instance.SaveProgress();
 
+        AudioManager.Instance.PlayMusic(nightHouseMusic);
         GameStateManager.SetState(GameState.Gameplay);
     }
 }

@@ -5,6 +5,9 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     [SerializeField] private Act1Manager actManager;
     [SerializeField] private NarrationUI narrationUI;
 
+    [SerializeField] private AudioClip doorSound;
+    
+
     public void Interact()
     {
         if (!ProgressionManager.Instance.LetterOpened)
@@ -15,6 +18,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
             return;
         }
 
+        AudioManager.Instance.PlaySFX(doorSound);
         actManager.ExitApartment();
     }
 }

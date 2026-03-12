@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
         RIGHT
     }
 
+    //Dependencies
     private IInteractable currentInteractable;
     private GameObject currentInteractPrompt;
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+    //Data
     private Vector2 moveInput = Vector2.zero;
     private Directions facingDirection = Directions.RIGHT;
     private bool isRunning;
@@ -31,12 +33,16 @@ public class PlayerController : MonoBehaviour
     private float currentMoveSpeed;
     private int currentAnimation = -1;
 
-    private readonly int animWalkSide = Animator.StringToHash("Anim_Player_Walk_Side");
-    private readonly int animIdleSide = Animator.StringToHash("Anim_Player_Idle_Side");
-    private readonly int animWalkDown = Animator.StringToHash("Anim_Player_Walk_Down");
-    private readonly int animIdleDown = Animator.StringToHash("Anim_Player_Idle_Down");
-    private readonly int animWalkUP = Animator.StringToHash("Anim_Player_Walk_UP");
-    private readonly int animIdleUP = Animator.StringToHash("Anim_Player_Idle_UP");
+    //Anims
+    private readonly int animWalkSide = Animator.StringToHash("WalkingSide");
+    private readonly int animIdleSide = Animator.StringToHash("IdleSide");
+    private readonly int animWalkDown = Animator.StringToHash("WalkingDown");
+    private readonly int animIdleDown = Animator.StringToHash("IdleDown");
+    private readonly int animWalkUP = Animator.StringToHash("WalkingUP");
+    private readonly int animIdleUP = Animator.StringToHash("IdleUP");
+    private readonly int animRunSide = Animator.StringToHash("RunningSide");
+    private readonly int animRunDown = Animator.StringToHash("RunningDown");
+    private readonly int animRunUP = Animator.StringToHash("RunningUP");
 
     private void Awake()
     {
@@ -50,7 +56,10 @@ public class PlayerController : MonoBehaviour
     {
         if (GameStateManager.CurrentState == GameState.Gameplay)
         {
-            currentMoveSpeed = isRunning ? runSpeed : walkSpeed;
+            bool isMoving = moveInput.sqrMagnitude > 0.0001f;
+            bool isSprinting = isRunning && isMoving;
+
+            currentMoveSpeed = isSprinting ? runSpeed : walkSpeed;
             rigidBody.linearVelocity = moveInput.normalized * currentMoveSpeed * Time.fixedDeltaTime;
 
             CalculateFacingDirection();
@@ -67,8 +76,26 @@ public class PlayerController : MonoBehaviour
 
         rigidBody.linearVelocity = Vector2.zero;
         moveInput = Vector2.zero;
+        isRunning = false;
         UpdateAnimation();
     }
+
+    private void Update()
+{
+    if (GameStateManager.CurrentState != GameState.Gameplay || isScriptedMoving)
+    {
+        isRunning = false;
+        return;
+    }
+
+    if (Keyboard.current == null)
+    {
+        isRunning = false;
+        return;
+    }
+
+    isRunning = Keyboard.current.leftShiftKey.isPressed || Keyboard.current.rightShiftKey.isPressed;
+}
 
     private void LateUpdate()
     {
@@ -89,7 +116,7 @@ public class PlayerController : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
-    private void OnRun(InputValue value)
+    private void OnSprint(InputValue value)
     {
         if (GameStateManager.CurrentState != GameState.Gameplay || isScriptedMoving)
         {
@@ -113,43 +140,65 @@ public class PlayerController : MonoBehaviour
     }
 
     private void UpdateAnimation()
+{
+    if (spriteRenderer == null || animator == null)
+        return;
+
+    if (facingDirection == Directions.LEFT)
     {
-        if (spriteRenderer == null || animator == null)
-            return;
-
-        if (facingDirection == Directions.LEFT)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if (facingDirection == Directions.RIGHT)
-        {
-            spriteRenderer.flipX = false;
-        }
-
-        bool isMoving = moveInput.sqrMagnitude > 0.0001f;
-        int targetAnimation = animIdleSide;
-
-        switch (facingDirection)
-        {
-            case Directions.UP:
-                targetAnimation = isMoving ? animWalkUP : animIdleUP;
-                break;
-
-            case Directions.DOWN:
-                targetAnimation = isMoving ? animWalkDown : animIdleDown;
-                break;
-
-            default:
-                targetAnimation = isMoving ? animWalkSide : animIdleSide;
-                break;
-        }
-
-        if (currentAnimation == targetAnimation)
-            return;
-
-        currentAnimation = targetAnimation;
-        animator.CrossFade(targetAnimation, 0.08f);
+        spriteRenderer.flipX = true;
     }
+    else if (facingDirection == Directions.RIGHT)
+    {
+        spriteRenderer.flipX = false;
+    }
+
+    bool isMoving = moveInput.sqrMagnitude > 0.0001f;
+    bool isSprinting = isRunning && isMoving;
+    int targetAnimation = animIdleSide;
+
+    switch (facingDirection)
+    {
+        case Directions.UP:
+            if (!isMoving)
+            {
+                targetAnimation = animIdleUP;
+            }
+            else
+            {
+                targetAnimation = isSprinting ? animRunUP : animWalkUP;
+            }
+            break;
+
+        case Directions.DOWN:
+            if (!isMoving)
+            {
+                targetAnimation = animIdleDown;
+            }
+            else
+            {
+                targetAnimation = isSprinting ? animRunDown : animWalkDown;
+            }
+            break;
+
+        default:
+            if (!isMoving)
+            {
+                targetAnimation = animIdleSide;
+            }
+            else
+            {
+                targetAnimation = isSprinting ? animRunSide : animWalkSide;
+            }
+            break;
+    }
+
+    if (currentAnimation == targetAnimation)
+        return;
+
+    currentAnimation = targetAnimation;
+    animator.CrossFade(targetAnimation, 0.08f);
+}
 
     public void SetInteractable(IInteractable interactable)
     {
@@ -248,6 +297,7 @@ public class PlayerController : MonoBehaviour
     {
         facingDirection = Directions.UP;
         moveInput = Vector2.zero;
+        isRunning = false;
         UpdateAnimation();
     }
 
@@ -255,6 +305,7 @@ public class PlayerController : MonoBehaviour
     {
         facingDirection = Directions.DOWN;
         moveInput = Vector2.zero;
+        isRunning = false;
         UpdateAnimation();
     }
 

@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: d654fd1275946d24798d51e33460d9b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5763939294825642664
+    second: LucasRunningAnimsDown_0
+  - first:
+      213: -1239007065212651804
+    second: LucasRunningAnimsDown_1
+  - first:
+      213: 2877637914251159314
+    second: LucasRunningAnimsDown_2
+  - first:
+      213: -1861032106613014706
+    second: LucasRunningAnimsDown_3
+  - first:
+      213: -7214854584147716864
+    second: LucasRunningAnimsDown_4
+  - first:
+      213: -4811873090660723690
+    second: LucasRunningAnimsDown_5
+  - first:
+      213: -3194401408881535983
+    second: LucasRunningAnimsDown_6
+  - first:
+      213: -3267725779959752074
+    second: LucasRunningAnimsDown_7
+  - first:
+      213: -3902199761672478641
+    second: LucasRunningAnimsDown_8
+  - first:
+      213: 1335345344005453141
+    second: LucasRunningAnimsDown_9
+  - first:
+      213: 400940442811762432
+    second: LucasRunningAnimsDown_10
+  - first:
+      213: -6936094678638133002
+    second: LucasRunningAnimsDown_11
+  - first:
+      213: 6209650476281300514
+    second: LucasRunningAnimsDown_12
+  - first:
+      213: -3064994197087309726
+    second: LucasRunningAnimsDown_13
+  - first:
+      213: 2217151521418995903
+    second: LucasRunningAnimsDown_14
+  - first:
+      213: 3726389472389842565
+    second: LucasRunningAnimsDown_15
+  - first:
+      213: 258903783215310886
+    second: LucasRunningAnimsDown_16
+  - first:
+      213: 6338026305982910997
+    second: LucasRunningAnimsDown_17
+  - first:
+      213: -3035435742856145063
+    second: LucasRunningAnimsDown_18
+  - first:
+      213: 6399222475901876929
+    second: LucasRunningAnimsDown_19
+  - first:
+      213: 7269761028191036247
+    second: LucasRunningAnimsDown_20
+  - first:
+      213: 1769026661463073540
+    second: LucasRunningAnimsDown_21
+  - first:
+      213: -7348859288811007584
+    second: LucasRunningAnimsDown_22
+  - first:
+      213: 1781715342505701081
+    second: LucasRunningAnimsDown_23
+  - first:
+      213: 9106859632529751406
+    second: LucasRunningAnimsDown_24
+  - first:
+      213: -6038484739052483114
+    second: LucasRunningAnimsDown_25
+  - first:
+      213: 4195041208436773823
+    second: LucasRunningAnimsDown_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 728
+        width: 98
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855800100cf5200b0800000000000000
+      internalID: -5763939294825642664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 718
+        width: 98
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6fcc383a92ecee0800000000000000
+      internalID: -1239007065212651804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_2
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 725
+        width: 96
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217e227cf6c6fe720800000000000000
+      internalID: 2877637914251159314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_3
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 716
+        width: 98
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ffbb1c8294c26e0800000000000000
+      internalID: -1861032106613014706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_4
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 728
+        width: 97
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005d6cd4bffafdb90800000000000000
+      internalID: -7214854584147716864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_5
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 714
+        width: 100
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61418ee1beac83db0800000000000000
+      internalID: -4811873090660723690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_6
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 724
+        width: 98
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114db91e7d43ba3d0800000000000000
+      internalID: -3194401408881535983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_7
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 718
+        width: 99
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67adc1e57b4b6a2d0800000000000000
+      internalID: -3267725779959752074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_8
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 728
+        width: 99
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40e5e2ddf998d9c0800000000000000
+      internalID: -3902199761672478641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_9
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 414
+        width: 90
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555bae1f389188210800000000000000
+      internalID: 1335345344005453141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 416
+        width: 93
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00702ed553d609500800000000000000
+      internalID: 400940442811762432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 416
+        width: 113
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f00c4783aa0ebf90800000000000000
+      internalID: -6936094678638133002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_12
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 416
+        width: 114
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2260512453c1d2650800000000000000
+      internalID: 6209650476281300514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_13
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 415
+        width: 120
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2603afb4404f675d0800000000000000
+      internalID: -3064994197087309726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_14
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 416
+        width: 115
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8656fcf87e4ce10800000000000000
+      internalID: 2217151521418995903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_15
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 417
+        width: 113
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5864d8c5b7bc6b330800000000000000
+      internalID: 3726389472389842565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_16
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 416
+        width: 85
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628ad8d7e9fc79300800000000000000
+      internalID: 258903783215310886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_17
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 415
+        width: 69
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5125131585135f750800000000000000
+      internalID: 6338026305982910997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 122
+        width: 107
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95719883647ffd5d0800000000000000
+      internalID: -3035435742856145063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 122
+        width: 100
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cab3d2ffea9ec850800000000000000
+      internalID: 6399222475901876929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_20
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 123
+        width: 100
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7532e47632163e460800000000000000
+      internalID: 7269761028191036247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_21
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 122
+        width: 101
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403a3ba3068dc8810800000000000000
+      internalID: 1769026661463073540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_22
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 121
+        width: 106
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a1171aa96b930a90800000000000000
+      internalID: -7348859288811007584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_23
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 125
+        width: 100
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de6ae00aace9b810800000000000000
+      internalID: 1781715342505701081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_24
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 122
+        width: 99
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6db748e590126e70800000000000000
+      internalID: 9106859632529751406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_25
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 122
+        width: 106
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddc8238f1ef23ca0800000000000000
+      internalID: -6038484739052483114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasRunningAnimsDown_26
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 121
+        width: 99
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3dff6b0c7c73a30800000000000000
+      internalID: 4195041208436773823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LucasRunningAnimsDown_0: -5763939294825642664
+      LucasRunningAnimsDown_1: -1239007065212651804
+      LucasRunningAnimsDown_10: 400940442811762432
+      LucasRunningAnimsDown_11: -6936094678638133002
+      LucasRunningAnimsDown_12: 6209650476281300514
+      LucasRunningAnimsDown_13: -3064994197087309726
+      LucasRunningAnimsDown_14: 2217151521418995903
+      LucasRunningAnimsDown_15: 3726389472389842565
+      LucasRunningAnimsDown_16: 258903783215310886
+      LucasRunningAnimsDown_17: 6338026305982910997
+      LucasRunningAnimsDown_18: -3035435742856145063
+      LucasRunningAnimsDown_19: 6399222475901876929
+      LucasRunningAnimsDown_2: 2877637914251159314
+      LucasRunningAnimsDown_20: 7269761028191036247
+      LucasRunningAnimsDown_21: 1769026661463073540
+      LucasRunningAnimsDown_22: -7348859288811007584
+      LucasRunningAnimsDown_23: 1781715342505701081
+      LucasRunningAnimsDown_24: 9106859632529751406
+      LucasRunningAnimsDown_25: -6038484739052483114
+      LucasRunningAnimsDown_26: 4195041208436773823
+      LucasRunningAnimsDown_3: -1861032106613014706
+      LucasRunningAnimsDown_4: -7214854584147716864
+      LucasRunningAnimsDown_5: -4811873090660723690
+      LucasRunningAnimsDown_6: -3194401408881535983
+      LucasRunningAnimsDown_7: -3267725779959752074
+      LucasRunningAnimsDown_8: -3902199761672478641
+      LucasRunningAnimsDown_9: 1335345344005453141
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 7af3e293a32fba547b44626904181470
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4022304489492291623
+    second: CucaRevealed_0
+  - first:
+      213: 7330438296598277422
+    second: CucaRevealed_1
+  - first:
+      213: -8648014001070801514
+    second: CucaRevealed_2
+  - first:
+      213: -1403801326659997522
+    second: CucaRevealed_3
+  - first:
+      213: 5637441148048711925
+    second: CucaRevealed_4
+  - first:
+      213: -7287200002372325390
+    second: CucaRevealed_5
+  - first:
+      213: -4310838261999837777
+    second: CucaRevealed_6
+  - first:
+      213: 7762891717286452949
+    second: CucaRevealed_7
+  - first:
+      213: -3899002330565744675
+    second: CucaRevealed_8
+  - first:
+      213: -9187689414351414600
+    second: CucaRevealed_9
+  - first:
+      213: -2508460939415807373
+    second: CucaRevealed_10
+  - first:
+      213: -1464358815510831966
+    second: CucaRevealed_11
+  - first:
+      213: -8044681414323913706
+    second: CucaRevealed_12
+  - first:
+      213: -5256823033419020833
+    second: CucaRevealed_13
+  - first:
+      213: -257436968594010056
+    second: CucaRevealed_14
+  - first:
+      213: -3547724714272723825
+    second: CucaRevealed_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CucaRevealed_0
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1160
+        width: 193
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df5a5db067ed28c0800000000000000
+      internalID: -4022304489492291623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_1
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1160
+        width: 193
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2de8acdac2fab560800000000000000
+      internalID: 7330438296598277422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_2
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 1160
+        width: 191
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69df19dc5151cf780800000000000000
+      internalID: -8648014001070801514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_3
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 1160
+        width: 194
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0753d8122b48ce0800000000000000
+      internalID: -1403801326659997522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_4
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 782
+        width: 194
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f02d9f0bd63c3e40800000000000000
+      internalID: 5637441148048711925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_5
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 790
+        width: 194
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff2f53053aaeda90800000000000000
+      internalID: -7287200002372325390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_6
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 784
+        width: 195
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad5655c073dc24c0800000000000000
+      internalID: -4310838261999837777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_7
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 789
+        width: 194
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de5ea623e45bbb60800000000000000
+      internalID: 7762891717286452949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 403
+        width: 207
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd76534c906f3e9c0800000000000000
+      internalID: -3899002330565744675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_9
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 403
+        width: 209
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba97f6f725ce7080800000000000000
+      internalID: -9187689414351414600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_10
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 403
+        width: 208
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a9d25e018203dd0800000000000000
+      internalID: -2508460939415807373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_11
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 403
+        width: 208
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2acd3c17a6d8dabe0800000000000000
+      internalID: -1464358815510831966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_12
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 17
+        width: 187
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c390050ec8b5090800000000000000
+      internalID: -8044681414323913706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_13
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 17
+        width: 188
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5c7fd8d430c07b0800000000000000
+      internalID: -5256823033419020833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_14
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 17
+        width: 189
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83096e6e0766d6cf0800000000000000
+      internalID: -257436968594010056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CucaRevealed_15
+      rect:
+        serializedVersion: 2
+        x: 2264
+        y: 16
+        width: 187
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c66e44b23f3cec0800000000000000
+      internalID: -3547724714272723825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CucaRevealed_0: -4022304489492291623
+      CucaRevealed_1: 7330438296598277422
+      CucaRevealed_10: -2508460939415807373
+      CucaRevealed_11: -1464358815510831966
+      CucaRevealed_12: -8044681414323913706
+      CucaRevealed_13: -5256823033419020833
+      CucaRevealed_14: -257436968594010056
+      CucaRevealed_15: -3547724714272723825
+      CucaRevealed_2: -8648014001070801514
+      CucaRevealed_3: -1403801326659997522
+      CucaRevealed_4: 5637441148048711925
+      CucaRevealed_5: -7287200002372325390
+      CucaRevealed_6: -4310838261999837777
+      CucaRevealed_7: 7762891717286452949
+      CucaRevealed_8: -3899002330565744675
+      CucaRevealed_9: -9187689414351414600
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

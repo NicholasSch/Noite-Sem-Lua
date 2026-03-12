@@ -4,40 +4,55 @@ using UnityEngine.SceneManagement;
 
 public class Act2Manager : MonoBehaviour
 {
-    //Scene objects
     [SerializeField] private GameObject donaCurioObject;
     [SerializeField] private GameObject barnToolsObject;
     [SerializeField] private GameObject millInteractableObject;
 
-    //References
     [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
     [SerializeField] private NarrationUI narrationUI;
 
-    //Prefabs
     [SerializeField] private TitleUI titlePrefab;
-    [SerializeField] private CorpoSecoController corpoSecoPrefab;
+    [SerializeField] private NPCController corpoSecoPrefab;
 
-    //Night Scene Positions
+
+    //Cutscene Points
     [SerializeField] private Transform playerLookPosition;
     [SerializeField] private Transform corpoSecoSpawnPoint;
+    [SerializeField] private Transform corpoSecoLookDir;
     [SerializeField] private Transform horizonLookTarget;
     [SerializeField] private Transform millLookTarget;
 
     //Audio
+    [SerializeField] private AudioClip dayFarmMusic;
+    [SerializeField] private AudioClip dayFarmAmbience;
     [SerializeField] private AudioClip draggingSound;
     [SerializeField] private AudioClip windBurstSound;
-    [SerializeField] private AudioClip nightAmbience;
+    [SerializeField] private AudioClip nightFarmAmbience;
+    [SerializeField] private AudioClip nightFarmMusic;
+    [SerializeField] private string corpoSecoPointAnimation = "Anim_CorpoSeco_Point";
 
     private void Start()
     {
         CleanupSceneObjects();
         StartCoroutine(SceneFlowRoutine());
+
+        if (ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day)
+        {
+            AudioManager.Instance.PlayAmbient(dayFarmAmbience);
+            AudioManager.Instance.PlayMusic(dayFarmMusic);
+        }
+        else if (ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night &&
+                 ProgressionManager.Instance.firstNightTitlePlayed)
+        {
+            AudioManager.Instance.PlayAmbient(nightFarmAmbience);
+            AudioManager.Instance.PlayMusic(nightFarmMusic);
+        }
     }
 
     private void CleanupSceneObjects()
     {
-        if (ProgressionManager.Instance.talkedToDonaCurio && donaCurioObject != null)
+        if (ProgressionManager.Instance.HasTalkedToNpc("CucaDisguised") && donaCurioObject != null)
         {
             Destroy(donaCurioObject);
         }
@@ -59,19 +74,12 @@ public class Act2Manager : MonoBehaviour
         int day = ProgressionManager.Instance.currentDay;
         ProgressionManager.DayPeriod period = ProgressionManager.Instance.currentPeriod;
 
-        if (sceneName == "Farm_Day_1" && day == 1 && period == ProgressionManager.DayPeriod.Day && !ProgressionManager.Instance.farmIntroPlayed)
+        if (sceneName == "Farm_Day_1" &&
+            day == 1 &&
+            period == ProgressionManager.DayPeriod.Day &&
+            !ProgressionManager.Instance.farmIntroPlayed)
         {
             yield return PlayFarmIntro();
-            yield break;
-        }
-
-        if (sceneName == "House_Night_1" &&
-            day == 1 &&
-            period == ProgressionManager.DayPeriod.Night &&
-            ProgressionManager.Instance.firstNightSleepDone &&
-            !ProgressionManager.Instance.firstNightWakeScenePlayed)
-        {
-            yield return PlayHouseNightWakeScene();
             yield break;
         }
 
@@ -102,31 +110,6 @@ public class Act2Manager : MonoBehaviour
         ProgressionManager.Instance.SaveProgress();
     }
 
-    private IEnumerator PlayHouseNightWakeScene()
-    {
-        GameStateManager.SetState(GameState.Cutscene);
-
-        yield return new WaitForSecondsRealtime(1.2f);
-
-        if (draggingSound != null)
-        {
-            AudioManager.Instance.PlaySFX(draggingSound);
-        }
-
-        string[] lines =
-        {
-            "<color=#531182>Lucas:</color> ...Que som foi esse?",
-            "Parece que tem alguma coisa sendo arrastada lá fora."
-        };
-
-        yield return ThoughtUI.Instance.PlaySequence(lines);
-
-        ProgressionManager.Instance.firstNightWakeScenePlayed = true;
-        ProgressionManager.Instance.SaveProgress();
-
-        GameStateManager.SetState(GameState.Gameplay);
-    }
-
     private IEnumerator PlayFirstNightOutsideScene()
     {
         GameStateManager.SetState(GameState.Cutscene);
@@ -136,20 +119,16 @@ public class Act2Manager : MonoBehaviour
             gameUI.gameObject.SetActive(false);
         }
 
-        if (nightAmbience != null)
-        {
-            AudioManager.Instance.PlayAmbient(nightAmbience);
-        }
+        AudioManager.Instance.PlayAmbient(nightFarmAmbience);
 
         if (millLookTarget != null)
         {
             player.LookAtTarget(millLookTarget);
         }
 
-
-        CorpoSecoController corpoSeco = Instantiate(corpoSecoPrefab, corpoSecoSpawnPoint.position, Quaternion.identity);
+        NPCController corpoSeco = Instantiate(corpoSecoPrefab, corpoSecoSpawnPoint.position, Quaternion.identity);
         corpoSeco.PlayIdle();
-        corpoSeco.LookAt(player.transform);
+        corpoSeco.LookAtTarget(player.transform);
 
         string[] apparitionLines =
         {
@@ -165,30 +144,37 @@ public class Act2Manager : MonoBehaviour
             yield return player.MoveTo(playerLookPosition.position, 2f);
         }
 
-        player.LookAtTarget(corpoSeco.transform);
+
+        corpoSeco.LookAtTarget(corpoSecoLookDir);
 
         yield return new WaitForSecondsRealtime(0.8f);
 
-        corpoSeco.PlayPoint();
+        corpoSeco.PlayAnimationState(corpoSecoPointAnimation);
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(2f);
+
+        corpoSeco.ResetToIdle();
+
+        yield return new WaitForSecondsRealtime(0.2f);
 
         if (horizonLookTarget != null)
         {
             player.LookAtTarget(horizonLookTarget);
         }
 
-        yield return new WaitForSecondsRealtime(2f);
 
         if (windBurstSound != null)
         {
             AudioManager.Instance.PlaySFX(windBurstSound);
         }
 
-        yield return corpoSeco.Disappear();
+        yield return new WaitForSecondsRealtime(0.7f);
+
+        Destroy(corpoSeco.gameObject);
+
+        yield return new WaitForSecondsRealtime(0.5f);
 
         TitleUI titleInstance = Instantiate(titlePrefab);
-        titleInstance.Setup("NOITE SEM LUA", "As Sombras da Promessa");
         yield return titleInstance.Play();
 
         ProgressionManager.Instance.firstNightTitlePlayed = true;

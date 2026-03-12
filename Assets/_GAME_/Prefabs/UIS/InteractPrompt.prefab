@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2862679730365141845}
   - component: {fileID: 2176715674646570252}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Bakcground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 4684482282305329057}
   - component: {fileID: 4440170099324918137}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: E Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

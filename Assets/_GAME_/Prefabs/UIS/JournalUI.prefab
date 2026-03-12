@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 8148751344433869561}
   - component: {fileID: 4589462037063340498}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 624649529514329353}
   - component: {fileID: 2487492282957942195}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 62d35bf9d3e07604c83422f44aa4ed07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6250626501687682528
+    second: LucasIdleAnims_0
+  - first:
+      213: 2824597336328572842
+    second: LucasIdleAnims_1
+  - first:
+      213: -7936608798565874869
+    second: LucasIdleAnims_2
+  - first:
+      213: 8476951407184238627
+    second: LucasIdleAnims_3
+  - first:
+      213: -8030155518619055804
+    second: LucasIdleAnims_4
+  - first:
+      213: -4805863575636370070
+    second: LucasIdleAnims_5
+  - first:
+      213: -5817698433657455895
+    second: LucasIdleAnims_6
+  - first:
+      213: -4382143346507923117
+    second: LucasIdleAnims_7
+  - first:
+      213: -8657172350603473096
+    second: LucasIdleAnims_8
+  - first:
+      213: 1590701362350809228
+    second: LucasIdleAnims_9
+  - first:
+      213: 1064385350449250771
+    second: LucasIdleAnims_10
+  - first:
+      213: -2682695811954484169
+    second: LucasIdleAnims_11
+  - first:
+      213: 586925358876767625
+    second: LucasIdleAnims_12
+  - first:
+      213: -5897616415585815636
+    second: LucasIdleAnims_13
+  - first:
+      213: 1740884251463827854
+    second: LucasIdleAnims_14
+  - first:
+      213: -275122970355002455
+    second: LucasIdleAnims_15
+  - first:
+      213: -6429375811699713916
+    second: LucasIdleAnims_16
+  - first:
+      213: -7282370586891384527
+    second: LucasIdleAnims_17
+  - first:
+      213: 820511627732190170
+    second: LucasIdleAnims_18
+  - first:
+      213: 5668926341713599569
+    second: LucasIdleAnims_19
+  - first:
+      213: -6042854774225982581
+    second: LucasIdleAnims_20
+  - first:
+      213: -3327486863480129782
+    second: LucasIdleAnims_21
+  - first:
+      213: 5764573904622514824
+    second: LucasIdleAnims_22
+  - first:
+      213: -6187200874344006899
+    second: LucasIdleAnims_23
+  - first:
+      213: -482214775474395887
+    second: LucasIdleAnims_24
+  - first:
+      213: 1003403148407074880
+    second: LucasIdleAnims_25
+  - first:
+      213: 5890812483883540278
+    second: LucasIdleAnims_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LucasIdleAnims_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 729
+        width: 101
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5acb0afafaeb650800000000000000
+      internalID: 6250626501687682528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 731
+        width: 96
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf0161ef4cf23720800000000000000
+      internalID: 2824597336328572842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_2
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 730
+        width: 99
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43cd3009508bd190800000000000000
+      internalID: -7936608798565874869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 730
+        width: 100
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328d67b546e24a570800000000000000
+      internalID: 8476951407184238627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_4
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 730
+        width: 102
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4498195f9182f8090800000000000000
+      internalID: -8030155518619055804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_5
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 730
+        width: 100
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d943f5a842e4db0800000000000000
+      internalID: -4805863575636370070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_6
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 730
+        width: 99
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea308b1912634fa0800000000000000
+      internalID: -5817698433657455895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_7
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 729
+        width: 100
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351cd8c08df7f23c0800000000000000
+      internalID: -4382143346507923117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_8
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 729
+        width: 100
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f42f26d9b8bd780800000000000000
+      internalID: -8657172350603473096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_9
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 416
+        width: 62
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8066ae067e431610800000000000000
+      internalID: 1590701362350809228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 416
+        width: 63
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d148ad36d475ce00800000000000000
+      internalID: 1064385350449250771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 416
+        width: 64
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c56006f5625cad0800000000000000
+      internalID: -2682695811954484169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_12
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 416
+        width: 63
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985b485118d252800800000000000000
+      internalID: 586925358876767625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_13
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 416
+        width: 64
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3be7fed15772ea0800000000000000
+      internalID: -5897616415585815636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_14
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 416
+        width: 63
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81c29bc00dd82810800000000000000
+      internalID: 1740884251463827854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_15
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 417
+        width: 64
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3907abd119e2cf0800000000000000
+      internalID: -275122970355002455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_16
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 416
+        width: 65
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488562873c446c6a0800000000000000
+      internalID: -6429375811699713916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_17
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 416
+        width: 64
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139069de882dfea90800000000000000
+      internalID: -7282370586891384527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_18
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 121
+        width: 98
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad30e096afa036b00800000000000000
+      internalID: 820511627732190170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 126
+        width: 97
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c91b7f8721cae40800000000000000
+      internalID: 5668926341713599569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_20
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 123
+        width: 99
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bacf86997732ca0800000000000000
+      internalID: -6042854774225982581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_21
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 120
+        width: 98
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07fc73d35462d1d0800000000000000
+      internalID: -3327486863480129782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_22
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 121
+        width: 97
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882f28a9c61efff40800000000000000
+      internalID: 5764573904622514824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_23
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 121
+        width: 97
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b3db20695a22aa0800000000000000
+      internalID: -6187200874344006899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_24
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 123
+        width: 97
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11567627734de49f0800000000000000
+      internalID: -482214775474395887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_25
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 120
+        width: 99
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040ff43e8ddcced00800000000000000
+      internalID: 1003403148407074880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LucasIdleAnims_26
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 125
+        width: 97
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f90544ebe50c150800000000000000
+      internalID: 5890812483883540278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LucasIdleAnims_0: 6250626501687682528
+      LucasIdleAnims_1: 2824597336328572842
+      LucasIdleAnims_10: 1064385350449250771
+      LucasIdleAnims_11: -2682695811954484169
+      LucasIdleAnims_12: 586925358876767625
+      LucasIdleAnims_13: -5897616415585815636
+      LucasIdleAnims_14: 1740884251463827854
+      LucasIdleAnims_15: -275122970355002455
+      LucasIdleAnims_16: -6429375811699713916
+      LucasIdleAnims_17: -7282370586891384527
+      LucasIdleAnims_18: 820511627732190170
+      LucasIdleAnims_19: 5668926341713599569
+      LucasIdleAnims_2: -7936608798565874869
+      LucasIdleAnims_20: -6042854774225982581
+      LucasIdleAnims_21: -3327486863480129782
+      LucasIdleAnims_22: 5764573904622514824
+      LucasIdleAnims_23: -6187200874344006899
+      LucasIdleAnims_24: -482214775474395887
+      LucasIdleAnims_25: 1003403148407074880
+      LucasIdleAnims_26: 5890812483883540278
+      LucasIdleAnims_3: 8476951407184238627
+      LucasIdleAnims_4: -8030155518619055804
+      LucasIdleAnims_5: -4805863575636370070
+      LucasIdleAnims_6: -5817698433657455895
+      LucasIdleAnims_7: -4382143346507923117
+      LucasIdleAnims_8: -8657172350603473096
+      LucasIdleAnims_9: 1590701362350809228
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
   actManager: {fileID: 1337574566}
   narrationUI: {fileID: 966587933}
+  doorSound: {fileID: 8300000, guid: cc15f7c46dacfc841adc124e6d07f327, type: 3}
 --- !u!50 &18142877
 Rigidbody2D:
   serializedVersion: 5
@@ -2484,7 +2485,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 0
+      m_AllTileFlags: 1073741824
   - first: {x: -7, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -2958,6 +2959,14 @@ CompositeCollider2D:
         Y: 1875000
       - X: -3750000
         Y: 1875000
+    - - X: 31250000
+        Y: 9375000
+      - X: 18750000
+        Y: 9375000
+      - X: 18750000
+        Y: 625000
+      - X: 31250000
+        Y: 625000
     - - X: -70000000
         Y: -5000000
       - X: -75625000
@@ -3015,6 +3024,10 @@ CompositeCollider2D:
       - {x: -1.625, y: 1.3749893}
       - {x: -1.6249812, y: 0.2499938}
       - {x: -1.4374958, y: 0.1875}
+    - - {x: 3.124971, y: 0.0625}
+      - {x: 3.124971, y: 0.9375}
+      - {x: 1.875, y: 0.93747073}
+      - {x: 1.8750292, y: 0.0625}
     - - {x: -7.0000296, y: -3}
       - {x: -7.0000296, y: -0.5}
       - {x: -7.5625033, y: -0.500001}
@@ -6822,12 +6835,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192831045}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -766.4123, y: -562.28595, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1602439532}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1237749833 stripped
 AudioSource:
@@ -6898,7 +6911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Act1Manager
   apartmentMusic: {fileID: 8300000, guid: 2dc3c3219a6d79f478ed5d38bc8df512, type: 3}
   apartmentAmbience: {fileID: 8300000, guid: 45479ffe794fa6f49b3fa05b8cf77639, type: 3}
-  glassCrack: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
+  glassCrack: {fileID: 8300000, guid: 18d0903be2466e1418009c956fe7a8a4, type: 3}
   blackScreenText: {fileID: 966587933}
   doorExitText:
     displayDuration: 2
@@ -7036,6 +7049,7 @@ Transform:
   - {fileID: 859141359}
   - {fileID: 1981957627}
   - {fileID: 84786024}
+  - {fileID: 1192831048}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1801233457 stripped
@@ -8347,6 +8361,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3024411806241822233, guid: 7cda4f5f25838cc43a640c4394e822c1, type: 3}
+      propertyPath: currentDay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024411806241822233, guid: 7cda4f5f25838cc43a640c4394e822c1, type: 3}
+      propertyPath: porchScenePlayed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4561241501199704886, guid: 7cda4f5f25838cc43a640c4394e822c1, type: 3}
       propertyPath: m_Name
       value: ProgressionManager
@@ -8569,4 +8591,3 @@ SceneRoots:
   - {fileID: 1803977560}
   - {fileID: 1602439532}
   - {fileID: 1271193499653233137}
-  - {fileID: 1192831048}

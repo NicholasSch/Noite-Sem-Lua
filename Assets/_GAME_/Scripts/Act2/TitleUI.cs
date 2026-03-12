@@ -5,24 +5,17 @@ using UnityEngine;
 public class TitleUI : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private TextMeshProUGUI titleText;
-    [SerializeField] private TextMeshProUGUI subtitleText;
     [SerializeField] private float fadeDuration = 1.2f;
-    [SerializeField] private float holdDuration = 2.5f;
+    [SerializeField] private float holdDuration = 10f;
 
-    public void Setup(string title, string subtitle)
-    {
-        titleText.text = title;
-        subtitleText.text = subtitle;
-    }
 
     public IEnumerator Play()
     {
         canvasGroup.alpha = 0f;
 
-        yield return Fade(0f, 1f);
+        yield return Fade(0f, 2f);
         yield return new WaitForSecondsRealtime(holdDuration);
-        yield return Fade(1f, 0f);
+        yield return Fade(2f, 0f);
 
         Destroy(gameObject);
     }

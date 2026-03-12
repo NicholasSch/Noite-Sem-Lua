@@ -3,19 +3,53 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour, IInteractable
 {
+    private enum SequenceActionType
+    {
+        DialogueBlock,
+        MoveToTarget,
+        Wait,
+        FaceDirection,
+        FaceTarget,
+        FacePlayer,
+        PlayAnimation
+    }
+
+    [System.Serializable]
+    private class SequenceAction
+    {   
+        //Action Data
+        public SequenceActionType actionType;
+
+        public int dialogueBlockIndex;
+
+        public Transform target;
+
+        public float waitDuration;
+
+        public NPCController.Direction direction;
+
+        //Anim
+        public string animationStateName;
+        public float animationWaitDuration;
+        public bool returnToIdleAfterAnimation = true;
+    }
+
+    //Dependencies
+    [SerializeField] private string npcID;
     [SerializeField] private NPCDialogue dialogue;
     [SerializeField] private NPCController controller;
-    [SerializeField] private Transform walkTarget;
-    [SerializeField] private GameObject objectToDisableAfterConversation;
 
-    private static readonly string[] Lines =
-    {
-        "<color=#531182>Lucas:</color> Que mulher estranha",
-        "Este lugar é estranho",
-        "Bom, eu deveria fazer o que o caderno manda agora"
-    };
+    //Sequences
+    [SerializeField] private SequenceAction[] firstInteractionSequence;
+    [SerializeField] private SequenceAction[] repeatInteractionSequence;
 
-    private bool talking;
+    //Optionals
+    [SerializeField] private bool lockPlayerDuringInteraction = true;
+    [SerializeField] private bool facePlayerAtStart = true;
+    [SerializeField] private GameObject objectToDisableAfterFirstInteraction;
+    [SerializeField] private string completeTaskIDAfterFirstInteraction;
+
+    private bool isRunning;
     private PlayerController player;
 
     private void Start()
@@ -25,7 +59,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (talking)
+        if (isRunning)
             return;
 
         StartCoroutine(InteractionRoutine());
@@ -33,29 +67,111 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
     private IEnumerator InteractionRoutine()
     {
-        talking = true;
+        isRunning = true;
 
-        GameStateManager.SetState(GameState.Cutscene);
-        player.ForceFaceUp();
+        bool hasTalkedBefore = ProgressionManager.Instance.HasTalkedToNpc(npcID);
+        SequenceAction[] sequenceToRun = hasTalkedBefore ? repeatInteractionSequence : firstInteractionSequence;
 
-        yield return dialogue.StartDialogue();
-
-        ProgressionManager.Instance.talkedToDonaCurio = true;
-        ProgressionManager.Instance.SaveProgress();
-
-        if (walkTarget != null)
+        if (lockPlayerDuringInteraction)
         {
-            StartCoroutine(controller.WalkTo(walkTarget));
+            GameStateManager.SetState(GameState.Cutscene);
         }
 
-        yield return ThoughtUI.Instance.PlaySequence(Lines);
-
-        if (objectToDisableAfterConversation != null)
+        if (facePlayerAtStart && player != null && controller != null)
         {
-            objectToDisableAfterConversation.SetActive(false);
+            controller.LookAtTarget(player.transform);
         }
 
-        GameStateManager.SetState(GameState.Gameplay);
-        talking = false;
+        for (int i = 0; i < sequenceToRun.Length; i++)
+        {
+            yield return RunAction(sequenceToRun[i]);
+        }
+
+        if (!hasTalkedBefore)
+        {
+            ProgressionManager.Instance.RegisterNpcTalk(npcID);
+
+            if (!string.IsNullOrWhiteSpace(completeTaskIDAfterFirstInteraction))
+            {
+                TaskManager.Instance.CompleteTask(completeTaskIDAfterFirstInteraction);
+            }
+
+            if (objectToDisableAfterFirstInteraction != null)
+            {
+                objectToDisableAfterFirstInteraction.SetActive(false);
+            }
+        }
+
+        if (lockPlayerDuringInteraction)
+        {
+            GameStateManager.SetState(GameState.Gameplay);
+        }
+
+        isRunning = false;
+    }
+
+    private IEnumerator RunAction(SequenceAction action)
+    {
+        switch (action.actionType)
+        {
+            case SequenceActionType.DialogueBlock:
+                if (dialogue != null)
+                {
+                    yield return dialogue.PlayDialogueBlock(action.dialogueBlockIndex);
+                }
+                break;
+
+            case SequenceActionType.MoveToTarget:
+                if (controller != null && action.target != null)
+                {
+                    yield return controller.WalkTo(action.target);
+                }
+                break;
+
+            case SequenceActionType.Wait:
+                if (action.waitDuration > 0f)
+                {
+                    yield return new WaitForSecondsRealtime(action.waitDuration);
+                }
+                break;
+
+            case SequenceActionType.FaceDirection:
+                if (controller != null)
+                {
+                    controller.FaceDirection(action.direction);
+                }
+                break;
+
+            case SequenceActionType.FaceTarget:
+                if (controller != null && action.target != null)
+                {
+                    controller.LookAtTarget(action.target);
+                }
+                break;
+
+            case SequenceActionType.FacePlayer:
+                if (controller != null && player != null)
+                {
+                    controller.LookAtTarget(player.transform);
+                }
+                break;
+
+            case SequenceActionType.PlayAnimation:
+                if (controller != null && !string.IsNullOrWhiteSpace(action.animationStateName))
+                {
+                    controller.PlayAnimationState(action.animationStateName);
+
+                    if (action.animationWaitDuration > 0f)
+                    {
+                        yield return new WaitForSecondsRealtime(action.animationWaitDuration);
+                    }
+
+                    if (action.returnToIdleAfterAnimation)
+                    {
+                        controller.ResetToIdle();
+                    }
+                }
+                break;
+        }
     }
 }
