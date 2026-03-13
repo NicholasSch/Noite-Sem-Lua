@@ -23,6 +23,7 @@ public class ProgressionManager : MonoBehaviour
         public bool firstNightSleepDone;
         public bool firstNightWakeScenePlayed;
         public bool firstNightTitlePlayed;
+        public bool act3MorningIntroPlayed;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -38,6 +39,7 @@ public class ProgressionManager : MonoBehaviour
     public bool firstNightSleepDone;
     public bool firstNightWakeScenePlayed;
     public bool firstNightTitlePlayed;
+    public bool act3MorningIntroPlayed;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -110,7 +112,7 @@ public class ProgressionManager : MonoBehaviour
         SaveProgress();
     }
 
-    public void AdvanceToNextDay()
+    public void NextDay()
     {
         currentDay++;
         currentPeriod = DayPeriod.Day;
@@ -143,6 +145,7 @@ public class ProgressionManager : MonoBehaviour
             firstNightSleepDone = firstNightSleepDone,
             firstNightWakeScenePlayed = firstNightWakeScenePlayed,
             firstNightTitlePlayed = firstNightTitlePlayed,
+            act3MorningIntroPlayed = act3MorningIntroPlayed,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -176,6 +179,7 @@ public class ProgressionManager : MonoBehaviour
         firstNightSleepDone = data.firstNightSleepDone;
         firstNightWakeScenePlayed = data.firstNightWakeScenePlayed;
         firstNightTitlePlayed = data.firstNightTitlePlayed;
+        act3MorningIntroPlayed = data.act3MorningIntroPlayed;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -192,6 +196,7 @@ public class ProgressionManager : MonoBehaviour
         firstNightSleepDone = false;
         firstNightWakeScenePlayed = false;
         firstNightTitlePlayed = false;
+        act3MorningIntroPlayed = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();

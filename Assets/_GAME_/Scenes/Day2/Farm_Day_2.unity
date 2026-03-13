@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8851492ddd7fa5d4aba37fb2fcfff885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BarnToolsInteract
-  barnDoorSound: {fileID: 0}
+  barnDoorSound: {fileID: 8300000, guid: e0895826f2d55884bb38b246b49a5e62, type: 3}
 --- !u!1001 &80674307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4123,7 +4123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
       propertyPath: 'dialogueBlocks.Array.data[1].lines.Array.data[2]'
-      value: "Bom eu deveria fazer fazer o que o caderno do vov\xF4 manda agora"
+      value: "Bom eu deveria fazer o que o caderno do vov\xF4 manda agora"
       objectReference: {fileID: 0}
     - target: {fileID: 7901281308893154759, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
       propertyPath: firstInteractionSequence.Array.data[1].target
@@ -4137,11 +4137,6 @@ PrefabInstance:
 --- !u!4 &321525496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3771388887722691281, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-  m_PrefabInstance: {fileID: 321525495}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &439703820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1193293298618050137, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
   m_PrefabInstance: {fileID: 321525495}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &649044929
@@ -7287,70 +7282,6 @@ Transform:
   - {fileID: 719359628}
   m_Father: {fileID: 1254750279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &697286005
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 697286006}
-  - component: {fileID: 697286007}
-  m_Layer: 0
-  m_Name: Act2Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &697286006
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697286005}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1469785839}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697286007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697286005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86130b2c4094ee14ca68593b5aad9ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Act2Manager
-  donaCurioObject: {fileID: 439703820}
-  barnToolsObject: {fileID: 37195872}
-  millInteractableObject: {fileID: 281313048}
-  gameUI: {fileID: 1766220107}
-  player: {fileID: 1115960879}
-  narrationUI: {fileID: 1014862610}
-  titlePrefab: {fileID: -3799667207118881983, guid: 2eb5533cce94e294d98457e41cb2c449, type: 3}
-  corpoSecoPrefab: {fileID: -7947478279587922365, guid: c44f8f39724e6844baf3d83965bccf5e, type: 3}
-  playerLookPosition: {fileID: 0}
-  corpoSecoSpawnPoint: {fileID: 0}
-  corpoSecoLookDir: {fileID: 0}
-  horizonLookTarget: {fileID: 0}
-  millLookTarget: {fileID: 0}
-  dayFarmMusic: {fileID: 8300000, guid: 8aad60808127a914887f71802fedc7e4, type: 3}
-  dayFarmAmbience: {fileID: 8300000, guid: 0cb587b610287b8459071497ca96481c, type: 3}
-  draggingSound: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
-  windBurstSound: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
-  nightFarmAmbience: {fileID: 0}
-  nightFarmMusic: {fileID: 0}
-  corpoSecoPointAnimation: Anim_CorpoSeco_Point
 --- !u!1 &719359627
 GameObject:
   m_ObjectHideFlags: 0
@@ -97673,17 +97604,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1297235561535066089, guid: e6f6531b630aa904995bf232de8f419d, type: 3}
   m_PrefabInstance: {fileID: 1115960877}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1115960879 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 379073557985043776, guid: e6f6531b630aa904995bf232de8f419d, type: 3}
-  m_PrefabInstance: {fileID: 1115960877}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46947fbd35c5e441b294a9b1bdc00f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!4 &1142966991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4471605587918108456, guid: c8a0bb27786d9f645b714fa41ab7380f, type: 3}
@@ -98305,7 +98225,6 @@ Transform:
   - {fileID: 1142966991}
   - {fileID: 2141403372}
   - {fileID: 1290998015}
-  - {fileID: 697286006}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485360199
@@ -100170,17 +100089,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1209933204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1766220107 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2610823754188994887, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
-  m_PrefabInstance: {fileID: 909417708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4c3f04d6cfbf674881f5d3ebf8ee400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameUI
 --- !u!1 &2044315495
 GameObject:
   m_ObjectHideFlags: 0

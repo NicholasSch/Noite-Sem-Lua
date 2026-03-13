@@ -9,35 +9,41 @@ EditorBuildSettings:
     path: Assets/_GAME_/Scenes/Apartment.unity
     guid: 1ec35872e1b87b147b4e63310ddc6cec
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Cave_Day.unity
+    path: Assets/_GAME_/Scenes/Day1/Cave_Day.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Farm_Day_1.unity
+    path: Assets/_GAME_/Scenes/Day1/Farm_Day_1.unity
     guid: 90959bdc72e566e4395a4fb96e07c302
   - enabled: 1
-    path: Assets/_GAME_/Scenes/House_Day_1.unity
+    path: Assets/_GAME_/Scenes/Day1/House_Day_1.unity
     guid: 7ccf27621a300c740b3ab6b95c014a43
   - enabled: 1
-    path: Assets/_GAME_/Scenes/House_Night_1.unity
+    path: Assets/_GAME_/Scenes/Day1/House_Night_1.unity
     guid: a8a10e256a805524d9b50472167d29e7
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Farm_Night_1.unity
+    path: Assets/_GAME_/Scenes/Day1/Farm_Night_1.unity
     guid: b96b8df9a9071e0459533f9a0bbe0bd0
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Cave_Night.unity
+    path: Assets/_GAME_/Scenes/Day1/Cave_Night.unity
     guid: 18a48888493bbe84b9c1e6eec58c691c
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Forest_Day.unity
+    path: Assets/_GAME_/Scenes/Day1/Forest_Day_1.unity
     guid: e3574805d923c1644bd30a64d3d2135a
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Forest_Night.unity
+    path: Assets/_GAME_/Scenes/Day1/Forest_Night.unity
     guid: 184f91a0f7747944c8ba7a89db3fce86
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Market_Day.unity
+    path: Assets/_GAME_/Scenes/Day1/Market_Day_1.unity
     guid: 2b9cf0ba838106d41acdc8d796263def
   - enabled: 1
-    path: Assets/_GAME_/Scenes/Market_Night.unity
+    path: Assets/_GAME_/Scenes/Day1/Market_Night.unity
     guid: b1cd3d8cb69f1764c8e0efc4f1abefa7
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day2/House_Day_2.unity
+    guid: 3bda8b5119ca2a4439e28a40473ce44c
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day2/Farm_Day_2.unity
+    guid: 575555616ab1e2841833b5acdfa3dd21
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

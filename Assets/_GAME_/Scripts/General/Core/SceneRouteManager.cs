@@ -64,6 +64,7 @@ public static class SceneRouteManager
             switch (day)
             {
                 case 1: sceneName = "Farm_Day_1"; break;
+                case 2: sceneName = "Farm_Day_2"; break;
                 default: sceneName = "Farm_Day_1"; break;
             }
         }
@@ -72,6 +73,7 @@ public static class SceneRouteManager
             switch (day)
             {
                 case 1: sceneName = "Farm_Night_1"; break;
+                case 2: sceneName = "Farm_Night_2"; break;
                 default: sceneName = "Farm_Night_1"; break;
             }
         }
@@ -95,6 +97,7 @@ public static class SceneRouteManager
             switch (day)
             {
                 case 1: sceneName = "House_Day_1"; break;
+                case 2: sceneName = "House_Day_2"; break;
                 default: sceneName = "House_Day_1"; break;
             }
         }
@@ -103,6 +106,7 @@ public static class SceneRouteManager
             switch (day)
             {
                 case 1: sceneName = "House_Night_1"; break;
+                case 2: sceneName = "House_Night_2"; break;
                 default: sceneName = "House_Night_1"; break;
             }
         }
@@ -125,6 +129,7 @@ public static class SceneRouteManager
             switch (day)
             {
                 case 1: sceneName = "Forest_Day_1"; break;
+                case 2: sceneName = "Forest_Day_2"; break;
                 default: sceneName = "Forest_Day_1"; break;
             }
         }
@@ -133,6 +138,7 @@ public static class SceneRouteManager
             switch (day)
             {
                 case 1: sceneName = "Forest_Night_1"; break;
+                case 2: sceneName = "Forest_Night_2"; break;
                 default: sceneName = "Forest_Night_1"; break;
             }
         }

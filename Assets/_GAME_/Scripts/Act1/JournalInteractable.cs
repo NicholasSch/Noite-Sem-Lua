@@ -43,7 +43,7 @@ public class JournalInteractable : MonoBehaviour, IInteractable
         isOpen = true;
         Time.timeScale = 0f;
 
-        yield return new WaitForSecondsRealtime(10f);
+        yield return new WaitForSecondsRealtime(30f);
 
         if (currentLetterInstance != null)
         {

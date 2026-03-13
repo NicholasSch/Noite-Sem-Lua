@@ -29,7 +29,6 @@ public class Act2Manager : MonoBehaviour
     [SerializeField] private AudioClip draggingSound;
     [SerializeField] private AudioClip windBurstSound;
     [SerializeField] private AudioClip nightFarmAmbience;
-    [SerializeField] private AudioClip nightFarmMusic;
     [SerializeField] private string corpoSecoPointAnimation = "Anim_CorpoSeco_Point";
 
     private void Start()
@@ -46,7 +45,6 @@ public class Act2Manager : MonoBehaviour
                  ProgressionManager.Instance.firstNightTitlePlayed)
         {
             AudioManager.Instance.PlayAmbient(nightFarmAmbience);
-            AudioManager.Instance.PlayMusic(nightFarmMusic);
         }
     }
 
@@ -178,13 +176,16 @@ public class Act2Manager : MonoBehaviour
         yield return titleInstance.Play();
 
         ProgressionManager.Instance.firstNightTitlePlayed = true;
-        ProgressionManager.Instance.SaveProgress();
+        ProgressionManager.Instance.NextDay();
+        ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Day);
 
-        if (gameUI != null)
-        {
-            gameUI.gameObject.SetActive(true);
-        }
+        SceneRouteManager.RouteData route = SceneRouteManager.GetRoute(
+            SceneRouteManager.WorldArea.House,
+            SceneRouteManager.EntryPoint.Default
+        );
 
-        GameStateManager.SetState(GameState.Gameplay);
+        ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
+
+        yield return narrationUI.ShowTextRoutine("", route.SceneName);
     }
 }
