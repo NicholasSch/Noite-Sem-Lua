@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 10fd3ca4285d3ac4db4255396e328546
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 440555844086145653
+    second: DanteIdle_0
+  - first:
+      213: -1584989569391943200
+    second: DanteIdle_1
+  - first:
+      213: -5137475072819491897
+    second: DanteIdle_2
+  - first:
+      213: -8507358270065441816
+    second: DanteIdle_3
+  - first:
+      213: -5137452579145475240
+    second: DanteIdle_4
+  - first:
+      213: 912856760033207340
+    second: DanteIdle_5
+  - first:
+      213: 1744448326287125098
+    second: DanteIdle_6
+  - first:
+      213: -8529715995094527652
+    second: DanteIdle_7
+  - first:
+      213: -6923180263399643833
+    second: DanteIdle_8
+  - first:
+      213: -530413109081889224
+    second: DanteIdle_9
+  - first:
+      213: -7497883171466503163
+    second: DanteIdle_10
+  - first:
+      213: 7787019008782270050
+    second: DanteIdle_11
+  - first:
+      213: -6338845600535210563
+    second: DanteIdle_12
+  - first:
+      213: 2008469198472294077
+    second: DanteIdle_13
+  - first:
+      213: 7735653219403175909
+    second: DanteIdle_14
+  - first:
+      213: 8382545553294470709
+    second: DanteIdle_15
+  - first:
+      213: -5594811609730263520
+    second: DanteIdle_16
+  - first:
+      213: -4855342897081076267
+    second: DanteIdle_17
+  - first:
+      213: 350778830158361425
+    second: DanteIdle_18
+  - first:
+      213: 6884280530740316090
+    second: DanteIdle_19
+  - first:
+      213: -6236282809807289977
+    second: DanteIdle_20
+  - first:
+      213: -4701338807893105785
+    second: DanteIdle_21
+  - first:
+      213: -5487955345250302630
+    second: DanteIdle_22
+  - first:
+      213: 5957600880842789513
+    second: DanteIdle_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DanteIdle_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 517
+        width: 110
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5722a7eb43b2d1600800000000000000
+      internalID: 440555844086145653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 517
+        width: 110
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1a1bf526cf00ae0800000000000000
+      internalID: -1584989569391943200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_2
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 517
+        width: 109
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb8b2a04a504b8b0800000000000000
+      internalID: -5137475072819491897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_3
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 517
+        width: 110
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e384cf2abacfe980800000000000000
+      internalID: -8507358270065441816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_4
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 517
+        width: 102
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b9e91491a14b8b0800000000000000
+      internalID: -5137452579145475240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_5
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 517
+        width: 110
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24e790036e1bac00800000000000000
+      internalID: 912856760033207340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_6
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 517
+        width: 110
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a6e51a286853810800000000000000
+      internalID: 1744448326287125098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_7
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 517
+        width: 109
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c515c6dae7c50a980800000000000000
+      internalID: -8529715995094527652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 250
+        width: 113
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745a1142b3cebef90800000000000000
+      internalID: -6923180263399643833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_9
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 252
+        width: 113
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836a6f8661893a8f0800000000000000
+      internalID: -530413109081889224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_10
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 250
+        width: 112
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c1c552bfa22f790800000000000000
+      internalID: -7497883171466503163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_11
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 247
+        width: 112
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e7ea5f78c011c60800000000000000
+      internalID: 7787019008782270050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_12
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 249
+        width: 104
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db51d0ec285e708a0800000000000000
+      internalID: -6338845600535210563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_13
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 252
+        width: 112
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe214d38148fdb10800000000000000
+      internalID: 2008469198472294077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_14
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 248
+        width: 111
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e712282e9f8a5b60800000000000000
+      internalID: 7735653219403175909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_15
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 246
+        width: 112
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ea5a1a4c8c45470800000000000000
+      internalID: 8382545553294470709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_16
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 77
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026dbc8cb7c3b52b0800000000000000
+      internalID: -5594811609730263520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_17
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 95
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d534cc1c5b5e9cb0800000000000000
+      internalID: -4855342897081076267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_18
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 97
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153f05ecc773ed400800000000000000
+      internalID: 350778830158361425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_19
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 0
+        width: 75
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab70ae01ba0e98f50800000000000000
+      internalID: 6884280530740316090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_20
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 0
+        width: 91
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781cf8263d54479a0800000000000000
+      internalID: -6236282809807289977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_21
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 0
+        width: 100
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783e5c2534d71ceb0800000000000000
+      internalID: -4701338807893105785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_22
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 101
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55462f90bdd6d3b0800000000000000
+      internalID: -5487955345250302630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DanteIdle_23
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 0
+        width: 79
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9825038bf66ada250800000000000000
+      internalID: 5957600880842789513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DanteIdle_0: 440555844086145653
+      DanteIdle_1: -1584989569391943200
+      DanteIdle_10: -7497883171466503163
+      DanteIdle_11: 7787019008782270050
+      DanteIdle_12: -6338845600535210563
+      DanteIdle_13: 2008469198472294077
+      DanteIdle_14: 7735653219403175909
+      DanteIdle_15: 8382545553294470709
+      DanteIdle_16: -5594811609730263520
+      DanteIdle_17: -4855342897081076267
+      DanteIdle_18: 350778830158361425
+      DanteIdle_19: 6884280530740316090
+      DanteIdle_2: -5137475072819491897
+      DanteIdle_20: -6236282809807289977
+      DanteIdle_21: -4701338807893105785
+      DanteIdle_22: -5487955345250302630
+      DanteIdle_23: 5957600880842789513
+      DanteIdle_3: -8507358270065441816
+      DanteIdle_4: -5137452579145475240
+      DanteIdle_5: 912856760033207340
+      DanteIdle_6: 1744448326287125098
+      DanteIdle_7: -8529715995094527652
+      DanteIdle_8: -6923180263399643833
+      DanteIdle_9: -530413109081889224
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

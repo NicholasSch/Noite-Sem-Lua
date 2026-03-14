@@ -2,7 +2,8 @@ using System.Collections;
 using UnityEngine;
 
 public class Act3Manager : MonoBehaviour
-{
+{   
+    [Header("Audio")]
     [SerializeField] private AudioClip dayHouseAmbience;
     [SerializeField] private AudioClip dayHouseMusic;
 

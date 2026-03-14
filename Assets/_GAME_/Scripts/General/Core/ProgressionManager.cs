@@ -24,6 +24,8 @@ public class ProgressionManager : MonoBehaviour
         public bool firstNightWakeScenePlayed;
         public bool firstNightTitlePlayed;
         public bool act3MorningIntroPlayed;
+        public bool act3BenchVisionSeen;
+        public bool act3NewspaperFound;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -40,6 +42,8 @@ public class ProgressionManager : MonoBehaviour
     public bool firstNightWakeScenePlayed;
     public bool firstNightTitlePlayed;
     public bool act3MorningIntroPlayed;
+    public bool act3BenchVisionSeen;
+    public bool act3NewspaperFound;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -146,6 +150,8 @@ public class ProgressionManager : MonoBehaviour
             firstNightWakeScenePlayed = firstNightWakeScenePlayed,
             firstNightTitlePlayed = firstNightTitlePlayed,
             act3MorningIntroPlayed = act3MorningIntroPlayed,
+            act3BenchVisionSeen = act3BenchVisionSeen,
+            act3NewspaperFound = act3NewspaperFound,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -171,7 +177,7 @@ public class ProgressionManager : MonoBehaviour
         if (data == null)
             return;
 
-        currentDay = Mathf.Max(1, data.currentDay);
+        currentDay = Mathf.Max(0, data.currentDay);
         currentPeriod = data.currentPeriod;
         farmIntroPlayed = data.farmIntroPlayed;
         LetterOpened = data.LetterOpened;
@@ -180,6 +186,8 @@ public class ProgressionManager : MonoBehaviour
         firstNightWakeScenePlayed = data.firstNightWakeScenePlayed;
         firstNightTitlePlayed = data.firstNightTitlePlayed;
         act3MorningIntroPlayed = data.act3MorningIntroPlayed;
+        act3BenchVisionSeen = data.act3BenchVisionSeen;
+        act3NewspaperFound = data.act3NewspaperFound;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -188,7 +196,7 @@ public class ProgressionManager : MonoBehaviour
 
     public void ResetProgress()
     {
-        currentDay = 1;
+        currentDay = 0;
         currentPeriod = DayPeriod.Day;
         farmIntroPlayed = false;
         LetterOpened = false;
@@ -197,6 +205,8 @@ public class ProgressionManager : MonoBehaviour
         firstNightWakeScenePlayed = false;
         firstNightTitlePlayed = false;
         act3MorningIntroPlayed = false;
+        act3BenchVisionSeen = false;
+        act3NewspaperFound = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();

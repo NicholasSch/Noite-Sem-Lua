@@ -4,26 +4,28 @@ using UnityEngine.SceneManagement;
 
 public class Act2Manager : MonoBehaviour
 {
+    [Header("Objects")]
     [SerializeField] private GameObject donaCurioObject;
     [SerializeField] private GameObject barnToolsObject;
     [SerializeField] private GameObject millInteractableObject;
-
-    [SerializeField] private GameUI gameUI;
-    [SerializeField] private PlayerController player;
-    [SerializeField] private NarrationUI narrationUI;
-
-    [SerializeField] private TitleUI titlePrefab;
     [SerializeField] private NPCController corpoSecoPrefab;
+    [SerializeField] private PlayerController player;
+
+    [Header("UIS")]
+    [SerializeField] private GameUI gameUI;
+    [SerializeField] private NarrationUI narrationUI;
+    [SerializeField] private TitleUI titlePrefab;
+    
 
 
-    //Cutscene Points
+    [Header("Cutscene Points")]
     [SerializeField] private Transform playerLookPosition;
     [SerializeField] private Transform corpoSecoSpawnPoint;
     [SerializeField] private Transform corpoSecoLookDir;
     [SerializeField] private Transform horizonLookTarget;
     [SerializeField] private Transform millLookTarget;
 
-    //Audio
+    [Header("Audio")]
     [SerializeField] private AudioClip dayFarmMusic;
     [SerializeField] private AudioClip dayFarmAmbience;
     [SerializeField] private AudioClip draggingSound;

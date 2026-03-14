@@ -57,7 +57,7 @@ public class JournalSystem : MonoBehaviour
     {
         leftPageText =
             "Caderno de Dante\n\n" +
-            "O Engenho não gosta de estranhos.\n" +
+            "O Engenho não gosta de estranhos.\n\n" +
             "Caminhe pelos limites e mostre à terra\n" +
             "que o sangue de Dante ainda corre aqui.";
 
@@ -78,26 +78,26 @@ public class JournalSystem : MonoBehaviour
     {
         leftPageText =
             "Caderno de Dante\n\n" +
-            "Lia dizia que o Engenho só tinha vida por causa do pomar. Cada árvore aqui foi plantada com um desejo. " +
-            "Se você encontrar o banco de madeira sob a sombra mais antiga, saberá que este lugar já foi preenchido por risos, " +
-            "antes do silêncio se tornar o único dono da casa.";
+            "Lia dizia que o Engenho só respirava por causa do pomar. Cada árvore nasceu de um desejo, de uma esperança confiada à terra.\n\n" +
+            "Se encontrar o velho banco de madeira junto ao canteiro que já foi sombra e abrigo, talvez entenda que este lugar já pertenceu aos risos,\n\n" +
+            "antes que o silêncio tomasse conta de tudo.";
 
         tasks.Add(new Task(
             "Orchard_Care",
-            "O Cuidado com o Pomar",
-            "Lia dizia que o Engenho só tinha vida pelas árvores. Cada uma foi um desejo. Tire o peso dos galhos secos para que o passado não sufoque o presente."
+            "O Cuidado com o Pomar (Interaja com os arbustos)",
+            "Lia dizia que o Engenho só tinha vida por causa das árvores e dos frutos. Colha o que ainda resiste nos arbustos do pomar, para que o abandono não apague de vez o cuidado que existiu aqui."
         ));
 
         tasks.Add(new Task(
             "Plant_Hope",
-            "O Plantio da Esperança",
-            "Plante o que dará sombra aos seus netos. Uma vida nova ajuda a terra a perdoar quem chega."
+            "O Plantio da Esperança (Plante a muda no canteiro vazio)",
+            "Plante no canteiro aquilo que ainda pode crescer. Uma vida nova talvez ajude esta terra a lembrar que nem toda promessa termina em ruína."
         ));
 
         tasks.Add(new Task(
             "Lake_Toll",
-            "O Pedágio das Águas",
-            "Não ignore o que vive no lago. Jogue uma moeda de prata. É o preço para que a água não te veja como um invasor."
+            "O Pedágio das Águas (Interaja com o lago)",
+            "Não ignore o que repousa nas águas. Ofereça a moeda de prata, como pede o caderno. Há lugares onde a terra acolhe, e outros onde é preciso pedir licença."
         ));
     }
 
