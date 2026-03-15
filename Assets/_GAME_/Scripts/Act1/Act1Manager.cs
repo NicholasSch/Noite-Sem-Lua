@@ -2,10 +2,13 @@ using System.Collections;
 using UnityEngine;
 
 public class Act1Manager : MonoBehaviour
-{
+{   
+    [Header("Audio")]
     [SerializeField] private AudioClip apartmentMusic;
     [SerializeField] private AudioClip apartmentAmbience;
     [SerializeField] private AudioClip glassCrack;
+    
+    [Header("UIS")]
     [SerializeField] private NarrationUI blackScreenText;
     [SerializeField] private NarrationSettings doorExitText;
 

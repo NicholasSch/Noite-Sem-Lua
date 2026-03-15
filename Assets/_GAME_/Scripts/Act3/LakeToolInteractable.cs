@@ -4,7 +4,6 @@ using UnityEngine;
 public class LakeTollInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private AudioClip coinSound;
-    [SerializeField] private GameObject frozenReflectionObject;
 
     private static readonly string[] FirstLines =
     {
@@ -37,23 +36,12 @@ public class LakeTollInteractable : MonoBehaviour, IInteractable
 
         GameStateManager.SetState(GameState.Cutscene);
 
-        if (coinSound != null)
-        {
-            AudioManager.Instance.PlaySFX(coinSound);
-        }
+        AudioManager.Instance.PlaySFX(coinSound);
 
-        if (frozenReflectionObject != null)
-        {
-            frozenReflectionObject.SetActive(true);
-        }
 
         yield return new WaitForSecondsRealtime(1.2f);
         yield return ThoughtUI.Instance.PlaySequence(FirstLines);
 
-        if (frozenReflectionObject != null)
-        {
-            frozenReflectionObject.SetActive(false);
-        }
 
         TaskManager.Instance.CompleteTask("Lake_Toll");
         GameStateManager.SetState(GameState.Gameplay);

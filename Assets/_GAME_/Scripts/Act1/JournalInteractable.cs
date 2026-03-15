@@ -11,11 +11,6 @@ public class JournalInteractable : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        if (gameUI != null)
-        {
-            gameUI.SetActive(false);
-        }
-
         isOpen = false;
         Time.timeScale = 1f;
     }
@@ -31,11 +26,6 @@ public class JournalInteractable : MonoBehaviour, IInteractable
     private IEnumerator OpenLetterRoutine()
     {
         GameStateManager.SetState(GameState.Letter);
-
-        if (gameUI != null)
-        {
-            gameUI.SetActive(false);
-        }
 
         currentLetterInstance = Instantiate(letterPrefab);
         currentLetterInstance.Setup(this, gameUI);

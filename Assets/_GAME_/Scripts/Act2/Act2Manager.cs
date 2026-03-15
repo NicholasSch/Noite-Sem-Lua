@@ -15,8 +15,6 @@ public class Act2Manager : MonoBehaviour
     [SerializeField] private GameUI gameUI;
     [SerializeField] private NarrationUI narrationUI;
     [SerializeField] private TitleUI titlePrefab;
-    
-
 
     [Header("Cutscene Points")]
     [SerializeField] private Transform playerLookPosition;
@@ -114,17 +112,11 @@ public class Act2Manager : MonoBehaviour
     {
         GameStateManager.SetState(GameState.Cutscene);
 
-        if (gameUI != null)
-        {
-            gameUI.gameObject.SetActive(false);
-        }
+        gameUI.gameObject.SetActive(false);
 
         AudioManager.Instance.PlayAmbient(nightFarmAmbience);
 
-        if (millLookTarget != null)
-        {
-            player.LookAtTarget(millLookTarget);
-        }
+        player.LookAtTarget(millLookTarget);
 
         NPCController corpoSeco = Instantiate(corpoSecoPrefab, corpoSecoSpawnPoint.position, Quaternion.identity);
         corpoSeco.PlayIdle();
@@ -139,11 +131,7 @@ public class Act2Manager : MonoBehaviour
 
         yield return ThoughtUI.Instance.PlaySequence(apparitionLines);
 
-        if (playerLookPosition != null)
-        {
-            yield return player.MoveTo(playerLookPosition.position, 2f);
-        }
-
+        yield return player.MoveTo(playerLookPosition.position, 2f);
 
         corpoSeco.LookAtTarget(corpoSecoLookDir);
 
@@ -157,16 +145,9 @@ public class Act2Manager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.2f);
 
-        if (horizonLookTarget != null)
-        {
-            player.LookAtTarget(horizonLookTarget);
-        }
+        player.LookAtTarget(horizonLookTarget);
 
-
-        if (windBurstSound != null)
-        {
-            AudioManager.Instance.PlaySFX(windBurstSound);
-        }
+        AudioManager.Instance.PlaySFX(windBurstSound);
 
         yield return new WaitForSecondsRealtime(0.7f);
 

@@ -17,7 +17,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     [System.Serializable]
     private class SequenceAction
     {   
-        //Action Data
+        [Header("Action data")]
         public SequenceActionType actionType;
 
         public int dialogueBlockIndex;
@@ -28,22 +28,21 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
         public NPCController.Direction direction;
 
-        //Anim
         public string animationStateName;
         public float animationWaitDuration;
         public bool returnToIdleAfterAnimation = true;
     }
 
-    //Dependencies
+    [Header("Dependencies")]
     [SerializeField] private string npcID;
     [SerializeField] private NPCDialogue dialogue;
     [SerializeField] private NPCController controller;
 
-    //Sequences
+    [Header("Sequences")]
     [SerializeField] private SequenceAction[] firstInteractionSequence;
     [SerializeField] private SequenceAction[] repeatInteractionSequence;
 
-    //Optionals
+    [Header("Optionals")]
     [SerializeField] private bool lockPlayerDuringInteraction = true;
     [SerializeField] private bool facePlayerAtStart = true;
     [SerializeField] private GameObject objectToDisableAfterFirstInteraction;

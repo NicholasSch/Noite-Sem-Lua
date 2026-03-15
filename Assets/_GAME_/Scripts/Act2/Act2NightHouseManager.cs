@@ -5,7 +5,6 @@ public class Act2NightHouseManager : MonoBehaviour
 {
     [SerializeField] private AudioClip draggingSound;
     [SerializeField] private AudioClip nightHouseAmbience;
-    [SerializeField] private AudioClip nightHouseMusic;
 
     private void Start()
     {
@@ -15,10 +14,6 @@ public class Act2NightHouseManager : MonoBehaviour
         {
             StartCoroutine(NightWakeRoutine());
         }
-        else
-        {
-            AudioManager.Instance.PlayMusic(nightHouseMusic);
-        }
     }
 
     private IEnumerator NightWakeRoutine()
@@ -27,10 +22,7 @@ public class Act2NightHouseManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
 
-        if (draggingSound != null)
-        {
             AudioManager.Instance.PlaySFX(draggingSound);
-        }
 
         yield return new WaitForSecondsRealtime(5f);
 
@@ -46,7 +38,6 @@ public class Act2NightHouseManager : MonoBehaviour
         ProgressionManager.Instance.firstNightWakeScenePlayed = true;
         ProgressionManager.Instance.SaveProgress();
 
-        AudioManager.Instance.PlayMusic(nightHouseMusic);
         GameStateManager.SetState(GameState.Gameplay);
     }
 }

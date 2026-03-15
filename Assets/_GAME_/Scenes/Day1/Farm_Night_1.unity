@@ -38275,7 +38275,7 @@ Tilemap:
     m_Data: {r: 4.5e-44, g: 4.5e-44, b: 4.5e-44, a: 4.5e-44}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30980393, g: 0.18039216, b: 0.43529412, a: 1}
+  m_Color: {r: 0.26666668, g: 0.15686275, b: 0.3764706, a: 1}
   m_Origin: {x: -37, y: -33, z: 0}
   m_Size: {x: 97, y: 64, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -38815,11 +38815,11 @@ MonoBehaviour:
   donaCurioObject: {fileID: 0}
   barnToolsObject: {fileID: 0}
   millInteractableObject: {fileID: 0}
-  gameUI: {fileID: 1766220107}
+  corpoSecoPrefab: {fileID: 8350919547536413864, guid: c44f8f39724e6844baf3d83965bccf5e, type: 3}
   player: {fileID: 1115960879}
+  gameUI: {fileID: 1766220107}
   narrationUI: {fileID: 1014862610}
   titlePrefab: {fileID: -3799667207118881983, guid: 2eb5533cce94e294d98457e41cb2c449, type: 3}
-  corpoSecoPrefab: {fileID: 8350919547536413864, guid: c44f8f39724e6844baf3d83965bccf5e, type: 3}
   playerLookPosition: {fileID: 104997024}
   corpoSecoSpawnPoint: {fileID: 1637465271}
   corpoSecoLookDir: {fileID: 2139157229}
@@ -44999,7 +44999,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30980393, g: 0.18039216, b: 0.43529412, a: 1}
+  m_Color: {r: 0.26666668, g: 0.15686275, b: 0.3764706, a: 1}
   m_Origin: {x: -29, y: -20, z: 0}
   m_Size: {x: 53, y: 36, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -48741,7 +48741,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30980393, g: 0.18039216, b: 0.43529412, a: 1}
+  m_Color: {r: 0.26666668, g: 0.15686275, b: 0.3764706, a: 1}
   m_Origin: {x: -37, y: -30, z: 0}
   m_Size: {x: 96, y: 52, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -51348,7 +51348,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30980393, g: 0.18039216, b: 0.43529412, a: 1}
+  m_Color: {r: 0.26666668, g: 0.15686275, b: 0.3764706, a: 1}
   m_Origin: {x: -30, y: -25, z: 0}
   m_Size: {x: 59, y: 25, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -103343,7 +103343,7 @@ Tilemap:
     m_Data: {r: 1.67e-43, g: 1.67e-43, b: 1.67e-43, a: 1.67e-43}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30980393, g: 0.18039216, b: 0.43529412, a: 1}
+  m_Color: {r: 0.26666668, g: 0.15686275, b: 0.3764706, a: 1}
   m_Origin: {x: -36, y: -34, z: 0}
   m_Size: {x: 96, y: 65, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -106648,7 +106648,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30980393, g: 0.18039216, b: 0.43529412, a: 1}
+  m_Color: {r: 0.26666668, g: 0.15686275, b: 0.3764706, a: 1}
   m_Origin: {x: -37, y: -30, z: 0}
   m_Size: {x: 96, y: 52, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}

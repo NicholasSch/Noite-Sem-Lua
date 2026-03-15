@@ -3,77 +3,77 @@ guid: 7c369dfcdddd70442a6154b33b37fe88
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6138347473516098711
-    second: Corpo-Seco_0
+      213: 948768642176915628
+    second: CorpoSeco_0
   - first:
-      213: -7881507644299943832
-    second: Corpo-Seco_1
+      213: -4844728824001698798
+    second: CorpoSeco_1
   - first:
-      213: -3724861105722059127
-    second: Corpo-Seco_2
+      213: -4723205897669350225
+    second: CorpoSeco_2
   - first:
-      213: -2992517303067888533
-    second: Corpo-Seco_3
+      213: -432969771527353144
+    second: CorpoSeco_3
   - first:
-      213: 3214411895486845808
-    second: Corpo-Seco_4
+      213: -6910375140936870006
+    second: CorpoSeco_4
   - first:
-      213: 4348316670189154599
-    second: Corpo-Seco_5
+      213: -2038644344761466902
+    second: CorpoSeco_5
   - first:
-      213: 1004572689985499208
-    second: Corpo-Seco_6
+      213: 2749197572778837314
+    second: CorpoSeco_6
   - first:
-      213: -3578199410914983891
-    second: Corpo-Seco_7
+      213: 5428257037732760753
+    second: CorpoSeco_7
   - first:
-      213: -2654913064867236726
-    second: Corpo-Seco_8
+      213: 1757021057489282484
+    second: CorpoSeco_8
   - first:
-      213: 3998912584197731824
-    second: Corpo-Seco_9
+      213: 9035808756574749040
+    second: CorpoSeco_9
   - first:
-      213: 6874835419084205774
-    second: Corpo-Seco_10
+      213: 5770567131397839494
+    second: CorpoSeco_10
   - first:
-      213: 383311592576218034
-    second: Corpo-Seco_11
+      213: 954288414477510553
+    second: CorpoSeco_11
   - first:
-      213: -3931450189176401447
-    second: Corpo-Seco_12
+      213: -1736278590376938087
+    second: CorpoSeco_12
   - first:
-      213: -7874719225235644615
-    second: Corpo-Seco_13
+      213: -8672171091514435627
+    second: CorpoSeco_13
   - first:
-      213: -1662309489501770864
-    second: Corpo-Seco_14
+      213: -970760931350818838
+    second: CorpoSeco_14
   - first:
-      213: 3768390120932223975
-    second: Corpo-Seco_15
+      213: -115757780156024865
+    second: CorpoSeco_15
   - first:
-      213: -5320999833177256412
-    second: Corpo-Seco_16
+      213: 7319827095471831069
+    second: CorpoSeco_16
   - first:
-      213: -7986603865183540192
-    second: Corpo-Seco_17
+      213: 5405743167517495009
+    second: CorpoSeco_17
   - first:
-      213: 7672275486786135064
-    second: Corpo-Seco_18
+      213: 6906088847383284375
+    second: CorpoSeco_18
   - first:
-      213: -907265136615877458
-    second: Corpo-Seco_19
+      213: 93813887553014873
+    second: CorpoSeco_19
   - first:
-      213: -197650931080374788
-    second: Corpo-Seco_20
+      213: 769832194103921275
+    second: CorpoSeco_20
   - first:
-      213: -127174879433474906
-    second: Corpo-Seco_21
+      213: -541585124310483256
+    second: CorpoSeco_21
   - first:
-      213: -7630991812332988232
-    second: Corpo-Seco_22
+      213: 4146189726821706628
+    second: CorpoSeco_22
   - first:
-      213: 8633808053365239538
-    second: Corpo-Seco_23
+      213: -2527346964531447142
+    second: CorpoSeco_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -120,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 208
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -169,13 +169,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corpo-Seco_0
+      name: CorpoSeco_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 1001
-        width: 223
-        height: 439
+        x: 33
+        y: 503
+        width: 109
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 794f7da318acf2550800000000000000
-      internalID: 6138347473516098711
+      spriteID: ca81cf2ad04ba2d00800000000000000
+      internalID: 948768642176915628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_1
+      name: CorpoSeco_1
       rect:
         serializedVersion: 2
-        x: 352
-        y: 1002
-        width: 219
-        height: 437
+        x: 178
+        y: 504
+        width: 108
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 860e9f63e824f9290800000000000000
-      internalID: -7881507644299943832
+      spriteID: 21468449dc014ccb0800000000000000
+      internalID: -4844728824001698798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_2
+      name: CorpoSeco_2
       rect:
         serializedVersion: 2
-        x: 641
-        y: 1002
-        width: 222
-        height: 437
+        x: 326
+        y: 503
+        width: 108
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98694cb3f82ae4cc0800000000000000
-      internalID: -3724861105722059127
+      spriteID: fac636cb24dc37eb0800000000000000
+      internalID: -4723205897669350225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_3
+      name: CorpoSeco_3
       rect:
         serializedVersion: 2
-        x: 944
-        y: 1002
-        width: 221
-        height: 437
+        x: 480
+        y: 503
+        width: 108
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b64bd6e2e517876d0800000000000000
-      internalID: -2992517303067888533
+      spriteID: 8cc41a96948cdf9f0800000000000000
+      internalID: -432969771527353144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_4
+      name: CorpoSeco_4
       rect:
         serializedVersion: 2
-        x: 1493
-        y: 1001
-        width: 224
-        height: 438
+        x: 760
+        y: 503
+        width: 110
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,20 +272,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07398489692eb9c20800000000000000
-      internalID: 3214411895486845808
+      spriteID: a8794cb0c6a6910a0800000000000000
+      internalID: -6910375140936870006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_5
+      name: CorpoSeco_5
       rect:
         serializedVersion: 2
-        x: 1845
-        y: 1001
-        width: 245
-        height: 438
+        x: 939
+        y: 503
+        width: 122
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 721b88129f2585c30800000000000000
-      internalID: 4348316670189154599
+      spriteID: aef322705c745b3e0800000000000000
+      internalID: -2038644344761466902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_6
+      name: CorpoSeco_6
       rect:
         serializedVersion: 2
-        x: 2182
-        y: 1002
-        width: 223
-        height: 438
+        x: 1112
+        y: 503
+        width: 108
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,20 +316,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 840f4a10a85f0fd00800000000000000
-      internalID: 1004572689985499208
+      spriteID: 24549d660ac172620800000000000000
+      internalID: 2749197572778837314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_7
+      name: CorpoSeco_7
       rect:
         serializedVersion: 2
-        x: 2509
-        y: 1001
-        width: 221
-        height: 438
+        x: 1277
+        y: 503
+        width: 107
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,20 +338,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2086e8089ea75ec0800000000000000
-      internalID: -3578199410914983891
+      spriteID: 1bc4393040b055b40800000000000000
+      internalID: 5428257037732760753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_8
+      name: CorpoSeco_8
       rect:
         serializedVersion: 2
-        x: 59
-        y: 500
-        width: 232
-        height: 453
+        x: 31
+        y: 248
+        width: 112
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a847b0342aad72bd0800000000000000
-      internalID: -2654913064867236726
+      spriteID: 4b5a78ab751326810800000000000000
+      internalID: 1757021057489282484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_9
+      name: CorpoSeco_9
       rect:
         serializedVersion: 2
-        x: 337
-        y: 491
-        width: 228
-        height: 461
+        x: 171
+        y: 242
+        width: 113
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,20 +382,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f5f1f4eecdfe7730800000000000000
-      internalID: 3998912584197731824
+      spriteID: 071800ab034a56d70800000000000000
+      internalID: 9035808756574749040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_10
+      name: CorpoSeco_10
       rect:
         serializedVersion: 2
-        x: 631
-        y: 491
-        width: 232
-        height: 461
+        x: 322
+        y: 242
+        width: 112
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,20 +404,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ecea9c3a362586f50800000000000000
-      internalID: 6874835419084205774
+      spriteID: 68a53837b3c251050800000000000000
+      internalID: 5770567131397839494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_11
+      name: CorpoSeco_11
       rect:
         serializedVersion: 2
-        x: 940
-        y: 500
-        width: 231
-        height: 452
+        x: 477
+        y: 248
+        width: 115
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b37bc1dcdbc15500800000000000000
-      internalID: 383311592576218034
+      spriteID: 997e336c1405e3d00800000000000000
+      internalID: 954288414477510553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_12
+      name: CorpoSeco_12
       rect:
         serializedVersion: 2
-        x: 1493
-        y: 507
-        width: 216
-        height: 436
+        x: 759
+        y: 251
+        width: 108
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,20 +448,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d19ff5f1eea079c0800000000000000
-      internalID: -3931450189176401447
+      spriteID: 995777d32df77e7e0800000000000000
+      internalID: -1736278590376938087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_13
+      name: CorpoSeco_13
       rect:
         serializedVersion: 2
-        x: 1851
-        y: 507
-        width: 216
-        height: 436
+        x: 941
+        y: 251
+        width: 109
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,20 +470,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93fd3e1369067b290800000000000000
-      internalID: -7874719225235644615
+      spriteID: 5d7ded2e65246a780800000000000000
+      internalID: -8672171091514435627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_14
+      name: CorpoSeco_14
       rect:
         serializedVersion: 2
-        x: 2183
-        y: 507
-        width: 195
-        height: 436
+        x: 1110
+        y: 251
+        width: 99
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,20 +492,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09b6c7b935a4ee8e0800000000000000
-      internalID: -1662309489501770864
+      spriteID: aefc105831a2782f0800000000000000
+      internalID: -970760931350818838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_15
+      name: CorpoSeco_15
       rect:
         serializedVersion: 2
-        x: 2506
-        y: 507
-        width: 200
-        height: 436
+        x: 1276
+        y: 251
+        width: 99
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,20 +514,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eba14569d20c4430800000000000000
-      internalID: 3768390120932223975
+      spriteID: fd7ffc989eeb46ef0800000000000000
+      internalID: -115757780156024865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_16
+      name: CorpoSeco_16
       rect:
         serializedVersion: 2
-        x: 49
+        x: 25
         y: 0
-        width: 250
-        height: 448
+        width: 123
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,20 +536,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42e8e85f7d20826b0800000000000000
-      internalID: -5320999833177256412
+      spriteID: d18b0e216ff359560800000000000000
+      internalID: 7319827095471831069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_17
+      name: CorpoSeco_17
       rect:
         serializedVersion: 2
-        x: 365
+        x: 183
         y: 0
-        width: 209
-        height: 448
+        width: 104
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,20 +558,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02c29f57912e92190800000000000000
-      internalID: -7986603865183540192
+      spriteID: 1ee00ee15ce050b40800000000000000
+      internalID: 5405743167517495009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_18
+      name: CorpoSeco_18
       rect:
         serializedVersion: 2
-        x: 610
+        x: 308
         y: 0
-        width: 222
-        height: 448
+        width: 110
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,20 +580,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81423d0e7e5697a60800000000000000
-      internalID: 7672275486786135064
+      spriteID: 79a4197773b57df50800000000000000
+      internalID: 6906088847383284375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_19
+      name: CorpoSeco_19
       rect:
         serializedVersion: 2
-        x: 904
+        x: 458
         y: 0
-        width: 220
-        height: 448
+        width: 110
+        height: 219
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,20 +602,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea41ae64a2fb863f0800000000000000
-      internalID: -907265136615877458
+      spriteID: 95c8892db3b4d4100800000000000000
+      internalID: 93813887553014873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_20
+      name: CorpoSeco_20
       rect:
         serializedVersion: 2
-        x: 1477
+        x: 752
         y: 0
-        width: 292
-        height: 445
+        width: 147
+        height: 219
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,20 +624,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf5dd6f768dc14df0800000000000000
-      internalID: -197650931080374788
+      spriteID: b7a49324d4efeaa00800000000000000
+      internalID: 769832194103921275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_21
+      name: CorpoSeco_21
       rect:
         serializedVersion: 2
-        x: 1827
+        x: 929
         y: 0
-        width: 294
-        height: 444
+        width: 149
+        height: 219
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,20 +646,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6acb307fe1f2c3ef0800000000000000
-      internalID: -127174879433474906
+      spriteID: 8ce76d9e237eb78f0800000000000000
+      internalID: -541585124310483256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_22
+      name: CorpoSeco_22
       rect:
         serializedVersion: 2
-        x: 2170
+        x: 1105
         y: 0
-        width: 293
-        height: 445
+        width: 147
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -668,20 +668,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b85afd9065491690800000000000000
-      internalID: -7630991812332988232
+      spriteID: 48be49ec6993a8930800000000000000
+      internalID: 4146189726821706628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpo-Seco_23
+      name: CorpoSeco_23
       rect:
         serializedVersion: 2
-        x: 2516
+        x: 1281
         y: 0
-        width: 258
-        height: 444
+        width: 103
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -690,8 +690,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2feedbf3ea271d770800000000000000
-      internalID: 8633808053365239538
+      spriteID: a9af0f2835f0decd0800000000000000
+      internalID: -2527346964531447142
       vertices: []
       indices: 
       edges: []
@@ -710,30 +710,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Corpo-Seco_0: 6138347473516098711
-      Corpo-Seco_1: -7881507644299943832
-      Corpo-Seco_10: 6874835419084205774
-      Corpo-Seco_11: 383311592576218034
-      Corpo-Seco_12: -3931450189176401447
-      Corpo-Seco_13: -7874719225235644615
-      Corpo-Seco_14: -1662309489501770864
-      Corpo-Seco_15: 3768390120932223975
-      Corpo-Seco_16: -5320999833177256412
-      Corpo-Seco_17: -7986603865183540192
-      Corpo-Seco_18: 7672275486786135064
-      Corpo-Seco_19: -907265136615877458
-      Corpo-Seco_2: -3724861105722059127
-      Corpo-Seco_20: -197650931080374788
-      Corpo-Seco_21: -127174879433474906
-      Corpo-Seco_22: -7630991812332988232
-      Corpo-Seco_23: 8633808053365239538
-      Corpo-Seco_3: -2992517303067888533
-      Corpo-Seco_4: 3214411895486845808
-      Corpo-Seco_5: 4348316670189154599
-      Corpo-Seco_6: 1004572689985499208
-      Corpo-Seco_7: -3578199410914983891
-      Corpo-Seco_8: -2654913064867236726
-      Corpo-Seco_9: 3998912584197731824
+      CorpoSeco_0: 948768642176915628
+      CorpoSeco_1: -4844728824001698798
+      CorpoSeco_10: 5770567131397839494
+      CorpoSeco_11: 954288414477510553
+      CorpoSeco_12: -1736278590376938087
+      CorpoSeco_13: -8672171091514435627
+      CorpoSeco_14: -970760931350818838
+      CorpoSeco_15: -115757780156024865
+      CorpoSeco_16: 7319827095471831069
+      CorpoSeco_17: 5405743167517495009
+      CorpoSeco_18: 6906088847383284375
+      CorpoSeco_19: 93813887553014873
+      CorpoSeco_2: -4723205897669350225
+      CorpoSeco_20: 769832194103921275
+      CorpoSeco_21: -541585124310483256
+      CorpoSeco_22: 4146189726821706628
+      CorpoSeco_23: -2527346964531447142
+      CorpoSeco_3: -432969771527353144
+      CorpoSeco_4: -6910375140936870006
+      CorpoSeco_5: -2038644344761466902
+      CorpoSeco_6: 2749197572778837314
+      CorpoSeco_7: 5428257037732760753
+      CorpoSeco_8: 1757021057489282484
+      CorpoSeco_9: 9035808756574749040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

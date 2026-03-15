@@ -5,6 +5,75 @@ TextureImporter:
   - first:
       213: 8264666547471850457
     second: LiaIdle_0
+  - first:
+      213: -1715901531286060334
+    second: LiaIdle_1
+  - first:
+      213: 7466171124563986536
+    second: LiaIdle_2
+  - first:
+      213: -2618087717154603973
+    second: LiaIdle_3
+  - first:
+      213: -7090129831299134640
+    second: LiaIdle_4
+  - first:
+      213: 7685373069755665699
+    second: LiaIdle_5
+  - first:
+      213: 717340264873829290
+    second: LiaIdle_6
+  - first:
+      213: -7192592612551382841
+    second: LiaIdle_7
+  - first:
+      213: 7585704645665832680
+    second: LiaIdle_8
+  - first:
+      213: 5425698975720439567
+    second: LiaIdle_9
+  - first:
+      213: 4496637565109719653
+    second: LiaIdle_10
+  - first:
+      213: -5148151394797600123
+    second: LiaIdle_11
+  - first:
+      213: -427429617248282279
+    second: LiaIdle_12
+  - first:
+      213: 1799308078333289649
+    second: LiaIdle_13
+  - first:
+      213: 3233590797905961305
+    second: LiaIdle_14
+  - first:
+      213: -110815981747803277
+    second: LiaIdle_15
+  - first:
+      213: 472173172456968298
+    second: LiaIdle_16
+  - first:
+      213: -1049677076821169091
+    second: LiaIdle_17
+  - first:
+      213: -7947549677105262020
+    second: LiaIdle_18
+  - first:
+      213: -973920431099284740
+    second: LiaIdle_19
+  - first:
+      213: 1799499092562108469
+    second: LiaIdle_20
+  - first:
+      213: -7267186644399756474
+    second: LiaIdle_21
+  - first:
+      213: -2988889388578010707
+    second: LiaIdle_22
+  - first:
+      213: 1087684301557511204
+    second: LiaIdle_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 112
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,10 +172,10 @@ TextureImporter:
       name: LiaIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1384
-        height: 752
+        x: 118
+        y: 510
+        width: 105
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +186,512 @@ TextureImporter:
       bones: []
       spriteID: 9db1d15df6ef1b270800000000000000
       internalID: 8264666547471850457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 510
+        width: 105
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2452606a4ef28e0800000000000000
+      internalID: -1715901531286060334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_2
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 510
+        width: 105
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8684aef841b2d9760800000000000000
+      internalID: 7466171124563986536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_3
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 510
+        width: 105
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3cbf2ca71faaabd0800000000000000
+      internalID: -2618087717154603973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_4
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 510
+        width: 105
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bc30acb7cca9d90800000000000000
+      internalID: -7090129831299134640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_5
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 510
+        width: 105
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dc32d861ee7aa60800000000000000
+      internalID: 7685373069755665699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_6
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 510
+        width: 105
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3a3e69b2184f900800000000000000
+      internalID: 717340264873829290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_7
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 510
+        width: 55
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8a6ca7027ce2c90800000000000000
+      internalID: -7192592612551382841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 242
+        width: 108
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee31f73f26d54960800000000000000
+      internalID: 7585704645665832680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 22
+        width: 77
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f740ac874fb4b40800000000000000
+      internalID: 5425698975720439567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_10
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 242
+        width: 106
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562da009a04476e30800000000000000
+      internalID: 4496637565109719653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_11
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 22
+        width: 78
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582482f15971e88b0800000000000000
+      internalID: -5148151394797600123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_12
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 242
+        width: 108
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9595f691707711af0800000000000000
+      internalID: -427429617248282279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_13
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 22
+        width: 78
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4eb820a2d68f810800000000000000
+      internalID: 1799308078333289649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_14
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 242
+        width: 106
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951282ac2b500ec20800000000000000
+      internalID: 3233590797905961305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_15
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 22
+        width: 79
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b6c74a37d467ef0800000000000000
+      internalID: -110815981747803277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_16
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 242
+        width: 107
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6054c8affe7d8600800000000000000
+      internalID: 472173172456968298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_17
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 22
+        width: 77
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c2433924cce61f0800000000000000
+      internalID: -1049677076821169091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_18
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 242
+        width: 106
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32de553da1a4b190800000000000000
+      internalID: -7947549677105262020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_19
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 22
+        width: 78
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2f4d82780fb72f0800000000000000
+      internalID: -973920431099284740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_20
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 242
+        width: 107
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5306dc9f3ea19f810800000000000000
+      internalID: 1799499092562108469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_21
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 22
+        width: 78
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64be6180044c52b90800000000000000
+      internalID: -7267186644399756474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_22
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 144
+        width: 49
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da98fd8dfe45586d0800000000000000
+      internalID: -2988889388578010707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LiaIdle_23
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 22
+        width: 12
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424ba160c1b381f00800000000000000
+      internalID: 1087684301557511204
       vertices: []
       indices: 
       edges: []
@@ -136,6 +711,29 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       LiaIdle_0: 8264666547471850457
+      LiaIdle_1: -1715901531286060334
+      LiaIdle_10: 4496637565109719653
+      LiaIdle_11: -5148151394797600123
+      LiaIdle_12: -427429617248282279
+      LiaIdle_13: 1799308078333289649
+      LiaIdle_14: 3233590797905961305
+      LiaIdle_15: -110815981747803277
+      LiaIdle_16: 472173172456968298
+      LiaIdle_17: -1049677076821169091
+      LiaIdle_18: -7947549677105262020
+      LiaIdle_19: -973920431099284740
+      LiaIdle_2: 7466171124563986536
+      LiaIdle_20: 1799499092562108469
+      LiaIdle_21: -7267186644399756474
+      LiaIdle_22: -2988889388578010707
+      LiaIdle_23: 1087684301557511204
+      LiaIdle_3: -2618087717154603973
+      LiaIdle_4: -7090129831299134640
+      LiaIdle_5: 7685373069755665699
+      LiaIdle_6: 717340264873829290
+      LiaIdle_7: -7192592612551382841
+      LiaIdle_8: 7585704645665832680
+      LiaIdle_9: 5425698975720439567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

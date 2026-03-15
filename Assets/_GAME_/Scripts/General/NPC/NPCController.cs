@@ -11,12 +11,12 @@ public class NPCController : MonoBehaviour
         Right
     }
 
-    //Dependencies
+    [Header("Dependencies")]
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float moveSpeed = 2f;
 
-    //Anims
+    [Header("Animations")]
     [SerializeField] private string idleUpState = "Idle";
     [SerializeField] private string idleDownState = "Idle";
     [SerializeField] private string idleSideState = "Idle";

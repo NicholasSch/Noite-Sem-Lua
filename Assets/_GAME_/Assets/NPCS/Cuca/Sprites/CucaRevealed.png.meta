@@ -82,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,10 +148,10 @@ TextureImporter:
       name: CucaRevealed_0
       rect:
         serializedVersion: 2
-        x: 333
-        y: 1160
-        width: 193
-        height: 319
+        x: 197
+        y: 534
+        width: 86
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: CucaRevealed_1
       rect:
         serializedVersion: 2
-        x: 987
-        y: 1160
-        width: 193
-        height: 320
+        x: 491
+        y: 534
+        width: 86
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: CucaRevealed_2
       rect:
         serializedVersion: 2
-        x: 1634
-        y: 1160
-        width: 191
-        height: 320
+        x: 782
+        y: 534
+        width: 84
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: CucaRevealed_3
       rect:
         serializedVersion: 2
-        x: 2255
-        y: 1160
-        width: 194
-        height: 320
+        x: 1061
+        y: 534
+        width: 86
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: CucaRevealed_4
       rect:
         serializedVersion: 2
-        x: 331
-        y: 782
-        width: 194
-        height: 340
+        x: 197
+        y: 362
+        width: 86
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: CucaRevealed_5
       rect:
         serializedVersion: 2
-        x: 988
-        y: 790
-        width: 194
-        height: 341
+        x: 491
+        y: 367
+        width: 87
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: CucaRevealed_6
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 784
-        width: 195
-        height: 341
+        x: 780
+        y: 363
+        width: 86
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: CucaRevealed_7
       rect:
         serializedVersion: 2
-        x: 2256
-        y: 789
-        width: 194
-        height: 341
+        x: 1061
+        y: 367
+        width: 87
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: CucaRevealed_8
       rect:
         serializedVersion: 2
-        x: 336
-        y: 403
-        width: 207
-        height: 337
+        x: 198
+        y: 194
+        width: 94
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +346,10 @@ TextureImporter:
       name: CucaRevealed_9
       rect:
         serializedVersion: 2
-        x: 985
-        y: 403
-        width: 209
-        height: 337
+        x: 490
+        y: 194
+        width: 93
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,10 +368,10 @@ TextureImporter:
       name: CucaRevealed_10
       rect:
         serializedVersion: 2
-        x: 1632
-        y: 403
-        width: 208
-        height: 337
+        x: 779
+        y: 194
+        width: 96
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,10 +390,10 @@ TextureImporter:
       name: CucaRevealed_11
       rect:
         serializedVersion: 2
-        x: 2250
-        y: 403
-        width: 208
-        height: 337
+        x: 1059
+        y: 195
+        width: 93
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: CucaRevealed_12
       rect:
         serializedVersion: 2
-        x: 335
-        y: 17
-        width: 187
-        height: 349
+        x: 198
+        y: 20
+        width: 83
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,10 +434,10 @@ TextureImporter:
       name: CucaRevealed_13
       rect:
         serializedVersion: 2
-        x: 989
-        y: 17
-        width: 188
-        height: 349
+        x: 493
+        y: 20
+        width: 82
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,10 +456,10 @@ TextureImporter:
       name: CucaRevealed_14
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 17
-        width: 189
-        height: 349
+        x: 785
+        y: 20
+        width: 81
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +478,10 @@ TextureImporter:
       name: CucaRevealed_15
       rect:
         serializedVersion: 2
-        x: 2264
-        y: 16
-        width: 187
-        height: 350
+        x: 1065
+        y: 21
+        width: 82
+        height: 156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

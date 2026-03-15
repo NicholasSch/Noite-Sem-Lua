@@ -13,11 +13,6 @@ public class LetterUI : MonoBehaviour
 
     public void Close()
     {
-        if (gameUI != null)
-        {
-            gameUI.SetActive(true);
-        }
-
         Time.timeScale = 1f;
 
         ProgressionManager.Instance.LetterOpened = true;
