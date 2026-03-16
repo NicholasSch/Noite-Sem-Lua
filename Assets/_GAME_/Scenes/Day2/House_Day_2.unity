@@ -1756,7 +1756,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -10, y: -7, z: 0}
   m_Size: {x: 21, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -2330,7 +2330,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -10, y: -8, z: 0}
   m_Size: {x: 26, y: 14, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -3780,7 +3780,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -10, y: -8, z: 0}
   m_Size: {x: 27, y: 14, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -4285,7 +4285,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.6784314, g: 0.28235295, b: 0.13725491, a: 1}
+  m_Color: {r: 0.6698113, g: 0.29289365, b: 0.15481488, a: 1}
   m_Origin: {x: -9, y: -7, z: 0}
   m_Size: {x: 9, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -5270,7 +5270,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -10, y: -8, z: 0}
   m_Size: {x: 26, y: 14, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -6258,7 +6258,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -10, y: -7, z: 0}
   m_Size: {x: 21, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -6849,7 +6849,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.5188679, g: 0.34043717, b: 0.31572622, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 11, y: 5, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -7921,7 +7921,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -9, y: 0, z: 0}
   m_Size: {x: 12, y: 5, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -8431,7 +8431,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -9, y: -7, z: 0}
   m_Size: {x: 9, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -8791,8 +8791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd1a865d0be7a64cbf9d3686511cf61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Act3Manager
-  dayHouseAmbience: {fileID: 0}
-  dayHouseMusic: {fileID: 0}
+  dayHouseAmbience: {fileID: 8300000, guid: 1588db30f43458547a189a86961a728f, type: 3}
 --- !u!1 &1960095540
 GameObject:
   m_ObjectHideFlags: 0
@@ -9963,7 +9962,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -9, y: -7, z: 0}
   m_Size: {x: 25, y: 10, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -10738,7 +10737,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.24554999, g: 0.38113743, b: 0.5849056, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 16, y: 5, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}

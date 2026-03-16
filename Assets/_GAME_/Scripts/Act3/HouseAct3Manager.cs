@@ -5,12 +5,10 @@ public class Act3Manager : MonoBehaviour
 {   
     [Header("Audio")]
     [SerializeField] private AudioClip dayHouseAmbience;
-    [SerializeField] private AudioClip dayHouseMusic;
 
     private void Start()
     {
         AudioManager.Instance.PlayAmbient(dayHouseAmbience);
-        AudioManager.Instance.PlayMusic(dayHouseMusic);
 
         StartCoroutine(SceneFlowRoutine());
     }

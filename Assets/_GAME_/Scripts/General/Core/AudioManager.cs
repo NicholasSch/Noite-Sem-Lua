@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(musicFadeRoutine);
         }
 
-        musicFadeRoutine = StartCoroutine(FadeInSource(musicSource, clip, fadeDuration));
+        musicFadeRoutine = StartCoroutine(FadeInSourceRoutine(musicSource, clip, fadeDuration));
     }
 
     public void StopMusic()
@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(musicFadeRoutine);
         }
 
-        musicFadeRoutine = StartCoroutine(FadeOutSource(musicSource, fadeDuration));
+        musicFadeRoutine = StartCoroutine(FadeOutSourceRoutine(musicSource, fadeDuration));
     }
 
     public void PlayAmbient(AudioClip clip)
@@ -77,7 +77,7 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(ambientFadeRoutine);
         }
 
-        ambientFadeRoutine = StartCoroutine(FadeInSource(ambientSource, clip, fadeDuration));
+        ambientFadeRoutine = StartCoroutine(FadeInSourceRoutine(ambientSource, clip, fadeDuration));
     }
 
     public void StopAmbient()
@@ -92,7 +92,57 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(ambientFadeRoutine);
         }
 
-        ambientFadeRoutine = StartCoroutine(FadeOutSource(ambientSource, fadeDuration));
+        ambientFadeRoutine = StartCoroutine(FadeOutSourceRoutine(ambientSource, fadeDuration));
+    }
+
+    public IEnumerator FadeInMusicRoutine(AudioClip clip, float duration)
+    {
+        if (clip == null)
+            yield break;
+
+        if (musicFadeRoutine != null)
+        {
+            StopCoroutine(musicFadeRoutine);
+            musicFadeRoutine = null;
+        }
+
+        yield return FadeInSourceRoutine(musicSource, clip, duration);
+    }
+
+    public IEnumerator FadeOutMusicRoutine(float duration)
+    {
+        if (musicFadeRoutine != null)
+        {
+            StopCoroutine(musicFadeRoutine);
+            musicFadeRoutine = null;
+        }
+
+        yield return FadeOutSourceRoutine(musicSource, duration);
+    }
+
+    public IEnumerator FadeInAmbientRoutine(AudioClip clip, float duration)
+    {
+        if (clip == null)
+            yield break;
+
+        if (ambientFadeRoutine != null)
+        {
+            StopCoroutine(ambientFadeRoutine);
+            ambientFadeRoutine = null;
+        }
+
+        yield return FadeInSourceRoutine(ambientSource, clip, duration);
+    }
+
+    public IEnumerator FadeOutAmbientRoutine(float duration)
+    {
+        if (ambientFadeRoutine != null)
+        {
+            StopCoroutine(ambientFadeRoutine);
+            ambientFadeRoutine = null;
+        }
+
+        yield return FadeOutSourceRoutine(ambientSource, duration);
     }
 
     public void PlaySFX(AudioClip clip)
@@ -111,7 +161,7 @@ public class AudioManager : MonoBehaviour
         uiSource.PlayOneShot(clip);
     }
 
-    private IEnumerator FadeInSource(AudioSource source, AudioClip clip, float duration)
+    private IEnumerator FadeInSourceRoutine(AudioSource source, AudioClip clip, float duration)
     {
         float targetVolume = source.volume;
 
@@ -128,7 +178,7 @@ public class AudioManager : MonoBehaviour
         yield return FadeSourceVolume(source, 0f, targetVolume, duration);
     }
 
-    private IEnumerator FadeOutSource(AudioSource source, float duration)
+    private IEnumerator FadeOutSourceRoutine(AudioSource source, float duration)
     {
         if (!source.isPlaying)
             yield break;

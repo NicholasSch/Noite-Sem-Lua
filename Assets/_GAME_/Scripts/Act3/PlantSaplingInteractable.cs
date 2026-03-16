@@ -5,6 +5,8 @@ public class PlantSaplingInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Act3FarmManager act3FarmManager;
 
+    [SerializeField] private AudioClip PlantingSound;
+
     private static readonly string[] PlantLines =
     {
         "<color=#531182>Lucas:</color> Vou plantar isso aqui... por eles.",
@@ -24,6 +26,10 @@ public class PlantSaplingInteractable : MonoBehaviour, IInteractable
     {
 
         GameStateManager.SetState(GameState.Thought);
+
+        AudioManager.Instance.PlaySFX(PlantingSound);
+
+        yield return new WaitForSecondsRealtime(1.2f);
 
         yield return ThoughtUI.Instance.PlaySequence(PlantLines);
 

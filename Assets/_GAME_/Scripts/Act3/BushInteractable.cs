@@ -25,6 +25,8 @@ public class OrchardBushInteractable : MonoBehaviour, IInteractable
         GameStateManager.SetState(GameState.Thought);
 
         AudioManager.Instance.PlaySFX(trimmingSound);
+        
+        yield return new WaitForSecondsRealtime(1.2f);
 
         yield return ThoughtUI.Instance.PlaySequence(Lines);
 

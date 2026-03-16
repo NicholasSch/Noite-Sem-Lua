@@ -233,54 +233,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: FarmInteractable
       objectReference: {fileID: 0}
-    - target: {fileID: 7283342413114460634, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
-      propertyPath: m_Size.x
-      value: 0.9773847
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283342413114460634, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
-      propertyPath: m_Size.y
-      value: 0.6966638
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283342413114460634, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.34181207
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283342413114460634, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.22259751
-      objectReference: {fileID: 0}
+    - target: {fileID: 4788095746935800619, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
+      propertyPath: narrationUI
+      value: 
+      objectReference: {fileID: 966461721}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4269984081230666873, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 410592844}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
 --- !u!4 &410592842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 360295640175342172, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
   m_PrefabInstance: {fileID: 410592841}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &410592843 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4269984081230666873, guid: e6f65a1cbf170c841bea41981bcba5b0, type: 3}
-  m_PrefabInstance: {fileID: 410592841}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &410592844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410592843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120b529c15a4b4b4a87f799f9890af77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmInteractable
-  farmSound: {fileID: 0}
-  narrationUI: {fileID: 966461721}
 --- !u!1001 &411297710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20230,7 +20196,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.77935284, g: 0.8018868, b: 0.6694998, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -17, y: -12, z: 0}
   m_Size: {x: 84, y: 23, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -37485,7 +37451,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.77935284, g: 0.8018868, b: 0.6694998, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -17, y: -12, z: 0}
   m_Size: {x: 84, y: 23, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -54549,7 +54515,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.78039217, g: 0.8, b: 0.67058825, a: 1}
+  m_Color: {r: 0.85882354, g: 0.76862746, b: 0.76862746, a: 1}
   m_Origin: {x: -17, y: -1, z: 0}
   m_Size: {x: 84, y: 4, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}

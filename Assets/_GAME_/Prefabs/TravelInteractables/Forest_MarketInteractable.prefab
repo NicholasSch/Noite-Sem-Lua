@@ -91,5 +91,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2470a66cef8658e4abd8211e78afe2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MarketInteractable
-  marketSound: {fileID: 0}
+  marketSound: {fileID: 8300000, guid: 53ad38f3188c6024a8f4c4ff09ba0e18, type: 3}
   narrationUI: {fileID: 0}

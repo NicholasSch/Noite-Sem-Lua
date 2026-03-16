@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360295640175342172}
   - component: {fileID: 7283342413114460634}
+  - component: {fileID: 4788095746935800619}
   m_Layer: 6
   m_Name: Forest_FarmInteractable
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4269984081230666873}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0591812, y: 0.8101797, z: 0}
   m_LocalScale: {x: 1.6343429, y: 4.8822083, z: 5.051794}
   m_ConstrainProportionsScale: 0
@@ -66,7 +67,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.08359718, y: 0.024089627}
+  m_Offset: {x: 0.34181207, y: 0.22259751}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,5 +77,19 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3125544, y: 0.29964805}
+  m_Size: {x: 0.9773847, y: 0.6966638}
   m_EdgeRadius: 0
+--- !u!114 &4788095746935800619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269984081230666873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120b529c15a4b4b4a87f799f9890af77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmInteractable
+  farmSound: {fileID: 8300000, guid: 19e24876eb640ce4a8a1cd0e2cf122c6, type: 3}
+  narrationUI: {fileID: 0}

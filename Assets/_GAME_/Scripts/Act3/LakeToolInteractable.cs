@@ -38,10 +38,9 @@ public class LakeTollInteractable : MonoBehaviour, IInteractable
 
         AudioManager.Instance.PlaySFX(coinSound);
 
-
         yield return new WaitForSecondsRealtime(1.2f);
-        yield return ThoughtUI.Instance.PlaySequence(FirstLines);
 
+        yield return ThoughtUI.Instance.PlaySequence(FirstLines);
 
         TaskManager.Instance.CompleteTask("Lake_Toll");
         GameStateManager.SetState(GameState.Gameplay);

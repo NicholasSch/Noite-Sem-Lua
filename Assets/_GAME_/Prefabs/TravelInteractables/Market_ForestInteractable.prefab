@@ -91,5 +91,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfeb01c52ea46d64286696fa413eda48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Market_ForestInteractable
-  forestSound: {fileID: 0}
+  forestSound: {fileID: 8300000, guid: 37a90093b615e4043be4ff5f9cd2fc42, type: 3}
   narrationUI: {fileID: 0}
