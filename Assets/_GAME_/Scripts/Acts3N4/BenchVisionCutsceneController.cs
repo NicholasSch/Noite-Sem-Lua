@@ -4,7 +4,7 @@ using UnityEngine;
 public class BenchVisionCutsceneController : MonoBehaviour
 {
     [Header("Dependencies")]
-    [SerializeField] private Act3FarmManager act3FarmManager;
+    [SerializeField] private FarmDay2Manager farmDay2Manager;
     [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
 
@@ -34,17 +34,17 @@ public class BenchVisionCutsceneController : MonoBehaviour
         player.LookAtTarget(visionLookTarget);
         gameUI.gameObject.SetActive(false);
 
-        yield return AudioManager.Instance.FadeInMusicRoutine(sadMusicClip, 3f);
+        yield return AudioManager.Instance.FadeInMusicRoutine(sadMusicClip, 2f);
 
         mapGridPresent.SetActive(false);
         mapGridPast.SetActive(true);
         presentSapling.SetActive(false);
         whiteTreeObject.SetActive(true);
         danteSilhouetteObject.SetActive(true);
-        danteController.FaceDirection(NPCController.Direction.Up);    
+        danteController.FaceDirection(NPCController.Direction.Up);
         liaSilhouetteObject.SetActive(true);
 
-        yield return new WaitForSecondsRealtime(0.8f);
+        yield return new WaitForSecondsRealtime(1.5f);
 
         string[] visionLines =
         {
@@ -72,11 +72,11 @@ public class BenchVisionCutsceneController : MonoBehaviour
         mapGridPresent.SetActive(true);
         mapGridPast.SetActive(false);
 
-        act3FarmManager.MarkBenchVisionSeen();
+        farmDay2Manager.MarkBenchVisionSeen();
 
         yield return AudioManager.Instance.FadeOutMusicRoutine(3f);
         AudioManager.Instance.PlayAmbient(farmAmbienceClip);
-        AudioManager.Instance.FadeInMusicRoutine(farmMusicClip,3f);
+        yield return AudioManager.Instance.FadeInMusicRoutine(farmMusicClip, 3f);
 
         string[] CutscenePrologueLines =
         {

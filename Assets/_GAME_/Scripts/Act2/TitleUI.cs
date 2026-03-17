@@ -5,7 +5,7 @@ using UnityEngine;
 public class TitleUI : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private float fadeDuration = 1.2f;
+    [SerializeField] private float fadeDuration = 2f;
     [SerializeField] private float holdDuration = 10f;
 
 
@@ -13,9 +13,9 @@ public class TitleUI : MonoBehaviour
     {
         canvasGroup.alpha = 0f;
 
-        yield return Fade(0f, 2f);
+        yield return Fade(0f, fadeDuration);
         yield return new WaitForSecondsRealtime(holdDuration);
-        yield return Fade(2f, 0f);
+        yield return Fade(fadeDuration, 0f);
 
         Destroy(gameObject);
     }

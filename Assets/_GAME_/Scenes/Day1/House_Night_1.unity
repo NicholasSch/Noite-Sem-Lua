@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 35859731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -766.7825, y: -563.6311, z: -10}
+  m_LocalPosition: {x: -766.78345, y: -563.6311, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,10 +359,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 390931789}
     m_Modifications:
-    - target: {fileID: 452810839752920630, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
-      propertyPath: typingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b8d1a894bd119e942807a1b1ca222197, type: 3}
     - target: {fileID: 1467959845868304587, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
       propertyPath: m_overflowMode
       value: 1
@@ -1340,7 +1336,6 @@ Transform:
   m_Children:
   - {fileID: 1125755119}
   - {fileID: 1023446344}
-  - {fileID: 885231540}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621586254
@@ -2346,37 +2341,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3796066916686541684, guid: 5977730ac9a4e4b499c4a688f6b0a932, type: 3}
   m_PrefabInstance: {fileID: 830224606}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &885231539
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 885231540}
-  m_Layer: 6
-  m_Name: CurioExitPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &885231540
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885231539}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1400032, y: 55.68, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 602887930}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &906584275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2460,7 +2424,7 @@ Transform:
   m_GameObject: {fileID: 1023446343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.86, y: 11.03, z: 0}
+  m_LocalPosition: {x: -32.86, y: 11.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9272,7 +9236,7 @@ GameObject:
   - component: {fileID: 1804831536}
   - component: {fileID: 1804831535}
   m_Layer: 0
-  m_Name: ACT2NightHouseManager
+  m_Name: HouseNight1Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9292,7 +9256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Act2NightHouseManager
   draggingSound: {fileID: 8300000, guid: a08f28db557dee046b6f8ed29883a5b1, type: 3}
   nightHouseAmbience: {fileID: 8300000, guid: 9efd0c0e1d0d94344aaa627bf302052c, type: 3}
-  nightHouseMusic: {fileID: 0}
 --- !u!4 &1804831536
 Transform:
   m_ObjectHideFlags: 0

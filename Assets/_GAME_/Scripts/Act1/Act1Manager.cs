@@ -28,7 +28,7 @@ public class Act1Manager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(3f);
         AudioManager.Instance.PlayMusic(apartmentMusic);
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(1.5f);
         yield return ThoughtUI.Instance.PlaySequence(intro);
     }
 

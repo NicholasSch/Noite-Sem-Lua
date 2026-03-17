@@ -10,24 +10,32 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        StartCoroutine(SleepRoutine());
+        StartCoroutine(SleepChecker());
     }
 
-    private IEnumerator SleepRoutine()
+    private IEnumerator SleepChecker()
     {
-        if (ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed)
+        if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed)||(ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act4CurioEncounterPlayed))
         {
             yield return narrationUI.ShowTextRoutine(blockedSleepText);
             yield break;
         }
-
-        GameStateManager.SetState(GameState.Cutscene);
-        ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
-
-        if (ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.firstNightSleepDone)
+        else if (ProgressionManager.Instance.currentDay == 1 && ProgressionManager.Instance.porchScenePlayed && !ProgressionManager.Instance.firstNightSleepDone)
         {
             ProgressionManager.Instance.firstNightSleepDone = true;
+            ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
         }
+        else
+        {
+            ProgressionManager.Instance.NextDay();
+        }
+        StartCoroutine(SleepRoutine());
+    }
+
+    private IEnumerator SleepRoutine()
+    {   
+        
+        GameStateManager.SetState(GameState.Cutscene);
 
         SceneRouteManager.RouteData route = SceneRouteManager.GetRoute(
             SceneRouteManager.WorldArea.House,
@@ -39,4 +47,6 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
         yield return narrationUI.ShowTextRoutine(sleepText, route.SceneName);
     }
+
+
 }

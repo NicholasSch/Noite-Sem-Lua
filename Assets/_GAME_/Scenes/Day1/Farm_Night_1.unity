@@ -38378,7 +38378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104997024}
   m_Layer: 0
-  m_Name: PlayerMoveTo1
+  m_Name: PlayerWalkPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38779,7 +38779,7 @@ GameObject:
   - component: {fileID: 697286006}
   - component: {fileID: 697286007}
   m_Layer: 0
-  m_Name: Act2Manager
+  m_Name: FarmNight1Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38809,27 +38809,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 697286005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86130b2c4094ee14ca68593b5aad9ab3, type: 3}
+  m_Script: {fileID: 11500000, guid: b8d31da3bec1c244abdfbdba2c925653, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Act2Manager
-  donaCurioObject: {fileID: 0}
-  barnToolsObject: {fileID: 0}
-  millInteractableObject: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::FarmNight1Manager
   corpoSecoPrefab: {fileID: 8350919547536413864, guid: c44f8f39724e6844baf3d83965bccf5e, type: 3}
   player: {fileID: 1115960879}
   gameUI: {fileID: 1766220107}
   narrationUI: {fileID: 1014862610}
   titlePrefab: {fileID: -3799667207118881983, guid: 2eb5533cce94e294d98457e41cb2c449, type: 3}
-  playerLookPosition: {fileID: 104997024}
   corpoSecoSpawnPoint: {fileID: 1637465271}
-  corpoSecoLookDir: {fileID: 2139157229}
-  horizonLookTarget: {fileID: 1779745300}
-  millLookTarget: {fileID: 1637465271}
-  dayFarmMusic: {fileID: 0}
-  dayFarmAmbience: {fileID: 0}
-  draggingSound: {fileID: 8300000, guid: a08f28db557dee046b6f8ed29883a5b1, type: 3}
+  playerWalkPosition: {fileID: 104997024}
+  corpoSecoPointDir: {fileID: 2139157229}
+  PlayerLookTarget: {fileID: 1779745300}
+  nightFarmAmbience: {fileID: 8300000, guid: 9efd0c0e1d0d94344aaa627bf302052c, type: 3}
   windBurstSound: {fileID: 8300000, guid: 4efe1627fbb0ff54f8f597044276370f, type: 3}
-  nightFarmAmbience: {fileID: 0}
   corpoSecoPointAnimation: Pointing
 --- !u!1 &805826130
 GameObject:
@@ -45178,8 +45171,8 @@ Transform:
   m_Children:
   - {fileID: 1637465271}
   - {fileID: 104997024}
-  - {fileID: 1779745300}
   - {fileID: 2139157229}
+  - {fileID: 1779745300}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &973807058
@@ -49197,10 +49190,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254750279}
     m_Modifications:
-    - target: {fileID: 452810839752920630, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
-      propertyPath: typingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b8d1a894bd119e942807a1b1ca222197, type: 3}
     - target: {fileID: 1467959845868304587, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
       propertyPath: m_overflowMode
       value: 1
@@ -72142,7 +72131,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 34
-      m_TileSpriteIndex: 40
+      m_TileSpriteIndex: 43
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -74151,8 +74140,8 @@ Tilemap:
   - first: {x: 24, y: -10, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 40
-      m_TileSpriteIndex: 43
+      m_TileIndex: 15
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -74992,7 +74981,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 32
-      m_TileSpriteIndex: 34
+      m_TileSpriteIndex: 40
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -85572,7 +85561,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 28
-      m_TileSpriteIndex: 28
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -87132,7 +87121,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 28
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -103100,7 +103089,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0cb5cffb9671abc4a93529e303e87307, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 81c091ddca304734fb2c4ef061005bdc, type: 2}
   - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: 91e468328ac464342950d924f8021d81, type: 2}
@@ -103150,8 +103139,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4e7106bb5c7957544afc8c78a9fab4f3, type: 2}
   - m_RefCount: 306
     m_Data: {fileID: 11400000, guid: 0b2faf8ab36d0a84d96175bc2c3e68cf, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 708530bd12f93f744b82ad33af0243e7, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 4006453863104b04583424c36758feae, type: 2}
   - m_RefCount: 61
@@ -103197,12 +103186,12 @@ Tilemap:
     m_Data: {fileID: -1057931266, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 1870309442, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: -950781810, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1151953243, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 293
     m_Data: {fileID: 2065284584, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 219
@@ -103224,7 +103213,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -1655775354, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 5749979351659307573, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
+    m_Data: {fileID: -1151953243, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 41
     m_Data: {fileID: -43917135, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 14
@@ -103236,7 +103225,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 132415526, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -391245373, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
+    m_Data: {fileID: 5749979351659307573, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 400
     m_Data: {fileID: -1092934471, guid: fab33e189392c7d4f8619d86dfcd1393, type: 3}
   - m_RefCount: 19
@@ -103248,13 +103237,13 @@ Tilemap:
   - m_RefCount: 306
     m_Data: {fileID: 1164900088, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -125898655, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
+    m_Data: {fileID: -391245373, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 416468029, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 61
     m_Data: {fileID: -889766021, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1004123519, guid: 0806bb431074f384d9c14f3be1aadd03, type: 3}
+    m_Data: {fileID: -125898655, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -509951821732516963, guid: 1d5af0570caa0124eb347c2550290561, type: 3}
   - m_RefCount: 1005
@@ -103386,7 +103375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1779745300}
   m_Layer: 0
-  m_Name: PlayerLook1
+  m_Name: PlayerLookTarg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106024,7 +106013,7 @@ Tilemap:
       - {fileID: 9098395064655027044, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -5288405454392149618, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -8759645116765742646, guid: d251f641711c2ed4396919f68351053f, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 45, y: -12, z: 0}
@@ -106787,7 +106776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139157229}
   m_Layer: 0
-  m_Name: CorpoSecoLook1
+  m_Name: CorpoSecoPointDir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -39,14 +39,20 @@ public class JournalSystem : MonoBehaviour
     {
         tasks.Clear();
 
-        switch (ProgressionManager.Instance.currentDay)
+        switch (ProgressionManager.Instance.journalPhase)
         {
-            case 1:
+            case ProgressionManager.JournalPhase.Day1:
                 SetupDay1();
                 break;
-            case 2:
-                SetupDay2();
+
+            case ProgressionManager.JournalPhase.Day2Act3:
+                SetupDay2Act3();
                 break;
+
+            case ProgressionManager.JournalPhase.Day2Act4:
+                SetupDay2Act4();
+                break;
+
             default:
                 SetupDay1();
                 break;
@@ -74,7 +80,7 @@ public class JournalSystem : MonoBehaviour
         ));
     }
 
-    private void SetupDay2()
+    private void SetupDay2Act3()
     {
         leftPageText =
             "Caderno de Dante\n\n" +
@@ -98,6 +104,27 @@ public class JournalSystem : MonoBehaviour
             "Lake_Toll",
             "O Pedágio das Águas (Interaja com o lago)",
             "Não ignore o que repousa nas águas. Ofereça a moeda de prata, como pede o caderno. Há lugares onde a terra acolhe, e outros onde é preciso pedir licença."
+        ));
+    }
+
+    private void SetupDay2Act4()
+    {
+        leftPageText =
+            "Caderno de Dante\n\n" +
+            "Há caminhos que a mata tenta engolir, mas o coração insiste em lembrar. Mesmo coberto de lodo e silêncio, o que foi feito por amor resiste mais do que devia.\n\n" +
+            "E há coisas que esta terra não dá, por mais que o Engenho peça em silêncio. Quando precisar buscar fora o que falta aqui dentro, vá sem se demorar.\n\n" +
+            "Na vila, escute pouco. As vozes de fora confundem. Neste lugar, até a ausência fala mais verdade do que gente viva.";
+
+        tasks.Add(new Task(
+            "Trail_Marker",
+            "O Trilho da Saudade (Limpe o marco no caminho da floresta)",
+            "Há marcas que o tempo tenta cobrir, mas algumas permanecem, mesmo sob lodo e esquecimento."
+        ));
+
+        tasks.Add(new Task(
+            "Market_Supplies",
+            "O Abastecimento do Engenho (Fale com o feirante e consiga os mantimentos)",
+            "Busque na vila o que a terra não oferece: óleo para as luzes e sementes para o amanhã. Não se detenha mais do que o necessário."
         ));
     }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class OrchardBushInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Act3FarmManager act3FarmManager;
+    [SerializeField] private FarmDay2Manager act3FarmManager;
     [SerializeField] private AudioClip trimmingSound;
 
     private static readonly string[] Lines =

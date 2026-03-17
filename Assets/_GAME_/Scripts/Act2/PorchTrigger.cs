@@ -5,39 +5,49 @@ public class PorchTrigger : MonoBehaviour
 {
     private static readonly string[] Lines =
     {
-        "Lucas: O lugar está em pedaços, mas parece... vivo.",
+        "<color=#531182>Lucas:</color> O lugar está em pedaços, mas parece... vivo.",
         "Aquela mulher mencionou a feira.",
         "E o vovô deixou uma lista de mantimentos no final do caderno.",
         "Se eu quiser passar mais do que uma noite aqui, preciso de suprimentos.",
-        "Eu devia descansar e partir para a vila logo cedo."
+        "Eu devia descansar e partir pra vila logo cedo."
     };
 
     private PlayerController player;
+    private bool isRunning;
 
     private void Start()
     {
         player = FindFirstObjectByType<PlayerController>();
-
-        if (ProgressionManager.Instance.porchScenePlayed)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {   
+    {
         if (!other.CompareTag("Player"))
             return;
+
+        if (isRunning)
+            return;
+
         if (ProgressionManager.Instance.porchScenePlayed)
             return;
-        if (!TaskManager.Instance.IsCompleted("Barn_Tools") || !TaskManager.Instance.IsCompleted("Mill_Gears") || !ProgressionManager.Instance.HasTalkedToNpc("CucaDisguised"))
+
+        if (!TaskManager.Instance.IsCompleted("Barn_Tools"))
             return;
+
+        if (!TaskManager.Instance.IsCompleted("Mill_Gears"))
+            return;
+
+        if (!ProgressionManager.Instance.act2CurioEncounterPlayed)
+            return;
+
         player.ForceFaceDown();
-        StartCoroutine(StartAct4());
+        StartCoroutine(StartPorchScene());
     }
 
-    private IEnumerator StartAct4()
+    private IEnumerator StartPorchScene()
     {
+        isRunning = true;
+
         GameStateManager.SetState(GameState.Cutscene);
 
         yield return ThoughtUI.Instance.PlaySequence(Lines);
@@ -46,6 +56,8 @@ public class PorchTrigger : MonoBehaviour
         ProgressionManager.Instance.SaveProgress();
 
         GameStateManager.SetState(GameState.Gameplay);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+
+        isRunning = false;
     }
 }

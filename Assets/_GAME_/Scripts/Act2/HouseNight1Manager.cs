@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Act2NightHouseManager : MonoBehaviour
+public class HouseNight1Manager : MonoBehaviour
 {
     [SerializeField] private AudioClip draggingSound;
     [SerializeField] private AudioClip nightHouseAmbience;
@@ -22,7 +22,7 @@ public class Act2NightHouseManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
 
-            AudioManager.Instance.PlaySFX(draggingSound);
+        AudioManager.Instance.PlaySFX(draggingSound);
 
         yield return new WaitForSecondsRealtime(5f);
 

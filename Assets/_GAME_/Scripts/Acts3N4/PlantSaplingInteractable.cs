@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PlantSaplingInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Act3FarmManager act3FarmManager;
-
+    [SerializeField] private FarmDay2Manager farmDay2Manager;
     [SerializeField] private AudioClip PlantingSound;
 
     private static readonly string[] PlantLines =
@@ -12,7 +11,6 @@ public class PlantSaplingInteractable : MonoBehaviour, IInteractable
         "<color=#531182>Lucas:</color> Vou plantar isso aqui... por eles.",
         "É o mínimo que posso fazer para manter a promessa do vovô viva."
     };
-
 
     public void Interact()
     {
@@ -24,7 +22,6 @@ public class PlantSaplingInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator InteractionRoutine()
     {
-
         GameStateManager.SetState(GameState.Thought);
 
         AudioManager.Instance.PlaySFX(PlantingSound);
@@ -33,7 +30,7 @@ public class PlantSaplingInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(PlantLines);
 
-        act3FarmManager.CompletePlantHope();
+        farmDay2Manager.CompletePlantHope();
 
         GameStateManager.SetState(GameState.Gameplay);
     }

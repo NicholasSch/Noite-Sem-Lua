@@ -1,16 +1,24 @@
 using System.Collections;
 using UnityEngine;
 
-public class Act3Manager : MonoBehaviour
-{   
+public class HouseDay2Manager : MonoBehaviour
+{
     [Header("Audio")]
     [SerializeField] private AudioClip dayHouseAmbience;
+
+    [Header("Objects")]
+    [SerializeField] private GameObject radioObject;
 
     private void Start()
     {
         AudioManager.Instance.PlayAmbient(dayHouseAmbience);
-
+        ApplySavedWorldState();
         StartCoroutine(SceneFlowRoutine());
+    }
+
+    public void ApplySavedWorldState()
+    {   
+        radioObject.SetActive(ProgressionManager.Instance.act4RadioBought);
     }
 
     private IEnumerator SceneFlowRoutine()
@@ -37,8 +45,10 @@ public class Act3Manager : MonoBehaviour
         yield return ThoughtUI.Instance.PlaySequence(lines);
 
         ProgressionManager.Instance.act3MorningIntroPlayed = true;
+        ProgressionManager.Instance.SetJournalPhase(ProgressionManager.JournalPhase.Day2Act3);
         ProgressionManager.Instance.SaveProgress();
 
         GameStateManager.SetState(GameState.Gameplay);
+        
     }
 }

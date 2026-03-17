@@ -206,7 +206,9 @@ MonoBehaviour:
   animator: {fileID: 1807089735277452608}
   spriteRenderer: {fileID: 3808247856882251048}
   moveSpeed: 1.8
-  idleState: Idle
+  idleUpState: Idle
+  idleDownState: Idle
+  idleSideState: Idle
   walkUpState: WalkingUP
   walkDownState: WalkingDown
   walkSideState: WalkingSide

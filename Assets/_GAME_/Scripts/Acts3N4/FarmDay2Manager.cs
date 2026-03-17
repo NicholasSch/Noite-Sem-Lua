@@ -1,27 +1,54 @@
 using UnityEngine;
+using System.Collections;
 
-public class Act3FarmManager : MonoBehaviour
+public class FarmDay2Manager : MonoBehaviour
 {
     [Header("Audio")]
     [SerializeField] private AudioClip dayFarmMusic;
     [SerializeField] private AudioClip dayFarmAmbience;
 
-    [Header("Objects")]
+    [Header("Act 3 Objects")]
     [SerializeField] private GameObject vegetationGrid;
     [SerializeField] private GameObject vegetationGrid2;
     [SerializeField] private GameObject saplingInteractable;
     [SerializeField] private GameObject newspaperInteractable;
     [SerializeField] private GameObject plantedTreeObject;
 
+    [Header("Act 4 Objects")]
+    [SerializeField] private GameObject dirtyMarkerObject;
+    [SerializeField] private GameObject cleanMarkerObject;
+    [SerializeField] private GameObject curioEncounterTrigger;
+    [SerializeField] private GameObject act4Curio;
+
     private void Start()
     {
-        AudioManager.Instance.PlayAmbient(dayFarmAmbience);
-        AudioManager.Instance.PlayMusic(dayFarmMusic);
-        
+
         ApplySavedWorldState();
+        StartCoroutine(StartSequence());
     }
 
     public void ApplySavedWorldState()
+    {
+        ApplyAct3State();
+        ApplyAct4State();
+    }   
+
+    private IEnumerator StartSequence()
+    {
+        AudioManager.Instance.PlayAmbient(dayFarmAmbience);
+
+        string[] intro =
+        {
+            "<color=#531182>Lucas:</color> Um novo dia."
+        };
+
+        yield return new WaitForSecondsRealtime(3f);
+        AudioManager.Instance.PlayMusic(dayFarmMusic);
+        yield return new WaitForSecondsRealtime(1f);
+        yield return ThoughtUI.Instance.PlaySequence(intro);
+    }
+
+    private void ApplyAct3State()
     {
         bool orchardDone = TaskManager.Instance.IsCompleted("Orchard_Care");
         bool benchVisionSeen = ProgressionManager.Instance.act3BenchVisionSeen;
@@ -33,6 +60,18 @@ public class Act3FarmManager : MonoBehaviour
         saplingInteractable.SetActive(benchVisionSeen && !plantDone);
         newspaperInteractable.SetActive(!newspaperFound);
         plantedTreeObject.SetActive(plantDone);
+    }
+
+    private void ApplyAct4State()
+    {
+        bool markerDone = TaskManager.Instance.IsCompleted("Trail_Marker");
+        bool marketDone = TaskManager.Instance.IsCompleted("Market_Supplies");
+        bool curioDone = ProgressionManager.Instance.act4CurioEncounterPlayed;
+
+        dirtyMarkerObject.SetActive(!markerDone);
+        cleanMarkerObject.SetActive(markerDone);
+        curioEncounterTrigger.SetActive(markerDone && marketDone && !curioDone);
+        act4Curio.SetActive(markerDone && marketDone && !curioDone);
     }
 
     public void CompleteOrchardCare()
@@ -69,6 +108,25 @@ public class Act3FarmManager : MonoBehaviour
             return;
 
         ProgressionManager.Instance.act3NewspaperFound = true;
+        ProgressionManager.Instance.SaveProgress();
+        ApplySavedWorldState();
+    }
+
+    public void CompleteTrailMarker()
+    {
+        if (TaskManager.Instance.IsCompleted("Trail_Marker"))
+            return;
+
+        TaskManager.Instance.CompleteTask("Trail_Marker");
+        ApplySavedWorldState();
+    }
+
+    public void MarkCurioEncounterPlayed()
+    {
+        if (ProgressionManager.Instance.act4CurioEncounterPlayed)
+            return;
+
+        ProgressionManager.Instance.act4CurioEncounterPlayed = true;
         ProgressionManager.Instance.SaveProgress();
         ApplySavedWorldState();
     }

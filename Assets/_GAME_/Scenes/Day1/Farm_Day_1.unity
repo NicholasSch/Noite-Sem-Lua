@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8851492ddd7fa5d4aba37fb2fcfff885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BarnToolsInteract
+  farmDay1Manager: {fileID: 0}
   barnDoorSound: {fileID: 8300000, guid: e0895826f2d55884bb38b246b49a5e62, type: 3}
 --- !u!1001 &80674307
 PrefabInstance:
@@ -282,6 +283,89 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 6900725507563149697, guid: c4226bddaf06323489ba2438b8d68d34, type: 3}
   m_PrefabInstance: {fileID: 80674307}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &102137364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 102137365}
+  - component: {fileID: 102137367}
+  - component: {fileID: 102137368}
+  m_Layer: 6
+  m_Name: CurioCutsceneTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &102137365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102137364}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.9982, y: 4.2505, z: 0}
+  m_LocalScale: {x: 0.569288, y: 0.569288, z: 0.569288}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1201557988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &102137367
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102137364}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.08665657, y: 0.50550556}
+  m_Size: {x: 7.6143074, y: 7.6143074}
+  m_Direction: 0
+--- !u!114 &102137368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102137364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c30b8a6791fb5449dd5c851cc76e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Act2CurioEncounterTrigger
+  controller: {fileID: 1121461013}
 --- !u!1001 &216214837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10529,6 +10613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe2aecb728180f40a2fe5cfe2ec7c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MillInteractable
+  farmDay1Manager: {fileID: 0}
   gearSound: {fileID: 8300000, guid: b58d76d2e3b500144831d20de625ddd3, type: 3}
 --- !u!1001 &321525495
 PrefabInstance:
@@ -10542,13 +10627,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CucaDisguised
       objectReference: {fileID: 0}
+    - target: {fileID: 1193293298618050137, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3771388887722691281, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.51
+      value: -5.11
       objectReference: {fileID: 0}
     - target: {fileID: 3771388887722691281, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.02
+      value: 5.98
       objectReference: {fileID: 0}
     - target: {fileID: 3771388887722691281, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10582,59 +10671,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: dialogueBlocks.Array.data[0].lines.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[0]'
-      value: "<color=#531182>Lucas:</color> Ol\xE1? Senhora? Eu sou o Lucas, neto
-        do Dante."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[1]'
-      value: "<color=#75FF67>Dona Curi\xF3:</color> Cuidado onde pisa, garoto. A
-        terra do seu av\xF4 tem mem\xF3ria curta para as pessoas,"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[2]'
-      value: "mas mem\xF3ria longa para as d\xEDvidas."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[3]'
-      value: "<color=#531182>Lucas:</color> \"D\xEDvidas? Meu av\xF4 era um homem
-        simples, senhora.\""
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[4]'
-      value: "<color=#75FF67>Dona Curi\xF3:</color>Neste ch\xE3o, nada \xE9 simples.
-        V\xE1 at\xE9 a feira amanh\xE3 "
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[5]'
-      value: se quiser ver como o tempo corre diferente aqui.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[0].lines.Array.data[6]'
-      value: "Mas volte antes do sol se p\xF4r. O moinho gosta de observar quem anda
-        no escuro.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[1].lines.Array.data[0]'
-      value: <color=#531182>Lucas:</color> Que mulher estranha
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[1].lines.Array.data[1]'
-      value: "Este lugar \xE9 estranho "
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290061215378501212, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: 'dialogueBlocks.Array.data[1].lines.Array.data[2]'
-      value: "Bom eu deveria fazer o que o caderno do vov\xF4 manda agora"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901281308893154759, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
-      propertyPath: firstInteractionSequence.Array.data[1].target
-      value: 
-      objectReference: {fileID: 2046090021}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10645,6 +10681,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3771388887722691281, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
   m_PrefabInstance: {fileID: 321525495}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &321525497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2321365052264238122, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
+  m_PrefabInstance: {fileID: 321525495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439703820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b51379a0ef4e04c9874a1b02c6d16e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCController
 --- !u!1 &439703820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1193293298618050137, guid: e4b8747093787654e97e58d5254e75c4, type: 3}
@@ -12142,7 +12189,7 @@ Tilemap:
       - {fileID: 9098395064655027044, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -5288405454392149618, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -8759645116765742646, guid: d251f641711c2ed4396919f68351053f, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 45, y: -12, z: 0}
@@ -13805,7 +13852,7 @@ GameObject:
   - component: {fileID: 697286006}
   - component: {fileID: 697286007}
   m_Layer: 0
-  m_Name: Act2Manager
+  m_Name: FarmDay1Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13835,28 +13882,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 697286005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86130b2c4094ee14ca68593b5aad9ab3, type: 3}
+  m_Script: {fileID: 11500000, guid: d478554f2fa597b42ac73b23788d27ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Act2Manager
-  donaCurioObject: {fileID: 439703820}
-  barnToolsObject: {fileID: 37195872}
-  millInteractableObject: {fileID: 281313048}
-  corpoSecoPrefab: {fileID: -7947478279587922365, guid: c44f8f39724e6844baf3d83965bccf5e, type: 3}
-  player: {fileID: 1115960879}
-  gameUI: {fileID: 1766220107}
-  narrationUI: {fileID: 1014862610}
-  titlePrefab: {fileID: -3799667207118881983, guid: 2eb5533cce94e294d98457e41cb2c449, type: 3}
-  playerLookPosition: {fileID: 0}
-  corpoSecoSpawnPoint: {fileID: 0}
-  corpoSecoLookDir: {fileID: 0}
-  horizonLookTarget: {fileID: 0}
-  millLookTarget: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::FarmDay1Manager
   dayFarmMusic: {fileID: 8300000, guid: 8aad60808127a914887f71802fedc7e4, type: 3}
   dayFarmAmbience: {fileID: 8300000, guid: 0cb587b610287b8459071497ca96481c, type: 3}
-  draggingSound: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
-  windBurstSound: {fileID: 8300000, guid: 8463276e68b96e643b64e550d3421fbc, type: 3}
-  nightFarmAmbience: {fileID: 0}
-  corpoSecoPointAnimation: Anim_CorpoSeco_Point
+  donaCurioObject: {fileID: 439703820}
+  donaCurioTrigger: {fileID: 102137364}
+  barnToolsObject: {fileID: 37195872}
+  millInteractableObject: {fileID: 281313048}
+  porchTriggerObject: {fileID: 1200928476}
 --- !u!1 &719359627
 GameObject:
   m_ObjectHideFlags: 0
@@ -51879,6 +51914,172 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &794125891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794125895}
+  - component: {fileID: 794125894}
+  - component: {fileID: 794125893}
+  - component: {fileID: 794125892}
+  m_Layer: 6
+  m_Name: LiasMarkerMoldy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &794125892
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794125891}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &794125893
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794125891}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.022781849}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8643281, y: 1.2304688}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1.5012007}
+  m_EdgeRadius: 0
+--- !u!212 &794125894
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794125891}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -4670220100602292497, guid: 01c1f5461855bc64693fc7ab737a4913, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &794125895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794125891}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.020000458, y: 6.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1201557988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894118301
 GameObject:
   m_ObjectHideFlags: 0
@@ -104000,6 +104201,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1502080674405902031, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
   m_PrefabInstance: {fileID: 909417708}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &909417710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2610823754188994887, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
+  m_PrefabInstance: {fileID: 909417708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c3f04d6cfbf674881f5d3ebf8ee400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameUI
 --- !u!1001 &967504605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104330,6 +104542,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46947fbd35c5e441b294a9b1bdc00f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!1 &1121461011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1121461012}
+  - component: {fileID: 1121461013}
+  m_Layer: 0
+  m_Name: CurioEncounterController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1121461012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121461011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1469785839}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1121461013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121461011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da112a6fb0ad0024aadb0e26079c70b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Act2CurioEncounterController
+  farmDay1Manager: {fileID: 697286007}
+  gameUI: {fileID: 909417710}
+  player: {fileID: 1115960879}
+  donaCurioObject: {fileID: 439703820}
+  donaCurioController: {fileID: 321525497}
+  playerLookTarget: {fileID: 321525496}
+  curioExitTarget: {fileID: 2046090021}
 --- !u!4 &1142966991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4471605587918108456, guid: c8a0bb27786d9f645b714fa41ab7380f, type: 3}
@@ -104513,10 +104776,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254750279}
     m_Modifications:
-    - target: {fileID: 452810839752920630, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
-      propertyPath: typingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b8d1a894bd119e942807a1b1ca222197, type: 3}
     - target: {fileID: 1467959845868304587, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
       propertyPath: m_overflowMode
       value: 1
@@ -104751,12 +105010,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 321525496}
+  - {fileID: 102137365}
   - {fileID: 37195874}
   - {fileID: 281313050}
   - {fileID: 1200928478}
-  - {fileID: 321525496}
   - {fileID: 1027768862}
   - {fileID: 967504606}
+  - {fileID: 794125895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209933203
@@ -104953,6 +105214,7 @@ Transform:
   - {fileID: 2141403372}
   - {fileID: 1290998015}
   - {fileID: 697286006}
+  - {fileID: 1121461012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485360199
@@ -106817,17 +107079,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1209933204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1766220107 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2610823754188994887, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
-  m_PrefabInstance: {fileID: 909417708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4c3f04d6cfbf674881f5d3ebf8ee400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameUI
 --- !u!1 &2046090020
 GameObject:
   m_ObjectHideFlags: 0
