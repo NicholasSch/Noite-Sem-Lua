@@ -10871,21 +10871,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 600784828}
     m_Modifications:
+    - target: {fileID: 5322165594874147517, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5571720770602862305, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_Name
       value: Radio
       objectReference: {fileID: 0}
     - target: {fileID: 5571720770602862305, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8487324299563247454, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.13
+      value: -26.921
       objectReference: {fileID: 0}
     - target: {fileID: 8487324299563247454, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.41
+      value: 13.48
       objectReference: {fileID: 0}
     - target: {fileID: 8487324299563247454, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_LocalPosition.z

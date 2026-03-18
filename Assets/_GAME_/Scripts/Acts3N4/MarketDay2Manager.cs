@@ -73,7 +73,7 @@ public class MarketDay2Manager : MonoBehaviour
         "Feirante: Dona Curió?",
         "Feirante: Ô menino... tem nome que a gente num chama assim, no claro do dia, no meio da feira.",
         "Feirante: Se essa mulher falou contigo, tenha cuidado.",
-        "No Engenho de Dante, dívida antiga nunca se paga com dinheiro.",
+        "Aqui na região, dívida antiga nunca se paga com dinheiro.",
         "<color=#531182>Lucas:</color> Ninguém conhece ela direito, mas todo mundo teme o que ela representa.",
         "Por que o vovô deixou ela entrar?"
     };
@@ -85,7 +85,7 @@ public class MarketDay2Manager : MonoBehaviour
 
     private static readonly string[] Feirante3FirstLines =
     {
-        "Feirante: Dona Curió? Nunca ouvi falar, não.",
+        "Feirante: Dona Curió? Eu não conheci.",
         "Feirante: Mas o povo daqui muda de assunto ligeiro quando esse nome aparece.",
         "Feirante: E povo da roça num treme à toa, viu?",
         "<color=#531182>Lucas:</color> Então ninguém fala... mas ninguém acha normal também.",

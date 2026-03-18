@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: e9e9e4a672d4df34db531d9ecd6130c3
+guid: 0f44c1a075371884b989dff5d45c3976
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8194845821786257731
-    second: Feirante3Idle_0
+      213: -8309634040466065289
+    second: Feirante4Idle_0
   - first:
-      213: 6022026657743017667
-    second: Feirante3Idle_1
+      213: -1588993329801215514
+    second: Feirante4Idle_1
   - first:
-      213: 6254870006521378923
-    second: Feirante3Idle_2
+      213: 580902279154821871
+    second: Feirante4Idle_2
   - first:
-      213: -1338151241196107683
-    second: Feirante3Idle_3
+      213: 1711140656731785965
+    second: Feirante4Idle_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,12 +109,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Feirante3Idle_0
+      name: Feirante4Idle_0
       rect:
         serializedVersion: 2
-        x: 168
-        y: 135
+        x: 183
+        y: 123
         width: 172
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778b684dddf3eac80800000000000000
+      internalID: -8309634040466065289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feirante4Idle_1
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 123
+        width: 189
         height: 422
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 349f9a45bd0f9b170800000000000000
-      internalID: 8194845821786257731
+      spriteID: 6e1cbb24cf2c2f9e0800000000000000
+      internalID: -1588993329801215514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Feirante3Idle_1
+      name: Feirante4Idle_2
       rect:
         serializedVersion: 2
-        x: 483
-        y: 136
-        width: 201
-        height: 417
+        x: 830
+        y: 123
+        width: 173
+        height: 436
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c694b2d659829350800000000000000
-      internalID: 6022026657743017667
+      spriteID: feaec3e8b87cf0800800000000000000
+      internalID: 580902279154821871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Feirante3Idle_2
+      name: Feirante4Idle_3
       rect:
         serializedVersion: 2
-        x: 786
-        y: 140
-        width: 201
-        height: 411
+        x: 1173
+        y: 123
+        width: 173
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b68b3f69123cdc650800000000000000
-      internalID: 6254870006521378923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Feirante3Idle_3
-      rect:
-        serializedVersion: 2
-        x: 1118
-        y: 135
-        width: 172
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5802c4398eed6de0800000000000000
-      internalID: -1338151241196107683
+      spriteID: dea0a3d7c513fb710800000000000000
+      internalID: 1711140656731785965
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Feirante3Idle_0: 8194845821786257731
-      Feirante3Idle_1: 6022026657743017667
-      Feirante3Idle_2: 6254870006521378923
-      Feirante3Idle_3: -1338151241196107683
+      Feirante4Idle_0: -8309634040466065289
+      Feirante4Idle_1: -1588993329801215514
+      Feirante4Idle_2: 580902279154821871
+      Feirante4Idle_3: 1711140656731785965
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

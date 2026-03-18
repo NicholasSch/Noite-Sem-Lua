@@ -8,10 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1807089735277452608, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c7e5e6b895a6b7345985d80bc6094330, type: 2}
     - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: npcID
       value: Feirante3
       objectReference: {fileID: 0}
+    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.671875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.703125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8309634040466065289, guid: 0f44c1a075371884b989dff5d45c3976, type: 3}
     - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_SortingOrder
       value: 1

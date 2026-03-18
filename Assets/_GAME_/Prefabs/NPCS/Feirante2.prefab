@@ -8,10 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1807089735277452608, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 505ca07df6abecd4ebff89d5d20c359a, type: 2}
     - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: npcID
       value: Feirante2
       objectReference: {fileID: 0}
+    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.671875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6484375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8194845821786257731, guid: e9e9e4a672d4df34db531d9ecd6130c3, type: 3}
     - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -22,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.65
+      value: 1.346
       objectReference: {fileID: 0}
     - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_LocalPosition.z

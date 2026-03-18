@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 0f44c1a075371884b989dff5d45c3976
+guid: 1f1f737e118ab28418d240be98dbdfd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8309634040466065289
-    second: Feirante4Idle_0
+      213: -2884375178861223876
+    second: Feirante2Idle_0
   - first:
-      213: -1588993329801215514
-    second: Feirante4Idle_1
+      213: -8264728659652966874
+    second: Feirante2Idle_1
   - first:
-      213: 580902279154821871
-    second: Feirante4Idle_2
+      213: 3694641031461907581
+    second: Feirante2Idle_2
   - first:
-      213: 1711140656731785965
-    second: Feirante4Idle_3
+      213: 2343743126939839529
+    second: Feirante2Idle_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 276
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Feirante4Idle_0
+      name: Feirante2Idle_0
       rect:
         serializedVersion: 2
-        x: 183
-        y: 123
-        width: 172
-        height: 436
+        x: 170
+        y: 128
+        width: 175
+        height: 427
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 778b684dddf3eac80800000000000000
-      internalID: -8309634040466065289
+      spriteID: c30e5019e04a8f7d0800000000000000
+      internalID: -2884375178861223876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Feirante4Idle_1
+      name: Feirante2Idle_1
       rect:
         serializedVersion: 2
-        x: 510
-        y: 123
-        width: 189
-        height: 422
+        x: 493
+        y: 129
+        width: 203
+        height: 417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e1cbb24cf2c2f9e0800000000000000
-      internalID: -1588993329801215514
+      spriteID: 626056c8219cd4d80800000000000000
+      internalID: -8264728659652966874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Feirante4Idle_2
+      name: Feirante2Idle_2
       rect:
         serializedVersion: 2
-        x: 830
-        y: 123
-        width: 173
-        height: 436
+        x: 803
+        y: 134
+        width: 205
+        height: 409
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: feaec3e8b87cf0800800000000000000
-      internalID: 580902279154821871
+      spriteID: d7caedc6170064330800000000000000
+      internalID: 3694641031461907581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Feirante4Idle_3
+      name: Feirante2Idle_3
       rect:
         serializedVersion: 2
-        x: 1173
-        y: 123
-        width: 173
-        height: 435
+        x: 1142
+        y: 129
+        width: 174
+        height: 426
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dea0a3d7c513fb710800000000000000
-      internalID: 1711140656731785965
+      spriteID: 92c230ec4f5a68020800000000000000
+      internalID: 2343743126939839529
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Feirante4Idle_0: -8309634040466065289
-      Feirante4Idle_1: -1588993329801215514
-      Feirante4Idle_2: 580902279154821871
-      Feirante4Idle_3: 1711140656731785965
+      Feirante2Idle_0: -2884375178861223876
+      Feirante2Idle_1: -8264728659652966874
+      Feirante2Idle_2: 3694641031461907581
+      Feirante2Idle_3: 2343743126939839529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
