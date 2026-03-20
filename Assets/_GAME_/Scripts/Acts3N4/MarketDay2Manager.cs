@@ -18,6 +18,7 @@ public class MarketDay2Manager : MonoBehaviour
 
     [Header("Dependencies")]
     [SerializeField] private PlayerController player;
+    [SerializeField] private GameUI gameUI;
 
     [Header("NPC Controllers")]
     [SerializeField] private NPCController feirante1Controller;
@@ -26,7 +27,7 @@ public class MarketDay2Manager : MonoBehaviour
     [SerializeField] private NPCController feirante4Controller;
 
     [Header("Objects")]
-    [SerializeField] private GameObject DantesRadio;
+    [SerializeField] private GameObject dantesRadio;
 
     private bool isInteractionRunning;
 
@@ -39,10 +40,10 @@ public class MarketDay2Manager : MonoBehaviour
     {
         "Feirante: Óleo de lamparina... sementes de hortaliça... é isso que ocê vai levar, rapaz?",
         "<color=#531182>Lucas:</color> É. Só isso.",
-        "Feirante: Pois tá certo.",
+        "Feirante: Pois tá certo."
     };
 
-        private static readonly string[] Feirante1SecondLines =
+    private static readonly string[] Feirante1SecondLines =
     {
         "Feirante: ...",
         "Feirante: Escuta um tiquinho só.",
@@ -116,7 +117,8 @@ public class MarketDay2Manager : MonoBehaviour
     {
         AudioManager.Instance.PlayAmbient(marketAmbience);
         AudioManager.Instance.PlayMusic(marketMusic);
-        DantesRadio.SetActive(!ProgressionManager.Instance.act4RadioBought);
+        dantesRadio.SetActive(!ProgressionManager.Instance.act4RadioBought);
+        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
     }
 
     public void InteractWithVendor(VendorType vendorType)
@@ -164,18 +166,17 @@ public class MarketDay2Manager : MonoBehaviour
         bool hasTalkedBefore = ProgressionManager.Instance.HasTalkedToNpc(Feirante1NpcID);
 
         if (!hasTalkedBefore)
-        {   
+        {
             StartCoroutine(AudioManager.Instance.FadeOutMusicRoutine(2f));
 
             yield return ThoughtUI.Instance.PlaySequence(Feirante1FirstLines);
 
-            StartCoroutine(AudioManager.Instance.FadeInMusicRoutine(radioSong,2f));
+            StartCoroutine(AudioManager.Instance.FadeInMusicRoutine(radioSong, 2f));
 
             yield return ThoughtUI.Instance.PlaySequence(Feirante1SecondLines);
 
-            yield return StartCoroutine(AudioManager.Instance.FadeOutMusicRoutine(2f));
-
-            StartCoroutine(AudioManager.Instance.FadeInMusicRoutine(marketMusic,2f));
+            yield return AudioManager.Instance.FadeOutMusicRoutine(2f);
+            StartCoroutine(AudioManager.Instance.FadeInMusicRoutine(marketMusic, 2f));
 
             ProgressionManager.Instance.RegisterNpcTalk(Feirante1NpcID);
 
@@ -183,10 +184,14 @@ public class MarketDay2Manager : MonoBehaviour
                 TaskManager.Instance.CompleteTask("Market_Supplies");
 
             ProgressionManager.Instance.act4RadioBought = true;
-            DantesRadio.SetActive(false);
+            ProgressionManager.Instance.act4HideGameUI = true;
             ProgressionManager.Instance.SaveProgress();
 
+            dantesRadio.SetActive(false);
+
             yield return ThoughtUI.Instance.PlaySequence(Feirante1AfterLines);
+
+            gameUI.gameObject.SetActive(false);
             yield break;
         }
 
@@ -212,7 +217,7 @@ public class MarketDay2Manager : MonoBehaviour
         bool hasTalkedBefore = ProgressionManager.Instance.HasTalkedToNpc(Feirante3NpcID);
 
         if (!hasTalkedBefore)
-        {   
+        {
             yield return ThoughtUI.Instance.PlaySequence(Feirante3FirstLines);
             ProgressionManager.Instance.RegisterNpcTalk(Feirante3NpcID);
             yield break;
@@ -241,13 +246,10 @@ public class MarketDay2Manager : MonoBehaviour
         {
             case VendorType.Feirante1:
                 return feirante1Controller;
-
             case VendorType.Feirante2:
                 return feirante2Controller;
-
             case VendorType.Feirante3:
                 return feirante3Controller;
-
             default:
                 return feirante4Controller;
         }

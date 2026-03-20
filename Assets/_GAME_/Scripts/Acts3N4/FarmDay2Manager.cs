@@ -1,11 +1,14 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class FarmDay2Manager : MonoBehaviour
 {
     [Header("Audio")]
     [SerializeField] private AudioClip dayFarmMusic;
     [SerializeField] private AudioClip dayFarmAmbience;
+
+    [Header("Dependencies")]
+    [SerializeField] private GameUI gameUI;
 
     [Header("Act 3 Objects")]
     [SerializeField] private GameObject vegetationGrid;
@@ -22,16 +25,24 @@ public class FarmDay2Manager : MonoBehaviour
 
     private void Start()
     {
-
         ApplySavedWorldState();
-        StartCoroutine(StartSequence());
+
+        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
+
+        if (!ProgressionManager.Instance.act4RadioBought)
+            StartCoroutine(StartSequence());
+        else
+        {
+            AudioManager.Instance.PlayAmbient(dayFarmAmbience);
+            AudioManager.Instance.PlayMusic(dayFarmMusic);
+        }
     }
 
     public void ApplySavedWorldState()
     {
         ApplyAct3State();
         ApplyAct4State();
-    }   
+    }
 
     private IEnumerator StartSequence()
     {
@@ -46,6 +57,7 @@ public class FarmDay2Manager : MonoBehaviour
         AudioManager.Instance.PlayMusic(dayFarmMusic);
         yield return new WaitForSecondsRealtime(1f);
         yield return ThoughtUI.Instance.PlaySequence(intro);
+        
     }
 
     private void ApplyAct3State()

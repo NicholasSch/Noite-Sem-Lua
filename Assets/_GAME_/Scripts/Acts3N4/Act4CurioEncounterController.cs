@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Act4CurioEncounterController : MonoBehaviour
 {
@@ -8,12 +7,13 @@ public class Act4CurioEncounterController : MonoBehaviour
     [SerializeField] private FarmDay2Manager farmDay2Manager;
     [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
+    [SerializeField] private NarrationUI narrationUI;
 
     [Header("Scene objects")]
     [SerializeField] private GameObject donaCurioObject;
     [SerializeField] private NPCController donaCurioController;
     [SerializeField] private Transform playerLookTarget;
-    [SerializeField] private GameObject CurioExitTarget;
+    [SerializeField] private Transform curioExitTarget;
 
     [Header("Audio")]
     [SerializeField] private AudioClip tensionMusic;
@@ -53,9 +53,19 @@ public class Act4CurioEncounterController : MonoBehaviour
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 
-        //curio walks to exit target
+        yield return donaCurioController.WalkTo(curioExitTarget.position);
+
+        string[] endingLines =
+        {
+            "<color=#531182>Lucas:</color> Está escurecendo rápido demais...",
+            "Melhor eu entrar. Posso organizar o que trouxe lá dentro."
+        };
+
+        yield return ThoughtUI.Instance.PlaySequence(endingLines);
 
         farmDay2Manager.MarkCurioEncounterPlayed();
+
+        isRunning = false;
 
         GameStateManager.SetState(GameState.Gameplay);
     }

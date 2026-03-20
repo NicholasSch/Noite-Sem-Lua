@@ -245,6 +245,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1502080674405902031, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
   m_PrefabInstance: {fileID: 60019018}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &60019020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2610823754188994887, guid: 633089fb513d4c74893936e66f7a685a, type: 3}
+  m_PrefabInstance: {fileID: 60019018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c3f04d6cfbf674881f5d3ebf8ee400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameUI
 --- !u!1 &73306932
 GameObject:
   m_ObjectHideFlags: 0
@@ -29889,11 +29900,12 @@ MonoBehaviour:
   marketMusic: {fileID: 8300000, guid: 69e6482160e85004ea09fa2d647f00f6, type: 3}
   radioSong: {fileID: 8300000, guid: 5f3e06e1c7b69e54884f743fd06ed804, type: 3}
   player: {fileID: 1552350778}
+  gameUI: {fileID: 60019020}
   feirante1Controller: {fileID: 231877811}
   feirante2Controller: {fileID: 315262754}
   feirante3Controller: {fileID: 1425445457}
   feirante4Controller: {fileID: 1817268181}
-  DantesRadio: {fileID: 439447071}
+  dantesRadio: {fileID: 439447071}
 --- !u!1001 &1353867553
 PrefabInstance:
   m_ObjectHideFlags: 0

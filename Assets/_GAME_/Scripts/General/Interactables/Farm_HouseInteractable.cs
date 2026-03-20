@@ -7,7 +7,11 @@ public class Farm_HouseInteractable : MonoBehaviour, IInteractable
     [SerializeField] private NarrationUI narrationUI;
 
     public void Interact()
-    {
+    {   
+        if (ProgressionManager.Instance.currentDay == 2 && ProgressionManager.Instance.act4CurioEncounterPlayed)
+        {
+           ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
+        }
         StartCoroutine(EnterHouseRoutine());
     }
 

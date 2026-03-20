@@ -36,9 +36,12 @@ public class ProgressionManager : MonoBehaviour
         public bool act3BenchVisionSeen;
         public bool act3NewspaperFound;
         public bool act4Started;
-        public bool act4RadioSceneSeen;
-        public bool act4CurioEncounterPlayed;
         public bool act4RadioBought;
+        public bool act4CurioEncounterPlayed;
+        public bool act4HideGameUI;
+        public bool act5NightIntroPlayed;
+        public bool act5TobaccoFound;
+        public bool act5JournalRecovered;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -48,6 +51,7 @@ public class ProgressionManager : MonoBehaviour
     public int currentDay = 0;
     public DayPeriod currentPeriod = DayPeriod.Day;
     public JournalPhase journalPhase = JournalPhase.Day1;
+
     public bool LetterOpened;
     public bool farmIntroPlayed;
     public bool act2CurioEncounterPlayed;
@@ -61,6 +65,10 @@ public class ProgressionManager : MonoBehaviour
     public bool act4Started;
     public bool act4RadioBought;
     public bool act4CurioEncounterPlayed;
+    public bool act4HideGameUI;
+    public bool act5NightIntroPlayed;
+    public bool act5TobaccoFound;
+    public bool act5JournalRecovered;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -180,6 +188,10 @@ public class ProgressionManager : MonoBehaviour
             act4Started = act4Started,
             act4RadioBought = act4RadioBought,
             act4CurioEncounterPlayed = act4CurioEncounterPlayed,
+            act4HideGameUI = act4HideGameUI,
+            act5NightIntroPlayed = act5NightIntroPlayed,
+            act5TobaccoFound = act5TobaccoFound,
+            act5JournalRecovered = act5JournalRecovered,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -219,8 +231,12 @@ public class ProgressionManager : MonoBehaviour
         act3BenchVisionSeen = data.act3BenchVisionSeen;
         act3NewspaperFound = data.act3NewspaperFound;
         act4Started = data.act4Started;
-        act4CurioEncounterPlayed = data.act4CurioEncounterPlayed;
         act4RadioBought = data.act4RadioBought;
+        act4CurioEncounterPlayed = data.act4CurioEncounterPlayed;
+        act4HideGameUI = data.act4HideGameUI;
+        act5NightIntroPlayed = data.act5NightIntroPlayed;
+        act5TobaccoFound = data.act5TobaccoFound;
+        act5JournalRecovered = data.act5JournalRecovered;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -245,6 +261,10 @@ public class ProgressionManager : MonoBehaviour
         act4Started = false;
         act4RadioBought = false;
         act4CurioEncounterPlayed = false;
+        act4HideGameUI = false;
+        act5NightIntroPlayed = false;
+        act5TobaccoFound = false;
+        act5JournalRecovered = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();

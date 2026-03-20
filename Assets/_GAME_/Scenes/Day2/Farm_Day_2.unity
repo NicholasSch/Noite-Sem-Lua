@@ -173854,6 +173854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Act3FarmManager
   dayFarmMusic: {fileID: 8300000, guid: 69e6482160e85004ea09fa2d647f00f6, type: 3}
   dayFarmAmbience: {fileID: 8300000, guid: 1588db30f43458547a189a86961a728f, type: 3}
+  gameUI: {fileID: 909417710}
   vegetationGrid: {fileID: 634731870}
   vegetationGrid2: {fileID: 821866052}
   saplingInteractable: {fileID: 1120034561}
@@ -174175,10 +174176,11 @@ MonoBehaviour:
   farmDay2Manager: {fileID: 1803658791}
   gameUI: {fileID: 909417710}
   player: {fileID: 1115960879}
+  narrationUI: {fileID: 1014862610}
   donaCurioObject: {fileID: 982203082}
   donaCurioController: {fileID: 982203083}
   playerLookTarget: {fileID: 1204805345}
-  CurioExitTarget: {fileID: 1176019509}
+  curioExitTarget: {fileID: 1176019510}
   tensionMusic: {fileID: 8300000, guid: cc15f7c46dacfc841adc124e6d07f327, type: 3}
 --- !u!1 &1950466333
 GameObject:

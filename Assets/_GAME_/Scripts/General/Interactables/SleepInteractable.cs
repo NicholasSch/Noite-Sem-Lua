@@ -15,7 +15,7 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator SleepChecker()
     {
-        if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed)||(ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act4CurioEncounterPlayed))
+        if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed)||(ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered))
         {
             yield return narrationUI.ShowTextRoutine(blockedSleepText);
             yield break;
