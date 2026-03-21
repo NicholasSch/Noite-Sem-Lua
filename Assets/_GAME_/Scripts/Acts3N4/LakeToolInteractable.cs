@@ -15,9 +15,9 @@ public class LakeTollInteractable : MonoBehaviour, IInteractable
         "Eu preciso ficar atento."
     };
 
-    private static readonly string[] RepeatLines =
+        private static readonly string[] AfterLines =
     {
-        "<color=#531182>Lucas:</color> A água continua estranha."
+        "<color=#531182>Lucas:</color> O caderno mudou?"
     };
 
     private static readonly string[] BlockedLines =
@@ -40,13 +40,6 @@ public class LakeTollInteractable : MonoBehaviour, IInteractable
             yield break;
         }
 
-        if (TaskManager.Instance.IsCompleted("Lake_Toll"))
-        {
-            GameStateManager.SetState(GameState.Thought);
-            yield return ThoughtUI.Instance.PlaySequence(RepeatLines);
-            GameStateManager.SetState(GameState.Gameplay);
-            yield break;
-        }
 
         GameStateManager.SetState(GameState.Cutscene);
 
@@ -61,6 +54,8 @@ public class LakeTollInteractable : MonoBehaviour, IInteractable
         ProgressionManager.Instance.act4Started = true;
         ProgressionManager.Instance.SetJournalPhase(ProgressionManager.JournalPhase.Day2Act4);
         ProgressionManager.Instance.SaveProgress();
+
+        yield return ThoughtUI.Instance.PlaySequence(AfterLines);
 
         farmDay2Manager.ApplySavedWorldState();
 

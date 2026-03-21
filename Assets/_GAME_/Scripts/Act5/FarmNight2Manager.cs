@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class ForestDay2Manager : MonoBehaviour
+public class FarmNight2Manager : MonoBehaviour
 {
     [Header("Audio")]
-    [SerializeField] private AudioClip dayForestAmbience;
+    [SerializeField] private AudioClip NightFarmAmbience;
 
     [Header("Dependencies")]
     [SerializeField] private GameUI gameUI;
 
     void Start()
     {
-        AudioManager.Instance.PlayAmbient(dayForestAmbience);
+        AudioManager.Instance.PlayAmbient(NightFarmAmbience);
         gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
     }
 }

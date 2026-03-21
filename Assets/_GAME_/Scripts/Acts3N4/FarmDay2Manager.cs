@@ -29,13 +29,16 @@ public class FarmDay2Manager : MonoBehaviour
 
         gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
 
-        if (!ProgressionManager.Instance.act4RadioBought)
-            StartCoroutine(StartSequence());
-        else
+        string[] intro =
         {
-            AudioManager.Instance.PlayAmbient(dayFarmAmbience);
-            AudioManager.Instance.PlayMusic(dayFarmMusic);
+            "<color=#531182>Lucas:</color> Um novo dia."
+        };
+
+        if (!ProgressionManager.Instance.act3BenchVisionSeen)
+        {
+            StartCoroutine(ThoughtUI.Instance.PlaySequence(intro));
         }
+        StartCoroutine(StartSequence());
     }
 
     public void ApplySavedWorldState()
@@ -48,15 +51,9 @@ public class FarmDay2Manager : MonoBehaviour
     {
         AudioManager.Instance.PlayAmbient(dayFarmAmbience);
 
-        string[] intro =
-        {
-            "<color=#531182>Lucas:</color> Um novo dia."
-        };
-
         yield return new WaitForSecondsRealtime(3f);
         AudioManager.Instance.PlayMusic(dayFarmMusic);
         yield return new WaitForSecondsRealtime(1f);
-        yield return ThoughtUI.Instance.PlaySequence(intro);
         
     }
 

@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TitleUI
   canvasGroup: {fileID: 3387876424877372540}
   fadeDuration: 4
-  holdDuration: 5
+  holdDuration: 3.5
 --- !u!225 &3387876424877372540
 CanvasGroup:
   m_ObjectHideFlags: 0

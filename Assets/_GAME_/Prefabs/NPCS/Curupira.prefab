@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2461414714920128745
+--- !u!1001 &6575120828616821892
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,47 +11,15 @@ PrefabInstance:
     - target: {fileID: 1807089735277452608, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 132f26964f7a9f241a28c8069295cda9, type: 2}
+      objectReference: {fileID: 9100000, guid: 6989b86b73827a24ba955e65daabea1f, type: 2}
     - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: npcID
-      value: CorpoSeco
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 8350919547536413864}
-    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 2.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_Size.x
-      value: 1.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_Size.y
-      value: 2.22
+      value: Curupira
       objectReference: {fileID: 0}
     - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 948768642176915628, guid: 7c369dfcdddd70442a6154b33b37fe88, type: 3}
-    - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -4600892500283559877, guid: 217c6eb351af80b4da3d5d45fc9a2ade, type: 3}
     - target: {fileID: 5020758977854276282, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -94,25 +62,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7022403094741855794, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Name
-      value: CorpoSeco
+      value: Curupira
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
     - {fileID: 2788065578304300599, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-    - {fileID: 5494337206101524622, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
     - {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+    - {fileID: 5494337206101524622, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
+    - {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
---- !u!114 &8350919547536413864 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5894330864203842625, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
-  m_PrefabInstance: {fileID: 2461414714920128745}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b51379a0ef4e04c9874a1b02c6d16e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCController
