@@ -6,12 +6,19 @@ public class Market_ForestInteractable : MonoBehaviour, IInteractable
     [SerializeField] private AudioClip forestSound;
     [SerializeField] private NarrationUI narrationUI;
 
+    private static readonly string[] blockedLines = {"<color=#531182>Lucas:</color> Ainda não, ainda há algo que não vi aqui"};
+
     public void Interact()
-    {
-        StartCoroutine(EnterHouseRoutine());
+    {   
+        if (ProgressionManager.Instance.currentDay == 2 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && !(ProgressionManager.Instance.act5NewspaperFound && ProgressionManager.Instance.act5JournalRecovered))
+        {
+            StartCoroutine(ThoughtUI.Instance.PlaySequence(blockedLines));
+            return;
+        }
+        StartCoroutine(ExitRoutine());
     }
 
-    private IEnumerator EnterHouseRoutine()
+    private IEnumerator ExitRoutine()
     {
         AudioManager.Instance.PlaySFX(forestSound);
 

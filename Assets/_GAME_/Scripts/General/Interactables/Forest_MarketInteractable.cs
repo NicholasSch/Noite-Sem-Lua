@@ -8,10 +8,10 @@ public class Forest_MarketInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        StartCoroutine(EnterHouseRoutine());
+        StartCoroutine(ExitRoutine());
     }
 
-    private IEnumerator EnterHouseRoutine()
+    private IEnumerator ExitRoutine()
     {
         AudioManager.Instance.PlaySFX(marketSound);
 

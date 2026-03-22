@@ -42,6 +42,7 @@ public class ProgressionManager : MonoBehaviour
         public bool act5NightIntroPlayed;
         public bool act5TobaccoFound;
         public bool act5JournalRecovered;
+        public bool act5NewspaperFound;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -69,6 +70,7 @@ public class ProgressionManager : MonoBehaviour
     public bool act5NightIntroPlayed;
     public bool act5TobaccoFound;
     public bool act5JournalRecovered;
+    public bool act5NewspaperFound;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -192,6 +194,7 @@ public class ProgressionManager : MonoBehaviour
             act5NightIntroPlayed = act5NightIntroPlayed,
             act5TobaccoFound = act5TobaccoFound,
             act5JournalRecovered = act5JournalRecovered,
+            act5NewspaperFound = act5NewspaperFound,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -237,6 +240,7 @@ public class ProgressionManager : MonoBehaviour
         act5NightIntroPlayed = data.act5NightIntroPlayed;
         act5TobaccoFound = data.act5TobaccoFound;
         act5JournalRecovered = data.act5JournalRecovered;
+        act5NewspaperFound = data.act5NewspaperFound;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -265,6 +269,7 @@ public class ProgressionManager : MonoBehaviour
         act5NightIntroPlayed = false;
         act5TobaccoFound = false;
         act5JournalRecovered = false;
+        act5NewspaperFound = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();

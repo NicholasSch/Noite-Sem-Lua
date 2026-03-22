@@ -1,15 +1,12 @@
 using UnityEngine;
 
-public class NewspaperInteractable : MonoBehaviour, IInteractable
+public class NewspaperCucaInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private FarmDay2Manager farmDay2Manager;
     [SerializeField] private NewspaperUI newspaperPrefab;
 
     public void Interact()
     {
-        if (ProgressionManager.Instance.act3NewspaperFound)
-            return;
-
         if (FindFirstObjectByType<NewspaperUI>() != null)
             return;
 
@@ -22,6 +19,7 @@ public class NewspaperInteractable : MonoBehaviour, IInteractable
     private void OnNewspaperClosed()
     {
         farmDay2Manager.MarkNewspaperFound();
+        
         GameStateManager.SetState(GameState.Gameplay);
     }
 }

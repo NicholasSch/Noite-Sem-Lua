@@ -13,16 +13,8 @@ public class CurupiraFootprintsInteractable : MonoBehaviour
         "Quem conseguiria caminhar assim?",
         "As pegadas indicam um lado...",
         "Mas o rastro da terra diz o contrário.",
-        "É como se os pés estivessem... invertidos."
-    };
-
-        private static readonly string[] aterLines =
-    {
-        "<color=#531182>Lucas:</color> Que estranho...",
-        "Quem conseguiria caminhar assim?",
-        "As pegadas indicam um lado...",
-        "Mas o rastro da terra diz o contrário.",
-        "É como se os pés estivessem... invertidos."
+        "É como se os pés estivessem... invertidos.", 
+        "E quanta força nessas pegadas."
     };
 
     private void OnTriggerEnter2D(Collider2D other)
