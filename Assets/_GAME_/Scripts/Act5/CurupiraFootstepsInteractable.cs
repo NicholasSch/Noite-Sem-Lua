@@ -1,11 +1,12 @@
 using System.Collections;
 using UnityEngine;
 
-public class CurupiraFootprintsInteractable : MonoBehaviour
+public class CurupiraFootstepsInteractable : MonoBehaviour, IInteractable
 {
+    [SerializeField] private ForestNight2Manager forestNight2Manager;
     [SerializeField] private CurupiraEncounterController encounterController;
 
-    private bool triggered = false;
+    private bool isRunning;
 
     private static readonly string[] Lines =
     {
@@ -13,29 +14,33 @@ public class CurupiraFootprintsInteractable : MonoBehaviour
         "Quem conseguiria caminhar assim?",
         "As pegadas indicam um lado...",
         "Mas o rastro da terra diz o contrário.",
-        "É como se os pés estivessem... invertidos.", 
-        "E quanta força nessas pegadas."
+        "É como se os pés estivessem... invertidos."
     };
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void Interact()
     {
-        if (triggered)
+        if (isRunning || ProgressionManager.Instance.act5FootstepsSeen)
             return;
+
         StartCoroutine(InteractionRoutine());
     }
 
     private IEnumerator InteractionRoutine()
     {
+        isRunning = true;
+
         GameStateManager.SetState(GameState.Thought);
 
         yield return ThoughtUI.Instance.PlaySequence(Lines);
+
+        forestNight2Manager.MarkFootstepsSeen();
 
         GameStateManager.SetState(GameState.Gameplay);
 
         yield return new WaitForSecondsRealtime(0.3f);
 
-        triggered = true;
-
         encounterController.TriggerEncounter();
+
+        isRunning = false;
     }
 }

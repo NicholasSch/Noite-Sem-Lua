@@ -43,6 +43,10 @@ public class ProgressionManager : MonoBehaviour
         public bool act5TobaccoFound;
         public bool act5JournalRecovered;
         public bool act5NewspaperFound;
+        public bool act5FootstepsSeen;
+        public bool act5ForestLoopBroken;
+        public bool act5CaveBlockedSeen;
+        public bool act5LoopSeen;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -71,6 +75,10 @@ public class ProgressionManager : MonoBehaviour
     public bool act5TobaccoFound;
     public bool act5JournalRecovered;
     public bool act5NewspaperFound;
+    public bool act5FootstepsSeen;
+    public bool act5ForestLoopBroken;
+    public bool act5CaveBlockedSeen;
+    public bool act5LoopSeen;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -195,6 +203,10 @@ public class ProgressionManager : MonoBehaviour
             act5TobaccoFound = act5TobaccoFound,
             act5JournalRecovered = act5JournalRecovered,
             act5NewspaperFound = act5NewspaperFound,
+            act5FootstepsSeen = act5FootstepsSeen,
+            act5ForestLoopBroken = act5ForestLoopBroken,
+            act5CaveBlockedSeen = act5CaveBlockedSeen,
+            act5LoopSeen = act5LoopSeen,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -241,6 +253,10 @@ public class ProgressionManager : MonoBehaviour
         act5TobaccoFound = data.act5TobaccoFound;
         act5JournalRecovered = data.act5JournalRecovered;
         act5NewspaperFound = data.act5NewspaperFound;
+        act5FootstepsSeen = data.act5FootstepsSeen;
+        act5ForestLoopBroken = data.act5ForestLoopBroken;
+        act5CaveBlockedSeen = data.act5CaveBlockedSeen;
+        act5LoopSeen = data.act5LoopSeen;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -270,6 +286,10 @@ public class ProgressionManager : MonoBehaviour
         act5TobaccoFound = false;
         act5JournalRecovered = false;
         act5NewspaperFound = false;
+        act5FootstepsSeen = false;
+        act5ForestLoopBroken = false;
+        act5CaveBlockedSeen = false;
+        act5LoopSeen = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();
