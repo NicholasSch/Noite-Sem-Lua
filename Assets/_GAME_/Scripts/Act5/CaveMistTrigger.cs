@@ -6,10 +6,19 @@ public class CaveMistTrigger : MonoBehaviour
     [SerializeField] private Transform returnPoint;
     [SerializeField] private CanvasGroup whiteFlashCanvas;
     [SerializeField] private AudioClip coughSound;
+    [SerializeField] private PlayerController player;
 
     private bool isRunning;
 
-    private static readonly string[] FirstLines =
+    private static readonly string[] genericLines =
+    {
+        "<color=#531182>Lucas:</color> Essa neblina está errada...",
+        "Nem a luz da lanterna atravessa direito.",
+        "E esse cheiro... parece coisa queimada.",
+        "Melhor eu sair daqui."
+    };
+
+    private static readonly string[] newspaperReadLines =
     {
         "<color=#531182>Lucas:</color> O jornal mencionou uma Garganta da Rocha...",
         "Mas a neblina aqui está tão espessa que nem a luz da lanterna atravessa.",
@@ -17,11 +26,17 @@ public class CaveMistTrigger : MonoBehaviour
         "Melhor eu voltar pra casa principal enquanto ainda consigo ver meus próprios pés."
     };
 
-    private static readonly string[] RepeatLines =
+    private static readonly string[] repeatLines =
     {
         "<color=#531182>Lucas:</color> Não consigo respirar aqui.",
         "Preciso de algo pra filtrar esse ar... ou esperar o vento mudar."
     };
+
+    private void Start()
+    {
+        if (player == null)
+            player = FindFirstObjectByType<PlayerController>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,10 +46,10 @@ public class CaveMistTrigger : MonoBehaviour
         if (isRunning)
             return;
 
-        StartCoroutine(BlockRoutine(other.transform));
+        StartCoroutine(BlockRoutine());
     }
 
-    private IEnumerator BlockRoutine(Transform playerTransform)
+    private IEnumerator BlockRoutine()
     {
         isRunning = true;
 
@@ -45,21 +60,28 @@ public class CaveMistTrigger : MonoBehaviour
         if (coughSound != null)
             AudioManager.Instance.PlaySFX(coughSound);
 
-        yield return new WaitForSecondsRealtime(0.4f);
+        yield return new WaitForSecondsRealtime(0.25f);
 
-        playerTransform.position = returnPoint.position;
+        yield return FlashWhite(1f, 0f, 0.6f);
 
-        yield return FlashWhite(1f, 0f, 0.4f);
+        if (player != null)
+            yield return player.MoveTo(returnPoint.position, 2f);
 
-        if (!ProgressionManager.Instance.act5CaveBlockedSeen)
+        GameStateManager.SetState(GameState.Thought);
+
+        if (!ProgressionManager.Instance.act5NewspaperFound)
         {
-            yield return ThoughtUI.Instance.PlaySequence(FirstLines);
+            yield return ThoughtUI.Instance.PlaySequence(genericLines);
+        }
+        else if (!ProgressionManager.Instance.act5CaveBlockedSeen)
+        {
+            yield return ThoughtUI.Instance.PlaySequence(newspaperReadLines);
             ProgressionManager.Instance.act5CaveBlockedSeen = true;
             ProgressionManager.Instance.SaveProgress();
         }
         else
         {
-            yield return ThoughtUI.Instance.PlaySequence(RepeatLines);
+            yield return ThoughtUI.Instance.PlaySequence(repeatLines);
         }
 
         GameStateManager.SetState(GameState.Gameplay);

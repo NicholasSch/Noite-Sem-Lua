@@ -14,6 +14,8 @@ public class FarmDay2Manager : MonoBehaviour
     [SerializeField] private GameObject vegetationGrid;
     [SerializeField] private GameObject vegetationGrid2;
     [SerializeField] private GameObject saplingInteractable;
+    [SerializeField] private GameObject benchInteractable;
+    [SerializeField] private GameObject lakeInteractable;
     [SerializeField] private GameObject newspaperInteractable;
     [SerializeField] private GameObject plantedTreeObject;
 
@@ -62,11 +64,14 @@ public class FarmDay2Manager : MonoBehaviour
         bool orchardDone = TaskManager.Instance.IsCompleted("Orchard_Care");
         bool benchVisionSeen = ProgressionManager.Instance.act3BenchVisionSeen;
         bool plantDone = TaskManager.Instance.IsCompleted("Plant_Hope");
+        bool lakeToolDone = TaskManager.Instance.IsCompleted("Lake_Toll");
         bool newspaperFound = ProgressionManager.Instance.act3NewspaperFound;
 
         vegetationGrid.SetActive(!orchardDone);
         vegetationGrid2.SetActive(orchardDone);
+        benchInteractable.SetActive(!benchVisionSeen);
         saplingInteractable.SetActive(benchVisionSeen && !plantDone);
+        lakeInteractable.SetActive(!lakeToolDone);
         newspaperInteractable.SetActive(!newspaperFound);
         plantedTreeObject.SetActive(plantDone);
     }
