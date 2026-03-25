@@ -53,6 +53,10 @@ public class JournalSystem : MonoBehaviour
                 SetupDay2Act4();
                 break;
 
+            case ProgressionManager.JournalPhase.Day3Act6:
+                SetupDay3Act6();
+                break;
+
             default:
                 SetupDay1();
                 break;
@@ -125,6 +129,27 @@ public class JournalSystem : MonoBehaviour
             "Market_Supplies",
             "O Abastecimento do Engenho (Fale com o feirante e consiga os mantimentos)",
             "Busque na vila o que a terra não oferece: óleo para as luzes e sementes para o amanhã. Não se detenha mais do que o necessário."
+        ));
+    }
+
+    private void SetupDay3Act6()
+    {
+        leftPageText =
+            "Caderno de Dante\n\n" +
+            "O sangue da terra é a água, e a árvore que você plantou tem sede de séculos. Cuide dela, pois ela será seus olhos quando a névoa subir.\n\n" +
+            "Nem todo vento sopra para limpar o céu. Alguns ventos vêm em uma perna só para bagunçar o que está no lugar.\n\n" +
+            "Se o vento assobiar dentro de casa, não tente prendê-lo. Apenas guarde o que é frágil.";
+
+        tasks.Add(new Task(
+            "Water_Sentinel",
+            "O Batismo da Água (Regue a árvore)",
+            "O que cresce rápido demais tem uma sede que a terra não sacia. Regue a árvore; ela será seu porto quando o chão se tornar incerto."
+        ));
+
+        tasks.Add(new Task(
+            "Prepare_Smoker",
+            "O Nó no Vento (Prepare o defumador na varanda)",
+            "Queime arruda e guiné na varanda. Há visitantes que não batem à porta; entram pelo vão do assoalho. Guarde o que é frágil."
         ));
     }
 

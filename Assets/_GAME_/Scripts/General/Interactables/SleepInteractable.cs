@@ -15,26 +15,45 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator SleepChecker()
     {
-        if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed)||(ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered))
+        bool act6DayTasksDone =
+            TaskManager.Instance.IsCompleted("Water_Sentinel") &&
+            TaskManager.Instance.IsCompleted("Prepare_Smoker");
+
+        if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed) ||
+            (ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered) ||
+            (ProgressionManager.Instance.currentDay == 3 &&
+             ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
+             !act6DayTasksDone))
         {
             yield return narrationUI.ShowTextRoutine(blockedSleepText);
             yield break;
         }
-        else if (ProgressionManager.Instance.currentDay == 1 && ProgressionManager.Instance.porchScenePlayed && !ProgressionManager.Instance.firstNightSleepDone)
+        else if (ProgressionManager.Instance.currentDay == 1 &&
+                 ProgressionManager.Instance.porchScenePlayed &&
+                 !ProgressionManager.Instance.firstNightSleepDone)
         {
             ProgressionManager.Instance.firstNightSleepDone = true;
             ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
+        }
+        else if (ProgressionManager.Instance.currentDay == 3 &&
+                 ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
+                 act6DayTasksDone &&
+                 !ProgressionManager.Instance.act6NightStarted)
+        {
+            ProgressionManager.Instance.act6NightStarted = true;
+            ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
+            ProgressionManager.Instance.SaveProgress();
         }
         else
         {
             ProgressionManager.Instance.NextDay();
         }
+
         StartCoroutine(SleepRoutine());
     }
 
     private IEnumerator SleepRoutine()
-    {   
-        
+    {
         GameStateManager.SetState(GameState.Cutscene);
 
         SceneRouteManager.RouteData route = SceneRouteManager.GetRoute(
@@ -47,6 +66,4 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
         yield return narrationUI.ShowTextRoutine(sleepText, route.SceneName);
     }
-
-
 }

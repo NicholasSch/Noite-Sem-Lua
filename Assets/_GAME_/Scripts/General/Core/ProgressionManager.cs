@@ -16,7 +16,8 @@ public class ProgressionManager : MonoBehaviour
     {
         Day1,
         Day2Act3,
-        Day2Act4
+        Day2Act4,
+        Day3Act6
     }
 
     [System.Serializable]
@@ -46,7 +47,13 @@ public class ProgressionManager : MonoBehaviour
         public bool act5FootstepsSeen;
         public bool act5ForestLoopBroken;
         public bool act5CaveBlockedSeen;
-        public bool act5LoopSeen;
+        public bool act6MorningIntroPlayed;
+        public bool act6NewspaperFound;
+        public bool act6NightStarted;
+        public bool act6NightChaosPlayed;
+        public bool act6RadioVisionSeen;
+        public bool act6NoteFound;
+        public bool act6NorthClueRevealed;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -78,7 +85,13 @@ public class ProgressionManager : MonoBehaviour
     public bool act5FootstepsSeen;
     public bool act5ForestLoopBroken;
     public bool act5CaveBlockedSeen;
-    public bool act5LoopSeen;
+    public bool act6MorningIntroPlayed;
+    public bool act6NewspaperFound;
+    public bool act6NightStarted;
+    public bool act6NightChaosPlayed;
+    public bool act6RadioVisionSeen;
+    public bool act6NoteFound;
+    public bool act6NorthClueRevealed;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -206,7 +219,13 @@ public class ProgressionManager : MonoBehaviour
             act5FootstepsSeen = act5FootstepsSeen,
             act5ForestLoopBroken = act5ForestLoopBroken,
             act5CaveBlockedSeen = act5CaveBlockedSeen,
-            act5LoopSeen = act5LoopSeen,
+            act6MorningIntroPlayed = act6MorningIntroPlayed,
+            act6NewspaperFound = act6NewspaperFound,
+            act6NightStarted = act6NightStarted,
+            act6NightChaosPlayed = act6NightChaosPlayed,
+            act6RadioVisionSeen = act6RadioVisionSeen,
+            act6NoteFound = act6NoteFound,
+            act6NorthClueRevealed = act6NorthClueRevealed,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -256,7 +275,13 @@ public class ProgressionManager : MonoBehaviour
         act5FootstepsSeen = data.act5FootstepsSeen;
         act5ForestLoopBroken = data.act5ForestLoopBroken;
         act5CaveBlockedSeen = data.act5CaveBlockedSeen;
-        act5LoopSeen = data.act5LoopSeen;
+        act6MorningIntroPlayed = data.act6MorningIntroPlayed;
+        act6NewspaperFound = data.act6NewspaperFound;
+        act6NightStarted = data.act6NightStarted;
+        act6NightChaosPlayed = data.act6NightChaosPlayed;
+        act6RadioVisionSeen = data.act6RadioVisionSeen;
+        act6NoteFound = data.act6NoteFound;
+        act6NorthClueRevealed = data.act6NorthClueRevealed;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -289,7 +314,13 @@ public class ProgressionManager : MonoBehaviour
         act5FootstepsSeen = false;
         act5ForestLoopBroken = false;
         act5CaveBlockedSeen = false;
-        act5LoopSeen = false;
+        act6MorningIntroPlayed = false;
+        act6NewspaperFound = false;
+        act6NightStarted = false;
+        act6NightChaosPlayed = false;
+        act6RadioVisionSeen = false;
+        act6NoteFound = false;
+        act6NorthClueRevealed = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();
