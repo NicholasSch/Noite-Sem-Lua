@@ -136,20 +136,22 @@ public class JournalSystem : MonoBehaviour
     {
         leftPageText =
             "Caderno de Dante\n\n" +
-            "O sangue da terra é a água, e a árvore que você plantou tem sede de séculos. Cuide dela, pois ela será seus olhos quando a névoa subir.\n\n" +
-            "Nem todo vento sopra para limpar o céu. Alguns ventos vêm em uma perna só para bagunçar o que está no lugar.\n\n" +
+            "O sangue da terra é a água, e a árvore que você plantou tem sede de séculos. " +
+            "Cuide dela, pois ela será seus olhos quando a névoa subir.\n\n" +
+            "E fique atento: nem todo vento sopra para limpar o céu; alguns ventos vêm em uma perna só " +
+            "para bagunçar o que está no lugar.\n\n" +
             "Se o vento assobiar dentro de casa, não tente prendê-lo. Apenas guarde o que é frágil.";
 
         tasks.Add(new Task(
-            "Water_Sentinel",
-            "O Batismo da Água (Regue a árvore)",
-            "O que cresce rápido demais tem uma sede que a terra não sacia. Regue a árvore; ela será seu porto quando o chão se tornar incerto."
+            "Sentinel_Thirst",
+            "A Sede da Sentinela (Verifique a árvore que cresceu no canteiro)",
+            "A muda já não parece pertencer ao mesmo tempo que o resto do Engenho. Observe o que a terra fez com ela e siga a instrução do caderno."
         ));
 
         tasks.Add(new Task(
-            "Prepare_Smoker",
-            "O Nó no Vento (Prepare o defumador na varanda)",
-            "Queime arruda e guiné na varanda. Há visitantes que não batem à porta; entram pelo vão do assoalho. Guarde o que é frágil."
+            "House_Whistle",
+            "A Casa que Assobia (Prepare a proteção da varanda)",
+            "Há ventos que entram sem pedir licença. Organize a proteção pedida por Dante e deixe a casa pronta antes do cair da noite."
         ));
     }
 

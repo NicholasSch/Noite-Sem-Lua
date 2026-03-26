@@ -70,6 +70,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "Farm_Day_1"; break;
                 case 2: sceneName = "Farm_Day_2"; break;
+                case 3: sceneName = "Farm_Day_3"; break;
                 default: sceneName = "Farm_Day_1"; break;
             }
         }
@@ -79,6 +80,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "Farm_Night_1"; break;
                 case 2: sceneName = "Farm_Night_2"; break;
+                case 3: sceneName = "Farm_Night_3"; break;
                 default: sceneName = "Farm_Night_1"; break;
             }
         }
@@ -103,6 +105,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "House_Day_1"; break;
                 case 2: sceneName = "House_Day_2"; break;
+                case 3: sceneName = "House_Day_3"; break;
                 default: sceneName = "House_Day_1"; break;
             }
         }
@@ -112,6 +115,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "House_Night_1"; break;
                 case 2: sceneName = "House_Night_2"; break;
+                case 3: sceneName = "House_Night_3"; break;
                 default: sceneName = "House_Night_1"; break;
             }
         }
@@ -135,6 +139,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "Forest_Day_1"; break;
                 case 2: sceneName = "Forest_Day_2"; break;
+                case 3: sceneName = "Forest_Day_3"; break;
                 default: sceneName = "Forest_Day_1"; break;
             }
         }
@@ -144,6 +149,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "Forest_Night_1"; break;
                 case 2: sceneName = "Forest_Night_2"; break;
+                case 3: sceneName = "Forest_Night_3"; break;
                 default: sceneName = "Forest_Night_1"; break;
             }
         }
@@ -168,6 +174,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "Market_Day_1"; break;
                 case 2: sceneName = "Market_Day_2"; break;
+                case 3: sceneName = "Market_Day_3"; break;
                 default: sceneName = "Market_Day_1"; break;
             }
         }
@@ -177,6 +184,7 @@ public static class SceneRouteManager
             {
                 case 1: sceneName = "Market_Night_1"; break;
                 case 2: sceneName = "Market_Night_2"; break;
+                case 3: sceneName = "Market_Night_3"; break;
                 default: sceneName = "Market_Night_1"; break;
             }
         }

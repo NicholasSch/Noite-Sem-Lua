@@ -15,15 +15,15 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator SleepChecker()
     {
-        bool act6DayTasksDone =
-            TaskManager.Instance.IsCompleted("Water_Sentinel") &&
-            TaskManager.Instance.IsCompleted("Prepare_Smoker");
+        bool act6TasksDone =
+            TaskManager.Instance.IsCompleted("Sentinel_Thirst") &&
+            TaskManager.Instance.IsCompleted("House_Whistle");
 
         if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed) ||
             (ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered) ||
             (ProgressionManager.Instance.currentDay == 3 &&
              ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
-             !act6DayTasksDone))
+             !act6TasksDone))
         {
             yield return narrationUI.ShowTextRoutine(blockedSleepText);
             yield break;
@@ -37,7 +37,7 @@ public class SleepInteractable : MonoBehaviour, IInteractable
         }
         else if (ProgressionManager.Instance.currentDay == 3 &&
                  ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
-                 act6DayTasksDone &&
+                 act6TasksDone &&
                  !ProgressionManager.Instance.act6NightStarted)
         {
             ProgressionManager.Instance.act6NightStarted = true;
