@@ -168,7 +168,7 @@ MonoBehaviour:
   footstepsInteractable: {fileID: 1801199188}
   hollowLogInteractable: {fileID: 1047804268}
   loopTriggerObject: {fileID: 428488015}
-  playerCutscenePos: {fileID: 0}
+  playerCutscenePos: {fileID: 200166500}
 --- !u!1 &138917410
 GameObject:
   m_ObjectHideFlags: 0
@@ -54495,7 +54495,7 @@ MonoBehaviour:
   forestNight2Manager: {fileID: 57851961}
   narrationUI: {fileID: 966461721}
   playerController: {fileID: 297602246}
-  playerCutscenePos: {fileID: 0}
+  playerCutscenePos: {fileID: 200166500}
   tobaccoOfferSound: {fileID: 0}
   melodicWhistleSound: {fileID: 0}
 --- !u!61 &1047804271

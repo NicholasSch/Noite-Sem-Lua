@@ -64,13 +64,11 @@ public class HollowLogInteractable : MonoBehaviour, IInteractable
         GameStateManager.SetState(GameState.Thought);
         yield return ThoughtUI.Instance.PlaySequence(OfferLines);
 
-        if (tobaccoOfferSound != null)
-            AudioManager.Instance.PlaySFX(tobaccoOfferSound);
-
+        AudioManager.Instance.PlaySFX(tobaccoOfferSound);
+        
         yield return new WaitForSecondsRealtime(0.8f);
 
-        if (melodicWhistleSound != null)
-            AudioManager.Instance.PlaySFX(melodicWhistleSound);
+        AudioManager.Instance.PlaySFX(melodicWhistleSound);
 
         yield return new WaitForSecondsRealtime(1f);
 

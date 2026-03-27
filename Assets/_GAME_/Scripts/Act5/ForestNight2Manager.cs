@@ -13,8 +13,6 @@ public class ForestNight2Manager : MonoBehaviour
     [SerializeField] private GameObject hollowLogInteractable;
     [SerializeField] private GameObject loopTriggerObject;
 
-    [SerializeField] private Transform playerCutscenePos;
-
     private int currentLoopCount;
 
     public int CurrentLoopCount => currentLoopCount;

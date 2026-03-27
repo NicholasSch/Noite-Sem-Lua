@@ -3,7 +3,7 @@ using UnityEngine;
 public class MarketNight2Manager : MonoBehaviour
 {
     [Header("Audio")]
-    [SerializeField] private AudioClip NightForestAmbience;
+    [SerializeField] private AudioClip NightMarketAmbience;
 
     [Header("Dependencies")]
     [SerializeField] private GameUI gameUI;
@@ -12,7 +12,7 @@ public class MarketNight2Manager : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.Instance.PlayAmbient(NightForestAmbience);
+        AudioManager.Instance.PlayAmbient(NightMarketAmbience);
         ApplySavedWorldState();
     }
 

@@ -145,13 +145,13 @@ public class JournalSystem : MonoBehaviour
         tasks.Add(new Task(
             "Sentinel_Thirst",
             "A Sede da Sentinela (Verifique a árvore que cresceu no canteiro)",
-            "A muda já não parece pertencer ao mesmo tempo que o resto do Engenho. Observe o que a terra fez com ela e siga a instrução do caderno."
+            "O que foi plantado ontem já reclama um tempo que não nos pertence. A muda estica-se para o céu como se buscasse algo que o Engenho esqueceu de dar. Ouça o que o tronco diz sob a casca e sacie a sede daquela que vigia o canteiro."
         ));
 
         tasks.Add(new Task(
             "House_Whistle",
-            "A Casa que Assobia (Prepare a proteção da varanda)",
-            "Há ventos que entram sem pedir licença. Organize a proteção pedida por Dante e deixe a casa pronta antes do cair da noite."
+            "A Casa que Assobia (Prepare a proteção na fogueira)",
+            "Quando o assobio ecoar entre as frestas, o fogo será o único limite entre o que está dentro e o que quer entrar. Não deixe a chama morrer; prepare o cerco na fogueira antes que a escuridão tome o que é seu por direito."
         ));
     }
 

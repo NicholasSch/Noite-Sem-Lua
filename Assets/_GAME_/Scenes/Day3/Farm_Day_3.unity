@@ -114154,6 +114154,8 @@ Transform:
   - {fileID: 1097721539}
   - {fileID: 546186972}
   - {fileID: 1386375017}
+  - {fileID: 1700660877}
+  - {fileID: 1560773408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209933203
@@ -114408,6 +114410,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7543107928643605615, guid: 5e98c883f1b81c446a72dba88ae7da7d, type: 3}
   m_PrefabInstance: {fileID: 1386375016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386375018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5390622254100525160, guid: 5e98c883f1b81c446a72dba88ae7da7d, type: 3}
+  m_PrefabInstance: {fileID: 1386375016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1401319073
 GameObject:
   m_ObjectHideFlags: 0
@@ -114563,6 +114570,90 @@ Transform:
   - {fileID: 216214838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1560773405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560773408}
+  - component: {fileID: 1560773407}
+  - component: {fileID: 1560773409}
+  m_Layer: 6
+  m_Name: CampfireInteractable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!70 &1560773407
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560773405}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.08665657, y: 0.50550556}
+  m_Size: {x: 7.6143074, y: 7.6143074}
+  m_Direction: 0
+--- !u!4 &1560773408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560773405}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41.464, y: 12.117, z: 0}
+  m_LocalScale: {x: 0.56435, y: 0.56435, z: 0.56435}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1201557988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1560773409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560773405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d487f05d6cea4c841bc5dafb84037f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Act6ProtectionInteractable
+  farmDay3Manager: {fileID: 1803658791}
+  fireSound: {fileID: 0}
 --- !u!1 &1564145806
 GameObject:
   m_ObjectHideFlags: 0
@@ -114686,6 +114777,90 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1700660874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700660877}
+  - component: {fileID: 1700660876}
+  - component: {fileID: 1700660878}
+  m_Layer: 6
+  m_Name: TreeInteractable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!70 &1700660876
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700660874}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -1.6374742, y: -0.486786}
+  m_Size: {x: 3.6622612, y: 3.6622612}
+  m_Direction: 0
+--- !u!4 &1700660877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700660874}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -36.70371, y: 11.20018, z: 0}
+  m_LocalScale: {x: 0.5605813, y: 0.5605813, z: 0.5605813}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1201557988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700660878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700660874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7462e809f25d047b651cde8f86535f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreeInteractable
+  farmDay3Manager: {fileID: 1803658791}
+  wateringSound: {fileID: 0}
 --- !u!1 &1803658789
 GameObject:
   m_ObjectHideFlags: 0
@@ -114695,6 +114870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1803658790}
+  - component: {fileID: 1803658791}
   m_Layer: 0
   m_Name: Day3FarmManager
   m_TagString: Untagged
@@ -114717,6 +114893,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1469785839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803658791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803658789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c90137d82ad6fe4e823491bc1e4c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmDay3Manager
+  dayFarmMusic: {fileID: 0}
+  dayFarmAmbience: {fileID: 0}
+  newspaperInteractable: {fileID: 1386375018}
+  treeInteractable: {fileID: 1700660874}
+  campfireInteractable: {fileID: 1560773405}
 --- !u!1001 &2092718731
 PrefabInstance:
   m_ObjectHideFlags: 0
