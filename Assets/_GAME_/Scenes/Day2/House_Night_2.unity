@@ -9465,9 +9465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f693f192ba320ce4ea007ee72f39c2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HouseNight2Manager
-  nightHouseAmbience: {fileID: 0}
-  chestOpenSound: {fileID: 0}
-  paperPickupSound: {fileID: 0}
+  nightHouseAmbience: {fileID: 8300000, guid: 29c51886c3db8cc4982c48b939c709f0, type: 3}
+  chestOpenSound: {fileID: 8300000, guid: 0580db2af7f722f47a8425fe3e1c88a8, type: 3}
+  paperPickupSound: {fileID: 8300000, guid: 0c38aec3635629c47b93b92321d211bb, type: 3}
   chestClosedObject: {fileID: 4985748020774768883}
   chestOpenFullObject: {fileID: 466617513}
   chestOpenEmptyObject: {fileID: 441619193}

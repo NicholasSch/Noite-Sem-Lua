@@ -29686,7 +29686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e051ae5dad2249aef4a74362492e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MarketNight2Manager
-  NightForestAmbience: {fileID: 0}
+  NightMarketAmbience: {fileID: 8300000, guid: 29c51886c3db8cc4982c48b939c709f0, type: 3}
   gameUI: {fileID: 60019020}
   journalInteractable: {fileID: 1408680373}
   newspaperCurupiraInteractable: {fileID: 1400024430}
@@ -30002,8 +30002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Act5MarketJournalInteractable
   narrationUI: {fileID: 1353867556}
   marketNight2Manager: {fileID: 1326867815}
-  paperSound: {fileID: 0}
-  softImpactSound: {fileID: 0}
+  paperSound: {fileID: 8300000, guid: 18afcf040e5b5df4baeec966159f22e7, type: 3}
+  softImpactSound: {fileID: 8300000, guid: 2731fa79955780044a657bf559aad143, type: 3}
 --- !u!4 &1408680375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7543107928643605615, guid: fc226715fbbd8974cb3cf399a54d47c2, type: 3}

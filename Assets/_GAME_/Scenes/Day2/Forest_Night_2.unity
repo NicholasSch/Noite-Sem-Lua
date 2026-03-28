@@ -163,12 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa22b62e04e5084f9f8c35b1b82c74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ForestNight2Manager
-  NightForestAmbience: {fileID: 0}
+  NightForestAmbience: {fileID: 8300000, guid: 29c51886c3db8cc4982c48b939c709f0, type: 3}
   gameUI: {fileID: 898468335}
   footstepsInteractable: {fileID: 1801199188}
   hollowLogInteractable: {fileID: 1047804268}
   loopTriggerObject: {fileID: 428488015}
-  playerCutscenePos: {fileID: 200166500}
 --- !u!1 &138917410
 GameObject:
   m_ObjectHideFlags: 0
@@ -54496,8 +54495,8 @@ MonoBehaviour:
   narrationUI: {fileID: 966461721}
   playerController: {fileID: 297602246}
   playerCutscenePos: {fileID: 200166500}
-  tobaccoOfferSound: {fileID: 0}
-  melodicWhistleSound: {fileID: 0}
+  tobaccoOfferSound: {fileID: 8300000, guid: 9ac900e5aca8dca4fb0944940df4a753, type: 3}
+  melodicWhistleSound: {fileID: 8300000, guid: 95b696f42813042469a2e44075b4ab3e, type: 3}
 --- !u!61 &1047804271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55178,8 +55177,8 @@ MonoBehaviour:
   curupiraPrefab: {fileID: 4200472956742886070, guid: fe0c68a5624a83c47ab44995f6e5acbe, type: 3}
   spawnPoint: {fileID: 1405967913}
   vanishPoint: {fileID: 683203257}
-  woodHit: {fileID: 0}
-  laugh: {fileID: 0}
+  woodHit: {fileID: 8300000, guid: d15d89799ee8b48418bdec439e6932dc, type: 3}
+  laugh: {fileID: 8300000, guid: 104b9011e4cb4e24cbcfda4808186ed6, type: 3}
 --- !u!1 &1891765264
 GameObject:
   m_ObjectHideFlags: 0

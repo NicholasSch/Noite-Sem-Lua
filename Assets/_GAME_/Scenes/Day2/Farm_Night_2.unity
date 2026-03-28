@@ -97317,7 +97317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e86ea449d3acf47bed2a3622e6bcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmNight2Manager
-  NightFarmAmbience: {fileID: 0}
+  NightFarmAmbience: {fileID: 8300000, guid: 29c51886c3db8cc4982c48b939c709f0, type: 3}
   gameUI: {fileID: 909417710}
 --- !u!1 &775111945
 GameObject:
@@ -107851,7 +107851,7 @@ Tilemap:
       - {fileID: 9098395064655027044, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -5288405454392149618, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -8759645116765742646, guid: d251f641711c2ed4396919f68351053f, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 45, y: -12, z: 0}
