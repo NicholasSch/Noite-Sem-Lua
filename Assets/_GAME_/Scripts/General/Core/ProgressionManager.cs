@@ -53,7 +53,7 @@ public class ProgressionManager : MonoBehaviour
         public bool act6NightChaosPlayed;
         public bool act6RadioVisionSeen;
         public bool act6NoteFound;
-        public bool act6NorthClueRevealed;
+        public bool act6CaveClueRevealed;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -91,7 +91,7 @@ public class ProgressionManager : MonoBehaviour
     public bool act6NightChaosPlayed;
     public bool act6RadioVisionSeen;
     public bool act6NoteFound;
-    public bool act6NorthClueRevealed;
+    public bool act6CaveClueRevealed;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -225,7 +225,7 @@ public class ProgressionManager : MonoBehaviour
             act6NightChaosPlayed = act6NightChaosPlayed,
             act6RadioVisionSeen = act6RadioVisionSeen,
             act6NoteFound = act6NoteFound,
-            act6NorthClueRevealed = act6NorthClueRevealed,
+            act6CaveClueRevealed = act6CaveClueRevealed,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -281,7 +281,7 @@ public class ProgressionManager : MonoBehaviour
         act6NightChaosPlayed = data.act6NightChaosPlayed;
         act6RadioVisionSeen = data.act6RadioVisionSeen;
         act6NoteFound = data.act6NoteFound;
-        act6NorthClueRevealed = data.act6NorthClueRevealed;
+        act6CaveClueRevealed = data.act6CaveClueRevealed;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -320,7 +320,7 @@ public class ProgressionManager : MonoBehaviour
         act6NightChaosPlayed = false;
         act6RadioVisionSeen = false;
         act6NoteFound = false;
-        act6NorthClueRevealed = false;
+        act6CaveClueRevealed = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();

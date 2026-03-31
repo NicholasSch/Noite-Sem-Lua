@@ -20,9 +20,15 @@ public class HouseNight3Manager : MonoBehaviour
     [SerializeField] private GameObject brokenRadioObject;
     [SerializeField] private GameObject brokenRadioInteractable;
     [SerializeField] private GameObject whirlwindObject;
-    [SerializeField] private GameObject northClueObject;
+    [SerializeField] private GameObject caveClueObject;
     [SerializeField] private Transform playerLookPos1;
     [SerializeField] private Transform playerMovPos1;
+    [SerializeField] private Transform playerMovPos2;
+    [SerializeField] private Transform playerMovPos3;
+    [SerializeField] private Transform playerMovPos4;
+    [SerializeField] private Transform playerMovPos5;
+    [SerializeField] private Transform playerMovPos6;
+    [SerializeField] private Transform playerMovPos7;
     [SerializeField] private Transform playerLookPos2;
     [SerializeField] private GameObject houseGrid;
     [SerializeField] private GameObject houseGridDarker;
@@ -32,7 +38,7 @@ public class HouseNight3Manager : MonoBehaviour
     [SerializeField] private Transform whirlwindRadioPos;
     [SerializeField] private Transform whirlwindDoorPos;
     [SerializeField] private Transform whirlwindExitPos;
-    [SerializeField] private float whirlwindMoveSpeed = 6f;
+    [SerializeField] private float whirlwindMoveSpeed = 4.5f;
 
     private void Start()
     {
@@ -45,17 +51,18 @@ public class HouseNight3Manager : MonoBehaviour
     {
         bool chaosPlayed = ProgressionManager.Instance.act6NightChaosPlayed;
         bool noteFound = ProgressionManager.Instance.act6NoteFound;
-        bool northClueRevealed = ProgressionManager.Instance.act6NorthClueRevealed;
+        bool caveClueRevealed = ProgressionManager.Instance.act6CaveClueRevealed;
 
         intactRadioObject.SetActive(!chaosPlayed);
         brokenRadioObject.SetActive(chaosPlayed);
         brokenRadioInteractable.SetActive(chaosPlayed && !noteFound);
-        northClueObject.SetActive(northClueRevealed);
 
         houseGrid.SetActive(!chaosPlayed);
         houseGridDarker.SetActive(chaosPlayed);
 
         whirlwindObject.SetActive(false);
+
+        caveClueObject.SetActive(noteFound && !caveClueRevealed);
     }
 
     private IEnumerator SceneFlowRoutine()
@@ -88,6 +95,12 @@ public class HouseNight3Manager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         yield return player.MoveTo(playerMovPos1.position);
+        yield return player.MoveTo(playerMovPos2.position);
+        yield return player.MoveTo(playerMovPos3.position);
+        yield return player.MoveTo(playerMovPos4.position);
+        yield return player.MoveTo(playerMovPos5.position);
+        yield return player.MoveTo(playerMovPos6.position);
+        yield return player.MoveTo(playerMovPos7.position);
 
         player.ForceFaceUp();
 
@@ -128,6 +141,10 @@ public class HouseNight3Manager : MonoBehaviour
         intactRadioObject.SetActive(false);
         brokenRadioObject.SetActive(true);
 
+        AudioManager.Instance.StopMusic();
+
+        player.ForceFaceUp();
+
         yield return MoveObjectTo(whirlwindObject.transform, whirlwindDoorPos.position, whirlwindMoveSpeed);
 
         yield return MoveObjectTo(whirlwindObject.transform, whirlwindExitPos.position, whirlwindMoveSpeed);
@@ -166,20 +183,37 @@ public class HouseNight3Manager : MonoBehaviour
         objectToMove.position = targetPosition;
     }
 
-    public void RevealNorthClue()
+    public void EnterRadioVisionState()
     {
-        if (ProgressionManager.Instance.act6NorthClueRevealed)
+        houseGrid.SetActive(true);
+        houseGridDarker.SetActive(false);
+        brokenRadioObject.SetActive(false);
+        brokenRadioInteractable.SetActive(false);
+        intactRadioObject.SetActive(true);
+    }
+
+    public void ExitRadioVisionState()
+    {
+        houseGrid.SetActive(false);
+        houseGridDarker.SetActive(true);
+        brokenRadioObject.SetActive(true);
+        brokenRadioInteractable.SetActive(!ProgressionManager.Instance.act6NoteFound);
+        intactRadioObject.SetActive(false);
+    }
+
+    public void CaveClueInteracted()
+    {
+        if (ProgressionManager.Instance.act6CaveClueRevealed)
             return;
 
-        ProgressionManager.Instance.act6NorthClueRevealed = true;
+        ProgressionManager.Instance.act6CaveClueRevealed = true;
         ProgressionManager.Instance.SaveProgress();
 
-        if (northClueObject != null)
-            northClueObject.SetActive(true);
+        caveClueObject.SetActive(false);
     }
 
     public void DisableBrokenRadioInteraction()
     {
-        brokenRadioInteractable.SetActive(false);
+        ApplySavedWorldState();
     }
 }

@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: fa8b4ecadb9bfc140b63cef9df709cd0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5408193984500294317
+    second: Whirlwind_0
+  - first:
+      213: -7408280920834179055
+    second: Whirlwind_1
+  - first:
+      213: 1757503365097481093
+    second: Whirlwind_2
+  - first:
+      213: 8909519306989496007
+    second: Whirlwind_3
+  - first:
+      213: -6337279227023466627
+    second: Whirlwind_4
+  - first:
+      213: -629048883709668978
+    second: Whirlwind_5
+  - first:
+      213: 7538441034235752720
+    second: Whirlwind_6
+  - first:
+      213: -5038717723868688837
+    second: Whirlwind_7
+  - first:
+      213: -1142530098644304198
+    second: Whirlwind_8
+  - first:
+      213: -2220823117508542465
+    second: Whirlwind_9
+  - first:
+      213: 1906442050081494519
+    second: Whirlwind_10
+  - first:
+      213: -6591677574642154629
+    second: Whirlwind_11
+  - first:
+      213: -8312677321999598811
+    second: Whirlwind_12
+  - first:
+      213: -7683831260675822425
+    second: Whirlwind_13
+  - first:
+      213: 1829869891912420764
+    second: Whirlwind_14
+  - first:
+      213: 7088955783907640051
+    second: Whirlwind_15
+  - first:
+      213: 2293760125801926881
+    second: Whirlwind_16
+  - first:
+      213: 408474051982278207
+    second: Whirlwind_17
+  - first:
+      213: -8590123135053234095
+    second: Whirlwind_18
+  - first:
+      213: 5072616141304960840
+    second: Whirlwind_19
+  - first:
+      213: -1495883497867489712
+    second: Whirlwind_20
+  - first:
+      213: -1968427694459915256
+    second: Whirlwind_21
+  - first:
+      213: -1353059548138376701
+    second: Whirlwind_22
+  - first:
+      213: 5551881723351229435
+    second: Whirlwind_23
+  - first:
+      213: -8462516812513596195
+    second: Whirlwind_24
+  - first:
+      213: 8024930434654934106
+    second: Whirlwind_25
+  - first:
+      213: -5321497636380754652
+    second: Whirlwind_26
+  - first:
+      213: 2305428808286799205
+    second: Whirlwind_27
+  - first:
+      213: -2925434114090660828
+    second: Whirlwind_28
+  - first:
+      213: -8207528343787618194
+    second: Whirlwind_29
+  - first:
+      213: -7077885518030479858
+    second: Whirlwind_30
+  - first:
+      213: 6798420695103605254
+    second: Whirlwind_31
+  - first:
+      213: 8730566830070598194
+    second: Whirlwind_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Whirlwind_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 565
+        width: 65
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d9475993c32f4b0800000000000000
+      internalID: -5408193984500294317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 565
+        width: 83
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1100065d0cf703990800000000000000
+      internalID: -7408280920834179055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_2
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 565
+        width: 113
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5836038bff7e36810800000000000000
+      internalID: 1757503365097481093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_3
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 565
+        width: 172
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6e794ea98f4ab70800000000000000
+      internalID: 8909519306989496007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_4
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 564
+        width: 147
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fddce8e167d08a0800000000000000
+      internalID: -6337279227023466627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_5
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 564
+        width: 149
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8111248f5b2547f0800000000000000
+      internalID: -629048883709668978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_6
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 564
+        width: 146
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 011b9d52e2ced9860800000000000000
+      internalID: 7538441034235752720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_7
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 564
+        width: 126
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e87592de0e21ab0800000000000000
+      internalID: -5038717723868688837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_8
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 377
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe3d1dbdeae420f0800000000000000
+      internalID: -1142530098644304198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_9
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 377
+        width: 87
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff7deb142d0e21e0800000000000000
+      internalID: -2220823117508542465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_10
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 376
+        width: 120
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f599fb91fa057a10800000000000000
+      internalID: 1906442050081494519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_11
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 377
+        width: 162
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73cb898b28a584a0800000000000000
+      internalID: -6591677574642154629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_12
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 377
+        width: 142
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bb4c1a40073ac80800000000000000
+      internalID: -8312677321999598811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_13
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 376
+        width: 147
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac2069dd2c8d5590800000000000000
+      internalID: -7683831260675822425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_14
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 376
+        width: 159
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d4f9cb8f0056910800000000000000
+      internalID: 1829869891912420764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_15
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 376
+        width: 126
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f204400ab7016260800000000000000
+      internalID: 7088955783907640051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 187
+        width: 67
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0116a7ea215df10800000000000000
+      internalID: 2293760125801926881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_17
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 188
+        width: 83
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e3e507cf03ba500800000000000000
+      internalID: 408474051982278207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_18
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 186
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15089466580c9c880800000000000000
+      internalID: -8590123135053234095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_19
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 188
+        width: 161
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8471560318d856640800000000000000
+      internalID: 5072616141304960840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_20
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 191
+        width: 162
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e4d3c52ed8d3be0800000000000000
+      internalID: -1495883497867489712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_21
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 188
+        width: 158
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804fca9e07dbea4e0800000000000000
+      internalID: -1968427694459915256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_22
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 191
+        width: 148
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302f2418287f83de0800000000000000
+      internalID: -1353059548138376701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_23
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 191
+        width: 135
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf36553230f3c0d40800000000000000
+      internalID: 5551881723351229435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_24
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 65
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc2b5c9bc91f8a80800000000000000
+      internalID: -8462516812513596195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_25
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 10
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5414d066b74e5f60800000000000000
+      internalID: 8024930434654934106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_26
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 85
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42db17e181e3626b0800000000000000
+      internalID: -5321497636380754652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_27
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 120
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56503e459478eff10800000000000000
+      internalID: 2305428808286799205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_28
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 0
+        width: 161
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c01df3c25c667d0800000000000000
+      internalID: -2925434114090660828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_29
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 2
+        width: 162
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60c698e470091e80800000000000000
+      internalID: -8207528343787618194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_30
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 0
+        width: 151
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e59e02f9c46cd90800000000000000
+      internalID: -7077885518030479858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_31
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 0
+        width: 155
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a80554a97d85e50800000000000000
+      internalID: 6798420695103605254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whirlwind_32
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 0
+        width: 125
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a8a228644392970800000000000000
+      internalID: 8730566830070598194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Whirlwind_0: -5408193984500294317
+      Whirlwind_1: -7408280920834179055
+      Whirlwind_10: 1906442050081494519
+      Whirlwind_11: -6591677574642154629
+      Whirlwind_12: -8312677321999598811
+      Whirlwind_13: -7683831260675822425
+      Whirlwind_14: 1829869891912420764
+      Whirlwind_15: 7088955783907640051
+      Whirlwind_16: 2293760125801926881
+      Whirlwind_17: 408474051982278207
+      Whirlwind_18: -8590123135053234095
+      Whirlwind_19: 5072616141304960840
+      Whirlwind_2: 1757503365097481093
+      Whirlwind_20: -1495883497867489712
+      Whirlwind_21: -1968427694459915256
+      Whirlwind_22: -1353059548138376701
+      Whirlwind_23: 5551881723351229435
+      Whirlwind_24: -8462516812513596195
+      Whirlwind_25: 8024930434654934106
+      Whirlwind_26: -5321497636380754652
+      Whirlwind_27: 2305428808286799205
+      Whirlwind_28: -2925434114090660828
+      Whirlwind_29: -8207528343787618194
+      Whirlwind_3: 8909519306989496007
+      Whirlwind_30: -7077885518030479858
+      Whirlwind_31: 6798420695103605254
+      Whirlwind_32: 8730566830070598194
+      Whirlwind_4: -6337279227023466627
+      Whirlwind_5: -629048883709668978
+      Whirlwind_6: 7538441034235752720
+      Whirlwind_7: -5038717723868688837
+      Whirlwind_8: -1142530098644304198
+      Whirlwind_9: -2220823117508542465
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
