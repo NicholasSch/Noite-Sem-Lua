@@ -48,9 +48,9 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
         houseNight3Manager.EnterRadioVisionState();
 
         danteSilhouetteObject.SetActive(true);
-        danteSilhouetteController.FaceDirection(NPCController.Direction.Left);
+        danteSilhouetteController.FaceDirection(NPCController.Direction.Down);
         liaSilhouetteObject.SetActive(true);
-        liaSilhouetteController.FaceDirection(NPCController.Direction.Right);
+        liaSilhouetteController.FaceDirection(NPCController.Direction.Up);
 
         AudioManager.Instance.PlayMusic(cleanMelodyClip, 1.5f);
 
@@ -66,7 +66,8 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
             "mas vou esconder nossa música onde ela nunca vai procurar.",
             "<color=#8C6B3B>Lia:</color> Você faria isso?",
             "Viver no silêncio por mim?",
-            "<color=#8C6B3B>Dante:</color> Eu viveria mil anos no escuro se isso garantisse que o nosso neto ouvisse essa música um dia.",
+            "<color=#8C6B3B>Dante:</color> Eu viveria mil anos no escuro", 
+            "se isso garantisse que o nosso neto ouvisse essa música um dia.",
             "Ela é o nosso mapa de volta."
         });
 
@@ -74,16 +75,14 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
 
         AudioManager.Instance.PlaySFX(paperRustleClip);
 
-        yield return new WaitForSecondsRealtime(0.4f);
+        yield return new WaitForSecondsRealtime(1f);
 
         AudioManager.Instance.StopMusic(1.5f);
 
-        yield return new WaitForSecondsRealtime(0.3f);
+        yield return new WaitForSecondsRealtime(1f);
 
         danteSilhouetteObject.SetActive(false);
         liaSilhouetteObject.SetActive(false);
-
-        houseNight3Manager.ExitRadioVisionState();
 
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {
@@ -95,6 +94,8 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
 
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        houseNight3Manager.ExitRadioVisionState();
     }
 
     private IEnumerator FindNoteRoutine()
@@ -112,7 +113,8 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
             "Bilhete de Dante:",
             "Lia, se a música parar, não se assuste.",
             "Eu fui buscar o silêncio para que você pudesse descansar.",
-            "O preço foi alto, mas o Engenho guardará nossa história até que o nosso sangue volte para reclamá-la."
+            "O preço foi alto", 
+            "mas o Engenho guardará nossa história até que o nosso sangue volte para reclamá-la."
         });
 
         yield return ThoughtUI.Instance.PlaySequence(new string[]
@@ -126,7 +128,8 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {
             "<color=#531182>Lucas:</color> Eles não mereciam isso.",
-            "Eu vou descobrir o que a Dona Curió está escondendo naquela caverna, nem que eu tenha que enfrentar o próprio vento."
+            "Eu vou descobrir o que a Dona Curió está escondendo naquela caverna", 
+            "nem que eu tenha que enfrentar o próprio vento."
         });
 
         ProgressionManager.Instance.act6NoteFound = true;

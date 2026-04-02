@@ -16,6 +16,8 @@ public class HouseNight3Manager : MonoBehaviour
 
     [Header("Scene Objects")]
     [SerializeField] private GameObject intactRadioObject;
+
+    [SerializeField] private GameObject pastRadioObject;
     [SerializeField] private GameObject brokenRadioObject;
     [SerializeField] private GameObject brokenRadioInteractable;
     [SerializeField] private GameObject whirlwindObject;
@@ -61,7 +63,7 @@ public class HouseNight3Manager : MonoBehaviour
 
         whirlwindObject.SetActive(false);
 
-        caveClueObject.SetActive(noteFound && !caveClueRevealed);
+        caveClueObject.SetActive(chaosPlayed && !caveClueRevealed);
     }
 
     private IEnumerator SceneFlowRoutine()
@@ -187,8 +189,7 @@ public class HouseNight3Manager : MonoBehaviour
         houseGrid.SetActive(true);
         houseGridDarker.SetActive(false);
         brokenRadioObject.SetActive(false);
-        brokenRadioInteractable.SetActive(false);
-        intactRadioObject.SetActive(true);
+        pastRadioObject.SetActive(true);
     }
 
     public void ExitRadioVisionState()
@@ -196,8 +197,9 @@ public class HouseNight3Manager : MonoBehaviour
         houseGrid.SetActive(false);
         houseGridDarker.SetActive(true);
         brokenRadioObject.SetActive(true);
-        brokenRadioInteractable.SetActive(!ProgressionManager.Instance.act6NoteFound);
-        intactRadioObject.SetActive(false);
+        brokenRadioInteractable.SetActive(false);
+        brokenRadioInteractable.SetActive(true);
+        pastRadioObject.SetActive(false);
     }
 
     public void CaveClueInteracted()

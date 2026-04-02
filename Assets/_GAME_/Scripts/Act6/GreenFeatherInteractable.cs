@@ -11,7 +11,8 @@ public class GreenFeatherInteractable : MonoBehaviour, IInteractable
     {
         if (isRunning)
             return;
-
+        if (!ProgressionManager.Instance.act6NoteFound)
+            return;
         StartCoroutine(Routine());
     }
 

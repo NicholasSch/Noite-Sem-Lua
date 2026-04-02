@@ -49,11 +49,13 @@ public class HollowLogInteractable : MonoBehaviour, IInteractable
     private IEnumerator InteractionRoutine()
     {
 
-        playerController.ForceFaceUp();
         isRunning = true;
-        yield return playerController.MoveTo(playerCutscenePos.position,2f);
 
         GameStateManager.SetState(GameState.Cutscene);
+
+        yield return playerController.MoveTo(playerCutscenePos.position,2f);
+
+        playerController.ForceFaceUp();
 
         yield return NarrationUI.Instance.ShowTextRoutine(HollowLogNarration);
 

@@ -19,11 +19,12 @@ public class SleepInteractable : MonoBehaviour, IInteractable
             TaskManager.Instance.IsCompleted("Sentinel_Thirst") &&
             TaskManager.Instance.IsCompleted("House_Whistle");
 
-        if ((ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed) ||
+        if (
+            (ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed) ||
             (ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered) ||
-            (ProgressionManager.Instance.currentDay == 3 &&
-             ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
-             !act6TasksDone))
+            (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !act6TasksDone) ||
+            (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && ! ProgressionManager.Instance.act6CaveClueRevealed)
+            )
         {
             yield return NarrationUI.Instance.ShowTextRoutine(blockedSleepText);
             yield break;

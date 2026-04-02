@@ -38,9 +38,7 @@ public class HouseDay3Manager : MonoBehaviour
         {
             "<color=#531182>Lucas:</color> ...",
             "Folhas batendo na janela.",
-            "Parece que a casa quer me tirar da cama à força.",
-            "O caderno do vovô está aberto na mesa de cabeceira.",
-            "Como se ele já soubesse que eu ia precisar dele hoje."
+            "Parece que a casa quer me tirar da cama à força."
         };
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
