@@ -3,12 +3,11 @@ using UnityEngine;
 public class LetterUI : MonoBehaviour
 {
     private JournalInteractable owner;
-    private GameObject gameUI;
 
-    public void Setup(JournalInteractable journalInteractable, GameObject uiRoot)
+
+    public void Setup(JournalInteractable journalInteractable)
     {
         owner = journalInteractable;
-        gameUI = uiRoot;
     }
 
     public void Close()

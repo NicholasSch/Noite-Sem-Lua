@@ -7,9 +7,6 @@ public class FarmDay2Manager : MonoBehaviour
     [SerializeField] private AudioClip dayFarmMusic;
     [SerializeField] private AudioClip dayFarmAmbience;
 
-    [Header("Dependencies")]
-    [SerializeField] private GameUI gameUI;
-
     [Header("Act 3 Objects")]
     [SerializeField] private GameObject vegetationGrid;
     [SerializeField] private GameObject vegetationGrid2;
@@ -29,7 +26,7 @@ public class FarmDay2Manager : MonoBehaviour
     {
         ApplySavedWorldState();
 
-        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
+        GameUI.Instance.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
 
         string[] intro =
         {

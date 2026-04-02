@@ -1,11 +1,11 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Act2CurioEncounterController : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private FarmDay1Manager farmDay1Manager;
-    [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
 
     [Header("Scene Objects")]
@@ -29,7 +29,7 @@ public class Act2CurioEncounterController : MonoBehaviour
         isRunning = true;
 
         GameStateManager.SetState(GameState.Cutscene);
-        gameUI.gameObject.SetActive(false);
+        GameUI.Instance.gameObject.SetActive(false);
 
         player.LookAtTarget(playerLookTarget);
         donaCurioController.LookAtTarget(player.transform);
@@ -61,7 +61,7 @@ public class Act2CurioEncounterController : MonoBehaviour
 
         farmDay1Manager.MarkCurioEncounterPlayed();
 
-        gameUI.gameObject.SetActive(true);
+        GameUI.Instance.gameObject.SetActive(true);
         GameStateManager.SetState(GameState.Gameplay);
 
         isRunning = false;

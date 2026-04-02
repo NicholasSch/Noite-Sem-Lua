@@ -13,8 +13,6 @@ public class HouseNight2Manager : MonoBehaviour
     [SerializeField] private GameObject chestOpenFullObject;
     [SerializeField] private GameObject chestOpenEmptyObject;
 
-    [Header("Dependencies")]
-    [SerializeField] private GameUI gameUI;
 
     private static readonly string[] ChestLines =
     {
@@ -54,7 +52,7 @@ public class HouseNight2Manager : MonoBehaviour
             return;
         }
 
-        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
+        GameUI.Instance.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
         chestClosedObject.SetActive(!ProgressionManager.Instance.act5TobaccoFound);
         chestOpenEmptyObject.SetActive(ProgressionManager.Instance.act5TobaccoFound);
 
@@ -63,7 +61,7 @@ public class HouseNight2Manager : MonoBehaviour
     private IEnumerator PlayAct5Intro()
     {
         GameStateManager.SetState(GameState.Cutscene);
-        gameUI.gameObject.SetActive(false);
+        GameUI.Instance.gameObject.SetActive(false);
 
         yield return ThoughtUI.Instance.PlaySequence(NighIntroLines);
 
@@ -94,7 +92,6 @@ public class HouseNight2Manager : MonoBehaviour
 
     AudioManager.Instance.PlaySFX(paperPickupSound);
 
-    
     yield return new WaitForSecondsRealtime(0.5f);
 
     yield return ThoughtUI.Instance.PlaySequence(PaperLine);

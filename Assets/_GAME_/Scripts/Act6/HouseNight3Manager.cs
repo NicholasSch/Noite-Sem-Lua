@@ -12,7 +12,6 @@ public class HouseNight3Manager : MonoBehaviour
     [SerializeField] private AudioClip radioCrashClip;
 
     [Header("Dependencies")]
-    [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
 
     [Header("Scene Objects")]
@@ -78,7 +77,7 @@ public class HouseNight3Manager : MonoBehaviour
     private IEnumerator PlayNightChaosRoutine()
     {
         GameStateManager.SetState(GameState.Cutscene);
-        gameUI.gameObject.SetActive(false);
+        GameUI.Instance.gameObject.SetActive(false);
 
         yield return new WaitForSecondsRealtime(1f);
 
@@ -163,7 +162,7 @@ public class HouseNight3Manager : MonoBehaviour
 
         brokenRadioInteractable.SetActive(!ProgressionManager.Instance.act6NoteFound);
 
-        gameUI.gameObject.SetActive(true);
+        GameUI.Instance.gameObject.SetActive(true);
         GameStateManager.SetState(GameState.Gameplay);
     }
 

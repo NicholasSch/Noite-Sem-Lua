@@ -5,8 +5,6 @@ public class MarketNight2Manager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip NightMarketAmbience;
 
-    [Header("Dependencies")]
-    [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject journalInteractable;
     [SerializeField] private GameObject newspaperCurupiraInteractable;
 
@@ -18,7 +16,7 @@ public class MarketNight2Manager : MonoBehaviour
 
     private void ApplySavedWorldState()
     {
-        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
+        GameUI.Instance.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
         journalInteractable.SetActive(!ProgressionManager.Instance.act5JournalRecovered);
         newspaperCurupiraInteractable.SetActive(!ProgressionManager.Instance.act5NewspaperFound);
     }

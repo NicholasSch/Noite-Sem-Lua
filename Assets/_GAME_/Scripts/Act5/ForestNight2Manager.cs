@@ -5,8 +5,6 @@ public class ForestNight2Manager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip NightForestAmbience;
 
-    [Header("Dependencies")]
-    [SerializeField] private GameUI gameUI;
 
     [Header("Objects")]
     [SerializeField] private GameObject footstepsInteractable;
@@ -21,7 +19,7 @@ public class ForestNight2Manager : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.PlayAmbient(NightForestAmbience);
-        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
+        GameUI.Instance.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
         ApplySavedWorldState();
     }
 
@@ -49,6 +47,6 @@ public class ForestNight2Manager : MonoBehaviour
     {
         footstepsInteractable.SetActive(!ProgressionManager.Instance.act5FootstepsSeen);
         hollowLogInteractable.SetActive(!ProgressionManager.Instance.act5ForestLoopBroken && currentLoopCount > 2);
-        loopTriggerObject.SetActive(!ProgressionManager.Instance.act5ForestLoopBroken);
+        loopTriggerObject.SetActive(ProgressionManager.Instance.act5JournalRecovered && !ProgressionManager.Instance.act5ForestLoopBroken);
     }
 }

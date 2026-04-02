@@ -4,7 +4,6 @@ using UnityEngine;
 public class Market_ForestInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private AudioClip forestSound;
-    [SerializeField] private NarrationUI narrationUI;
 
     private static readonly string[] blockedLines = {"<color=#531182>Lucas:</color> Ainda não, ainda há algo que não vi aqui"};
 
@@ -29,6 +28,6 @@ public class Market_ForestInteractable : MonoBehaviour, IInteractable
 
         ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
 
-        yield return narrationUI.ShowTextRoutine("", route.SceneName);
+        yield return NarrationUI.Instance.ShowTextRoutine("", route.SceneName);
     }
 }

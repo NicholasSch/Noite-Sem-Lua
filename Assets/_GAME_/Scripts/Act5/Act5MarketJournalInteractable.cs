@@ -3,7 +3,6 @@ using UnityEngine;
 public class Act5MarketJournalInteractable : MonoBehaviour, IInteractable
 {   
     [Header("Dependencies")]
-    [SerializeField] private NarrationUI narrationUI;
     [SerializeField] private MarketNight2Manager marketNight2Manager;
 
     [Header("Audio")]
@@ -54,9 +53,9 @@ public class Act5MarketJournalInteractable : MonoBehaviour, IInteractable
         yield return ThoughtUI.Instance.PlaySequence(JournalLines);
 
         AudioManager.Instance.PlaySFX(softImpactSound);
-        yield return narrationUI.ShowTextRoutine(PhotoNarration);
+        yield return NarrationUI.Instance.ShowTextRoutine(PhotoNarration);
 
-        yield return narrationUI.ShowTextRoutine(BackNarration);
+        yield return NarrationUI.Instance.ShowTextRoutine(BackNarration);
 
         GameStateManager.SetState(GameState.Thought);
         yield return ThoughtUI.Instance.PlaySequence(LucasLines);

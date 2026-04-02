@@ -5,7 +5,6 @@ public class BenchVisionCutsceneController : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private FarmDay2Manager farmDay2Manager;
-    [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
 
     [Header("Audio")]
@@ -32,7 +31,7 @@ public class BenchVisionCutsceneController : MonoBehaviour
         GameStateManager.SetState(GameState.Cutscene);
 
         player.LookAtTarget(visionLookTarget);
-        gameUI.gameObject.SetActive(false);
+        GameUI.Instance.gameObject.SetActive(false);
 
         yield return AudioManager.Instance.FadeInMusicRoutine(sadMusicClip, 2f);
 
@@ -65,14 +64,12 @@ public class BenchVisionCutsceneController : MonoBehaviour
 
         yield return ThoughtUI.Instance.PlaySequence(endingLines);
 
-        presentSapling.SetActive(true);
         whiteTreeObject.SetActive(false);
         danteSilhouetteObject.SetActive(false);
         liaSilhouetteObject.SetActive(false);
         mapGridPresent.SetActive(true);
         mapGridPast.SetActive(false);
 
-        farmDay2Manager.MarkBenchVisionSeen();
 
         yield return AudioManager.Instance.FadeOutMusicRoutine(3f);
         AudioManager.Instance.PlayAmbient(farmAmbienceClip);
@@ -85,8 +82,10 @@ public class BenchVisionCutsceneController : MonoBehaviour
 
         yield return ThoughtUI.Instance.PlaySequence(CutscenePrologueLines);
 
-        gameUI.gameObject.SetActive(true);
+        GameUI.Instance.gameObject.SetActive(true);
 
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay2Manager.MarkBenchVisionSeen();
     }
 }

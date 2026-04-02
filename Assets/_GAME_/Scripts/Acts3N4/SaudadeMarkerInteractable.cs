@@ -16,6 +16,9 @@ public class SaudadeMarkerInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (ProgressionManager.Instance.journalPhase != ProgressionManager.JournalPhase.Day2Act4)
+            return;
+            
         if (TaskManager.Instance.IsCompleted("Trail_Marker"))
             return;
 

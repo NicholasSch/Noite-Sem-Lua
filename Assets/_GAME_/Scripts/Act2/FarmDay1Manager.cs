@@ -16,6 +16,7 @@ public class FarmDay1Manager : MonoBehaviour
 
     private void Start()
     {
+        GameUI.Instance.gameObject.SetActive(true);
         AudioManager.Instance.PlayAmbient(dayFarmAmbience);
         AudioManager.Instance.PlayMusic(dayFarmMusic);
 

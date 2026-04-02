@@ -1,9 +1,9 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SleepInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private NarrationUI narrationUI;
     [SerializeField] private string sleepText = "<color=#531182>Lucas:</color> Acho melhor descansar um pouco.";
     [SerializeField] private string blockedSleepText = "<color=#531182>Lucas:</color> Ainda não. Tenho coisas para resolver antes de dormir.";
     [SerializeField] private SceneRouteManager.EntryPoint sleepWakeEntryPoint = SceneRouteManager.EntryPoint.Default;
@@ -25,7 +25,7 @@ public class SleepInteractable : MonoBehaviour, IInteractable
              ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
              !act6TasksDone))
         {
-            yield return narrationUI.ShowTextRoutine(blockedSleepText);
+            yield return NarrationUI.Instance.ShowTextRoutine(blockedSleepText);
             yield break;
         }
         else if (ProgressionManager.Instance.currentDay == 1 &&
@@ -54,6 +54,9 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator SleepRoutine()
     {
+
+        AudioManager.Instance.StopMusic();
+        AudioManager.Instance.StopAmbient();
         GameStateManager.SetState(GameState.Cutscene);
 
         SceneRouteManager.RouteData route = SceneRouteManager.GetRoute(
@@ -64,6 +67,6 @@ public class SleepInteractable : MonoBehaviour, IInteractable
         ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
         ProgressionManager.Instance.SaveProgress();
 
-        yield return narrationUI.ShowTextRoutine(sleepText, route.SceneName);
+        yield return NarrationUI.Instance.ShowTextRoutine(sleepText, route.SceneName);
     }
 }

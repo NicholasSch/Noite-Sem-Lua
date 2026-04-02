@@ -106,7 +106,6 @@ public class ProgressionManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             LoadProgress();
         }
         else

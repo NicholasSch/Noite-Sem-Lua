@@ -9,7 +9,6 @@ public class Act1Manager : MonoBehaviour
     [SerializeField] private AudioClip glassCrack;
     
     [Header("UIS")]
-    [SerializeField] private NarrationUI blackScreenText;
     [SerializeField] private NarrationSettings doorExitText;
 
     private void Start()
@@ -20,6 +19,7 @@ public class Act1Manager : MonoBehaviour
     private IEnumerator StartSequence()
     {
         AudioManager.Instance.PlayAmbient(apartmentAmbience);
+        GameUI.Instance.gameObject.SetActive(false);
 
         string[] intro =
         {
@@ -46,7 +46,7 @@ public class Act1Manager : MonoBehaviour
         AudioManager.Instance.StopAmbient(2f);
         AudioManager.Instance.PlaySFX(glassCrack);
 
-        yield return blackScreenText.ShowTextRoutine(
+        yield return NarrationUI.Instance.ShowTextRoutine(
             "Por um segundo, antes da escuridão total, você sente que o seu reflexo no espelho continuou parado, observando suas costas.",
             doorExitText,
             SceneRouteManager.GetScene(SceneRouteManager.WorldArea.Farm)

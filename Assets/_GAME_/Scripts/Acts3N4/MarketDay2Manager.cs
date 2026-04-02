@@ -18,7 +18,6 @@ public class MarketDay2Manager : MonoBehaviour
 
     [Header("Dependencies")]
     [SerializeField] private PlayerController player;
-    [SerializeField] private GameUI gameUI;
 
     [Header("NPC Controllers")]
     [SerializeField] private NPCController feirante1Controller;
@@ -118,11 +117,13 @@ public class MarketDay2Manager : MonoBehaviour
         AudioManager.Instance.PlayAmbient(marketAmbience);
         AudioManager.Instance.PlayMusic(marketMusic);
         dantesRadio.SetActive(!ProgressionManager.Instance.act4RadioBought);
-        gameUI.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
+        GameUI.Instance.gameObject.SetActive(!ProgressionManager.Instance.act4HideGameUI);
     }
 
     public void InteractWithVendor(VendorType vendorType)
     {
+        if (!TaskManager.Instance.IsCompleted("Trail_Marker"))
+            return;
         if (isInteractionRunning)
             return;
 
@@ -191,7 +192,7 @@ public class MarketDay2Manager : MonoBehaviour
 
             yield return ThoughtUI.Instance.PlaySequence(Feirante1AfterLines);
 
-            gameUI.gameObject.SetActive(false);
+            GameUI.Instance.gameObject.SetActive(false);
             yield break;
         }
 

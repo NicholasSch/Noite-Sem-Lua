@@ -5,7 +5,6 @@ public class HollowLogInteractable : MonoBehaviour, IInteractable
 {   
     [Header("Dependencies")]
     [SerializeField] private ForestNight2Manager forestNight2Manager;
-    [SerializeField] private NarrationUI narrationUI;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private Transform playerCutscenePos;
 
@@ -44,9 +43,6 @@ public class HollowLogInteractable : MonoBehaviour, IInteractable
         if (!forestNight2Manager.CanUseHollowLog)
             return;
 
-        if (!ProgressionManager.Instance.act5TobaccoFound)
-            return;
-
         StartCoroutine(InteractionRoutine());
     }
 
@@ -59,7 +55,7 @@ public class HollowLogInteractable : MonoBehaviour, IInteractable
 
         GameStateManager.SetState(GameState.Cutscene);
 
-        yield return narrationUI.ShowTextRoutine(HollowLogNarration);
+        yield return NarrationUI.Instance.ShowTextRoutine(HollowLogNarration);
 
         GameStateManager.SetState(GameState.Thought);
         yield return ThoughtUI.Instance.PlaySequence(OfferLines);

@@ -9,8 +9,6 @@ public class FarmNight1Manager : MonoBehaviour
     [SerializeField] private PlayerController player;
 
     [Header("UI")]
-    [SerializeField] private GameUI gameUI;
-    [SerializeField] private NarrationUI narrationUI;
     [SerializeField] private TitleUI titlePrefab;
 
     [Header("Cutscene Points")]
@@ -41,7 +39,7 @@ public class FarmNight1Manager : MonoBehaviour
     {
         GameStateManager.SetState(GameState.Cutscene);
 
-        gameUI.gameObject.SetActive(false);
+        GameUI.Instance.gameObject.SetActive(false);
 
         player.LookAtTarget(corpoSecoSpawnPoint);
 
@@ -96,6 +94,6 @@ public class FarmNight1Manager : MonoBehaviour
 
         ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
 
-        yield return narrationUI.ShowTextRoutine("", route.SceneName);
+        yield return NarrationUI.Instance.ShowTextRoutine("", route.SceneName);
     }
 }

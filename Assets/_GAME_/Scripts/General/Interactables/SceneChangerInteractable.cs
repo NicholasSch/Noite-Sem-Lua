@@ -5,7 +5,6 @@ public class SceneChangerInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private SceneRouteManager.WorldArea destination;
     [SerializeField] private SceneRouteManager.EntryPoint destinationEntryPoint;
-    [SerializeField] private NarrationUI narrationUI;
     [SerializeField] private AudioClip travelSound;
     [SerializeField] private string transitionText;
 
@@ -25,6 +24,6 @@ public class SceneChangerInteractable : MonoBehaviour, IInteractable
 
         ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
 
-        yield return narrationUI.ShowTextRoutine(transitionText, route.SceneName);
+        yield return NarrationUI.Instance.ShowTextRoutine(transitionText, route.SceneName);
     }
 }

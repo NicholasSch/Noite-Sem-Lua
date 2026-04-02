@@ -3,7 +3,6 @@ using UnityEngine;
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Act1Manager actManager;
-    [SerializeField] private NarrationUI narrationUI;
 
     [SerializeField] private AudioClip doorSound;
     
@@ -12,9 +11,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     {
         if (!ProgressionManager.Instance.LetterOpened)
         {
-            narrationUI.StartCoroutine(
-                narrationUI.ShowTextRoutine("Eu deveria ler a carta do vovô primeiro", null)
-            );
+            StartCoroutine(NarrationUI.Instance.ShowTextRoutine("Eu deveria ler a carta do vovô primeiro", null));
             return;
         }
 

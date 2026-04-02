@@ -4,7 +4,6 @@ using UnityEngine;
 public class Forest_FarmInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private AudioClip farmSound;
-    [SerializeField] private NarrationUI narrationUI;
 
     public void Interact()
     {
@@ -22,6 +21,6 @@ public class Forest_FarmInteractable : MonoBehaviour, IInteractable
 
         ProgressionManager.Instance.SetPendingSpawn(route.SceneName, route.SpawnPointID);
 
-        yield return narrationUI.ShowTextRoutine("", route.SceneName);
+        yield return NarrationUI.Instance.ShowTextRoutine("", route.SceneName);
     }
 }

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class JournalInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject gameUI;
     [SerializeField] private LetterUI letterPrefab;
 
     private LetterUI currentLetterInstance;
@@ -28,7 +27,7 @@ public class JournalInteractable : MonoBehaviour, IInteractable
         GameStateManager.SetState(GameState.Letter);
 
         currentLetterInstance = Instantiate(letterPrefab);
-        currentLetterInstance.Setup(this, gameUI);
+        currentLetterInstance.Setup(this);
 
         isOpen = true;
         Time.timeScale = 0f;

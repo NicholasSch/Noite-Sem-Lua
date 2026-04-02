@@ -9,7 +9,8 @@ public class NarrationUI : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private TextMeshProUGUI textField;
     [SerializeField] private AudioClip typingSound;
-    [SerializeField] private AudioSource audioSource;
+
+    public static NarrationUI Instance { get; private set; }
 
     private CanvasGroup canvasGroup;
     private bool skipRequested;
@@ -22,6 +23,15 @@ public class NarrationUI : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         panel.SetActive(false);
         canvasGroup.alpha = 0f;
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public IEnumerator ShowTextRoutine(string text, NarrationSettings settings, string scene = null)
@@ -87,7 +97,7 @@ public class NarrationUI : MonoBehaviour
 
             if (typingSound != null && character != ' ' && Random.value > 0.65f)
             {
-                audioSource.PlayOneShot(typingSound, 0.4f);
+                AudioManager.Instance.PlaySFX(typingSound);
             }
 
             yield return new WaitForSecondsRealtime(currentSettings.typingSpeed);

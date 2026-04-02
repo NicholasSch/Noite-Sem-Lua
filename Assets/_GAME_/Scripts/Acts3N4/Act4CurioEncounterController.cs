@@ -5,9 +5,7 @@ public class Act4CurioEncounterController : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private FarmDay2Manager farmDay2Manager;
-    [SerializeField] private GameUI gameUI;
     [SerializeField] private PlayerController player;
-    [SerializeField] private NarrationUI narrationUI;
 
     [Header("Scene objects")]
     [SerializeField] private GameObject donaCurioObject;
@@ -33,7 +31,7 @@ public class Act4CurioEncounterController : MonoBehaviour
         isRunning = true;
 
         GameStateManager.SetState(GameState.Cutscene);
-        gameUI.gameObject.SetActive(false);
+        GameUI.Instance.gameObject.SetActive(false);
 
         player.LookAtTarget(playerLookTarget);
         AudioManager.Instance.PlayMusic(tensionMusic);

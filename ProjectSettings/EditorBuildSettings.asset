@@ -51,8 +51,20 @@ EditorBuildSettings:
     path: Assets/_GAME_/Scenes/Day2/Market_Night_2.unity
     guid: aad52cf43c74c4e4c9bcf882adb82feb
   - enabled: 1
+    path: Assets/_GAME_/Scenes/Day3/House_Day_3.unity
+    guid: 3da82bf9f37b4dc41a4166b4bde157bd
+  - enabled: 1
     path: Assets/_GAME_/Scenes/Day3/Farm_Day_3.unity
     guid: b8df55166cbcb6040b372d9316bb67c4
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day3/Forest_Day_3.unity
+    guid: 18b2f188de927b34385e5768c337c869
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day3/Market_Day_3.unity
+    guid: e502253e481c75840a76faece28899b2
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day3/House_Night_3.unity
+    guid: 5375bc2db668bf746809121f9cb8f3de
   - enabled: 1
     path: Assets/_GAME_/Scenes/Cave_Night.unity
     guid: 18a48888493bbe84b9c1e6eec58c691c

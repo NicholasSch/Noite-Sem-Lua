@@ -4,7 +4,6 @@ using UnityEngine;
 public class CaveMistTrigger : MonoBehaviour
 {
     [SerializeField] private Transform returnPoint;
-    [SerializeField] private CanvasGroup whiteFlashCanvas;
     [SerializeField] private AudioClip coughSound;
     [SerializeField] private PlayerController player;
 
@@ -12,7 +11,7 @@ public class CaveMistTrigger : MonoBehaviour
 
     private static readonly string[] genericLines =
     {
-        "<color=#531182>Lucas:</color> Essa neblina está errada...",
+        "<color=#531182>Lucas:</color> Essa neblina está estranha...",
         "Nem a luz da lanterna atravessa direito.",
         "E esse cheiro... parece coisa queimada.",
         "Melhor eu sair daqui."
@@ -55,17 +54,11 @@ public class CaveMistTrigger : MonoBehaviour
 
         GameStateManager.SetState(GameState.Cutscene);
 
-        yield return FlashWhite(0f, 1f, 0.25f);
-
-        if (coughSound != null)
-            AudioManager.Instance.PlaySFX(coughSound);
+        AudioManager.Instance.PlaySFX(coughSound);
 
         yield return new WaitForSecondsRealtime(0.25f);
 
-        yield return FlashWhite(1f, 0f, 0.6f);
-
-        if (player != null)
-            yield return player.MoveTo(returnPoint.position, 2f);
+        yield return player.MoveTo(returnPoint.position, 2f);
 
         GameStateManager.SetState(GameState.Thought);
 
@@ -86,20 +79,5 @@ public class CaveMistTrigger : MonoBehaviour
 
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
-    }
-
-    private IEnumerator FlashWhite(float start, float end, float duration)
-    {
-        float timer = 0f;
-        whiteFlashCanvas.alpha = start;
-
-        while (timer < duration)
-        {
-            timer += Time.unscaledDeltaTime;
-            whiteFlashCanvas.alpha = Mathf.Lerp(start, end, timer / duration);
-            yield return null;
-        }
-
-        whiteFlashCanvas.alpha = end;
     }
 }
