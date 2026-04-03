@@ -17,7 +17,8 @@ public class ProgressionManager : MonoBehaviour
         Day1,
         Day2Act3,
         Day2Act4,
-        Day3Act6
+        Day3Act6,
+        Day4Act7
     }
 
     [System.Serializable]
@@ -54,6 +55,10 @@ public class ProgressionManager : MonoBehaviour
         public bool act6RadioVisionSeen;
         public bool act6NoteFound;
         public bool act6CaveClueRevealed;
+        public bool act7MorningIntroPlayed;
+        public bool act7NewspaperFound;
+        public bool act7MillMessageFound;
+        public bool act7PocketWatchFound;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -92,6 +97,10 @@ public class ProgressionManager : MonoBehaviour
     public bool act6RadioVisionSeen;
     public bool act6NoteFound;
     public bool act6CaveClueRevealed;
+    public bool act7MorningIntroPlayed;
+    public bool act7NewspaperFound;
+    public bool act7MillMessageFound;
+    public bool act7PocketWatchFound;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -225,6 +234,10 @@ public class ProgressionManager : MonoBehaviour
             act6RadioVisionSeen = act6RadioVisionSeen,
             act6NoteFound = act6NoteFound,
             act6CaveClueRevealed = act6CaveClueRevealed,
+            act7MorningIntroPlayed = act7MorningIntroPlayed,
+            act7NewspaperFound = act7NewspaperFound,
+            act7MillMessageFound = act7MillMessageFound,
+            act7PocketWatchFound = act7PocketWatchFound,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -281,6 +294,10 @@ public class ProgressionManager : MonoBehaviour
         act6RadioVisionSeen = data.act6RadioVisionSeen;
         act6NoteFound = data.act6NoteFound;
         act6CaveClueRevealed = data.act6CaveClueRevealed;
+        act7MorningIntroPlayed = data.act7MorningIntroPlayed;
+        act7NewspaperFound = data.act7NewspaperFound;
+        act7MillMessageFound = data.act7MillMessageFound;
+        act7PocketWatchFound = data.act7PocketWatchFound;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -320,6 +337,10 @@ public class ProgressionManager : MonoBehaviour
         act6RadioVisionSeen = false;
         act6NoteFound = false;
         act6CaveClueRevealed = false;
+        act7MorningIntroPlayed = false;
+        act7NewspaperFound = false;
+        act7MillMessageFound = false;
+        act7PocketWatchFound = false;
         pendingSpawnPointID = null;
         pendingSceneName = null;
         completedTaskIDs.Clear();

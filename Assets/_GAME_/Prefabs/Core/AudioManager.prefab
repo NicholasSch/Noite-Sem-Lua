@@ -176,7 +176,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.35
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -434,7 +434,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -568,3 +568,4 @@ MonoBehaviour:
   ambientSource: {fileID: 4699353054559134731}
   sfxSource: {fileID: 6900725507563149697}
   uiSource: {fileID: 4660903120499487847}
+  defaultFadeDuration: 1.5

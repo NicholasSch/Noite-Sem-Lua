@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SleepInteractable : MonoBehaviour, IInteractable
@@ -23,8 +22,8 @@ public class SleepInteractable : MonoBehaviour, IInteractable
             (ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed) ||
             (ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered) ||
             (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !act6TasksDone) ||
-            (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && ! ProgressionManager.Instance.act6CaveClueRevealed)
-            )
+            (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && !ProgressionManager.Instance.act6CaveClueRevealed)
+        )
         {
             yield return NarrationUI.Instance.ShowTextRoutine(blockedSleepText);
             yield break;
@@ -55,7 +54,6 @@ public class SleepInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator SleepRoutine()
     {
-
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.StopAmbient();
         GameStateManager.SetState(GameState.Cutscene);

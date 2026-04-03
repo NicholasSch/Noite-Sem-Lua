@@ -56,6 +56,10 @@ public class JournalSystem : MonoBehaviour
             case ProgressionManager.JournalPhase.Day3Act6:
                 SetupDay3Act6();
                 break;
+                
+            case ProgressionManager.JournalPhase.Day4Act7:
+                SetupDay4Act7();
+                break;
 
             default:
                 SetupDay1();
@@ -154,6 +158,31 @@ public class JournalSystem : MonoBehaviour
             "Quando o assobio ecoar entre as frestas, o fogo será o único limite entre o que está dentro e o que quer entrar. Não deixe a chama morrer; prepare o cerco na fogueira antes que a escuridão tome o que é seu por direito."
         ));
     }
+
+    private void SetupDay4Act7()
+{
+    leftPageText =
+        "Caderno de Dante\n\n" +
+        "A terra começou a recusar meus passos antes mesmo de eu entender o que havia feito. " +
+        "Onde antes havia fruto, agora há cinza. Onde havia promessa, restou silêncio.\n\n" +
+        "Tentei enganar o tempo, mas foi a própria terra que me julgou. " +
+        "Ela não esquece o que é enterrado com pressa, nem aceita aquilo que não deveria ter voltado.\n\n" +
+        "Se seguir o rastro que secou sob meus pés, encontrará aquilo que tentei esconder de mim mesmo. " +
+        "E talvez compreenda por que o vento já não canta como antes.\n\n" +
+        "Ainda assim... mesmo naquilo que restou de mim, algo insiste em guardar o que era dela.";
+
+    tasks.Add(new Task(
+        "Act7_FirstDig",
+        "O Primeiro Buraco (Cave na base do moinho)",
+        "Siga o rastro onde a relva perdeu a cor e deixe que o moinho conduza seus passos. Onde a terra já foi mexida, cave. O que foi enterrado ali não pertence ao esquecimento."
+    ));
+
+    tasks.Add(new Task(
+        "Act7_SecondDig",
+        "O Segundo Buraco (Cave no ponto revelado)",
+        "Observe o que permanece sob a sombra do moinho e não recuse o sinal quando ele surgir. Há memórias que só retornam quando a terra é aberta pela segunda vez."
+    ));
+}
 
     public string GetLeftPage()
     {
