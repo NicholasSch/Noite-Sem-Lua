@@ -56,6 +56,8 @@ public class ProgressionManager : MonoBehaviour
         public bool act6NoteFound;
         public bool act6CaveClueRevealed;
         public bool act7MorningIntroPlayed;
+        public bool act7TrailObserved;
+        public bool act7FirstDigRevealed;
         public bool act7NewspaperFound;
         public bool act7MillMessageFound;
         public bool act7PocketWatchFound;
@@ -98,6 +100,8 @@ public class ProgressionManager : MonoBehaviour
     public bool act6NoteFound;
     public bool act6CaveClueRevealed;
     public bool act7MorningIntroPlayed;
+    public bool act7TrailObserved;
+    public bool act7FirstDigRevealed;
     public bool act7NewspaperFound;
     public bool act7MillMessageFound;
     public bool act7PocketWatchFound;
@@ -235,6 +239,8 @@ public class ProgressionManager : MonoBehaviour
             act6NoteFound = act6NoteFound,
             act6CaveClueRevealed = act6CaveClueRevealed,
             act7MorningIntroPlayed = act7MorningIntroPlayed,
+            act7TrailObserved = act7TrailObserved,
+            act7FirstDigRevealed = act7FirstDigRevealed,
             act7NewspaperFound = act7NewspaperFound,
             act7MillMessageFound = act7MillMessageFound,
             act7PocketWatchFound = act7PocketWatchFound,
@@ -295,6 +301,8 @@ public class ProgressionManager : MonoBehaviour
         act6NoteFound = data.act6NoteFound;
         act6CaveClueRevealed = data.act6CaveClueRevealed;
         act7MorningIntroPlayed = data.act7MorningIntroPlayed;
+        act7TrailObserved = data.act7TrailObserved;
+        act7FirstDigRevealed = data.act7FirstDigRevealed;
         act7NewspaperFound = data.act7NewspaperFound;
         act7MillMessageFound = data.act7MillMessageFound;
         act7PocketWatchFound = data.act7PocketWatchFound;
@@ -338,11 +346,12 @@ public class ProgressionManager : MonoBehaviour
         act6NoteFound = false;
         act6CaveClueRevealed = false;
         act7MorningIntroPlayed = false;
+        act7TrailObserved = false;
+        act7FirstDigRevealed = false;
         act7NewspaperFound = false;
         act7MillMessageFound = false;
         act7PocketWatchFound = false;
         pendingSpawnPointID = null;
-        pendingSceneName = null;
         completedTaskIDs.Clear();
         talkedNpcIDs.Clear();
 
@@ -360,8 +369,6 @@ public class ProgressionManager : MonoBehaviour
     private void OnApplicationPause(bool pauseStatus)
     {
         if (pauseStatus)
-        {
             SaveProgress();
-        }
     }
 }
