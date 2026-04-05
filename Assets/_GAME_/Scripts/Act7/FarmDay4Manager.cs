@@ -10,6 +10,7 @@ public class FarmDay4Manager : MonoBehaviour
     [Header("Act 7 Objects")]
     [SerializeField] private GameObject firstDigInteractable;
     [SerializeField] private GameObject CorpoSecoNewspaper;
+    [SerializeField] private GameObject millMessageInteractable;
 
     private void Start()
     {
@@ -28,9 +29,11 @@ public class FarmDay4Manager : MonoBehaviour
     {
         bool firstDigRevealed = ProgressionManager.Instance.act7FirstDigRevealed;
         bool newspaperFound = ProgressionManager.Instance.act7NewspaperFound;
+        bool millMessageFound = ProgressionManager.Instance.act7MillMessageFound;
 
         firstDigInteractable.SetActive(!firstDigRevealed);
         CorpoSecoNewspaper.SetActive(firstDigRevealed && !newspaperFound);
+        millMessageInteractable.SetActive(newspaperFound && !millMessageFound);
     }
 
     public void RevealFirstDig()
@@ -50,6 +53,17 @@ public class FarmDay4Manager : MonoBehaviour
 
         ProgressionManager.Instance.act7NewspaperFound = true;
         TaskManager.Instance.CompleteTask("Act7_FirstDig");
+        ProgressionManager.Instance.SaveProgress();
+
+        ApplySavedWorldState();
+    }
+
+    public void MarkAct7MillMessageFound()
+    {
+        if (ProgressionManager.Instance.act7MillMessageFound)
+            return;
+
+        ProgressionManager.Instance.act7MillMessageFound = true;
         ProgressionManager.Instance.SaveProgress();
 
         ApplySavedWorldState();
