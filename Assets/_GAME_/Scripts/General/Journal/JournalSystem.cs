@@ -179,7 +179,7 @@ public class JournalSystem : MonoBehaviour
 
     tasks.Add(new Task(
         "Act7_SecondDig",
-        "O Segundo Buraco (Cave no ponto revelado)",
+        "O Segundo Buraco (Cave na base da arvore cortada)",
         "Observe o que permanece sob a sombra do moinho e não recuse o sinal quando ele surgir. Há memórias que só retornam quando a terra é aberta pela segunda vez."
     ));
 }

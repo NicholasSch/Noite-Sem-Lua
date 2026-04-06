@@ -12,6 +12,9 @@ public class FarmDay4Manager : MonoBehaviour
     [SerializeField] private GameObject CorpoSecoNewspaper;
     [SerializeField] private GameObject millMessageInteractable;
 
+    [SerializeField] private GameObject CorpoSecoEncounterTrigger;
+    [SerializeField] private GameObject secondDigInteractable;
+
     private void Start()
     {
         ApplySavedWorldState();
@@ -30,10 +33,14 @@ public class FarmDay4Manager : MonoBehaviour
         bool firstDigRevealed = ProgressionManager.Instance.act7FirstDigRevealed;
         bool newspaperFound = ProgressionManager.Instance.act7NewspaperFound;
         bool millMessageFound = ProgressionManager.Instance.act7MillMessageFound;
+        bool secondDigRevealed = ProgressionManager.Instance.act7SecondDigRevealed;
+        bool pocketWatchFound = ProgressionManager.Instance.act7PocketWatchFound;
 
         firstDigInteractable.SetActive(!firstDigRevealed);
         CorpoSecoNewspaper.SetActive(firstDigRevealed && !newspaperFound);
         millMessageInteractable.SetActive(newspaperFound && !millMessageFound);
+        CorpoSecoEncounterTrigger.SetActive(millMessageFound && !secondDigRevealed);
+        secondDigInteractable.SetActive(secondDigRevealed && !pocketWatchFound);
     }
 
     public void RevealFirstDig()
@@ -54,7 +61,6 @@ public class FarmDay4Manager : MonoBehaviour
         ProgressionManager.Instance.act7NewspaperFound = true;
         TaskManager.Instance.CompleteTask("Act7_FirstDig");
         ProgressionManager.Instance.SaveProgress();
-
         ApplySavedWorldState();
     }
 
@@ -65,7 +71,27 @@ public class FarmDay4Manager : MonoBehaviour
 
         ProgressionManager.Instance.act7MillMessageFound = true;
         ProgressionManager.Instance.SaveProgress();
+        ApplySavedWorldState();
+    }
 
+    public void RevealSecondDig()
+    {
+        if (ProgressionManager.Instance.act7SecondDigRevealed)
+            return;
+
+        ProgressionManager.Instance.act7SecondDigRevealed = true;
+        ProgressionManager.Instance.SaveProgress();
+        ApplySavedWorldState();
+    }
+
+    public void MarkPocketWatchFound()
+    {
+        if (ProgressionManager.Instance.act7PocketWatchFound)
+            return;
+
+        ProgressionManager.Instance.act7PocketWatchFound = true;
+        TaskManager.Instance.CompleteTask("Act7_SecondDig");
+        ProgressionManager.Instance.SaveProgress();
         ApplySavedWorldState();
     }
 }

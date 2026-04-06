@@ -22,7 +22,8 @@ public class SleepInteractable : MonoBehaviour, IInteractable
             (ProgressionManager.Instance.currentDay == 1 && !ProgressionManager.Instance.porchScenePlayed) ||
             (ProgressionManager.Instance.currentDay == 2 && !ProgressionManager.Instance.act5JournalRecovered) ||
             (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !act6TasksDone) ||
-            (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && !ProgressionManager.Instance.act6CaveClueRevealed)
+            (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && !ProgressionManager.Instance.act6CaveClueRevealed) ||
+            (ProgressionManager.Instance.currentDay == 4 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !ProgressionManager.Instance.act7PocketWatchFound)
         )
         {
             yield return NarrationUI.Instance.ShowTextRoutine(blockedSleepText);

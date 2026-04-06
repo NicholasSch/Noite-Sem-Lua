@@ -60,6 +60,7 @@ public class ProgressionManager : MonoBehaviour
         public bool act7FirstDigRevealed;
         public bool act7NewspaperFound;
         public bool act7MillMessageFound;
+        public bool act7SecondDigRevealed;
         public bool act7PocketWatchFound;
         public string pendingSpawnPointID;
         public string pendingSceneName;
@@ -104,6 +105,7 @@ public class ProgressionManager : MonoBehaviour
     public bool act7FirstDigRevealed;
     public bool act7NewspaperFound;
     public bool act7MillMessageFound;
+    public bool act7SecondDigRevealed;
     public bool act7PocketWatchFound;
 
     public string pendingSpawnPointID;
@@ -243,6 +245,7 @@ public class ProgressionManager : MonoBehaviour
             act7FirstDigRevealed = act7FirstDigRevealed,
             act7NewspaperFound = act7NewspaperFound,
             act7MillMessageFound = act7MillMessageFound,
+            act7SecondDigRevealed = act7SecondDigRevealed,
             act7PocketWatchFound = act7PocketWatchFound,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
@@ -305,6 +308,7 @@ public class ProgressionManager : MonoBehaviour
         act7FirstDigRevealed = data.act7FirstDigRevealed;
         act7NewspaperFound = data.act7NewspaperFound;
         act7MillMessageFound = data.act7MillMessageFound;
+        act7SecondDigRevealed = data.act7SecondDigRevealed;
         act7PocketWatchFound = data.act7PocketWatchFound;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
@@ -350,6 +354,7 @@ public class ProgressionManager : MonoBehaviour
         act7FirstDigRevealed = false;
         act7NewspaperFound = false;
         act7MillMessageFound = false;
+        act7SecondDigRevealed = false;
         act7PocketWatchFound = false;
         pendingSpawnPointID = null;
         completedTaskIDs.Clear();
