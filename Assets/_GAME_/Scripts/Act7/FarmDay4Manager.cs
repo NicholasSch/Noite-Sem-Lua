@@ -11,7 +11,6 @@ public class FarmDay4Manager : MonoBehaviour
     [SerializeField] private GameObject firstDigInteractable;
     [SerializeField] private GameObject CorpoSecoNewspaper;
     [SerializeField] private GameObject millMessageInteractable;
-
     [SerializeField] private GameObject CorpoSecoEncounterTrigger;
     [SerializeField] private GameObject secondDigInteractable;
 
