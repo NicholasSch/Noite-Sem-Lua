@@ -61,6 +61,10 @@ public class JournalSystem : MonoBehaviour
                 SetupDay4Act7();
                 break;
 
+            case ProgressionManager.JournalPhase.Day5Act8:
+                SetupDay5Act8();
+                break;
+
             default:
                 SetupDay1();
                 break;
@@ -132,7 +136,7 @@ public class JournalSystem : MonoBehaviour
         tasks.Add(new Task(
             "Market_Supplies",
             "O Abastecimento do Engenho (Fale com o feirante e consiga os mantimentos)",
-            "Busque na vila o que a terra não oferece: óleo para as luzes e sementes para o amanhã. Não se detenha mais do que o necessário."
+            "Na vila há o que a terra não oferece óleo para as luzes e sementes para o amanhã. Não se detenha mais do que o necessário."
         ));
     }
 
@@ -160,29 +164,54 @@ public class JournalSystem : MonoBehaviour
     }
 
     private void SetupDay4Act7()
-{
-    leftPageText =
-        "Caderno de Dante\n\n" +
-        "A terra começou a recusar meus passos antes mesmo de eu entender o que havia feito. " +
-        "Onde antes havia fruto, agora há cinza. Onde havia promessa, restou silêncio.\n\n" +
-        "Tentei enganar o tempo, mas foi a própria terra que me julgou. " +
-        "Ela não esquece o que é enterrado com pressa, nem aceita aquilo que não deveria ter voltado.\n\n" +
-        "Se seguir o rastro que secou sob meus pés, encontrará aquilo que tentei esconder de mim mesmo. " +
-        "E talvez compreenda por que o vento já não canta como antes.\n\n" +
-        "Ainda assim... mesmo naquilo que restou de mim, algo insiste em guardar o que era dela.";
+    {
+        leftPageText =
+            "Caderno de Dante\n\n" +
+            "A terra começou a recusar meus passos antes mesmo de eu compreender o preço do que pedi. " +
+            "Onde antes havia fruto, agora há cinza; onde havia canto, restou apenas um silêncio que pesa mais do que pedra.\n\n" +
+            "Tentei esconder sob o moinho aquilo que meus olhos já não suportavam lembrar, " +
+            "mas o chão deste Engenho não foi feito para guardar mentiras por muito tempo.\n\n" +
+            "Há marcas que o vento não apagou e há coisas que nem a própria terra aceitou engolir. " +
+            "Se o rastro seco ainda resistiu, é porque certas memórias se recusam a morrer.\n\n" +
+            "E mesmo na ruína... ainda há quem vigie, em silêncio, o que um dia pertenceu à luz dela.";
 
-    tasks.Add(new Task(
-        "Act7_FirstDig",
-        "O Primeiro Buraco (Cave na base do moinho)",
-        "Siga o rastro onde a relva perdeu a cor e deixe que o moinho conduza seus passos. Onde a terra já foi mexida, cave. O que foi enterrado ali não pertence ao esquecimento."
-    ));
+        tasks.Add(new Task(
+            "Act7_FirstDig",
+            "O Primeiro Buraco (Cave na base do moinho)",
+            "O rastro sem cor leva ao moinho como se obedecesse a uma mágoa antiga. Onde a terra foi remexida e o peso do passado se acumulou junto às engrenagens paradas, cave. Há coisas que foram ocultadas, mas não entregues ao esquecimento."
+        ));
 
-    tasks.Add(new Task(
-        "Act7_SecondDig",
-        "O Segundo Buraco (Cave na base da arvore cortada)",
-        "Observe o que permanece sob a sombra do moinho e não recuse o sinal quando ele surgir. Há memórias que só retornam quando a terra é aberta pela segunda vez."
-    ));
-}
+        tasks.Add(new Task(
+            "Act7_SecondDig",
+            "O Segundo Buraco (Cave na base da árvore cortada)",
+            "Nem tudo o que resta neste Engenho se move para ferir. Sob a sombra do moinho, haverá um gesto, um chamado, um último vestígio de vontade. Quando ele surgir, siga-o. Há memórias que só retornam quando a terra é aberta pela segunda vez."
+        ));
+    }
+
+    private void SetupDay5Act8()
+    {
+        leftPageText =
+            "Caderno de Dante\n\n" +
+            "Nem toda raiz deste chão apodreceu com a dor. Houve algo que a terra escondeu da bruxa, " +
+            "como se ainda guardasse, em seu fundo mais limpo, um resto de misericórdia para o último dos meus.\n\n" +
+            "A árvore branca bebeu o que o Engenho não conseguiu perder. " +
+            "Ela cresceu em silêncio sobre aquilo que era puro e tomou para si a parte da terra que a névoa não conseguiu corromper.\n\n" +
+            "Mas pureza sozinha não basta contra o hálito do norte. " +
+            "O que o vento trouxe, o que o fogo espera e o que o solo preservou devem se encontrar no mesmo fôlego.\n\n" +
+            "Só então a fumaça deixará de ser fumaça, e o medo deixará de encontrar caminho pelos pulmões.";
+
+        tasks.Add(new Task(
+            "Act8_TreeHeart",
+            "O Coração da Árvore (Pegue o fruto da árvore branca)",
+            "A árvore branca reteve em seu corpo aquilo que o solo ainda tinha de limpo. Tome o fruto que ela oferecer. Nele repousa uma parte do Engenho que a dor não conseguiu apodrecer."
+        ));
+
+        tasks.Add(new Task(
+            "Act8_FireRitual",
+            "O Ritual na Fogueira (Prepare a proteção)",
+            "Na fogueira central, reúna o que veio pelo vento, o que foi poupado pela terra e o que o tempo não conseguiu apagar. Quando essas partes se unirem na brasa, a fumaça deixará de cegar e passará a guardar o fôlego de quem segue para o norte."
+        ));
+    }
 
     public string GetLeftPage()
     {

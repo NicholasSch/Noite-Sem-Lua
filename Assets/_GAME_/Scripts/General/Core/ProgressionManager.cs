@@ -18,7 +18,8 @@ public class ProgressionManager : MonoBehaviour
         Day2Act3,
         Day2Act4,
         Day3Act6,
-        Day4Act7
+        Day4Act7,
+        Day5Act8
     }
 
     [System.Serializable]
@@ -62,6 +63,11 @@ public class ProgressionManager : MonoBehaviour
         public bool act7MillMessageFound;
         public bool act7SecondDigRevealed;
         public bool act7PocketWatchFound;
+        public bool act8MorningIntroPlayed;
+        public bool act8PineconeFound;
+        public bool act8NewspaperFound;
+        public bool act8RitualDone;
+        public bool act8HairFound;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -107,6 +113,11 @@ public class ProgressionManager : MonoBehaviour
     public bool act7MillMessageFound;
     public bool act7SecondDigRevealed;
     public bool act7PocketWatchFound;
+    public bool act8MorningIntroPlayed;
+    public bool act8PineconeFound;
+    public bool act8NewspaperFound;
+    public bool act8RitualDone;
+    public bool act8HairFound;
 
     public string pendingSpawnPointID;
     public string pendingSceneName;
@@ -247,6 +258,11 @@ public class ProgressionManager : MonoBehaviour
             act7MillMessageFound = act7MillMessageFound,
             act7SecondDigRevealed = act7SecondDigRevealed,
             act7PocketWatchFound = act7PocketWatchFound,
+            act8MorningIntroPlayed = act8MorningIntroPlayed,
+            act8PineconeFound = act8PineconeFound,
+            act8NewspaperFound = act8NewspaperFound,
+            act8RitualDone = act8RitualDone,
+            act8HairFound = act8HairFound,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -310,6 +326,11 @@ public class ProgressionManager : MonoBehaviour
         act7MillMessageFound = data.act7MillMessageFound;
         act7SecondDigRevealed = data.act7SecondDigRevealed;
         act7PocketWatchFound = data.act7PocketWatchFound;
+        act8MorningIntroPlayed = data.act8MorningIntroPlayed;
+        act8PineconeFound = data.act8PineconeFound;
+        act8NewspaperFound = data.act8NewspaperFound;
+        act8RitualDone = data.act8RitualDone;
+        act8HairFound = data.act8HairFound;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -356,6 +377,11 @@ public class ProgressionManager : MonoBehaviour
         act7MillMessageFound = false;
         act7SecondDigRevealed = false;
         act7PocketWatchFound = false;
+        act8MorningIntroPlayed = false;
+        act8PineconeFound = false;
+        act8NewspaperFound = false;
+        act8RitualDone = false;
+        act8HairFound = false;
         pendingSpawnPointID = null;
         completedTaskIDs.Clear();
         talkedNpcIDs.Clear();
