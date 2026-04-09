@@ -8971,8 +8971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bee886e91f1ccb4098b4cdc7338a85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HouseDay3Manager
-  dayHouseAmbience: {fileID: 0}
-  leafHitSound: {fileID: 0}
+  dayHouseAmbience: {fileID: 8300000, guid: 45d6ca49610b43d419f09d23ae5fc9f4, type: 3}
+  leafHitSound: {fileID: 8300000, guid: 1b5a49be8dd9b2a42bc14b4fc4f305f1, type: 3}
 --- !u!1 &1980939653
 GameObject:
   m_ObjectHideFlags: 0

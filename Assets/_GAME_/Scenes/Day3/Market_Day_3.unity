@@ -29787,8 +29787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa467fdd7508284295de28b2be677d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MarketDay2Manager
-  marketAmbience: {fileID: 0}
-  marketMusic: {fileID: 0}
+  marketAmbience: {fileID: 8300000, guid: 45d6ca49610b43d419f09d23ae5fc9f4, type: 3}
+  marketMusic: {fileID: 8300000, guid: 13cb312347537064e845270e63ca5204, type: 3}
   radioSong: {fileID: 8300000, guid: 5f3e06e1c7b69e54884f743fd06ed804, type: 3}
   player: {fileID: 1552350778}
   feirante1Controller: {fileID: 231877811}
@@ -53475,7 +53475,7 @@ Transform:
   m_GameObject: {fileID: 1651100735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -741.4341, y: -567.3799, z: -10}
+  m_LocalPosition: {x: -741.44226, y: -567.3799, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

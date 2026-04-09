@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 35859731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -766.78345, y: -563.35114, z: -10}
+  m_LocalPosition: {x: -766.7752, y: -563.35114, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6194,8 +6194,8 @@ MonoBehaviour:
   danteSilhouetteController: {fileID: 503795666}
   liaSilhouetteController: {fileID: 1571089071}
   danteStepForwardTarget: {fileID: 1357798545}
-  cleanMelodyClip: {fileID: 0}
-  paperRustleClip: {fileID: 0}
+  cleanMelodyClip: {fileID: 8300000, guid: 5f3e06e1c7b69e54884f743fd06ed804, type: 3}
+  paperCrumpleClip: {fileID: 8300000, guid: 2fe073696ecf8fd4d87d92229b3a0431, type: 3}
 --- !u!61 &595710762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13615,7 +13615,6 @@ Transform:
   - {fileID: 1657827199}
   - {fileID: 595710760}
   - {fileID: 441619192}
-  - {fileID: 1811349835}
   - {fileID: 216649790}
   - {fileID: 1571089069}
   - {fileID: 503795664}
@@ -15097,7 +15096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5571720770602862305, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8487324299563247454, guid: 75d622dd60307ac4c8148259da81b6e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18451,12 +18450,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75cd3fcaff630484a96a9d3fa48b3210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HouseNight3Manager
-  nightHouseAmbience: {fileID: 0}
-  radioStaticClip: {fileID: 0}
-  cleanMelodyClip: {fileID: 0}
-  whistleClip: {fileID: 0}
-  fallingObjectsClip: {fileID: 0}
-  radioCrashClip: {fileID: 0}
+  nightHouseAmbience: {fileID: 8300000, guid: 2ede6372ccf89b542b91f9831b2b9517, type: 3}
+  radioStaticClip: {fileID: 8300000, guid: ad5c5814c6edb6d47a7f63cbc46cf134, type: 3}
+  cleanMelodyClip: {fileID: 8300000, guid: 5f3e06e1c7b69e54884f743fd06ed804, type: 3}
+  whistleClip: {fileID: 8300000, guid: 375b12066d4934e4eb52224a5b6f452b, type: 3}
+  fallingObjectsClip: {fileID: 8300000, guid: ee61c192c65a4e74da1cf96485b0dd93, type: 3}
+  radioCrashClip: {fileID: 8300000, guid: 1070165c39c6cfe4996ec34735565604, type: 3}
   player: {fileID: 689329201}
   intactRadioObject: {fileID: 1731597647}
   pastRadioObject: {fileID: 1675263993}
@@ -18480,84 +18479,6 @@ MonoBehaviour:
   whirlwindDoorPos: {fileID: 1167715514}
   whirlwindExitPos: {fileID: 1486387821}
   whirlwindMoveSpeed: 4.5
---- !u!1 &1811349834
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1811349835}
-  - component: {fileID: 1811349836}
-  m_Layer: 6
-  m_Name: RadioInteractable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1811349835
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811349834}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.94, y: 10.854, z: 0}
-  m_LocalScale: {x: 0.43583834, y: 0.3432227, z: 0.43583834}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1379987079}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1811349836
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811349834}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1825286924
 GameObject:
   m_ObjectHideFlags: 0

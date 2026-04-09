@@ -12,7 +12,9 @@ public class TreeInteractable : MonoBehaviour, IInteractable
     }
 
     private IEnumerator Routine()
-    {
+    {   
+
+        GameStateManager.SetState(GameState.Thought);
         AudioManager.Instance.PlaySFX(wateringSound);
 
 
@@ -30,5 +32,6 @@ public class TreeInteractable : MonoBehaviour, IInteractable
 
         farmDay3Manager.CompleteSentinelTask();
         gameObject.SetActive(false);
+        GameStateManager.SetState(GameState.Gameplay);
     }
 }

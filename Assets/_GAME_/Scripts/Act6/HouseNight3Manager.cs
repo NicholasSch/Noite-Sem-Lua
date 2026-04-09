@@ -81,6 +81,8 @@ public class HouseNight3Manager : MonoBehaviour
         GameStateManager.SetState(GameState.Cutscene);
         GameUI.Instance.gameObject.SetActive(false);
 
+        AudioManager.Instance.PlaySFX(radioStaticClip);
+
         yield return new WaitForSecondsRealtime(1f);
 
         player.LookAtTarget(playerLookPos1);
@@ -90,8 +92,6 @@ public class HouseNight3Manager : MonoBehaviour
             "<color=#531182>Lucas:</color> ...Que som é esse?",
             "O rádio não estava ligado."
         });
-
-        AudioManager.Instance.PlaySFX(radioStaticClip);
 
         yield return new WaitForSecondsRealtime(1f);
 
@@ -107,7 +107,7 @@ public class HouseNight3Manager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.6f);
 
-        AudioManager.Instance.PlaySFX(cleanMelodyClip);
+        AudioManager.Instance.PlayMusic(cleanMelodyClip);
 
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {

@@ -16,7 +16,7 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
 
     [Header("Audio")]
     [SerializeField] private AudioClip cleanMelodyClip;
-    [SerializeField] private AudioClip paperRustleClip;
+    [SerializeField] private AudioClip paperCrumpleClip;
 
     private bool isRunning;
 
@@ -73,7 +73,7 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
 
         yield return danteSilhouetteController.WalkTo(danteStepForwardTarget.position);
 
-        AudioManager.Instance.PlaySFX(paperRustleClip);
+        AudioManager.Instance.PlaySFX(paperCrumpleClip);
 
         yield return new WaitForSecondsRealtime(1f);
 

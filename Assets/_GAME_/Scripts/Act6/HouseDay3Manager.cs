@@ -28,11 +28,8 @@ public class HouseDay3Manager : MonoBehaviour
     {
         GameStateManager.SetState(GameState.Thought);
 
-        if (leafHitSound != null)
-        {
-            AudioManager.Instance.PlaySFX(leafHitSound);
-            yield return new WaitForSecondsRealtime(1f);
-        }
+        AudioManager.Instance.PlaySFX(leafHitSound);
+        yield return new WaitForSecondsRealtime(1f);
 
         string[] lines =
         {
