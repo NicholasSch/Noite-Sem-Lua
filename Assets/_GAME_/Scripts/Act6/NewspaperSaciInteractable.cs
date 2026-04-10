@@ -39,9 +39,9 @@ public class NewspaperSaciInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 
-        farmDay3Manager.MarkAct6NewspaperFound();
-
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        farmDay3Manager.MarkAct6NewspaperFound();
     }
 }

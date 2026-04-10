@@ -33,9 +33,9 @@ public class CurupiraFootstepsInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(Lines);
 
-        forestNight2Manager.MarkFootstepsSeen();
-
         GameStateManager.SetState(GameState.Gameplay);
+
+        forestNight2Manager.MarkFootstepsSeen();
 
         yield return new WaitForSecondsRealtime(0.3f);
 

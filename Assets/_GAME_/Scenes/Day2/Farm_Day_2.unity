@@ -171478,7 +171478,15 @@ CompositeCollider2D:
       - X: 393124992
         Y: -144375008
       - X: 393124992
+        Y: -146458332
+      - X: 392500000
+        Y: -146250000
+      - X: 391249984
         Y: -147500000
+      - X: 392500000
+        Y: -149375008
+      - X: 394374996
+        Y: -148750004
       - X: 395624992
         Y: -150000000
       - X: 404375008
@@ -171497,6 +171505,16 @@ CompositeCollider2D:
         Y: -160000000
       - X: 418750016
         Y: -160000000
+    - - X: 400000000
+        Y: -150624992
+      - X: 394375008
+        Y: -150624992
+      - X: 390000000
+        Y: -156875008
+      - X: 390000000
+        Y: -165000000
+      - X: 400000000
+        Y: -165000000
     - - X: 379375008
         Y: -168124992
       - X: 379375008
@@ -171842,7 +171860,11 @@ CompositeCollider2D:
       - {x: 39.999996, y: -14.25}
       - {x: 39.62499, y: -14.187508}
       - {x: 39.3125, y: -14.437513}
-      - {x: 39.312508, y: -14.750009}
+      - {x: 39.312458, y: -14.64582}
+      - {x: 39.24999, y: -14.625011}
+      - {x: 39.12501, y: -14.750019}
+      - {x: 39.25002, y: -14.937494}
+      - {x: 39.43751, y: -14.875013}
       - {x: 39.562508, y: -15}
     - - {x: 41.874985, y: -16}
       - {x: 41.9375, y: -15.812494}
@@ -171851,6 +171873,11 @@ CompositeCollider2D:
       - {x: 41.249992, y: -15.000009}
       - {x: 41.0625, y: -15.187512}
       - {x: 41.062527, y: -16}
+    - - {x: 39.999973, y: -16.5}
+      - {x: 39.999973, y: -15.062499}
+      - {x: 39.437496, y: -15.0625105}
+      - {x: 39, y: -15.687509}
+      - {x: 39.00003, y: -16.5}
     - - {x: 48.81249, y: -22}
       - {x: 49, y: -21.749992}
       - {x: 49.00003, y: -21.5}
@@ -172628,7 +172655,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 0
+      m_AllTileFlags: 1073741824
   - first: {x: 41, y: -16, z: 0}
     second:
       serializedVersion: 2
@@ -176215,10 +176242,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1469785839}
     m_Modifications:
-    - target: {fileID: 452810839752920630, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
-      propertyPath: typingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b8d1a894bd119e942807a1b1ca222197, type: 3}
     - target: {fileID: 1467959845868304587, guid: 8ea748712cd8ed0419582ba89d004d06, type: 3}
       propertyPath: m_overflowMode
       value: 1
@@ -181931,7 +181954,7 @@ MonoBehaviour:
   dayFarmMusic: {fileID: 8300000, guid: 69e6482160e85004ea09fa2d647f00f6, type: 3}
   dayFarmAmbience: {fileID: 8300000, guid: 1588db30f43458547a189a86961a728f, type: 3}
   vegetationGrid: {fileID: 634731870}
-  vegetationGrid2: {fileID: 0}
+  vegetationGrid2: {fileID: 515012876}
   saplingInteractable: {fileID: 1120034561}
   benchInteractable: {fileID: 8018652}
   lakeInteractable: {fileID: 229448046}

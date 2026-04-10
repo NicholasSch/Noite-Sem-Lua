@@ -30,8 +30,8 @@ public class PlantSaplingInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(PlantLines);
 
-        farmDay2Manager.CompletePlantHope();
-
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay2Manager.CompletePlantHope();
     }
 }

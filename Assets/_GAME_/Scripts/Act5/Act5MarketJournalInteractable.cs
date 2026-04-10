@@ -60,9 +60,9 @@ public class Act5MarketJournalInteractable : MonoBehaviour, IInteractable
         GameStateManager.SetState(GameState.Thought);
         yield return ThoughtUI.Instance.PlaySequence(LucasLines);
 
-        marketNight2Manager.MarkJournalInteracted();
-
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        marketNight2Manager.MarkJournalInteracted();
     }
 }

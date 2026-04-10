@@ -57,8 +57,8 @@ public class LakeTollInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(AfterLines);
 
-        farmDay2Manager.ApplySavedWorldState();
-
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay2Manager.ApplySavedWorldState();
     }
 }

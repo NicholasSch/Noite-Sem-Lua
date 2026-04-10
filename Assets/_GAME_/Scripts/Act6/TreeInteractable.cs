@@ -30,8 +30,9 @@ public class TreeInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 
-        farmDay3Manager.CompleteSentinelTask();
         gameObject.SetActive(false);
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay3Manager.CompleteSentinelTask();
     }
 }

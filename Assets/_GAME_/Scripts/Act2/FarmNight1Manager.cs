@@ -20,7 +20,7 @@ public class FarmNight1Manager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip nightFarmAmbience;
     [SerializeField] private AudioClip windBurstSound;
-    [SerializeField] private string corpoSecoPointAnimation = "Anim_CorpoSeco_Point";
+    [SerializeField] private string corpoSecoPointAnimation = "Pointing";
 
     private void Start()
     {

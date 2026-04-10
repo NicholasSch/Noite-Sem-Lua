@@ -11,7 +11,8 @@ public class NewspaperCorpoSecoInteractable : MonoBehaviour, IInteractable
     private static readonly string[] lines =
     {
         "<color=#531182>Lucas:</color> O vovô enterrou isso bem debaixo do moinho...",
-        "Se ele queria esconder a verdade aqui, talvez tenha deixado mais alguma coisa na própria madeira."
+        "Se ele queria esconder a verdade aqui,",
+        "talvez tenha deixado mais alguma coisa na própria madeira."
     };
 
     public void Interact()
@@ -37,13 +38,13 @@ public class NewspaperCorpoSecoInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator OnNewspaperClosedRoutine()
     {
-        farmDay4Manager.MarkAct7NewspaperFound();
-
         GameStateManager.SetState(GameState.Thought);
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        farmDay4Manager.MarkAct7NewspaperFound();
     }
 }

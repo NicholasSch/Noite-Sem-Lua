@@ -38,27 +38,19 @@ public class Act7MillMessageInteractable : MonoBehaviour, IInteractable
         {
             "Há um entalhe na madeira...",
             "As letras estão gastas.",
-            "Mas ainda dá para ler."
-        });
-
-        yield return ThoughtUI.Instance.PlaySequence(new string[]
-        {
+            "Mas ainda dá para ler.",
             "\"Lia, eu transformei o vento em música,",
             "mas agora o vento só traz silêncio.",
-            "Perdoe-me por não saber deixá-la ir.\""
-        });
-
-        yield return ThoughtUI.Instance.PlaySequence(new string[]
-        {
+            "Perdoe-me por não saber deixá-la ir.\"",
             "<color=#531182>Lucas:</color> Ele não conseguia aceitar o fim...",
             "O vovô se culpava tanto que permitiu que esse lugar morresse junto com ela.",
             "Esse arrependimento...",
             "é isso que está secando o Engenho."
         });
 
-        farmDay4Manager.MarkAct7MillMessageFound();
-
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        farmDay4Manager.MarkAct7MillMessageFound();
     }
 }

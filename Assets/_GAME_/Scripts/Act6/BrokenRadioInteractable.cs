@@ -135,9 +135,9 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
         ProgressionManager.Instance.act6NoteFound = true;
         ProgressionManager.Instance.SaveProgress();
 
-        houseNight3Manager.DisableBrokenRadioInteraction();
-
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        houseNight3Manager.DisableBrokenRadioInteraction();
     }
 }

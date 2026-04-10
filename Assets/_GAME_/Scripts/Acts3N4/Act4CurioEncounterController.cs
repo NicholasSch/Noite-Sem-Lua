@@ -61,10 +61,10 @@ public class Act4CurioEncounterController : MonoBehaviour
 
         yield return ThoughtUI.Instance.PlaySequence(endingLines);
 
-        farmDay2Manager.MarkCurioEncounterPlayed();
-
         isRunning = false;
 
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay2Manager.MarkCurioEncounterPlayed();
     }
 }

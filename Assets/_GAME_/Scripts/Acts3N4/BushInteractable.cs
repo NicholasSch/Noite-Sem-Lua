@@ -30,8 +30,8 @@ public class OrchardBushInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(Lines);
 
-        act3FarmManager.CompleteOrchardCare();
-
         GameStateManager.SetState(GameState.Gameplay);
+
+        act3FarmManager.CompleteOrchardCare();
     }
 }

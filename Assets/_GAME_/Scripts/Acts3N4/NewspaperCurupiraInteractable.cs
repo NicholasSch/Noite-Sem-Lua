@@ -43,9 +43,9 @@ public class NewspaperCurupiraInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(lines);
 
-        marketNight2Manager.MarkNewspaperFound();
-
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        marketNight2Manager.MarkNewspaperFound();
     }
 }

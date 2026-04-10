@@ -72,6 +72,24 @@ EditorBuildSettings:
     path: Assets/_GAME_/Scenes/Day4/Farm_Day_4.unity
     guid: b502f4ff4258f2843b28c7590fbb829e
   - enabled: 1
+    path: Assets/_GAME_/Scenes/Day4/Forest_Day_4.unity
+    guid: 18b2ebb1de2c0704eb7c1d7ac7b76161
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day4/Market_Day_4.unity
+    guid: fd81f0318f61ebb498e65fcfe2fb36da
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day5/House_Day_5.unity
+    guid: 55c0a291edd73dd42b9a0b8a00aff45b
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day5/Farm_Day_5.unity
+    guid: 6d72813a12bef6d4d87be29fbb0efaa2
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day5/Forest_Day_5.unity
+    guid: 48d1cf3e30f778549b0ea17b5c4b201e
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Day5/Market_Day_5.unity
+    guid: e9d89d69d3772084d85c63b5e4691598
+  - enabled: 1
     path: Assets/_GAME_/Scenes/Cave_Night.unity
     guid: 18a48888493bbe84b9c1e6eec58c691c
   - enabled: 1

@@ -10,13 +10,9 @@ public class Act7CorpoSecoEncounterController : MonoBehaviour
     [Header("Scene objects")]
     [SerializeField] private GameObject corpoSecoObject;
     [SerializeField] private NPCController corpoSecoController;
-    [SerializeField] private Transform playerLookTarget;
-    [SerializeField] private Transform corpoSecoPointTarget;
-    [SerializeField] private Transform playerLookAfterPointTarget;
 
     [Header("Audio")]
     [SerializeField] private AudioClip windBurstClip;
-    [SerializeField] private string corpoSecoPointAnimation = "Anim_CorpoSeco_Point";
 
     private bool isRunning;
 
@@ -40,13 +36,10 @@ public class Act7CorpoSecoEncounterController : MonoBehaviour
         GameStateManager.SetState(GameState.Cutscene);
         GameUI.Instance.gameObject.SetActive(false);
 
-        player.LookAtTarget(playerLookTarget);
-
         AudioManager.Instance.PlaySFX(windBurstClip);
 
         corpoSecoObject.SetActive(true);
         corpoSecoController.PlayIdle();
-        corpoSecoController.LookAtTarget(player.transform);
 
         yield return new WaitForSecondsRealtime(0.8f);
 
@@ -55,30 +48,19 @@ public class Act7CorpoSecoEncounterController : MonoBehaviour
             "<color=#531182>Lucas:</color> ...Você de novo.",
             "Ele não está avançando.",
             "Só está...",
-            "me mostrando alguma coisa."
+            "me mostrando alguma coisa.",
+            "Ha algo embaixo dele?"
         });
 
-        corpoSecoController.LookAtTarget(corpoSecoPointTarget);
+        yield return new WaitForSecondsRealtime(0.6f);
 
-        yield return new WaitForSecondsRealtime(0.8f);
+       AudioManager.Instance.PlaySFX(windBurstClip);
+       corpoSecoObject.SetActive(false);
 
-        corpoSecoController.PlayAnimationState(corpoSecoPointAnimation);
+       GameUI.Instance.gameObject.SetActive(true);
+       GameStateManager.SetState(GameState.Gameplay);
+       isRunning = false;
 
-        yield return new WaitForSecondsRealtime(2f);
-
-        corpoSecoController.ResetToIdle();
-
-        yield return new WaitForSecondsRealtime(0.2f);
-
-       player.LookAtTarget(playerLookAfterPointTarget);
-
-        farmDay4Manager.RevealSecondDig();
-
-        AudioManager.Instance.PlaySFX(windBurstClip);
-        corpoSecoObject.SetActive(false);
-
-        GameUI.Instance.gameObject.SetActive(true);
-        GameStateManager.SetState(GameState.Gameplay);
-        isRunning = false;
+       farmDay4Manager.RevealSecondDig();
     }
 }

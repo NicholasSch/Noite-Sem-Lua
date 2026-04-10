@@ -29,7 +29,7 @@ public class FarmDay4Manager : MonoBehaviour
 
     public void ApplySavedWorldState()
     {
-        bool firstDigRevealed = ProgressionManager.Instance.act7FirstDigRevealed;
+        bool firstDigRevealed = ProgressionManager.Instance.act7FirstDigInteracted;
         bool newspaperFound = ProgressionManager.Instance.act7NewspaperFound;
         bool millMessageFound = ProgressionManager.Instance.act7MillMessageFound;
         bool secondDigRevealed = ProgressionManager.Instance.act7SecondDigRevealed;
@@ -44,10 +44,10 @@ public class FarmDay4Manager : MonoBehaviour
 
     public void RevealFirstDig()
     {
-        if (ProgressionManager.Instance.act7FirstDigRevealed)
+        if (ProgressionManager.Instance.act7FirstDigInteracted)
             return;
 
-        ProgressionManager.Instance.act7FirstDigRevealed = true;
+        ProgressionManager.Instance.act7FirstDigInteracted = true;
         ProgressionManager.Instance.SaveProgress();
         ApplySavedWorldState();
     }

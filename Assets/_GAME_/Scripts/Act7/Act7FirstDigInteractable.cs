@@ -4,6 +4,7 @@ using UnityEngine;
 public class Act7FirstDigInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private FarmDay4Manager farmDay4Manager;
+    [SerializeField] private GameObject CorpoSecoNewspaper;
     [SerializeField] private AudioClip diggingSound;
 
     private bool isRunning;
@@ -21,6 +22,8 @@ public class Act7FirstDigInteractable : MonoBehaviour, IInteractable
 
         if (!ProgressionManager.Instance.act7MorningIntroPlayed)
             return;
+        if (ProgressionManager.Instance.act7FirstDigInteracted)
+            return;
 
         StartCoroutine(InteractionRoutine());
     }
@@ -32,28 +35,23 @@ public class Act7FirstDigInteractable : MonoBehaviour, IInteractable
 
         player.ForceFaceUp();
 
-        if (!ProgressionManager.Instance.act7FirstDigRevealed)
+        AudioManager.Instance.PlaySFX(diggingSound);
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        CorpoSecoNewspaper.SetActive(true);
+
+        yield return ThoughtUI.Instance.PlaySequence(new string[]
         {
-            AudioManager.Instance.PlaySFX(diggingSound);
-
-            yield return new WaitForSecondsRealtime(1.4f);
-
-            farmDay4Manager.RevealFirstDig();
-
-            yield return ThoughtUI.Instance.PlaySequence(new string[]
-            {
-                "<color=#531182>Lucas:</color> Estava enterrado fundo.",
-                "Alguém queria garantir que esse jornal só fosse lido por quem tivesse disposição de sujar as mãos."
-            });
-
-            GameStateManager.SetState(GameState.Gameplay);
-            isRunning = false;
-            yield break;
-        }
-
-        farmDay4Manager.MarkAct7NewspaperFound();
+            "<color=#531182>Lucas:</color> Estava enterrado fundo.",
+            "Alguém queria garantir que esse jornal só fosse lido",
+            "por quem tivesse disposição a sujar as mãos."
+        });
 
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        CorpoSecoNewspaper.SetActive(false);
+        farmDay4Manager.RevealFirstDig();
     }
 }

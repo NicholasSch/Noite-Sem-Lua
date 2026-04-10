@@ -29,11 +29,11 @@ public class GreenFeatherInteractable : MonoBehaviour, IInteractable
             "A pista segue para o oeste... para a caverna."
         });
 
-        houseNight3Manager.CaveClueInteracted();
-
         gameObject.SetActive(false);
 
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        houseNight3Manager.CaveClueInteracted();
     }
 }

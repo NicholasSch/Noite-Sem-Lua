@@ -31,8 +31,6 @@ public class Act7SecondDigInteractable : MonoBehaviour, IInteractable
 
         yield return new WaitForSecondsRealtime(1.5f);
 
-        farmDay4Manager.MarkPocketWatchFound();
-
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {
             "<color=#531182>Lucas:</color> O relógio dele...",
@@ -54,5 +52,7 @@ public class Act7SecondDigInteractable : MonoBehaviour, IInteractable
 
         GameStateManager.SetState(GameState.Gameplay);
         isRunning = false;
+
+        farmDay4Manager.MarkPocketWatchFound();
     }
 }

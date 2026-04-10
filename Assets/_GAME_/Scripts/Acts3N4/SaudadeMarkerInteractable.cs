@@ -35,8 +35,8 @@ public class SaudadeMarkerInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(MarkerLines);
 
-        farmDay2Manager.CompleteTrailMarker();
-
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay2Manager.CompleteTrailMarker();
     }
 }

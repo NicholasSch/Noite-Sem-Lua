@@ -72,6 +72,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "Farm_Day_2"; break;
                 case 3: sceneName = "Farm_Day_3"; break;
                 case 4: sceneName = "Farm_Day_4"; break;
+                case 5: sceneName = "Farm_Day_5"; break;
                 default: sceneName = "Farm_Day_1"; break;
             }
         }
@@ -83,6 +84,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "Farm_Night_2"; break;
                 case 3: sceneName = "Farm_Night_3"; break;
                 case 4: sceneName = "Farm_Night_4"; break;
+                case 5: sceneName = "Farm_Night_5"; break;
                 default: sceneName = "Farm_Night_1"; break;
             }
         }
@@ -109,6 +111,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "House_Day_2"; break;
                 case 3: sceneName = "House_Day_3"; break;
                 case 4: sceneName = "House_Day_4"; break;
+                case 5: sceneName = "House_Day_5"; break;
                 default: sceneName = "House_Day_1"; break;
             }
         }
@@ -120,6 +123,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "House_Night_2"; break;
                 case 3: sceneName = "House_Night_3"; break;
                 case 4: sceneName = "House_Night_4"; break;
+                case 5: sceneName = "House_Night_5"; break;
                 default: sceneName = "House_Night_1"; break;
             }
         }
@@ -145,6 +149,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "Forest_Day_2"; break;
                 case 3: sceneName = "Forest_Day_3"; break;
                 case 4: sceneName = "Forest_Day_4"; break;
+                case 5: sceneName = "Forest_Day_5"; break;
                 default: sceneName = "Forest_Day_1"; break;
             }
         }
@@ -156,6 +161,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "Forest_Night_2"; break;
                 case 3: sceneName = "Forest_Night_3"; break;
                 case 4: sceneName = "Forest_Night_4"; break;
+                case 5: sceneName = "Forest_Night_5"; break;
                 default: sceneName = "Forest_Night_1"; break;
             }
         }
@@ -182,6 +188,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "Market_Day_2"; break;
                 case 3: sceneName = "Market_Day_3"; break;
                 case 4: sceneName = "Market_Day_4"; break;
+                case 5: sceneName = "Market_Day_5"; break;
                 default: sceneName = "Market_Day_1"; break;
             }
         }
@@ -193,6 +200,7 @@ public static class SceneRouteManager
                 case 2: sceneName = "Market_Night_2"; break;
                 case 3: sceneName = "Market_Night_3"; break;
                 case 4: sceneName = "Market_Night_4"; break;
+                case 5: sceneName = "Market_Night_5"; break;
                 default: sceneName = "Market_Night_1"; break;
             }
         }

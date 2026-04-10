@@ -17,9 +17,9 @@ public class NewspaperCucaInteractable : MonoBehaviour, IInteractable
     }
 
     private void OnNewspaperClosed()
-    {
-        farmDay2Manager.MarkNewspaperFound();
-        
+    {   
         GameStateManager.SetState(GameState.Gameplay);
+
+        farmDay2Manager.MarkNewspaperFound();
     }
 }

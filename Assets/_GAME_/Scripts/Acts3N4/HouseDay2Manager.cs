@@ -14,6 +14,8 @@ public class HouseDay2Manager : MonoBehaviour
         AudioManager.Instance.PlayAmbient(dayHouseAmbience);
         ApplySavedWorldState();
         StartCoroutine(SceneFlowRoutine());
+
+        GameUI.Instance.gameObject.SetActive(true);
     }
 
     public void ApplySavedWorldState()
