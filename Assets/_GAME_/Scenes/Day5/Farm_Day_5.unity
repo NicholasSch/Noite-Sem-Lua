@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Act8CampfireInteractable
   farmDay5Manager: {fileID: 1803658791}
-  throwInFireSound: {fileID: 0}
+  throwInFireSound: {fileID: 8300000, guid: 82028f996880a7f44885692d93f519f5, type: 3}
 --- !u!1 &142597181
 GameObject:
   m_ObjectHideFlags: 0
@@ -113917,7 +113917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Act8TreeInteractable
   farmDay5Manager: {fileID: 1803658791}
   player: {fileID: 1115960879}
-  heartbeatThump: {fileID: 0}
+  heartbeatThump: {fileID: 8300000, guid: 5bbccb2b84d1e33409eb9ebf278d63b8, type: 3}
 --- !u!61 &992963694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -114138,9 +114138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Act8HairInteractable
   farmDay5Manager: {fileID: 1803658791}
-  musicBoxClip: {fileID: 0}
-  dayFarmMusic: {fileID: 0}
-  diggingSound: {fileID: 0}
+  musicBoxClip: {fileID: 8300000, guid: 5f3e06e1c7b69e54884f743fd06ed804, type: 3}
+  dayFarmMusic: {fileID: 8300000, guid: b400a80a6e2279e4eaa225fc8a89b453, type: 3}
+  diggingSound: {fileID: 8300000, guid: 1fff58e5f8a9c7e4a9e5610e922a3936, type: 3}
 --- !u!1001 &1115960877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115100,8 +115100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 066ee03374d925345828109447142b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmDay5Manager
-  dayFarmMusic: {fileID: 0}
-  dayFarmAmbience: {fileID: 0}
+  dayFarmMusic: {fileID: 8300000, guid: b400a80a6e2279e4eaa225fc8a89b453, type: 3}
+  dayFarmAmbience: {fileID: 8300000, guid: d8a0fd2745ade7247805bede0ca8f103, type: 3}
   treeInteractable: {fileID: 992963691}
   act8NewspaperInteractable: {fileID: 1905561612}
   campfireInteractable: {fileID: 127957419}

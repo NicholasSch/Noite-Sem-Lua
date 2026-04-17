@@ -51,7 +51,7 @@ public class FarmNight1Manager : MonoBehaviour
         {
             "<color=#531182>Lucas:</color> ...",
             "Tem alguém perto do moinho.",
-            "Não... isso não é alguém."
+            "Não... isso não é ALGUÉM."
         };
 
         yield return ThoughtUI.Instance.PlaySequence(apparitionLines);

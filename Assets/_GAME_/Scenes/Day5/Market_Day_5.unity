@@ -29750,7 +29750,7 @@ GameObject:
   - component: {fileID: 1326867814}
   - component: {fileID: 1326867815}
   m_Layer: 0
-  m_Name: MarketDay4Manager
+  m_Name: MarketDay5Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29783,8 +29783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa467fdd7508284295de28b2be677d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MarketDay2Manager
-  marketAmbience: {fileID: 8300000, guid: a5f6743d64400134f8c64eab19f51e3e, type: 3}
-  marketMusic: {fileID: 8300000, guid: af900b3c9c6b6104fb9fe5f017da1efa, type: 3}
+  marketAmbience: {fileID: 8300000, guid: d8a0fd2745ade7247805bede0ca8f103, type: 3}
+  marketMusic: {fileID: 8300000, guid: b400a80a6e2279e4eaa225fc8a89b453, type: 3}
   radioSong: {fileID: 8300000, guid: 5f3e06e1c7b69e54884f743fd06ed804, type: 3}
   player: {fileID: 1552350778}
   feirante1Controller: {fileID: 231877811}

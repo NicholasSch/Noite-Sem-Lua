@@ -29,7 +29,7 @@ public class Act7SecondDigInteractable : MonoBehaviour, IInteractable
 
         AudioManager.Instance.PlaySFX(diggingSound);
 
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(3f);
 
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {

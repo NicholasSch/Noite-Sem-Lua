@@ -8967,7 +8967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6e0708a0430b74b9ef9ca1df5ac705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HouseDay4Manager
-  dayHouseAmbience: {fileID: 0}
+  dayHouseAmbience: {fileID: 8300000, guid: a5f6743d64400134f8c64eab19f51e3e, type: 3}
 --- !u!1 &1980939653
 GameObject:
   m_ObjectHideFlags: 0

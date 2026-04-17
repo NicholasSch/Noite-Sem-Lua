@@ -34,8 +34,7 @@ public class Act8TreeInteractable : MonoBehaviour, IInteractable
             "Mas parece mais pesada do que deveria."
         });
 
-        if (heartbeatThump != null)
-            AudioManager.Instance.PlaySFX(heartbeatThump);
+        AudioManager.Instance.PlaySFX(heartbeatThump);
 
         yield return new WaitForSecondsRealtime(0.4f);
 

@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Act7SecondDigInteractable
   farmDay4Manager: {fileID: 1803658791}
-  diggingSound: {fileID: 0}
+  diggingSound: {fileID: 8300000, guid: 1fff58e5f8a9c7e4a9e5610e922a3936, type: 3}
 --- !u!61 &187448768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113325,7 +113325,7 @@ Tilemap:
       - {fileID: 9098395064655027044, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -5288405454392149618, guid: d251f641711c2ed4396919f68351053f, type: 3}
       - {fileID: -8759645116765742646, guid: d251f641711c2ed4396919f68351053f, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 45, y: -12, z: 0}
@@ -114746,7 +114746,7 @@ MonoBehaviour:
   player: {fileID: 1115960879}
   corpoSecoObject: {fileID: 1572476223}
   corpoSecoController: {fileID: 1572476224}
-  windBurstClip: {fileID: 0}
+  windBurstClip: {fileID: 8300000, guid: 4efe1627fbb0ff54f8f597044276370f, type: 3}
 --- !u!1 &1254750278
 GameObject:
   m_ObjectHideFlags: 0
@@ -114888,7 +114888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Act7FirstDigInteractable
   farmDay4Manager: {fileID: 1803658791}
   CorpoSecoNewspaper: {fileID: 1027564952}
-  diggingSound: {fileID: 0}
+  diggingSound: {fileID: 8300000, guid: 1fff58e5f8a9c7e4a9e5610e922a3936, type: 3}
 --- !u!61 &1421350040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115413,8 +115413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767964c1e8192534d9db075e53b980c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmDay4Manager
-  dayFarmMusic: {fileID: 0}
-  dayFarmAmbience: {fileID: 0}
+  dayFarmMusic: {fileID: 8300000, guid: af900b3c9c6b6104fb9fe5f017da1efa, type: 3}
+  dayFarmAmbience: {fileID: 8300000, guid: a5f6743d64400134f8c64eab19f51e3e, type: 3}
   firstDigInteractable: {fileID: 1421350037}
   CorpoSecoNewspaper: {fileID: 1027564952}
   millMessageInteractable: {fileID: 599664348}

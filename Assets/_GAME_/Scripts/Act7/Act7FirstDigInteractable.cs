@@ -37,7 +37,7 @@ public class Act7FirstDigInteractable : MonoBehaviour, IInteractable
 
         AudioManager.Instance.PlaySFX(diggingSound);
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(3f);
 
         CorpoSecoNewspaper.SetActive(true);
 
