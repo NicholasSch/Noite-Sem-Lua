@@ -45,6 +45,11 @@ public class CaveMistTrigger : MonoBehaviour
         if (isRunning)
             return;
 
+        if (ProgressionManager.Instance.act9IntroPlayed == true)
+        {
+            return;
+        }
+        
         StartCoroutine(BlockRoutine());
     }
 

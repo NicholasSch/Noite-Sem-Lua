@@ -7,7 +7,8 @@ public static class SceneRouteManager
         Farm,
         House,
         Forest,
-        Market
+        Market,
+        Cave
     }
 
     public enum EntryPoint
@@ -16,7 +17,8 @@ public static class SceneRouteManager
         FromFarm,
         FromHouse,
         FromForest,
-        FromMarket
+        FromMarket,
+        FromCave
     }
 
     public struct RouteData
@@ -54,6 +56,8 @@ public static class SceneRouteManager
 
             case WorldArea.Market:
                 return GetMarketRoute(day, period, entryPoint);
+            case WorldArea.Cave:
+                return GetCaveRoute(entryPoint);
 
             default:
                 return GetFarmRoute(day, period, entryPoint);
@@ -93,6 +97,7 @@ public static class SceneRouteManager
         {
             EntryPoint.FromHouse => "FromHouse",
             EntryPoint.FromForest => "FromForest",
+            EntryPoint.FromCave => "FromCave",
             _ => "Default"
         };
 
@@ -214,5 +219,21 @@ public static class SceneRouteManager
         return new RouteData(sceneName, spawnPointID);
     }
 
+    private static RouteData GetCaveRoute(EntryPoint entryPoint)
+    {
+        if (ProgressionManager.Instance.currentDay == 5 &&
+            ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night)
+        {
+            string spawnPointID = entryPoint switch
+            {
+                EntryPoint.FromFarm => "FromFarm",
+                _ => "Default"
+            };
+
+            return new RouteData("Cave_Night_5", spawnPointID);
+        }
+
+        return new RouteData("Farm_Night_5", "Default");
+    }
     
 }

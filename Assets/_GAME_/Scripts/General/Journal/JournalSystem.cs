@@ -64,7 +64,9 @@ public class JournalSystem : MonoBehaviour
             case ProgressionManager.JournalPhase.Day5Act8:
                 SetupDay5Act8();
                 break;
-
+            case ProgressionManager.JournalPhase.Day5Act9:
+                SetupDay5Act9();
+                break;
             default:
                 SetupDay1();
                 break;
@@ -212,6 +214,25 @@ public class JournalSystem : MonoBehaviour
             "Na fogueira central, reúna o que veio pelo vento, o que foi poupado pela terra e o que o tempo não conseguiu apagar. Quando essas partes se unirem na brasa, a fumaça deixará de cegar e passará a guardar o fôlego de quem segue para o norte."
         ));
     }
+
+private void SetupDay5Act9()
+{
+    leftPageText =
+        "Caderno de Dante\n\n" +
+        "O Engenho já não pede, nem implora como antes. Tudo o que podia ser levado foi levado, e tudo o que podia apodrecer já cedeu à terra. O que restou não cresce nem morre; apenas permanece, como se o próprio tempo tivesse desistido de seguir adiante.\n\n" +
+        "Há muito a terra deixou de responder aos vivos. Agora, ela escuta apenas aquilo que insiste em ficar, aquilo que não aceita partir mesmo quando tudo ao redor já se foi.\n\n" +
+        "O que caminha por estes campos não é vento, nem memória. É fome. E a fome aprendeu o seu nome.\n\n" +
+        "Tentei enterrar o que não devia existir. Tentei queimar o que não podia continuar. Tentei esquecer, como se o esquecimento fosse capaz de apagar o que esta terra insiste em guardar. Mas há coisas que não aceitam fim; elas esperam, crescem em silêncio e sempre encontram o caminho de volta.\n\n" +
+        "Se você chegou até aqui, não foi porque venceu o Engenho. Foi porque ele permitiu. E agora, pela primeira vez desde que tudo começou, ele não pretende mais esperar.";
+
+    tasks.Add(new Task(
+        "Act9_DefeatCurio",
+        "O Último Encontro (Enfrente Curio)",
+        "Ele não se esconde mais nas margens nem sussurra entre as árvores. Curio caminha livre pelo Engenho, e onde seus passos tocam, a terra se curva como se reconhecesse o próprio dono.\n\n" +
+        "Não há mais rituais, nem proteção, nem promessas capazes de adiar o inevitável. Resta apenas o encontro entre você e aquilo que nunca deixou este lugar.\n\n" +
+        "Termine o que foi começado — ou torne-se parte do que permanece."
+    ));
+}
 
     public string GetLeftPage()
     {

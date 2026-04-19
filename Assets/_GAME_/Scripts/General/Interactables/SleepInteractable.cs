@@ -24,7 +24,8 @@ public class SleepInteractable : MonoBehaviour, IInteractable
             (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !act6TasksDone) ||
             (ProgressionManager.Instance.currentDay == 3 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night && !ProgressionManager.Instance.act6CaveClueRevealed) ||
             (ProgressionManager.Instance.currentDay == 4 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !ProgressionManager.Instance.act7PocketWatchFound) ||
-            (ProgressionManager.Instance.currentDay == 5 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !ProgressionManager.Instance.act8HairFound)
+            (ProgressionManager.Instance.currentDay == 5 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day && !ProgressionManager.Instance.act8HairFound) || 
+            (ProgressionManager.Instance.currentDay == 5 && ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Night)
         )
         {
             yield return NarrationUI.Instance.ShowTextRoutine(blockedSleepText);
@@ -43,6 +44,13 @@ public class SleepInteractable : MonoBehaviour, IInteractable
                  !ProgressionManager.Instance.act6NightStarted)
         {
             ProgressionManager.Instance.act6NightStarted = true;
+            ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
+            ProgressionManager.Instance.SaveProgress();
+        }
+        else if (ProgressionManager.Instance.currentDay == 5 &&
+        ProgressionManager.Instance.currentPeriod == ProgressionManager.DayPeriod.Day &&
+        ProgressionManager.Instance.act8HairFound)
+        {
             ProgressionManager.Instance.SetPeriod(ProgressionManager.DayPeriod.Night);
             ProgressionManager.Instance.SaveProgress();
         }
