@@ -70,6 +70,7 @@ public class ProgressionManager : MonoBehaviour
         public bool act8RitualDone;
         public bool act8HairFound;
         public bool act9IntroPlayed;
+        public bool act9Completed;
         public string pendingSpawnPointID;
         public string pendingSceneName;
         public List<string> completedTaskIDs = new();
@@ -121,6 +122,7 @@ public class ProgressionManager : MonoBehaviour
     public bool act8RitualDone;
     public bool act8HairFound;
     public bool act9IntroPlayed;
+    public bool act9Completed;
     public string pendingSpawnPointID;
     public string pendingSceneName;
 
@@ -266,6 +268,7 @@ public class ProgressionManager : MonoBehaviour
             act8RitualDone = act8RitualDone,
             act8HairFound = act8HairFound,
             act9IntroPlayed = act9IntroPlayed,
+            act9Completed = act9Completed,
             pendingSpawnPointID = pendingSpawnPointID,
             pendingSceneName = pendingSceneName,
             completedTaskIDs = new List<string>(completedTaskIDs),
@@ -335,6 +338,7 @@ public class ProgressionManager : MonoBehaviour
         act8RitualDone = data.act8RitualDone;
         act8HairFound = data.act8HairFound;
         act9IntroPlayed = data.act9IntroPlayed;
+        act9Completed = data.act9Completed;
         pendingSpawnPointID = data.pendingSpawnPointID;
         pendingSceneName = data.pendingSceneName;
         completedTaskIDs = data.completedTaskIDs ?? new List<string>();
@@ -387,6 +391,7 @@ public class ProgressionManager : MonoBehaviour
         act8RitualDone = false;
         act8HairFound = false;
         act9IntroPlayed = false;
+        act9Completed = false;
         pendingSpawnPointID = null;
         completedTaskIDs.Clear();
         talkedNpcIDs.Clear();
