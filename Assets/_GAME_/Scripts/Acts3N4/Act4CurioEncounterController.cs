@@ -41,11 +41,11 @@ public class Act4CurioEncounterController : MonoBehaviour
 
         string[] lines =
         {
-            "<color=#8CD221>Dona Curió:</color> A feira é um lugar barulhento, não é?",
+            "<color=#67D221>Dona Curió:</color> A feira é um lugar barulhento, não é?",
             "As pessoas falam muito porque têm medo do silêncio.",
             "Mas o silêncio daqui é honesto, Lucas. Ele não mente como os feirantes.",
             "<color=#531182>Lucas:</color> Eles dizem que a senhora não existe, Dona Curió.",
-            "<color=#8CD221>Dona Curió:</color> Para eles, eu não existo.",
+            "<color=#67D221>Dona Curió:</color> Para eles, eu não existo.",
             "Mas para este Engenho, eu sou a única coisa que sobrou de real."
         };
 

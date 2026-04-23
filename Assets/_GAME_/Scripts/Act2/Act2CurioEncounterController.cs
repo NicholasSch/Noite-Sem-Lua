@@ -37,10 +37,10 @@ public class Act2CurioEncounterController : MonoBehaviour
         string[] lines =
         {
             "<color=#531182>Lucas:</color> Olá? Senhora? Eu sou o Lucas, neto do Dante.",
-            "<color=#8CD221>Dona Curió:</color> Cuidado onde pisa, garoto.",
+            "<color=#67D221>Dona Curió:</color> Cuidado onde pisa, garoto.",
             "A terra do seu avô tem memória curta pras pessoas, mas memória longa pras dívidas.",
             "<color=#531182>Lucas:</color> Dívidas? Meu avô era um homem simples, senhora.",
-            "<color=#8CD221>Dona Curió:</color> Neste chão, nada é simples.",
+            "<color=#67D221>Dona Curió:</color> Neste chão, nada é simples.",
             "Vá até a feira amanhã se quiser ver como o tempo corre diferente aqui.",
             "Mas volte antes do sol se pôr.",
             "O moinho gosta de observar quem anda no escuro."

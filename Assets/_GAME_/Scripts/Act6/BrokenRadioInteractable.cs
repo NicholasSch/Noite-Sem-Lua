@@ -58,13 +58,13 @@ public class BrokenRadioInteractable : MonoBehaviour, IInteractable
 
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {
-            "<color=#8C6B3B>Lia:</color> Dante, olhe para este lugar...",
+            "<color=#A92F87>Lia:</color> Dante, olhe para este lugar...",
             "As sombras estão ficando mais longas.",
             "Eu sinto que o Engenho está me chamando para o chão.",
             "<color=#8C6B3B>Dante:</color> Não enquanto eu tiver voz, Lia.",
             "Se a Dona Curió quer silêncio, eu vou dar a ela o que ela pede...",
             "mas vou esconder nossa música onde ela nunca vai procurar.",
-            "<color=#8C6B3B>Lia:</color> Você faria isso?",
+            "<color=#A92F87>Lia:</color> Você faria isso?",
             "Viver no silêncio por mim?",
             "<color=#8C6B3B>Dante:</color> Eu viveria mil anos no escuro", 
             "se isso garantisse que o nosso neto ouvisse essa música um dia.",
