@@ -221,9 +221,7 @@ private void SetupDay5Act9()
         "Caderno de Dante\n\n" +
         "O Engenho já não pede, nem implora como antes. Tudo o que podia ser levado foi levado, e tudo o que podia apodrecer já cedeu à terra. O que restou não cresce nem morre; apenas permanece, como se o próprio tempo tivesse desistido de seguir adiante.\n\n" +
         "Há muito a terra deixou de responder aos vivos. Agora, ela escuta apenas aquilo que insiste em ficar, aquilo que não aceita partir mesmo quando tudo ao redor já se foi.\n\n" +
-        "O que caminha por estes campos não é vento, nem memória. É fome. E a fome aprendeu o seu nome.\n\n" +
-        "Tentei enterrar o que não devia existir. Tentei queimar o que não podia continuar. Tentei esquecer, como se o esquecimento fosse capaz de apagar o que esta terra insiste em guardar. Mas há coisas que não aceitam fim; elas esperam, crescem em silêncio e sempre encontram o caminho de volta.\n\n" +
-        "Se você chegou até aqui, não foi porque venceu o Engenho. Foi porque ele permitiu. E agora, pela primeira vez desde que tudo começou, ele não pretende mais esperar.";
+        "Tentei enterrar o que não devia existir. Tentei queimar o que não podia continuar. Tentei esquecer, como se o esquecimento fosse capaz de apagar o que esta terra insiste em guardar. Mas há coisas que não aceitam fim; elas esperam, crescem em silêncio e sempre encontram o caminho de volta.\n\n" ;
 
     tasks.Add(new Task(
         "Act9_DefeatCurio",

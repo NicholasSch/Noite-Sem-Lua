@@ -230,7 +230,7 @@ public static class SceneRouteManager
                 _ => "Default"
             };
 
-            return new RouteData("Cave_Night_5", spawnPointID);
+            return new RouteData("Cave_Night", spawnPointID);
         }
 
         return new RouteData("Farm_Night_5", "Default");
