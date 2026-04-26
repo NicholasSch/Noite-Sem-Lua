@@ -11,10 +11,10 @@ PrefabInstance:
     - target: {fileID: 1807089735277452608, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 197615f8baa485a4f946d3b5266d31a3, type: 2}
+      objectReference: {fileID: 9100000, guid: 2afc4de7c9d71e341882372f47ec5697, type: 2}
     - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: npcID
-      value: CucaDisguised
+      value: CucaRevealed
       objectReference: {fileID: 0}
     - target: {fileID: 2043797479195411884, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: objectToDisableAfterConversation
@@ -100,16 +100,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.92
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 3147713976773274583, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.53
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4813735430772161417, guid: 96a1df9b1f9a4884783d6032804d6174, type: 3}
+      objectReference: {fileID: -4022304489492291623, guid: 7af3e293a32fba547b44626904181470, type: 3}
     - target: {fileID: 3808247856882251048, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7022403094741855794, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_Name
-      value: CucaDisguised
+      value: CucaRevealed
       objectReference: {fileID: 0}
     - target: {fileID: 7022403094741855794, guid: 65d75c2f3c24c5d4ead76cf5396048bf, type: 3}
       propertyPath: m_IsActive
