@@ -211,7 +211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Act9CorpoSecoInteractable
   caveManager: {fileID: 1679437360}
-  transformationSound: {fileID: 0}
 --- !u!1001 &123810446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15469,6 +15468,7 @@ MonoBehaviour:
   corpoSecoInteractable: {fileID: 1473221}
   danteSpirit: {fileID: 455728682}
   liaSpirit: {fileID: 1292039971}
+  mistSpawner: {fileID: 745322210}
   cucaScream: {fileID: 0}
   breakRootsSFX: {fileID: 0}
   CorpopSecoTransform: {fileID: 0}
