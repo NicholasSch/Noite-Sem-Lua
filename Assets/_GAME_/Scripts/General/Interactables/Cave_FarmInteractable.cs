@@ -22,6 +22,8 @@ public class Cave_FarmInteractable : MonoBehaviour, IInteractable
 
     private IEnumerator ExitRoutine()
     {
+        ProgressionManager.Instance.NextDay();
+        ProgressionManager.Instance.SetJournalPhase(ProgressionManager.JournalPhase.Epilogue);
         SceneRouteManager.RouteData route = SceneRouteManager.GetRoute(
             SceneRouteManager.WorldArea.Farm,
             SceneRouteManager.EntryPoint.FromCave

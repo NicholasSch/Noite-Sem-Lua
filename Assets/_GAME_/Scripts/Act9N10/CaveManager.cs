@@ -11,6 +11,7 @@ public class CaveManager : MonoBehaviour
     [SerializeField] private GameObject corpoSecoInteractable;
     [SerializeField] private GameObject danteSpirit;
     [SerializeField] private GameObject liaSpirit;
+    [SerializeField] private GameObject mistSpawner;
 
     [Header("Audio")]
     [SerializeField] private AudioClip cucaScream;
@@ -43,6 +44,8 @@ public class CaveManager : MonoBehaviour
     private IEnumerator FinalCucaSequence()
     {
         GameStateManager.SetState(GameState.Cutscene);
+
+        mistSpawner.SetActive(false);
 
         yield return ThoughtUI.Instance.PlaySequence(new string[] {
             "<color=#67D221>Cuca:</color> Você é persistente, pequeno herdeiro.",
