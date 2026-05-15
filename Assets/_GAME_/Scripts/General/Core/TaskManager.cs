@@ -21,11 +21,19 @@ public class TaskManager : MonoBehaviour
 
     private void Start()
     {
-        if (ProgressionManager.Instance == null)
-            return;
+        SyncWithProgression();
+    }
+
+    public void ResetTasks()
+    {
+        completedTasks.Clear();
+    }
+
+    public void SyncWithProgression()
+    {
+        if (ProgressionManager.Instance == null) return;
 
         completedTasks.Clear();
-
         foreach (string task in ProgressionManager.Instance.completedTaskIDs)
         {
             completedTasks.Add(task);
@@ -34,8 +42,7 @@ public class TaskManager : MonoBehaviour
 
     public void CompleteTask(string id)
     {
-        if (string.IsNullOrWhiteSpace(id))
-            return;
+        if (string.IsNullOrWhiteSpace(id)) return;
 
         if (completedTasks.Add(id))
         {

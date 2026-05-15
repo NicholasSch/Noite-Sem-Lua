@@ -4,6 +4,7 @@ using UnityEngine;
 public class HouseNight5Manager : MonoBehaviour
 {
     [SerializeField] private AudioClip nightAmbience;
+    [SerializeField] private AudioClip nightMusic;
 
     private void Start()
     {
@@ -20,7 +21,8 @@ public class HouseNight5Manager : MonoBehaviour
     {
         GameStateManager.SetState(GameState.Thought);
 
-        AudioManager.Instance.PlayAmbient(nightAmbience);
+            AudioManager.Instance.PlayAmbient(nightAmbience);
+            AudioManager.Instance.PlayMusic(nightMusic, 2f);
 
         yield return ThoughtUI.Instance.PlaySequence(new string[]
         {

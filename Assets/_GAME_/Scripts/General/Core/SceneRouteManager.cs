@@ -78,7 +78,7 @@ public static class SceneRouteManager
                 case 4: sceneName = "Farm_Day_4"; break;
                 case 5: sceneName = "Farm_Day_5"; break;
                 case 6: sceneName = "Farm_Day_6"; break;
-                default: sceneName = "Farm_Day_1"; break;
+                default: sceneName = "Farm_Day_6"; break;
             }
         }
         else

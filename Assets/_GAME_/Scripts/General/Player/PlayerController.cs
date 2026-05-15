@@ -241,6 +241,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnPause()
+    {
+        if(GameStateManager.CurrentState == GameState.Journal)
+        {
+            FindFirstObjectByType<JournalUI>()?.CloseJournal();
+        }
+    }
+
     public void LookAtTarget(Transform target)
     {
         Vector2 dir = target.position - transform.position;

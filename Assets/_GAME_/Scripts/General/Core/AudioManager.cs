@@ -5,10 +5,13 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
+    [Header("Audio Sources")]
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource ambientSource;
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource uiSource;
+
+    [Header("Settings")]
     [SerializeField] private float defaultFadeDuration = 1.5f;
 
     private Coroutine musicFadeRoutine;
@@ -16,12 +19,15 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource MusicSource => musicSource;
     public AudioSource AmbientSource => ambientSource;
+    public AudioSource SfxSource => sfxSource;
+    public AudioSource UISource => uiSource;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            LoadVolumes();
         }
         else
         {
@@ -29,145 +35,63 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayMusic(AudioClip clip)
+    private void LoadVolumes()
     {
-        PlayMusic(clip, defaultFadeDuration);
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVol", 0.4f);
+        ambientSource.volume = PlayerPrefs.GetFloat("AmbientVol", 0.45f);
+        sfxSource.volume = PlayerPrefs.GetFloat("SFXVol", 0.9f);
+        uiSource.volume = PlayerPrefs.GetFloat("UIVol", 0.45f);
     }
 
-    public void PlayMusic(AudioClip clip, float fadeDuration)
+    public void PlayMusic(AudioClip clip, float fadeDuration = -1f)
     {
-        if (clip == null)
-            return;
+        if (clip == null || musicSource.clip == clip) return;
+        float duration = fadeDuration < 0 ? defaultFadeDuration : fadeDuration;
 
-        if (musicFadeRoutine != null)
-        {
-            StopCoroutine(musicFadeRoutine);
-        }
-
-        musicFadeRoutine = StartCoroutine(FadeInSourceRoutine(musicSource, clip, fadeDuration));
+        if (musicFadeRoutine != null) StopCoroutine(musicFadeRoutine);
+        musicFadeRoutine = StartCoroutine(FadeInSourceRoutine(musicSource, clip, duration, "MusicVol", 0.4f));
     }
 
-    public void StopMusic()
+    public void StopMusic(float fadeDuration = -1f)
     {
-        StopMusic(defaultFadeDuration);
+        float duration = fadeDuration < 0 ? defaultFadeDuration : fadeDuration;
+        if (musicFadeRoutine != null) StopCoroutine(musicFadeRoutine);
+        musicFadeRoutine = StartCoroutine(FadeOutSourceRoutine(musicSource, duration));
     }
 
-    public void StopMusic(float fadeDuration)
+    public void PlayAmbient(AudioClip clip, float fadeDuration = -1f)
     {
-        if (musicFadeRoutine != null)
-        {
-            StopCoroutine(musicFadeRoutine);
-        }
+        if (clip == null || ambientSource.clip == clip) return;
+        float duration = fadeDuration < 0 ? defaultFadeDuration : fadeDuration;
 
-        musicFadeRoutine = StartCoroutine(FadeOutSourceRoutine(musicSource, fadeDuration));
+        if (ambientFadeRoutine != null) StopCoroutine(ambientFadeRoutine);
+        ambientFadeRoutine = StartCoroutine(FadeInSourceRoutine(ambientSource, clip, duration, "AmbientVol", 0.45f));
     }
 
-    public void PlayAmbient(AudioClip clip)
+    public void StopAmbient(float fadeDuration = -1f)
     {
-        PlayAmbient(clip, defaultFadeDuration);
-    }
-
-    public void PlayAmbient(AudioClip clip, float fadeDuration)
-    {
-        if (clip == null)
-            return;
-
-        if (ambientFadeRoutine != null)
-        {
-            StopCoroutine(ambientFadeRoutine);
-        }
-
-        ambientFadeRoutine = StartCoroutine(FadeInSourceRoutine(ambientSource, clip, fadeDuration));
-    }
-
-    public void StopAmbient()
-    {
-        StopAmbient(defaultFadeDuration);
-    }
-
-    public void StopAmbient(float fadeDuration)
-    {
-        if (ambientFadeRoutine != null)
-        {
-            StopCoroutine(ambientFadeRoutine);
-        }
-
-        ambientFadeRoutine = StartCoroutine(FadeOutSourceRoutine(ambientSource, fadeDuration));
-    }
-
-    public IEnumerator FadeInMusicRoutine(AudioClip clip, float duration)
-    {
-        if (clip == null)
-            yield break;
-
-        if (musicFadeRoutine != null)
-        {
-            StopCoroutine(musicFadeRoutine);
-            musicFadeRoutine = null;
-        }
-
-        yield return FadeInSourceRoutine(musicSource, clip, duration);
-    }
-
-    public IEnumerator FadeOutMusicRoutine(float duration)
-    {
-        if (musicFadeRoutine != null)
-        {
-            StopCoroutine(musicFadeRoutine);
-            musicFadeRoutine = null;
-        }
-
-        yield return FadeOutSourceRoutine(musicSource, duration);
-    }
-
-    public IEnumerator FadeInAmbientRoutine(AudioClip clip, float duration)
-    {
-        if (clip == null)
-            yield break;
-
-        if (ambientFadeRoutine != null)
-        {
-            StopCoroutine(ambientFadeRoutine);
-            ambientFadeRoutine = null;
-        }
-
-        yield return FadeInSourceRoutine(ambientSource, clip, duration);
-    }
-
-    public IEnumerator FadeOutAmbientRoutine(float duration)
-    {
-        if (ambientFadeRoutine != null)
-        {
-            StopCoroutine(ambientFadeRoutine);
-            ambientFadeRoutine = null;
-        }
-
-        yield return FadeOutSourceRoutine(ambientSource, duration);
+        float duration = fadeDuration < 0 ? defaultFadeDuration : fadeDuration;
+        if (ambientFadeRoutine != null) StopCoroutine(ambientFadeRoutine);
+        ambientFadeRoutine = StartCoroutine(FadeOutSourceRoutine(ambientSource, duration));
     }
 
     public void PlaySFX(AudioClip clip)
     {
-        if (clip == null)
-            return;
-
-        sfxSource.PlayOneShot(clip);
+        if (clip != null) sfxSource.PlayOneShot(clip);
     }
 
     public void PlayUI(AudioClip clip)
     {
-        if (clip == null)
-            return;
-
-        uiSource.PlayOneShot(clip);
+        if (clip != null) uiSource.PlayOneShot(clip);
     }
 
-    private IEnumerator FadeInSourceRoutine(AudioSource source, AudioClip clip, float duration)
+    private IEnumerator FadeInSourceRoutine(AudioSource source, AudioClip clip, float duration, string prefKey, float defaultVol)
     {
-        float targetVolume = source.volume;
+        float targetVolume = PlayerPrefs.GetFloat(prefKey, defaultVol);
 
         if (source.isPlaying)
         {
-            yield return FadeSourceVolume(source, source.volume, 0f, duration * 0.5f);
+            yield return StartCoroutine(FadeSourceVolume(source, source.volume, 0f, duration * 0.5f));
             source.Stop();
         }
 
@@ -175,39 +99,25 @@ public class AudioManager : MonoBehaviour
         source.volume = 0f;
         source.Play();
 
-        yield return FadeSourceVolume(source, 0f, targetVolume, duration);
+        yield return StartCoroutine(FadeSourceVolume(source, 0f, targetVolume, duration));
     }
 
     private IEnumerator FadeOutSourceRoutine(AudioSource source, float duration)
     {
-        if (!source.isPlaying)
-            yield break;
-
-        float startVolume = source.volume;
-
-        yield return FadeSourceVolume(source, startVolume, 0f, duration);
-
+        if (!source.isPlaying) yield break;
+        yield return StartCoroutine(FadeSourceVolume(source, source.volume, 0f, duration));
         source.Stop();
-        source.volume = startVolume;
     }
 
-    private IEnumerator FadeSourceVolume(AudioSource source, float startVolume, float endVolume, float duration)
+    private IEnumerator FadeSourceVolume(AudioSource source, float start, float end, float duration)
     {
-        if (duration <= 0f)
+        float elapsed = 0;
+        while (elapsed < duration)
         {
-            source.volume = endVolume;
-            yield break;
-        }
-
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.unscaledDeltaTime;
-            source.volume = Mathf.Lerp(startVolume, endVolume, timer / duration);
+            elapsed += Time.unscaledDeltaTime;
+            source.volume = Mathf.Lerp(start, end, elapsed / duration);
             yield return null;
         }
-
-        source.volume = endVolume;
+        source.volume = end;
     }
 }

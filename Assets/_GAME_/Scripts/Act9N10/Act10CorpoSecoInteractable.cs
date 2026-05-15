@@ -6,7 +6,7 @@ public class Act10CorpoSecoInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (ProgressionManager.Instance.act9Completed)
+        if (!ProgressionManager.Instance.act9Completed)
             return;
 
         caveManager.StartEpilogue();

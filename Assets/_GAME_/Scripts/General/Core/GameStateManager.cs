@@ -1,8 +1,9 @@
 using UnityEngine;
-
 public enum GameState
 {
-    Gameplay,
+    Menu,
+    Gameplay, 
+    Paused,  
     Narration,
     Thought,
     Journal,
@@ -12,7 +13,7 @@ public enum GameState
 
 public class GameStateManager : MonoBehaviour
 {
-    public static GameState CurrentState { get; private set; } = GameState.Gameplay;
+    public static GameState CurrentState { get; private set; } = GameState.Menu;
 
     public static void SetState(GameState newState)
     {

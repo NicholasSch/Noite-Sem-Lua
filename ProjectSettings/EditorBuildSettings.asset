@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_GAME_/Scenes/Menu.unity
+    guid: cdcc86c19bdc0384aa32b4712ec57efe
+  - enabled: 1
     path: Assets/_GAME_/Scenes/Day0/Apartment.unity
     guid: 1ec35872e1b87b147b4e63310ddc6cec
   - enabled: 1
@@ -98,6 +101,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME_/Scenes/Day5/Cave_Night.unity
     guid: 18a48888493bbe84b9c1e6eec58c691c
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/Epilogue/Farm_Day_6.unity
+    guid: 1be6b47a0faeac34fb6b9d190aad94dd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

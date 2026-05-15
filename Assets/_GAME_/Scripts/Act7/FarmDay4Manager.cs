@@ -92,5 +92,23 @@ public class FarmDay4Manager : MonoBehaviour
         TaskManager.Instance.CompleteTask("Act7_SecondDig");
         ProgressionManager.Instance.SaveProgress();
         ApplySavedWorldState();
+
+        if (ProgressionManager.Instance.isDemo)
+        {
+            StartCoroutine(EndDemoRoutine());
+        }
+    }
+
+    private IEnumerator EndDemoRoutine()
+    {
+        yield return new WaitForSeconds(2f);
+
+        GameStateManager.SetState(GameState.Cutscene);
+        
+        yield return NarrationUI.Instance.ShowTextRoutine("<color=yellow>FIM DA DEMO</color> Obrigado por jogar Noite Sem Lua. O destino de Dante e Lia aguarda na versão completa...");
+        
+        ProgressionManager.Instance.ResetProgress();
+        
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }

@@ -33,7 +33,8 @@ public class BenchVisionCutsceneController : MonoBehaviour
         player.LookAtTarget(visionLookTarget);
         GameUI.Instance.gameObject.SetActive(false);
 
-        yield return AudioManager.Instance.FadeInMusicRoutine(sadMusicClip, 2f);
+        AudioManager.Instance.PlayMusic(sadMusicClip, 2f);
+        yield return new WaitForSeconds(2f);
 
         mapGridPresent.SetActive(false);
         mapGridPast.SetActive(true);
@@ -71,9 +72,11 @@ public class BenchVisionCutsceneController : MonoBehaviour
         mapGridPast.SetActive(false);
 
 
-        yield return AudioManager.Instance.FadeOutMusicRoutine(3f);
+        AudioManager.Instance.StopMusic(3f);
+        yield return new WaitForSecondsRealtime(2.8f);
         AudioManager.Instance.PlayAmbient(farmAmbienceClip);
-        yield return AudioManager.Instance.FadeInMusicRoutine(farmMusicClip, 3f);
+        AudioManager.Instance.PlayMusic(farmMusicClip, 3f);
+        yield return new WaitForSecondsRealtime(2f);
 
         string[] CutscenePrologueLines =
         {

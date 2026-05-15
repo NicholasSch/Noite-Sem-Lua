@@ -168,16 +168,17 @@ public class MarketDay2Manager : MonoBehaviour
 
         if (!hasTalkedBefore)
         {
-            StartCoroutine(AudioManager.Instance.FadeOutMusicRoutine(2f));
+            AudioManager.Instance.StopMusic(2f);
 
             yield return ThoughtUI.Instance.PlaySequence(Feirante1FirstLines);
 
-            StartCoroutine(AudioManager.Instance.FadeInMusicRoutine(radioSong, 2f));
+            AudioManager.Instance.PlayMusic(radioSong, 2f);
 
             yield return ThoughtUI.Instance.PlaySequence(Feirante1SecondLines);
 
-            yield return AudioManager.Instance.FadeOutMusicRoutine(2f);
-            StartCoroutine(AudioManager.Instance.FadeInMusicRoutine(marketMusic, 2f));
+            AudioManager.Instance.StopMusic(2f);
+            yield return new WaitForSeconds(2f);
+            AudioManager.Instance.PlayMusic(marketMusic, 2f);
 
             ProgressionManager.Instance.RegisterNpcTalk(Feirante1NpcID);
 

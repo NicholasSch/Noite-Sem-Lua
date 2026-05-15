@@ -28,14 +28,16 @@ public class JournalSystem : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            SetupCurrentDay();
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
+    private void Start()
+    {
+        SetupCurrentDay();
+    }
     public void SetupCurrentDay()
     {
         tasks.Clear();

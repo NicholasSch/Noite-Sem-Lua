@@ -27,6 +27,7 @@ public class ProgressionManager : MonoBehaviour
     [System.Serializable]
     private class SaveData
     {
+        public bool isDemo;
         public int currentDay;
         public DayPeriod currentPeriod;
         public JournalPhase journalPhase;
@@ -79,6 +80,7 @@ public class ProgressionManager : MonoBehaviour
         public List<string> talkedNpcIDs = new();
     }
 
+    public bool isDemo;
     public int currentDay = 0;
     public DayPeriod currentPeriod = DayPeriod.Day;
     public JournalPhase journalPhase = JournalPhase.Day1;
@@ -227,6 +229,7 @@ public class ProgressionManager : MonoBehaviour
     {
         SaveData data = new SaveData
         {
+            isDemo = isDemo,
             currentDay = currentDay,
             currentPeriod = currentPeriod,
             journalPhase = journalPhase,
@@ -298,6 +301,7 @@ public class ProgressionManager : MonoBehaviour
         if (data == null)
             return;
 
+        isDemo = data.isDemo;
         currentDay = Mathf.Max(0, data.currentDay);
         currentPeriod = data.currentPeriod;
         journalPhase = data.journalPhase;
@@ -352,6 +356,7 @@ public class ProgressionManager : MonoBehaviour
 
     public void ResetProgress()
     {
+        isDemo = false;
         currentDay = 0;
         currentPeriod = DayPeriod.Day;
         journalPhase = JournalPhase.Day1;
@@ -399,13 +404,22 @@ public class ProgressionManager : MonoBehaviour
         act9Completed = false;
         act10Started = false;
         pendingSpawnPointID = null;
+        pendingSceneName = null;
+        
         completedTaskIDs.Clear();
         talkedNpcIDs.Clear();
+
+        if (TaskManager.Instance != null)
+        {
+            TaskManager.Instance.ResetTasks();
+        }
 
         if (File.Exists(SavePath))
         {
             File.Delete(SavePath);
         }
+        
+        SaveProgress();
     }
 
     private void OnApplicationQuit()

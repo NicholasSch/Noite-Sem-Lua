@@ -26,8 +26,8 @@ public class Act1Manager : MonoBehaviour
             "<color=#531182>Lucas:</color> O advogado deixou o caderno do vovô na mesa."
         };
 
-        yield return new WaitForSecondsRealtime(3f);
-        AudioManager.Instance.PlayMusic(apartmentMusic);
+        yield return new WaitForSecondsRealtime(2f);
+        AudioManager.Instance.PlayMusic(apartmentMusic,2f);
         yield return new WaitForSecondsRealtime(1.5f);
         yield return ThoughtUI.Instance.PlaySequence(intro);
     }
