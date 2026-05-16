@@ -7823,7 +7823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jornal de Dante
+  m_text: "Di\xE1rio de Dante"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f25e8eb8f28a2e345893d472abe6ae38, type: 2}
   m_sharedMaterial: {fileID: 847143607517519235, guid: f25e8eb8f28a2e345893d472abe6ae38, type: 2}

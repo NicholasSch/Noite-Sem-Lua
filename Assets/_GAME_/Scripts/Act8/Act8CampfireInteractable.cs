@@ -53,7 +53,7 @@ public class Act8CampfireInteractable : MonoBehaviour, IInteractable
             "Eu consigo ver através da névoa agora.",
             "O caminho está aberto.",
             "o que é isso",
-            "Há algo enterrado aabixo da fogueira?"
+            "Há algo enterrado embaixo da fogueira?"
         });
 
         GameStateManager.SetState(GameState.Gameplay);

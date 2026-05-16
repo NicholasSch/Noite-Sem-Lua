@@ -225,9 +225,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnInteract(InputValue value)
     {
-        if (!value.isPressed || GameStateManager.CurrentState != GameState.Gameplay || currentInteractable == null) return;
-        currentInteractable.Interact();
-        HideInteractPrompt();
+        if (!value.isPressed || (GameStateManager.CurrentState != GameState.Gameplay && GameStateManager.CurrentState != GameState.Letter) || currentInteractable == null) return;
+        else if (GameStateManager.CurrentState == GameState.Letter) FindFirstObjectByType<LetterUI>().Close();
+        else
+        {
+            currentInteractable.Interact();
+            HideInteractPrompt();
+        }
     }
 
     private void OnClick(InputValue value)
