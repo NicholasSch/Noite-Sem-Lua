@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class InGameMenuManager : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class InGameMenuManager : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioClip openMenuSound;
+    [SerializeField] private AudioClip inGameMenuAmbience;
     [SerializeField] private AudioClip closeMenuSound;
+    private AudioClip currentAmbient;
 
     private void Start()
     {
@@ -60,6 +63,8 @@ public class InGameMenuManager : MonoBehaviour
         GameStateManager.SetState(GameState.Gameplay);
         
         AudioManager.Instance.PlayUI(closeMenuSound);
+        AudioManager.Instance.PlayAmbient(currentAmbient);
+        AudioManager.Instance.MusicSource.UnPause();
     }
 
     void Pause()
@@ -70,7 +75,11 @@ public class InGameMenuManager : MonoBehaviour
         isPaused = true;
         GameStateManager.SetState(GameState.Paused);
 
+        currentAmbient = AudioManager.Instance.AmbientSource.clip;
+
         AudioManager.Instance.PlayUI(openMenuSound);
+        AudioManager.Instance.PlayAmbient(inGameMenuAmbience);
+        AudioManager.Instance.MusicSource.Pause();
     }
 
     public void OpenJournal()

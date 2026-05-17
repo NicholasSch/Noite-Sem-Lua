@@ -2868,8 +2868,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InGameMenuManager
   pauseMenuUI: {fileID: 1688794151}
   optionsMenuUI: {fileID: 1651830821}
-  openMenuSound: {fileID: 0}
-  closeMenuSound: {fileID: 0}
+  openMenuSound: {fileID: 8300000, guid: b2d4b9525ee711741870cd821a4accbe, type: 3}
+  inGameMenuAmbience: {fileID: 8300000, guid: 8b23f92f4076cfa4d953fa5dc98b19dd, type: 3}
+  closeMenuSound: {fileID: 8300000, guid: e0c33f22d5b26d34b81e6b0da77016a1, type: 3}
 --- !u!1 &559693253
 GameObject:
   m_ObjectHideFlags: 0
