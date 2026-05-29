@@ -99,7 +99,7 @@ public class JournalSystem : MonoBehaviour
     private void SetupDay3Act6()
     {
         leftPageText = "Caderno de Dante\n\nO sangue da terra é a água. Cuide daquela que você plantou.\n\nSe o vento assobiar dentro de casa, não tente prendê-lo. Apenas guarde o que é frágil.";
-        tasks.Add(new Task("Sentinel_Thirst", "A Sede da Sentinela", "Regue o coqueiro. Ele será seus olhos quando a névoa subir."));
+        tasks.Add(new Task("Sentinel_Thirst", "A Sede da Sentinela", "Regue o pinheiro. Ele será seus olhos quando a névoa subir."));
         tasks.Add(new Task("House_Whistle", "A Casa que Assobia", "Prepare a proteção na fogueira central para afastar o redemoinho."));
     }
 
@@ -126,7 +126,7 @@ public class JournalSystem : MonoBehaviour
     private void SetupEpilogue()
     {
         leftPageText = "Caderno de Lucas\n\nVim ao Engenho buscar as cinzas de um homem que eu mal conhecia, mas encontrei um lugar onde o tempo havia parado de respirar.\n\nO vovô não era feito de maldade; ele era feito de um amor tão pesado que se tornou pedra.\n\nHoje, o vento finalmente levou o que era do vento. O Engenho de Dante não é mais feito de sombras. A promessa foi cumprida.\n\nPode descansar, vovô. Eu cuidarei do resto.";
-        tasks.Add(new Task("Final_Walk","O Novo Alvorecer","Caminhe até o coqueiro adulto. Veja o que o tempo e o cuidado foram capazes de reconstruir."));
+        tasks.Add(new Task("Final_Walk","O Novo Alvorecer","Caminhe até o pinheiro adulto. Veja o que o tempo e o cuidado foram capazes de reconstruir."));
         tasks.Add(new Task("Carry_Legacy","Carregar o Legado de Dante","O Engenho não é mais feito de pedras ou engrenagens. É feito de histórias. E hoje, uma nova história começa.",true ));
     }
 

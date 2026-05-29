@@ -69,13 +69,13 @@ public class InGameMenuManager : MonoBehaviour
 
     void Pause()
     {
+        currentAmbient = AudioManager.Instance.AmbientSource.clip;
+
         pauseMenuUI.SetActive(true);
         
         Time.timeScale = 0f;
         isPaused = true;
         GameStateManager.SetState(GameState.Paused);
-
-        currentAmbient = AudioManager.Instance.AmbientSource.clip;
 
         AudioManager.Instance.PlayUI(openMenuSound);
         AudioManager.Instance.PlayAmbient(inGameMenuAmbience);

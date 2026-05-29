@@ -87,7 +87,7 @@ public class CaveManager : MonoBehaviour
         });
         AudioManager.Instance.PlaySFX(cucaScream);
 
-        FadeOut(cucaObject,1f);
+        StartCoroutine(FadeOut(cucaObject,1f));
         
         TaskManager.Instance.CompleteTask("Act9_DefeatCurio");
         ProgressionManager.Instance.act9Completed = true;
